@@ -13,7 +13,7 @@ const parseWordType = (val: string): WordType => {
 };
 
 export const fetchWords = async (targetDifficulty: number = 3): Promise<WordChallenge[]> => {
-  const apiKey = process.env.API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     console.error("API Key missing");
     return getFallbackWords();
