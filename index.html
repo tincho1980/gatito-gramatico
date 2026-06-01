@@ -9,11 +9,29 @@
     <style>
       body {
         font-family: 'Quicksand', sans-serif;
-        background-color: #fff1f2; /* Rose-50 */
+        background-color: #fff1f2;
       }
       h1, h2, h3, h4, h5, h6, .font-heading {
         font-family: 'Fredoka', sans-serif;
       }
+      @keyframes toastIn {
+        0%   { transform: translateY(-110%) scale(0.9); opacity: 0; }
+        65%  { transform: translateY(5px) scale(1.02); opacity: 1; }
+        100% { transform: translateY(0) scale(1); opacity: 1; }
+      }
+      .animate-toast-in {
+        animation: toastIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+      }
+      @keyframes fadeInUp {
+        from { transform: translateY(12px); opacity: 0; }
+        to   { transform: translateY(0);    opacity: 1; }
+      }
+      .animate-fade-in-up { animation: fadeInUp 0.35s ease-out; }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      .animate-fade-in { animation: fadeIn 0.25s ease-out; }
     </style>
 </head>
   <body>

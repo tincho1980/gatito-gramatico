@@ -5,9 +5,10 @@ type CatMood = 'idle' | 'success' | 'error';
 interface BlackCatProps {
   mood: CatMood;
   className?: string;
+  size?: string;
 }
 
-export const BlackCat: React.FC<BlackCatProps> = ({ mood, className = '' }) => {
+export const BlackCat: React.FC<BlackCatProps> = ({ mood, className = '', size = 'w-40 h-40' }) => {
   const [blink, setBlink] = useState(false);
 
   // Blink effect for idle state
@@ -21,7 +22,7 @@ export const BlackCat: React.FC<BlackCatProps> = ({ mood, className = '' }) => {
   }, [mood]);
 
   return (
-    <div className={`relative w-40 h-40 ${className} transition-transform duration-500`}>
+    <div className={`relative ${size} ${className} transition-transform duration-500`}>
       <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-xl filter">
         {/* Tail (Background) */}
         <path d="M80 80 Q95 60 85 50 Q75 40 85 30" fill="none" stroke="#2d2d2d" strokeWidth="8" strokeLinecap="round" className={mood === 'success' ? 'animate-pulse' : ''} />

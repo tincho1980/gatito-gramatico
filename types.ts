@@ -20,6 +20,7 @@ export interface UserStats {
   maxScore: number;
   averageEfficiency: number; // 0-100
   averageLevel: number;
+  skillLevel: number; // 1-10, adaptive difficulty for next round
   history: GameResult[];
 }
 
@@ -27,7 +28,8 @@ export interface GameResult {
   date: string; // ISO date
   score: number; // Max 20
   efficiency: number; // %
-  averageLevel: number;
+  targetLevel: number; // skillLevel used for this round
+  averageLevel: number; // average difficulty of words returned by AI
 }
 
 export interface User {
