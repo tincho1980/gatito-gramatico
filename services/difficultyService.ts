@@ -1,7 +1,7 @@
-import { GameResult, UserStats } from '../types';
+import { GameResult, UserStats } from "../types";
 
 export const DIFFICULTY_CONFIG = {
-  default: 3,
+  default: 1,
   min: 1,
   max: 10,
   raiseThreshold: 80,
@@ -17,7 +17,7 @@ export function normalizeUserStats(stats: UserStats): UserStats {
 
   let skillLevel = stats.skillLevel;
   if (
-    typeof skillLevel !== 'number' ||
+    typeof skillLevel !== "number" ||
     skillLevel < DIFFICULTY_CONFIG.min ||
     skillLevel > DIFFICULTY_CONFIG.max
   ) {
@@ -30,7 +30,7 @@ export function normalizeUserStats(stats: UserStats): UserStats {
     ...stats,
     skillLevel: Math.max(
       DIFFICULTY_CONFIG.min,
-      Math.min(DIFFICULTY_CONFIG.max, skillLevel)
+      Math.min(DIFFICULTY_CONFIG.max, skillLevel),
     ),
     history,
   };
@@ -42,7 +42,7 @@ export function getSkillLevel(stats: UserStats): number {
 
 export function computeNextSkillLevel(
   current: number,
-  efficiency: number
+  efficiency: number,
 ): number {
   if (efficiency >= DIFFICULTY_CONFIG.raiseThreshold) {
     return Math.min(DIFFICULTY_CONFIG.max, current + 1);
@@ -61,9 +61,9 @@ export function computeSmoothedEfficiency(history: GameResult[]): number {
 
 export function computeEffectiveEfficiency(
   history: GameResult[],
-  currentEfficiency: number
+  currentEfficiency: number,
 ): number {
-  const withCurrent: Pick<GameResult, 'efficiency'>[] = [
+  const withCurrent: Pick<GameResult, "efficiency">[] = [
     ...history,
     { efficiency: currentEfficiency },
   ];
@@ -80,10 +80,11 @@ export function computeEffectiveEfficiency(
 
 export function getLevelChangeMessage(
   currentLevel: number,
-  previousTargetLevel: number | undefined
+  previousTargetLevel: number | undefined,
 ): string | null {
   if (previousTargetLevel === undefined) return null;
-  if (currentLevel > previousTargetLevel) return 'Subiste de nivel';
-  if (currentLevel < previousTargetLevel) return 'Bajamos un poco la dificultad';
+  if (currentLevel > previousTargetLevel) return "Subiste de nivel";
+  if (currentLevel < previousTargetLevel)
+    return "Bajamos un poco la dificultad";
   return null;
 }
