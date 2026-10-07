@@ -5,6 +5,7 @@ import { createRng } from './rng.ts';
 import {
   buildBossRound,
   buildRound,
+  canHint,
   nextWord,
   recordTurn,
   startRound,
@@ -234,7 +235,7 @@ describe('§4.3 ajuste dentro de la ronda', () => {
     for (let i = 0; i < 3; i++) p = play(p, false);
     const planned = p.planned[3]!;
     const { next } = nextWord(p, ctx);
-    expect(next).toMatchObject({ word: planned.word, hinted: true });
+    expect(next).toMatchObject({ word: planned.word, hinted: canHint(planned.word) });
   });
 
   it('§4.3 cinco full seguidos: se agrega un desafío al final, una sola vez', () => {
@@ -268,5 +269,25 @@ describe('§4.3 ajuste dentro de la ronda', () => {
     expect(nextWord(p, ctx).progress.planned).toHaveLength(10);
     for (let i = 0; i < 3; i++) p = play(p, false);
     expect(nextWord(p, ctx).next?.hinted).toBe(false);
+  });
+});
+
+describe('§4.3 cuándo hay pista', () => {
+  it('§4.3 en el mundo 1 no hay pista: la tónica es la única pregunta', () => {
+    const ctx1 = { state: initialState(), words: WORDS, rng: createRng(1) };
+    let p = startRound('practice', 1, 3, build(advancedState(), 1, 3));
+    for (let i = 0; i < 3; i++) {
+      const { progress, next } = nextWord(p, ctx1);
+      p = recordTurn(progress, turn({ wordId: next!.word.id, full: false }));
+    }
+    const { next } = nextWord(p, ctx1);
+    expect(next).toMatchObject({ slot: 'lower', hinted: false });
+  });
+
+  it('§4.3 sin pista en oraciones ni monosílabos sueltos', () => {
+    const sentence = WORDS.byWorld.get(9)![0]!;
+    const mono = WORDS.byWorld.get(8)!.find((w) => w.type === 'monosilaba' && !w.sentence)!;
+    const loose = WORDS.byWorld.get(2)!.find((w) => !w.sentence)!;
+    expect([canHint(sentence), canHint(mono), canHint(loose)]).toEqual([false, false, true]);
   });
 });

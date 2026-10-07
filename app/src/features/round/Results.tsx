@@ -10,11 +10,13 @@ interface ResultsProps {
   summary: RoundSummary;
   avatar: Avatar;
   sound: boolean;
-  onAgain: () => void;
-  onHome: () => void;
+  /** La ronda completó la parada (§7.2). */
+  stopCompleted: boolean;
+  onNext: () => void;
+  onWorld: () => void;
 }
 
-export function Results({ summary, avatar, sound, onAgain, onHome }: ResultsProps) {
+export function Results({ summary, avatar, sound, stopCompleted, onNext, onWorld }: ResultsProps) {
   const ratio = summary.total ? summary.fulls / summary.total : 0;
   const message = useMemo(
     () =>
@@ -43,6 +45,11 @@ export function Results({ summary, avatar, sound, onAgain, onHome }: ResultsProp
         </dl>
 
         <ul className="w-full space-y-2 text-left">
+          {stopCompleted && (
+            <Line icon="🎯">
+              <strong>¡Completaste esta parada!</strong>
+            </Line>
+          )}
           {summary.improved && (
             <Line icon="⬆️">
               Mejoraste en <strong>{RULE_NAMES[summary.improved.rule]}</strong>
@@ -74,11 +81,11 @@ export function Results({ summary, avatar, sound, onAgain, onHome }: ResultsProp
       </div>
 
       <div className="grid shrink-0 gap-3 pb-[env(safe-area-inset-bottom)]">
-        <Button onClick={onAgain} size="lg" className="min-h-14 w-full">
-          Otra ronda
+        <Button onClick={onNext} size="lg" className="min-h-14 w-full">
+          Seguir jugando
         </Button>
-        <Button onClick={onHome} variant="outline" size="lg" className="min-h-14 w-full">
-          Volver al inicio
+        <Button onClick={onWorld} variant="outline" size="lg" className="min-h-14 w-full">
+          Volver al mundo
         </Button>
       </div>
     </main>

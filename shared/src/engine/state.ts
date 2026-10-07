@@ -107,6 +107,7 @@ export function applyRound(
     addStop(progress, round.stop);
   }
   const bossWon = bossEnabled && fulls >= config.bossWin;
+  if (bossEnabled) progress.bossReady = true;
   if (bossWon) {
     progress.bossBest = Math.max(progress.bossBest ?? 0, fulls);
     addStop(progress, 5);
@@ -114,6 +115,14 @@ export function applyRound(
     for (const item of bossRewards(round.world)) if (!s.owned.includes(item)) s.owned.push(item);
   }
   s.xp += roundXp(round.turns, { bossWon }, config);
+
+  // §7.3 El jefe que se habilita queda habilitado.
+  for (const [id, p] of Object.entries(s.worlds)) {
+    const worldId = Number(id);
+    if (p.unlocked && p.bossBest === null && !p.bossReady) {
+      if (isBossEnabled(s, worldId, words.byWorld.get(worldId) ?? [], config)) p.bossReady = true;
+    }
+  }
 
   // §7.1 desbloqueos
   for (const id of unlockedWorlds(s.worlds, teacherUnlocks)) {

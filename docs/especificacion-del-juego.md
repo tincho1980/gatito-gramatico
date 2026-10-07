@@ -98,7 +98,7 @@ La lección no da XP (sus turnos no afectan nada, ver 4.2).
 
 ### 4.3 Ajuste dentro de la ronda — ajustable
 
-- **3 turnos seguidos no `full`:** la siguiente palabra se reemplaza por una del tier inferior del mismo mundo y se muestra con pista: la sílaba tónica viene resaltada. Si no hay tier inferior (práctica de tier 1), se muestra la palabra planeada, con pista. El contador vuelve a 0.
+- **3 turnos seguidos no `full`:** la siguiente palabra se reemplaza por una del tier inferior del mismo mundo y se muestra con pista: la sílaba tónica viene resaltada. Si no hay tier inferior (práctica de tier 1), se muestra la palabra planeada, con pista. El contador vuelve a 0. La pista solo se aplica si la palabra tiene el paso `tonica` y algún otro: en el mundo 1 la tónica es la única pregunta (la pista daría la respuesta) y en oraciones o monosílabos no hay tónica que marcar. En esos casos la palabra se muestra sin pista.
 - **5 turnos `full` seguidos:** se agrega una palabra de desafío extra al final (la ronda pasa a 11). Máximo una vez por ronda.
 - No aplica a la ronda del jefe.
 
@@ -193,12 +193,13 @@ El jefe de un mundo se habilita cuando:
 - Las paradas son secuenciales (empezando por la lección). Una ronda de una parada cuyas anteriores no están completas no la completa. Una parada completada se puede volver a jugar.
 - El mundo 1 tiene solo lección, práctica, práctica + y jefe: no tiene parada de desafío. Sus palabras de tier 3 aparecen como desafío y en el jefe.
 - Si terminó las paradas pero el jefe todavía no está habilitado (6.2), sigue jugando la última parada de práctica.
-- Botón "Jugar" en el inicio: arranca una ronda en la parada más avanzada no completada del último mundo jugado.
+- Botón "Jugar" en el inicio: arranca una ronda en la parada más avanzada no completada del último mundo jugado. Si es la parada 1, la lección; si ya completó las paradas y el jefe no está habilitado, la última práctica. Si el último mundo jugado ya está completo, lleva al mapa para elegir el próximo (las bifurcaciones no fuerzan orden).
 
 ### 7.3 Jefe final — ajustable
 
 - Se gana con **≥ 8 de 10** turnos `full`.
 - Si pierde: mensaje de ánimo, vuelve a la parada 4 y puede reintentar cuando quiera (sigue habilitado).
+- "Sigue habilitado": una vez que el jefe se habilitó (6.2), queda habilitado hasta vencerlo, aunque la EMA baje por el intento fallido (`bossReady` en el progreso del mundo).
 - Al ganar: animación, +50 XP, estrellas (7.4), gato amigo del mundo a la colección y desbloqueo de los mundos que dependan de él.
 
 ### 7.4 Estrellas por mundo

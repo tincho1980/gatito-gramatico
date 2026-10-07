@@ -5,6 +5,7 @@ import { isDue } from './leitner.ts';
 import { ruleKey } from './mastery.ts';
 import { shuffle, weightedSample, type Rng } from './rng.ts';
 import type { ProfileState, Stop, TurnResult, WordIndex } from './types.ts';
+import { stepsFor } from './turn.ts';
 import { tierOfStop, unlockedWorlds } from './worlds.ts';
 
 export type Slot = 'current' | 'review' | 'weakRule' | 'challenge' | 'fill' | 'boss' | 'lower';
@@ -246,6 +247,15 @@ export function buildBossRound(ctx: Omit<RoundContext, 'stop'>): PlannedWord[] {
   return shuffle(picked, rng).map((word) => ({ word, slot: 'boss', hinted: false }));
 }
 
+/**
+ * §4.3 La pista (tónica resaltada) solo tiene sentido si la palabra tiene el paso de tónica y
+ * algún otro: en el mundo 1 la pista daría la respuesta, y en oraciones o monosílabos no ayuda.
+ */
+export const canHint = (word: WordEntry): boolean => {
+  const steps = stepsFor(word);
+  return steps.includes('tonica') && steps.length > 1;
+};
+
 /** Estado de la ronda en curso, para el ajuste §4.3. */
 export interface RoundProgress {
   kind: 'practice' | 'boss';
@@ -334,8 +344,8 @@ export function nextWord(
       );
       const [easier] = weightedSample(lower, 1, weightFor(ctx.state, config), ctx.rng);
       const replacement: PlannedWord = easier
-        ? { word: easier, slot: 'lower', hinted: true }
-        : { ...planned, hinted: true };
+        ? { word: easier, slot: 'lower', hinted: canHint(easier) }
+        : { ...planned, hinted: canHint(planned.word) };
       const planned2 = [...p.planned];
       planned2[i] = replacement;
       p = { ...p, planned: planned2, missStreak: 0 };
