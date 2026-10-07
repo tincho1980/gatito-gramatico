@@ -22,5 +22,19 @@ export default tseslint.config(
     files: ['**/*.{js,mjs}', '**/*.config.ts'],
     languageOptions: { globals: globals.node },
   },
+  {
+    // shared/ es lógica pura: sin DOM, sin Node y sin reloj ni azar implícitos.
+    files: ['shared/src/**/*.ts'],
+    ignores: ['shared/src/**/*.test.ts', 'shared/src/engine/testing.ts'],
+    rules: {
+      'no-restricted-imports': ['error', { patterns: ['node:*'] }],
+      'no-restricted-globals': ['error', 'window', 'document', 'localStorage', 'fetch', 'process'],
+      'no-restricted-properties': [
+        'error',
+        { object: 'Date', property: 'now', message: 'Las fechas entran como argumento.' },
+        { object: 'Math', property: 'random', message: 'Usá el rng con semilla.' },
+      ],
+    },
+  },
   prettier,
 );

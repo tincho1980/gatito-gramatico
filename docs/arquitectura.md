@@ -107,9 +107,9 @@ Base Dexie `gatita`, versión 1:
 | Tabla | Clave | Campos |
 | --- | --- | --- |
 | `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt` |
-| `rounds` | `id` (uuid) | `profileId`, `world`, `stop`, `kind: 'practice' \| 'boss' \| 'lesson'`, `startedAt`, `finishedAt`, `turns: TurnResult[]`, `synced: boolean` |
+| `rounds` | `id` (uuid) | `profileId`, `world`, `stop`, `kind: 'practice' \| 'boss' \| 'lesson'`, `startedAt`, `finishedAt`, `tzOffsetMin`, `wordsVersion`, `turns: TurnResult[]`, `synced: boolean` |
 | `wordMastery` | `[profileId+wordId]` | `box`, `dueRound`, `lastRound`, `lastSeenAt`, `errors`, `fullStreak`, `firstBox3At?`, `firstBox5At?` |
-| `ruleMastery` | `[profileId+rule+world]` | `ema`, `attempts` |
+| `ruleMastery` | `[profileId+rule+world]` | `ema`, `attempts`, `recent` (últimos 30 resultados) |
 | `progress` | `profileId` | `roundsPlayed`, `xp`, `croquetas`, `worlds: Record<number, { unlocked, stopsDone, stars }>`, `streak`, `napWeek`, `badges`, `owned` |
 | `meta` | `key` | `activeProfileId`, `wordsVersion` |
 
@@ -157,6 +157,7 @@ create table private.rounds (
   started_at timestamptz not null,
   finished_at timestamptz not null,
   words_version text not null,
+  tz_offset_min smallint not null,      -- para la racha en la hora del dispositivo
   received_at timestamptz not null default now()
 );
 
@@ -167,6 +168,7 @@ create table private.turns (
   steps jsonb not null,                  -- [{step, correct}]
   full_correct boolean not null,
   hinted boolean not null,
+  challenge boolean not null,
   ms integer not null,
   primary key (round_id, idx)
 );

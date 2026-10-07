@@ -89,3 +89,23 @@ export type Tier = z.infer<typeof TierSchema>;
 export type WordEntry = z.infer<typeof WordEntrySchema>;
 export type WorldFile = z.infer<typeof WorldFileSchema>;
 export type WordsIndex = z.infer<typeof IndexSchema>;
+
+export const CollectionItemSchema = z.strictObject({
+  id: z.string().min(1),
+  kind: z.enum(['accesorio', 'fondo', 'gato']),
+  name: z.string().min(1),
+  price: z.number().int().nonnegative(),
+  /** Se gana al vencer al jefe de ese mundo (no se compra). */
+  unlockedBy: z.strictObject({ boss: WorldIdSchema }).optional(),
+});
+
+export const BadgeSchema = z.strictObject({
+  id: z.string().min(1),
+  name: z.string().min(1),
+  description: z.string().min(1),
+  /** Se muestra como "?" hasta ganarla. */
+  secret: z.boolean().optional(),
+});
+
+export type CollectionItem = z.infer<typeof CollectionItemSchema>;
+export type Badge = z.infer<typeof BadgeSchema>;

@@ -1,0 +1,72 @@
+[
+  { "id": "primera-ronda", "name": "Primera ronda", "description": "Terminaste tu primera ronda." },
+  {
+    "id": "mundo-1",
+    "name": "Oído de gata",
+    "description": "Tres estrellas en La Sílaba que Ronronea."
+  },
+  {
+    "id": "mundo-2",
+    "name": "Cazadora de agudas",
+    "description": "Tres estrellas en El Tejado Puntiagudo."
+  },
+  {
+    "id": "mundo-3",
+    "name": "Cazadora de graves",
+    "description": "Tres estrellas en Las Llanuras de la Siesta."
+  },
+  {
+    "id": "mundo-4",
+    "name": "Cazadora de esdrújulas",
+    "description": "Tres estrellas en El Árbol Trepador."
+  },
+  {
+    "id": "mundo-5",
+    "name": "Reina del mercado",
+    "description": "Tres estrellas en El Mercado de los Ovillos."
+  },
+  {
+    "id": "mundo-6",
+    "name": "Cazadora de diptongos",
+    "description": "Tres estrellas en El Río de los Abrazos."
+  },
+  {
+    "id": "mundo-7",
+    "name": "Cazadora de hiatos",
+    "description": "Tres estrellas en El Puente Roto."
+  },
+  {
+    "id": "mundo-8",
+    "name": "Detective de gemelas",
+    "description": "Tres estrellas en La Casa de los Gemelos."
+  },
+  {
+    "id": "mundo-9",
+    "name": "Cazadora de preguntas",
+    "description": "Tres estrellas en El Bosque de las Preguntas."
+  },
+  {
+    "id": "mundo-10",
+    "name": "Gata sabia",
+    "description": "Tres estrellas en La Torre de la Gata Sabia."
+  },
+  {
+    "id": "remontada",
+    "name": "Remontada",
+    "description": "Una regla mejoró mucho en una semana."
+  },
+  {
+    "id": "ya-no-me-enganan",
+    "name": "Ya no me engañan",
+    "description": "Una palabra que te costaba ahora te sale siempre."
+  },
+  { "id": "racha-3", "name": "Racha de 3", "description": "Jugaste 3 días seguidos." },
+  { "id": "racha-7", "name": "Racha de 7", "description": "Jugaste 7 días seguidos." },
+  { "id": "racha-30", "name": "Racha de 30", "description": "Jugaste 30 días seguidos." },
+  {
+    "id": "trasnochadora",
+    "name": "Gata trasnochadora",
+    "description": "Terminaste una ronda de madrugada.",
+    "secret": true
+  }
+]
