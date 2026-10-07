@@ -37,15 +37,15 @@ Documentos de referencia: [especificacion-del-juego.md](especificacion-del-juego
 Tareas:
 
 - [ ] **(Martín, a mano)** Rotar la API key de Gemini en Google AI Studio. La actual quedó embebida en builds anteriores.
-- [ ] Borrar `services/geminiService.ts`, la dependencia `@google/genai`, el `define` de `process.env` en `vite.config.ts` y la carpeta `dist/`.
-- [ ] Mientras no exista el motor nuevo, el juego viejo usa un banco mínimo hardcodeado y correcto (sacar el `FALLBACK_POOL` con errores).
-- [ ] Armar npm workspaces: mover la app actual a `app/`; crear `shared/`, `api/`, `words/` vacíos con su `package.json` y `tsconfig.json`; `tsconfig.base.json` en la raíz con `strict` y `noUncheckedIndexedAccess`.
-- [ ] Reemplazar Tailwind por CDN por Tailwind v4 con `@tailwindcss/vite`. Mover los estilos inline de `index.html` a `app/src/index.css`.
-- [ ] Fuentes (Fredoka, Quicksand o las que se definan) servidas localmente con `@fontsource`, no desde Google Fonts (necesario para offline).
-- [ ] ESLint + Prettier, scripts `typecheck`, `lint`, `test`, `build` en la raíz que corran en todos los workspaces.
-- [ ] Vitest configurado en `shared/` y `app/`, con un test de ejemplo.
-- [ ] GitHub Actions: typecheck, lint, test, build y chequeo de claves en `app/dist` (ver arquitectura §9.10).
-- [ ] `.nvmrc` con Node 22. Actualizar `README.md` con cómo levantar el proyecto.
+- [x] Borrar `services/geminiService.ts`, la dependencia `@google/genai`, el `define` de `process.env` en `vite.config.ts` y la carpeta `dist/`.
+- [x] Mientras no exista el motor nuevo, el juego viejo usa un banco mínimo hardcodeado y correcto (sacar el `FALLBACK_POOL` con errores).
+- [x] Armar npm workspaces: mover la app actual a `app/`; crear `shared/`, `api/`, `words/` vacíos con su `package.json` y `tsconfig.json`; `tsconfig.base.json` en la raíz con `strict` y `noUncheckedIndexedAccess`.
+- [x] Reemplazar Tailwind por CDN por Tailwind v4 con `@tailwindcss/vite`. Mover los estilos inline de `index.html` a `app/src/index.css`.
+- [x] Fuentes (Fredoka, Quicksand o las que se definan) servidas localmente con `@fontsource`, no desde Google Fonts (necesario para offline).
+- [x] ESLint + Prettier, scripts `typecheck`, `lint`, `test`, `build` en la raíz que corran en todos los workspaces.
+- [x] Vitest configurado en `shared/` y `app/`, con un test de ejemplo.
+- [x] GitHub Actions: typecheck, lint, test, build y chequeo de claves en `app/dist` (ver arquitectura §9.10).
+- [x] `.nvmrc` con Node 22. Actualizar `README.md` con cómo levantar el proyecto.
 
 Criterios de aceptación:
 

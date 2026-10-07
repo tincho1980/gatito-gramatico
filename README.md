@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# La Gatita Gramática
 
-# Run and deploy your AI Studio app
+Juego web (PWA, mobile first, offline-first) para practicar acentuación en español, pensado para chicos y adolescentes y para usar en el aula.
 
-This contains everything you need to run your app locally.
+## Requisitos
 
-View your app in AI Studio: https://ai.studio/apps/drive/1pHdB-WMbz6wU_mdH6KsyeaPMFBWZjY0w
+- Node 22 (está en `.nvmrc`: `nvm use`).
 
-## Run Locally
+## Levantar el proyecto
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev -w app
+```
 
+La app queda en http://localhost:3000. No hace falta ninguna clave ni archivo `.env`.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Comandos
+
+| Comando | Qué hace |
+| --- | --- |
+| `npm run dev -w app` | App en desarrollo |
+| `npm run typecheck` | `tsc` en todos los workspaces |
+| `npm run lint` | ESLint + chequeo de Prettier |
+| `npm run format` | Formatea con Prettier |
+| `npm test` | Tests (Vitest) de todos los workspaces |
+| `npm run build` | Build de todos los workspaces |
+| `npm run check:secrets` | Busca claves en `app/dist` (corre en CI después del build) |
+
+## Estructura
+
+Monorepo con npm workspaces:
+
+- `app/`: la PWA (React + Vite + Tailwind).
+- `shared/`: lógica pura del juego y tipos, sin DOM ni red. La usan `app` y `api`.
+- `api/`: Cloudflare Worker (etapa 7).
+- `words/`: banco de palabras (se integra a los workspaces en la etapa 1).
+
+## Documentación
+
+- [Plan de desarrollo](docs/plan-de-desarrollo.md)
+- [Especificación del juego](docs/especificacion-del-juego.md)
+- [Arquitectura](docs/arquitectura.md)
+- [Banco de palabras](docs/banco-de-palabras.md)
