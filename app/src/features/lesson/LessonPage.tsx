@@ -39,6 +39,7 @@ export function LessonPage() {
   const [phase, setPhase] = useState<Phase>({ kind: 'rule' });
   const turns = useRef<TurnResult[]>([]);
   const startedAt = useRef(new Date().toISOString());
+  const saving = useRef(false);
 
   const entries = useMemo(() => {
     const get = (id: string) => words?.index.byId.get(id);
@@ -54,6 +55,8 @@ export function LessonPage() {
   const look = worldLook(world);
 
   const finish = async () => {
+    if (saving.current) return; // un doble toque en "Seguir" no guarda dos veces
+    saving.current = true;
     const now = new Date();
     await saveRound(
       profile.id,

@@ -1,4 +1,4 @@
-import { expect, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from '@playwright/test';
 
 interface Entry {
   word: string;
@@ -30,6 +30,14 @@ export async function mapStates(page: Page): Promise<string[]> {
   return page
     .getByRole('listitem')
     .evaluateAll((els) => els.map((e) => e.getAttribute('aria-label') ?? ''));
+}
+
+async function tryClick(locator: Locator) {
+  try {
+    await locator.click({ timeout: 3000 });
+  } catch {
+    // la pantalla cambió: el loop vuelve a mirar
+  }
 }
 
 const TYPE_LABEL: Record<string, string> = {
@@ -64,12 +72,14 @@ export async function playUntil(
   for (let i = 0; i < 80; i++) {
     await expect(choices.first().or(next).or(done)).toBeVisible();
     if (await done.isVisible()) return;
+    // La pantalla puede cambiar entre ver un botón y tocarlo (por ejemplo, al guardar después
+    // del último "Seguir"): si el clic no llega, se vuelve a mirar qué hay.
     if (await next.isVisible()) {
-      await next.click();
+      await tryClick(next);
       continue;
     }
     if (!correct) {
-      await choices.last().click();
+      await tryClick(choices.last());
       continue;
     }
     const mark = page.locator('main mark');
