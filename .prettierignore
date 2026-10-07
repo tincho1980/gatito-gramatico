@@ -7,3 +7,5 @@ words/src/
 docs/
 *.md
 app/public/words/
+test-results
+playwright-report

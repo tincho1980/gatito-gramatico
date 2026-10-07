@@ -8,21 +8,27 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@fontsource-variable/fredoka": "^5.3.0",
     "@fontsource-variable/quicksand": "^5.3.0",
     "@gatita/shared": "*",
+    "dexie": "^4.4.6",
+    "dexie-react-hooks": "^4.4.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "recharts": "^3.5.0"
+    "react-router": "^7.18.4",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@playwright/test": "^1.64.0",
     "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^5.2.0",
+    "fake-indexeddb": "^6.2.5",
     "tailwindcss": "^4.3.3",
     "vite": "^7.3.7",
     "vitest": "^4.1.11"

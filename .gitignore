@@ -30,3 +30,7 @@ dist-ssr
 
 # Claude Code (local)
 .claude/settings.local.json
+
+# Playwright
+test-results/
+playwright-report/
