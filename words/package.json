@@ -1,0 +1,11 @@
+{
+  "name": "@gatita/words",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test lib/*.test.mjs scripts/*.test.mjs"
+  }
+}

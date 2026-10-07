@@ -1,0 +1,1833 @@
+{
+ "world": 6,
+ "name": "El Río de los Abrazos",
+ "topic": "diptongos",
+ "words": [
+  {
+   "id": "bueno",
+   "word": "bueno",
+   "syllables": [
+    "bue",
+    "no"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "buéno",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.38
+  },
+  {
+   "id": "también",
+   "word": "también",
+   "syllables": [
+    "tam",
+    "bién"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "tambien",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.06
+  },
+  {
+   "id": "nuevo",
+   "word": "nuevo",
+   "syllables": [
+    "nue",
+    "vo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "nuévo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.8
+  },
+  {
+   "id": "adiós",
+   "word": "adiós",
+   "syllables": [
+    "a",
+    "diós"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "adios",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.53
+  },
+  {
+   "id": "puerta",
+   "word": "puerta",
+   "syllables": [
+    "puer",
+    "ta"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "puérta",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.5
+  },
+  {
+   "id": "ciudad",
+   "word": "ciudad",
+   "syllables": [
+    "ciu",
+    "dad"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 6,
+   "tier": 1,
+   "distractor": "ciudád",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.48
+  },
+  {
+   "id": "agua",
+   "word": "agua",
+   "syllables": [
+    "a",
+    "gua"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "água",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.44
+  },
+  {
+   "id": "tierra",
+   "word": "tierra",
+   "syllables": [
+    "tie",
+    "rra"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "tiérra",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.38
+  },
+  {
+   "id": "juego",
+   "word": "juego",
+   "syllables": [
+    "jue",
+    "go"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "juégo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.37
+  },
+  {
+   "id": "auto",
+   "word": "auto",
+   "syllables": [
+    "au",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "áuto",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.34
+  },
+  {
+   "id": "escuela",
+   "word": "escuela",
+   "syllables": [
+    "es",
+    "cue",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "escuéla",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.33
+  },
+  {
+   "id": "fuego",
+   "word": "fuego",
+   "syllables": [
+    "fue",
+    "go"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "fuégo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.19
+  },
+  {
+   "id": "cielo",
+   "word": "cielo",
+   "syllables": [
+    "cie",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "ciélo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "aire",
+   "word": "aire",
+   "syllables": [
+    "ai",
+    "re"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "áire",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.08
+  },
+  {
+   "id": "siete",
+   "word": "siete",
+   "syllables": [
+    "sie",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "siéte",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.02
+  },
+  {
+   "id": "suelo",
+   "word": "suelo",
+   "syllables": [
+    "sue",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "suélo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.99
+  },
+  {
+   "id": "abuelo",
+   "word": "abuelo",
+   "syllables": [
+    "a",
+    "bue",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "abuélo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.94
+  },
+  {
+   "id": "reina",
+   "word": "reina",
+   "syllables": [
+    "rei",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "réina",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "nueve",
+   "word": "nueve",
+   "syllables": [
+    "nue",
+    "ve"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "nuéve",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.81
+  },
+  {
+   "id": "hielo",
+   "word": "hielo",
+   "syllables": [
+    "hie",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "hiélo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.72
+  },
+  {
+   "id": "viento",
+   "word": "viento",
+   "syllables": [
+    "vien",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "viénto",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.69
+  },
+  {
+   "id": "pierna",
+   "word": "pierna",
+   "syllables": [
+    "pier",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "piérna",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.68
+  },
+  {
+   "id": "nieve",
+   "word": "nieve",
+   "syllables": [
+    "nie",
+    "ve"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "niéve",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.54
+  },
+  {
+   "id": "piano",
+   "word": "piano",
+   "syllables": [
+    "pia",
+    "no"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "piáno",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.37
+  },
+  {
+   "id": "huevo",
+   "word": "huevo",
+   "syllables": [
+    "hue",
+    "vo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "huévo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.36
+  },
+  {
+   "id": "rueda",
+   "word": "rueda",
+   "syllables": [
+    "rue",
+    "da"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "ruéda",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.28
+  },
+  {
+   "id": "diente",
+   "word": "diente",
+   "syllables": [
+    "dien",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "diénte",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.04
+  },
+  {
+   "id": "cuaderno",
+   "word": "cuaderno",
+   "syllables": [
+    "cua",
+    "der",
+    "no"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "cuadérno",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.81
+  },
+  {
+   "id": "peine",
+   "word": "peine",
+   "syllables": [
+    "pei",
+    "ne"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "péine",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.45
+  },
+  {
+   "id": "muela",
+   "word": "muela",
+   "syllables": [
+    "mue",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 1,
+   "distractor": "muéla",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.24
+  },
+  {
+   "id": "cuidado",
+   "word": "cuidado",
+   "syllables": [
+    "cui",
+    "da",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cuidádo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.42
+  },
+  {
+   "id": "habitación",
+   "word": "habitación",
+   "syllables": [
+    "ha",
+    "bi",
+    "ta",
+    "ción"
+   ],
+   "stressIndex": 3,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "habitacion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.3
+  },
+  {
+   "id": "atención",
+   "word": "atención",
+   "syllables": [
+    "a",
+    "ten",
+    "ción"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "atencion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.12
+  },
+  {
+   "id": "novio",
+   "word": "novio",
+   "syllables": [
+    "no",
+    "vio"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "nóvio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.02
+  },
+  {
+   "id": "causa",
+   "word": "causa",
+   "syllables": [
+    "cau",
+    "sa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cáusa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "radio",
+   "word": "radio",
+   "syllables": [
+    "ra",
+    "dio"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "rádio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.87
+  },
+  {
+   "id": "estación",
+   "word": "estación",
+   "syllables": [
+    "es",
+    "ta",
+    "ción"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "estacion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.85
+  },
+  {
+   "id": "cuello",
+   "word": "cuello",
+   "syllables": [
+    "cue",
+    "llo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cuéllo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.8
+  },
+  {
+   "id": "fuimos",
+   "word": "fuimos",
+   "syllables": [
+    "fui",
+    "mos"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "fuímos",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.78
+  },
+  {
+   "id": "ruido",
+   "word": "ruido",
+   "syllables": [
+    "rui",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "ruído",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "cuidar",
+   "word": "cuidar",
+   "syllables": [
+    "cui",
+    "dar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cuidár",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.68
+  },
+  {
+   "id": "viernes",
+   "word": "viernes",
+   "syllables": [
+    "vier",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "viérnes",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.67
+  },
+  {
+   "id": "periódico",
+   "word": "periódico",
+   "syllables": [
+    "pe",
+    "rió",
+    "di",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 2,
+   "distractor": "periodico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.6
+  },
+  {
+   "id": "lluvia",
+   "word": "lluvia",
+   "syllables": [
+    "llu",
+    "via"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "llúvia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.56
+  },
+  {
+   "id": "lección",
+   "word": "lección",
+   "syllables": [
+    "lec",
+    "ción"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "leccion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.5
+  },
+  {
+   "id": "oigo",
+   "word": "oigo",
+   "syllables": [
+    "oi",
+    "go"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "óigo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.49
+  },
+  {
+   "id": "patio",
+   "word": "patio",
+   "syllables": [
+    "pa",
+    "tio"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "pátio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.4
+  },
+  {
+   "id": "deuda",
+   "word": "deuda",
+   "syllables": [
+    "deu",
+    "da"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "déuda",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.37
+  },
+  {
+   "id": "béisbol",
+   "word": "béisbol",
+   "syllables": [
+    "béis",
+    "bol"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 6,
+   "tier": 2,
+   "distractor": "beisbol",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.25
+  },
+  {
+   "id": "anciano",
+   "word": "anciano",
+   "syllables": [
+    "an",
+    "cia",
+    "no"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "anciáno",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.19
+  },
+  {
+   "id": "jaula",
+   "word": "jaula",
+   "syllables": [
+    "jau",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "jáula",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.18
+  },
+  {
+   "id": "pausa",
+   "word": "pausa",
+   "syllables": [
+    "pau",
+    "sa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "páusa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.94
+  },
+  {
+   "id": "cuidadoso",
+   "word": "cuidadoso",
+   "syllables": [
+    "cui",
+    "da",
+    "do",
+    "so"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cuidadóso",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "huésped",
+   "word": "huésped",
+   "syllables": [
+    "hués",
+    "ped"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 6,
+   "tier": 2,
+   "distractor": "huesped",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.89
+  },
+  {
+   "id": "guante",
+   "word": "guante",
+   "syllables": [
+    "guan",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "guánte",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.88
+  },
+  {
+   "id": "peinado",
+   "word": "peinado",
+   "syllables": [
+    "pei",
+    "na",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "peinádo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.81
+  },
+  {
+   "id": "cuota",
+   "word": "cuota",
+   "syllables": [
+    "cuo",
+    "ta"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "cuóta",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.69
+  },
+  {
+   "id": "farmacéutico",
+   "word": "farmacéutico",
+   "syllables": [
+    "far",
+    "ma",
+    "céu",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 2,
+   "distractor": "farmaceutico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.35
+  },
+  {
+   "id": "boina",
+   "word": "boina",
+   "syllables": [
+    "boi",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 2,
+   "distractor": "bóina",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.02
+  },
+  {
+   "id": "náutico",
+   "word": "náutico",
+   "syllables": [
+    "náu",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 2,
+   "distractor": "nautico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.69
+  },
+  {
+   "id": "averiguar",
+   "word": "averiguar",
+   "syllables": [
+    "a",
+    "ve",
+    "ri",
+    "guar"
+   ],
+   "stressIndex": 3,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 6,
+   "tier": 3,
+   "distractor": "averiguár",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "vergüenza",
+   "word": "vergüenza",
+   "syllables": [
+    "ver",
+    "güen",
+    "za"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "vergüénza",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.68
+  },
+  {
+   "id": "guau",
+   "word": "guau",
+   "syllables": [
+    "guau"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 6,
+   "tier": 3,
+   "distractor": "guáu",
+   "sentence": null,
+   "tags": [
+    "triptongo"
+   ],
+   "features": [
+    "triptongo"
+   ],
+   "related": null,
+   "freq": 4.4
+  },
+  {
+   "id": "huelga",
+   "word": "huelga",
+   "syllables": [
+    "huel",
+    "ga"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "huélga",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.11
+  },
+  {
+   "id": "construido",
+   "word": "construido",
+   "syllables": [
+    "cons",
+    "trui",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "construído",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.09
+  },
+  {
+   "id": "neumático",
+   "word": "neumático",
+   "syllables": [
+    "neu",
+    "má",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 3,
+   "distractor": "neumatico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.6
+  },
+  {
+   "id": "construí",
+   "word": "construí",
+   "syllables": [
+    "cons",
+    "truí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "construi",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.59
+  },
+  {
+   "id": "pingüino",
+   "word": "pingüino",
+   "syllables": [
+    "pin",
+    "güi",
+    "no"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "pingüíno",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.55
+  },
+  {
+   "id": "buey",
+   "word": "buey",
+   "syllables": [
+    "buey"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 6,
+   "tier": 3,
+   "distractor": "buéy",
+   "sentence": null,
+   "tags": [
+    "triptongo"
+   ],
+   "features": [
+    "triptongo"
+   ],
+   "related": null,
+   "freq": 3.53
+  },
+  {
+   "id": "acuático",
+   "word": "acuático",
+   "syllables": [
+    "a",
+    "cuá",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 3,
+   "distractor": "acuatico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.3
+  },
+  {
+   "id": "miau",
+   "word": "miau",
+   "syllables": [
+    "miau"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 6,
+   "tier": 3,
+   "distractor": "miáu",
+   "sentence": null,
+   "tags": [
+    "triptongo"
+   ],
+   "features": [
+    "triptongo"
+   ],
+   "related": null,
+   "freq": 3.27
+  },
+  {
+   "id": "destruí",
+   "word": "destruí",
+   "syllables": [
+    "des",
+    "truí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "destrui",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.26
+  },
+  {
+   "id": "cigüeña",
+   "word": "cigüeña",
+   "syllables": [
+    "ci",
+    "güe",
+    "ña"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "cigüéña",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.04
+  },
+  {
+   "id": "terapéutico",
+   "word": "terapéutico",
+   "syllables": [
+    "te",
+    "ra",
+    "péu",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 6,
+   "tier": 3,
+   "distractor": "terapeutico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.99
+  },
+  {
+   "id": "jesuita",
+   "word": "jesuita",
+   "syllables": [
+    "je",
+    "sui",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "jesuíta",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.69
+  },
+  {
+   "id": "incluí",
+   "word": "incluí",
+   "syllables": [
+    "in",
+    "cluí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "inclui",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.58
+  },
+  {
+   "id": "reconstruí",
+   "word": "reconstruí",
+   "syllables": [
+    "re",
+    "cons",
+    "truí"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "reconstrui",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.36
+  },
+  {
+   "id": "agüita",
+   "word": "agüita",
+   "syllables": [
+    "a",
+    "güi",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "agüíta",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.14
+  },
+  {
+   "id": "uruguayo",
+   "word": "uruguayo",
+   "syllables": [
+    "u",
+    "ru",
+    "gua",
+    "yo"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "uruguáyo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.03
+  },
+  {
+   "id": "paraguayo",
+   "word": "paraguayo",
+   "syllables": [
+    "pa",
+    "ra",
+    "gua",
+    "yo"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "paraguáyo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 1.65
+  },
+  {
+   "id": "murcielaguito",
+   "word": "murcielaguito",
+   "syllables": [
+    "mur",
+    "cie",
+    "la",
+    "gui",
+    "to"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 6,
+   "tier": 3,
+   "distractor": "murcielaguíto",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 1.63
+  }
+ ]
+}

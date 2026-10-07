@@ -1,0 +1,1877 @@
+{
+ "world": 7,
+ "name": "El Puente Roto",
+ "topic": "hiatos",
+ "words": [
+  {
+   "id": "día",
+   "word": "día",
+   "syllables": [
+    "dí",
+    "a"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "dia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.97
+  },
+  {
+   "id": "idea",
+   "word": "idea",
+   "syllables": [
+    "i",
+    "de",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "idéa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.66
+  },
+  {
+   "id": "policía",
+   "word": "policía",
+   "syllables": [
+    "po",
+    "li",
+    "cí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "policia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.62
+  },
+  {
+   "id": "tío",
+   "word": "tío",
+   "syllables": [
+    "tí",
+    "o"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "tio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.48
+  },
+  {
+   "id": "oído",
+   "word": "oído",
+   "syllables": [
+    "o",
+    "í",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "oido",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.25
+  },
+  {
+   "id": "país",
+   "word": "país",
+   "syllables": [
+    "pa",
+    "ís"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "pais",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.21
+  },
+  {
+   "id": "tía",
+   "word": "tía",
+   "syllables": [
+    "tí",
+    "a"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "tia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.94
+  },
+  {
+   "id": "frío",
+   "word": "frío",
+   "syllables": [
+    "frí",
+    "o"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "frio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.92
+  },
+  {
+   "id": "leer",
+   "word": "leer",
+   "syllables": [
+    "le",
+    "er"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 7,
+   "tier": 1,
+   "distractor": "leér",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.86
+  },
+  {
+   "id": "paseo",
+   "word": "paseo",
+   "syllables": [
+    "pa",
+    "se",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "paséo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.67
+  },
+  {
+   "id": "teatro",
+   "word": "teatro",
+   "syllables": [
+    "te",
+    "a",
+    "tro"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "teátro",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.63
+  },
+  {
+   "id": "alegría",
+   "word": "alegría",
+   "syllables": [
+    "a",
+    "le",
+    "grí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "alegria",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.52
+  },
+  {
+   "id": "feo",
+   "word": "feo",
+   "syllables": [
+    "fe",
+    "o"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "féo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.41
+  },
+  {
+   "id": "museo",
+   "word": "museo",
+   "syllables": [
+    "mu",
+    "se",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "muséo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.36
+  },
+  {
+   "id": "león",
+   "word": "león",
+   "syllables": [
+    "le",
+    "ón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "leon",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.3
+  },
+  {
+   "id": "fantasía",
+   "word": "fantasía",
+   "syllables": [
+    "fan",
+    "ta",
+    "sí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "fantasia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.25
+  },
+  {
+   "id": "maíz",
+   "word": "maíz",
+   "syllables": [
+    "ma",
+    "íz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "maiz",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.16
+  },
+  {
+   "id": "poeta",
+   "word": "poeta",
+   "syllables": [
+    "po",
+    "e",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "poéta",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.05
+  },
+  {
+   "id": "raíz",
+   "word": "raíz",
+   "syllables": [
+    "ra",
+    "íz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "raiz",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.91
+  },
+  {
+   "id": "baúl",
+   "word": "baúl",
+   "syllables": [
+    "ba",
+    "úl"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "baul",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.88
+  },
+  {
+   "id": "librería",
+   "word": "librería",
+   "syllables": [
+    "li",
+    "bre",
+    "rí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "libreria",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.73
+  },
+  {
+   "id": "grúa",
+   "word": "grúa",
+   "syllables": [
+    "grú",
+    "a"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "grua",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.68
+  },
+  {
+   "id": "panadería",
+   "word": "panadería",
+   "syllables": [
+    "pa",
+    "na",
+    "de",
+    "rí",
+    "a"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "panaderia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.56
+  },
+  {
+   "id": "búho",
+   "word": "búho",
+   "syllables": [
+    "bú",
+    "ho"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "buho",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.47
+  },
+  {
+   "id": "canoa",
+   "word": "canoa",
+   "syllables": [
+    "ca",
+    "no",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 1,
+   "distractor": "canóa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.4
+  },
+  {
+   "id": "sandía",
+   "word": "sandía",
+   "syllables": [
+    "san",
+    "dí",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "sandia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.34
+  },
+  {
+   "id": "heladería",
+   "word": "heladería",
+   "syllables": [
+    "he",
+    "la",
+    "de",
+    "rí",
+    "a"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "heladeria",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.94
+  },
+  {
+   "id": "juguetería",
+   "word": "juguetería",
+   "syllables": [
+    "ju",
+    "gue",
+    "te",
+    "rí",
+    "a"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 1,
+   "distractor": "jugueteria",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.78
+  },
+  {
+   "id": "ahí",
+   "word": "ahí",
+   "syllables": [
+    "a",
+    "hí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "ahi",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 6
+  },
+  {
+   "id": "había",
+   "word": "había",
+   "syllables": [
+    "ha",
+    "bí",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "habia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.83
+  },
+  {
+   "id": "tenía",
+   "word": "tenía",
+   "syllables": [
+    "te",
+    "ní",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "tenia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.83
+  },
+  {
+   "id": "sabía",
+   "word": "sabía",
+   "syllables": [
+    "sa",
+    "bí",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "sabia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.57
+  },
+  {
+   "id": "increíble",
+   "word": "increíble",
+   "syllables": [
+    "in",
+    "cre",
+    "í",
+    "ble"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "increible",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.18
+  },
+  {
+   "id": "real",
+   "word": "real",
+   "syllables": [
+    "re",
+    "al"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 7,
+   "tier": 2,
+   "distractor": "reál",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.18
+  },
+  {
+   "id": "decía",
+   "word": "decía",
+   "syllables": [
+    "de",
+    "cí",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "decia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.99
+  },
+  {
+   "id": "deseo",
+   "word": "deseo",
+   "syllables": [
+    "de",
+    "se",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "deséo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.96
+  },
+  {
+   "id": "energía",
+   "word": "energía",
+   "syllables": [
+    "e",
+    "ner",
+    "gí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "energia",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.92
+  },
+  {
+   "id": "oír",
+   "word": "oír",
+   "syllables": [
+    "o",
+    "ír"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "oir",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "pelea",
+   "word": "pelea",
+   "syllables": [
+    "pe",
+    "le",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "peléa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.89
+  },
+  {
+   "id": "héroe",
+   "word": "héroe",
+   "syllables": [
+    "hé",
+    "ro",
+    "e"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 2,
+   "distractor": "heroe",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.74
+  },
+  {
+   "id": "correo",
+   "word": "correo",
+   "syllables": [
+    "co",
+    "rre",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "corréo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.63
+  },
+  {
+   "id": "leído",
+   "word": "leído",
+   "syllables": [
+    "le",
+    "í",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "leido",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.55
+  },
+  {
+   "id": "vivía",
+   "word": "vivía",
+   "syllables": [
+    "vi",
+    "ví",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "vivia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.47
+  },
+  {
+   "id": "océano",
+   "word": "océano",
+   "syllables": [
+    "o",
+    "cé",
+    "a",
+    "no"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 2,
+   "distractor": "oceano",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.39
+  },
+  {
+   "id": "maestra",
+   "word": "maestra",
+   "syllables": [
+    "ma",
+    "es",
+    "tra"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "maéstra",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.36
+  },
+  {
+   "id": "caída",
+   "word": "caída",
+   "syllables": [
+    "ca",
+    "í",
+    "da"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "caida",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.3
+  },
+  {
+   "id": "reír",
+   "word": "reír",
+   "syllables": [
+    "re",
+    "ír"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "reir",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.29
+  },
+  {
+   "id": "egoísta",
+   "word": "egoísta",
+   "syllables": [
+    "e",
+    "go",
+    "ís",
+    "ta"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "egoista",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.27
+  },
+  {
+   "id": "batería",
+   "word": "batería",
+   "syllables": [
+    "ba",
+    "te",
+    "rí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "bateria",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.23
+  },
+  {
+   "id": "petróleo",
+   "word": "petróleo",
+   "syllables": [
+    "pe",
+    "tró",
+    "le",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 2,
+   "distractor": "petroleo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.19
+  },
+  {
+   "id": "toalla",
+   "word": "toalla",
+   "syllables": [
+    "to",
+    "a",
+    "lla"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "toálla",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.1
+  },
+  {
+   "id": "ataúd",
+   "word": "ataúd",
+   "syllables": [
+    "a",
+    "ta",
+    "úd"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "ataud",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.07
+  },
+  {
+   "id": "aéreo",
+   "word": "aéreo",
+   "syllables": [
+    "a",
+    "é",
+    "re",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 2,
+   "distractor": "aereo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.02
+  },
+  {
+   "id": "sonreír",
+   "word": "sonreír",
+   "syllables": [
+    "son",
+    "re",
+    "ír"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "sonreir",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.01
+  },
+  {
+   "id": "comía",
+   "word": "comía",
+   "syllables": [
+    "co",
+    "mí",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "comia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.71
+  },
+  {
+   "id": "leía",
+   "word": "leía",
+   "syllables": [
+    "le",
+    "í",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "leia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.58
+  },
+  {
+   "id": "reía",
+   "word": "reía",
+   "syllables": [
+    "re",
+    "í",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "reia",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.52
+  },
+  {
+   "id": "freír",
+   "word": "freír",
+   "syllables": [
+    "fre",
+    "ír"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "freir",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.34
+  },
+  {
+   "id": "cacao",
+   "word": "cacao",
+   "syllables": [
+    "ca",
+    "ca",
+    "o"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "cacáo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.27
+  },
+  {
+   "id": "caoba",
+   "word": "caoba",
+   "syllables": [
+    "ca",
+    "o",
+    "ba"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "caóba",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.89
+  },
+  {
+   "id": "púa",
+   "word": "púa",
+   "syllables": [
+    "pú",
+    "a"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "pua",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.88
+  },
+  {
+   "id": "koala",
+   "word": "koala",
+   "syllables": [
+    "ko",
+    "a",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 2,
+   "distractor": "koála",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.88
+  },
+  {
+   "id": "laúd",
+   "word": "laúd",
+   "syllables": [
+    "la",
+    "úd"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "laud",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.71
+  },
+  {
+   "id": "cacatúa",
+   "word": "cacatúa",
+   "syllables": [
+    "ca",
+    "ca",
+    "tú",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 2,
+   "distractor": "cacatua",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.51
+  },
+  {
+   "id": "creer",
+   "word": "creer",
+   "syllables": [
+    "cre",
+    "er"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 7,
+   "tier": 3,
+   "distractor": "creér",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.3
+  },
+  {
+   "id": "peor",
+   "word": "peor",
+   "syllables": [
+    "pe",
+    "or"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 7,
+   "tier": 3,
+   "distractor": "peór",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.22
+  },
+  {
+   "id": "río-24069c",
+   "word": "río",
+   "syllables": [
+    "rí",
+    "o"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "rio",
+   "sentence": "El [río] Paraná es enorme.",
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.82
+  },
+  {
+   "id": "continúa-b7b070",
+   "word": "continúa",
+   "syllables": [
+    "con",
+    "ti",
+    "nú",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "continua",
+   "sentence": "El partido [continúa] después del entretiempo.",
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.57
+  },
+  {
+   "id": "vehículo",
+   "word": "vehículo",
+   "syllables": [
+    "ve",
+    "hí",
+    "cu",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "vehiculo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.4
+  },
+  {
+   "id": "aldea",
+   "word": "aldea",
+   "syllables": [
+    "al",
+    "de",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 3,
+   "distractor": "aldéa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.24
+  },
+  {
+   "id": "rio-00db37",
+   "word": "rio",
+   "syllables": [
+    "rio"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 7,
+   "tier": 3,
+   "distractor": "río",
+   "sentence": "Mi hermano se [rio] del chiste.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "marea",
+   "word": "marea",
+   "syllables": [
+    "ma",
+    "re",
+    "a"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 3,
+   "distractor": "maréa",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.91
+  },
+  {
+   "id": "reúne",
+   "word": "reúne",
+   "syllables": [
+    "re",
+    "ú",
+    "ne"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "reune",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.77
+  },
+  {
+   "id": "continuo-68d386",
+   "word": "continuo",
+   "syllables": [
+    "con",
+    "ti",
+    "nuo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 7,
+   "tier": 3,
+   "distractor": "continuó",
+   "sentence": "Hay un ruido [continuo] en la calle.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.57
+  },
+  {
+   "id": "prohíbe-dece59",
+   "word": "prohíbe",
+   "syllables": [
+    "pro",
+    "hí",
+    "be"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "prohibe",
+   "sentence": "El cartel [prohíbe] pisar el pasto.",
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.52
+  },
+  {
+   "id": "coágulo",
+   "word": "coágulo",
+   "syllables": [
+    "co",
+    "á",
+    "gu",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 3,
+   "distractor": "coagulo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.3
+  },
+  {
+   "id": "caótico",
+   "word": "caótico",
+   "syllables": [
+    "ca",
+    "ó",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 7,
+   "tier": 3,
+   "distractor": "caotico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.12
+  },
+  {
+   "id": "transeúnte",
+   "word": "transeúnte",
+   "syllables": [
+    "tran",
+    "se",
+    "ún",
+    "te"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "transeunte",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.72
+  },
+  {
+   "id": "maúlla",
+   "word": "maúlla",
+   "syllables": [
+    "ma",
+    "ú",
+    "lla"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "maulla",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 2.13
+  },
+  {
+   "id": "cohíbe",
+   "word": "cohíbe",
+   "syllables": [
+    "co",
+    "hí",
+    "be"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 7,
+   "tier": 3,
+   "distractor": "cohibe",
+   "sentence": null,
+   "tags": [
+    "verbo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 1.41
+  }
+ ]
+}

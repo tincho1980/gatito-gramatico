@@ -1,0 +1,1956 @@
+{
+ "world": 10,
+ "name": "La Torre de la Gata Sabia",
+ "topic": "casos especiales",
+ "words": [
+  {
+   "id": "dame",
+   "word": "dame",
+   "syllables": [
+    "da",
+    "me"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "dáme",
+   "sentence": null,
+   "tags": [
+    "enclitico"
+   ],
+   "features": [],
+   "related": "da",
+   "freq": 5.31
+  },
+  {
+   "id": "jóvenes",
+   "word": "jóvenes",
+   "syllables": [
+    "jó",
+    "ve",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 1,
+   "distractor": "jovenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "joven",
+   "freq": 4.79
+  },
+  {
+   "id": "solamente",
+   "word": "solamente",
+   "syllables": [
+    "so",
+    "la",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "sólamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "solo",
+   "freq": 4.74
+  },
+  {
+   "id": "claramente",
+   "word": "claramente",
+   "syllables": [
+    "cla",
+    "ra",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "cláramente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "claro",
+   "freq": 4.59
+  },
+  {
+   "id": "rápidamente",
+   "word": "rápidamente",
+   "syllables": [
+    "rá",
+    "pi",
+    "da",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "rapidamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "rápido",
+   "freq": 4.54
+  },
+  {
+   "id": "canciones",
+   "word": "canciones",
+   "syllables": [
+    "can",
+    "cio",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "canciónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": "canción",
+   "freq": 4.51
+  },
+  {
+   "id": "imágenes",
+   "word": "imágenes",
+   "syllables": [
+    "i",
+    "má",
+    "ge",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 1,
+   "distractor": "imagenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "imagen",
+   "freq": 4.45
+  },
+  {
+   "id": "fácilmente",
+   "word": "fácilmente",
+   "syllables": [
+    "fá",
+    "cil",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "facilmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "fácil",
+   "freq": 4.44
+  },
+  {
+   "id": "corazones",
+   "word": "corazones",
+   "syllables": [
+    "co",
+    "ra",
+    "zo",
+    "nes"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "corazónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "corazón",
+   "freq": 4.35
+  },
+  {
+   "id": "aviones",
+   "word": "aviones",
+   "syllables": [
+    "a",
+    "vio",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "aviónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": "avión",
+   "freq": 4.33
+  },
+  {
+   "id": "lentamente",
+   "word": "lentamente",
+   "syllables": [
+    "len",
+    "ta",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "léntamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "lento",
+   "freq": 4.3
+  },
+  {
+   "id": "exámenes",
+   "word": "exámenes",
+   "syllables": [
+    "e",
+    "xá",
+    "me",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 1,
+   "distractor": "examenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "examen",
+   "freq": 4.15
+  },
+  {
+   "id": "camiones",
+   "word": "camiones",
+   "syllables": [
+    "ca",
+    "mio",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "camiónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": "camión",
+   "freq": 4.1
+  },
+  {
+   "id": "fáciles",
+   "word": "fáciles",
+   "syllables": [
+    "fá",
+    "ci",
+    "les"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 1,
+   "distractor": "faciles",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "fácil",
+   "freq": 4.02
+  },
+  {
+   "id": "botones",
+   "word": "botones",
+   "syllables": [
+    "bo",
+    "to",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "botónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "botón",
+   "freq": 4.01
+  },
+  {
+   "id": "ratones",
+   "word": "ratones",
+   "syllables": [
+    "ra",
+    "to",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "ratónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "ratón",
+   "freq": 3.83
+  },
+  {
+   "id": "felizmente",
+   "word": "felizmente",
+   "syllables": [
+    "fe",
+    "liz",
+    "men",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "mente",
+   "world": 10,
+   "tier": 1,
+   "distractor": "felízmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "feliz",
+   "freq": 3.7
+  },
+  {
+   "id": "dieciséis",
+   "word": "dieciséis",
+   "syllables": [
+    "die",
+    "ci",
+    "séis"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "dieciseis",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.69
+  },
+  {
+   "id": "lápices",
+   "word": "lápices",
+   "syllables": [
+    "lá",
+    "pi",
+    "ces"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 1,
+   "distractor": "lapices",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "lápiz",
+   "freq": 3.48
+  },
+  {
+   "id": "limones",
+   "word": "limones",
+   "syllables": [
+    "li",
+    "mo",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "limónes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "limón",
+   "freq": 3.3
+  },
+  {
+   "id": "veintidós",
+   "word": "veintidós",
+   "syllables": [
+    "vein",
+    "ti",
+    "dós"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "veintidos",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.26
+  },
+  {
+   "id": "miralo-c4afe1",
+   "word": "miralo",
+   "syllables": [
+    "mi",
+    "ra",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "míralo",
+   "sentence": "Si no me creés, [miralo] vos.",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "mirá",
+   "freq": 3.21
+  },
+  {
+   "id": "decime",
+   "word": "decime",
+   "syllables": [
+    "de",
+    "ci",
+    "me"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "decíme",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "decí",
+   "freq": 3.13
+  },
+  {
+   "id": "veintitrés",
+   "word": "veintitrés",
+   "syllables": [
+    "vein",
+    "ti",
+    "trés"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "veintitres",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.04
+  },
+  {
+   "id": "puntapié",
+   "word": "puntapié",
+   "syllables": [
+    "pun",
+    "ta",
+    "pié"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "puntapie",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.71
+  },
+  {
+   "id": "contame",
+   "word": "contame",
+   "syllables": [
+    "con",
+    "ta",
+    "me"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 1,
+   "distractor": "contáme",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "contá",
+   "freq": 2.48
+  },
+  {
+   "id": "órdenes-62e871",
+   "word": "órdenes",
+   "syllables": [
+    "ór",
+    "de",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "ordenes",
+   "sentence": "La seño nos dio dos [órdenes] claras.",
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "orden",
+   "freq": 4.85
+  },
+  {
+   "id": "últimamente",
+   "word": "últimamente",
+   "syllables": [
+    "úl",
+    "ti",
+    "ma",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "ultimamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "último",
+   "freq": 4.65
+  },
+  {
+   "id": "países",
+   "word": "países",
+   "syllables": [
+    "pa",
+    "í",
+    "ses"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 10,
+   "tier": 2,
+   "distractor": "paises",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": "país",
+   "freq": 4.24
+  },
+  {
+   "id": "mediodía",
+   "word": "mediodía",
+   "syllables": [
+    "me",
+    "dio",
+    "dí",
+    "a"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 10,
+   "tier": 2,
+   "distractor": "mediodia",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo",
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.22
+  },
+  {
+   "id": "dámelo",
+   "word": "dámelo",
+   "syllables": [
+    "dá",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "damelo",
+   "sentence": null,
+   "tags": [
+    "enclitico"
+   ],
+   "features": [],
+   "related": "da",
+   "freq": 4.22
+  },
+  {
+   "id": "franceses",
+   "word": "franceses",
+   "syllables": [
+    "fran",
+    "ce",
+    "ses"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "francéses",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "francés",
+   "freq": 4.21
+  },
+  {
+   "id": "ingleses",
+   "word": "ingleses",
+   "syllables": [
+    "in",
+    "gle",
+    "ses"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "ingléses",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "inglés",
+   "freq": 4.1
+  },
+  {
+   "id": "únicamente",
+   "word": "únicamente",
+   "syllables": [
+    "ú",
+    "ni",
+    "ca",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "unicamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "único",
+   "freq": 3.86
+  },
+  {
+   "id": "tranquilamente",
+   "word": "tranquilamente",
+   "syllables": [
+    "tran",
+    "qui",
+    "la",
+    "men",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "tranquílamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "tranquilo",
+   "freq": 3.81
+  },
+  {
+   "id": "útiles",
+   "word": "útiles",
+   "syllables": [
+    "ú",
+    "ti",
+    "les"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "utiles",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "útil",
+   "freq": 3.72
+  },
+  {
+   "id": "difícilmente",
+   "word": "difícilmente",
+   "syllables": [
+    "di",
+    "fí",
+    "cil",
+    "men",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "dificilmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "difícil",
+   "freq": 3.71
+  },
+  {
+   "id": "públicamente",
+   "word": "públicamente",
+   "syllables": [
+    "pú",
+    "bli",
+    "ca",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "publicamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "público",
+   "freq": 3.64
+  },
+  {
+   "id": "pasatiempo",
+   "word": "pasatiempo",
+   "syllables": [
+    "pa",
+    "sa",
+    "tiem",
+    "po"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "pasatiémpo",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.64
+  },
+  {
+   "id": "almacenes",
+   "word": "almacenes",
+   "syllables": [
+    "al",
+    "ma",
+    "ce",
+    "nes"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "almacénes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "almacén",
+   "freq": 3.59
+  },
+  {
+   "id": "orígenes",
+   "word": "orígenes",
+   "syllables": [
+    "o",
+    "rí",
+    "ge",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "origenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "origen",
+   "freq": 3.48
+  },
+  {
+   "id": "rascacielos",
+   "word": "rascacielos",
+   "syllables": [
+    "ras",
+    "ca",
+    "cie",
+    "los"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "rascaciélos",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.26
+  },
+  {
+   "id": "cómodamente",
+   "word": "cómodamente",
+   "syllables": [
+    "có",
+    "mo",
+    "da",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "comodamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "cómodo",
+   "freq": 3.23
+  },
+  {
+   "id": "márgenes",
+   "word": "márgenes",
+   "syllables": [
+    "már",
+    "ge",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "margenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "margen",
+   "freq": 3.04
+  },
+  {
+   "id": "volúmenes",
+   "word": "volúmenes",
+   "syllables": [
+    "vo",
+    "lú",
+    "me",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "volumenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "volumen",
+   "freq": 2.96
+  },
+  {
+   "id": "pasame-ea51d4",
+   "word": "pasame",
+   "syllables": [
+    "pa",
+    "sa",
+    "me"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "pásame",
+   "sentence": "Vos que estás cerca, [pasame] la sal.",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "pasá",
+   "freq": 2.94
+  },
+  {
+   "id": "veintiséis",
+   "word": "veintiséis",
+   "syllables": [
+    "vein",
+    "ti",
+    "séis"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "veintiseis",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.86
+  },
+  {
+   "id": "cortésmente",
+   "word": "cortésmente",
+   "syllables": [
+    "cor",
+    "tés",
+    "men",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 2,
+   "distractor": "cortesmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "cortés",
+   "freq": 2.76
+  },
+  {
+   "id": "avisame-2d3eec",
+   "word": "avisame",
+   "syllables": [
+    "a",
+    "vi",
+    "sa",
+    "me"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "avísame",
+   "sentence": "Cuando estés en casa, [avisame], ¿querés?",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "avisá",
+   "freq": 2.73
+  },
+  {
+   "id": "compases",
+   "word": "compases",
+   "syllables": [
+    "com",
+    "pa",
+    "ses"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "compáses",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "compás",
+   "freq": 2.71
+  },
+  {
+   "id": "resúmenes",
+   "word": "resúmenes",
+   "syllables": [
+    "re",
+    "sú",
+    "me",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "resumenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "resumen",
+   "freq": 2.66
+  },
+  {
+   "id": "cortacésped",
+   "word": "cortacésped",
+   "syllables": [
+    "cor",
+    "ta",
+    "cés",
+    "ped"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 10,
+   "tier": 2,
+   "distractor": "cortacesped",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 2.62
+  },
+  {
+   "id": "cuentagotas",
+   "word": "cuentagotas",
+   "syllables": [
+    "cuen",
+    "ta",
+    "go",
+    "tas"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "cuentagótas",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.3
+  },
+  {
+   "id": "decímelo",
+   "word": "decímelo",
+   "syllables": [
+    "de",
+    "cí",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "decimelo",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "decí",
+   "freq": 1.92
+  },
+  {
+   "id": "pasámela-96f878",
+   "word": "pasámela",
+   "syllables": [
+    "pa",
+    "sá",
+    "me",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "pásamela",
+   "sentence": "Si ya terminaste con la pelota, [pasámela].",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "pasá",
+   "freq": 1.15
+  },
+  {
+   "id": "contámelo",
+   "word": "contámelo",
+   "syllables": [
+    "con",
+    "tá",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "contamelo",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "contá",
+   "freq": 0.85
+  },
+  {
+   "id": "escribime",
+   "word": "escribime",
+   "syllables": [
+    "es",
+    "cri",
+    "bi",
+    "me"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 2,
+   "distractor": "escribíme",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "escribí",
+   "freq": 0.85
+  },
+  {
+   "id": "escribímelo",
+   "word": "escribímelo",
+   "syllables": [
+    "es",
+    "cri",
+    "bí",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 2,
+   "distractor": "escribimelo",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "escribí",
+   "freq": null
+  },
+  {
+   "id": "prácticamente",
+   "word": "prácticamente",
+   "syllables": [
+    "prác",
+    "ti",
+    "ca",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 3,
+   "distractor": "practicamente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "práctico",
+   "freq": 4.35
+  },
+  {
+   "id": "débiles",
+   "word": "débiles",
+   "syllables": [
+    "dé",
+    "bi",
+    "les"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "debiles",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "débil",
+   "freq": 4.1
+  },
+  {
+   "id": "traeme-560af7",
+   "word": "traeme",
+   "syllables": [
+    "tra",
+    "e",
+    "me"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "tráeme",
+   "sentence": "Si vas a la cocina, [traeme] un vaso, ¿querés?",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": "traé",
+   "freq": 3.23
+  },
+  {
+   "id": "andate",
+   "word": "andate",
+   "syllables": [
+    "an",
+    "da",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "andáte",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "andá",
+   "freq": 3.21
+  },
+  {
+   "id": "caracteres",
+   "word": "caracteres",
+   "syllables": [
+    "ca",
+    "rac",
+    "te",
+    "res"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "caractéres",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "carácter",
+   "freq": 3.18
+  },
+  {
+   "id": "fijate-eb5bd7",
+   "word": "fijate",
+   "syllables": [
+    "fi",
+    "ja",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "fíjate",
+   "sentence": "Vos [fijate] si cerraste la puerta.",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "fijá",
+   "freq": 3.09
+  },
+  {
+   "id": "especímenes",
+   "word": "especímenes",
+   "syllables": [
+    "es",
+    "pe",
+    "cí",
+    "me",
+    "nes"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "especimenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "espécimen",
+   "freq": 3.06
+  },
+  {
+   "id": "sacacorchos",
+   "word": "sacacorchos",
+   "syllables": [
+    "sa",
+    "ca",
+    "cor",
+    "chos"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "sacacórchos",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.01
+  },
+  {
+   "id": "cráteres",
+   "word": "cráteres",
+   "syllables": [
+    "crá",
+    "te",
+    "res"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "crateres",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "cráter",
+   "freq": 2.87
+  },
+  {
+   "id": "sentate",
+   "word": "sentate",
+   "syllables": [
+    "sen",
+    "ta",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "sentáte",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "sentá",
+   "freq": 2.86
+  },
+  {
+   "id": "asimismo",
+   "word": "asimismo",
+   "syllables": [
+    "a",
+    "si",
+    "mis",
+    "mo"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "asimísmo",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 2.82
+  },
+  {
+   "id": "regímenes",
+   "word": "regímenes",
+   "syllables": [
+    "re",
+    "gí",
+    "me",
+    "nes"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "regimenes",
+   "sentence": null,
+   "tags": [
+    "plural"
+   ],
+   "features": [],
+   "related": "régimen",
+   "freq": 2.61
+  },
+  {
+   "id": "ponete",
+   "word": "ponete",
+   "syllables": [
+    "po",
+    "ne",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "ponéte",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "poné",
+   "freq": 2.6
+  },
+  {
+   "id": "débilmente",
+   "word": "débilmente",
+   "syllables": [
+    "dé",
+    "bil",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 3,
+   "distractor": "debilmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "débil",
+   "freq": 2.49
+  },
+  {
+   "id": "acordate",
+   "word": "acordate",
+   "syllables": [
+    "a",
+    "cor",
+    "da",
+    "te"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "acordáte",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "acordá",
+   "freq": 2.3
+  },
+  {
+   "id": "comételo",
+   "word": "comételo",
+   "syllables": [
+    "co",
+    "mé",
+    "te",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "cometelo",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "comé",
+   "freq": 2.25
+  },
+  {
+   "id": "decimoséptimo",
+   "word": "decimoséptimo",
+   "syllables": [
+    "de",
+    "ci",
+    "mo",
+    "sép",
+    "ti",
+    "mo"
+   ],
+   "stressIndex": 3,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "decimoseptimo",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 1.86
+  },
+  {
+   "id": "balompié",
+   "word": "balompié",
+   "syllables": [
+    "ba",
+    "lom",
+    "pié"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "balompie",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 1.85
+  },
+  {
+   "id": "traémelo-f140ac",
+   "word": "traémelo",
+   "syllables": [
+    "tra",
+    "é",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 10,
+   "tier": 3,
+   "distractor": "tráemelo",
+   "sentence": "Si encontrás mi buzo, [traémelo], ¿podés?",
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [
+    "hiato"
+   ],
+   "related": "traé",
+   "freq": 1.85
+  },
+  {
+   "id": "vestite",
+   "word": "vestite",
+   "syllables": [
+    "ves",
+    "ti",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "vestíte",
+   "sentence": null,
+   "tags": [
+    "enclitico",
+    "voseo"
+   ],
+   "features": [],
+   "related": "vestí",
+   "freq": 1.79
+  },
+  {
+   "id": "ágilmente",
+   "word": "ágilmente",
+   "syllables": [
+    "á",
+    "gil",
+    "men",
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "mente",
+   "world": 10,
+   "tier": 3,
+   "distractor": "agilmente",
+   "sentence": null,
+   "tags": [
+    "mente"
+   ],
+   "features": [],
+   "related": "ágil",
+   "freq": 1.52
+  },
+  {
+   "id": "rioplatense",
+   "word": "rioplatense",
+   "syllables": [
+    "rio",
+    "pla",
+    "ten",
+    "se"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 10,
+   "tier": 3,
+   "distractor": "rioplaténse",
+   "sentence": null,
+   "tags": [
+    "compuesto"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 0.67
+  }
+ ]
+}

@@ -1,0 +1,5650 @@
+{
+ "abdomen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.7
+ },
+ "abecedario": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.61
+ },
+ "abuelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.94
+ },
+ "académico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.49
+ },
+ "acordate": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.3
+ },
+ "acuático": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.3
+ },
+ "además": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ademas": 3.77
+  },
+  "valid": true,
+  "zipf": 5.25
+ },
+ "adiós": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.53
+ },
+ "adonde": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "adónde"
+  ],
+  "otherForms": {
+   "adónde": 5.08
+  },
+  "valid": true,
+  "zipf": 4.35
+ },
+ "adónde": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "adonde"
+  ],
+  "otherForms": {
+   "adonde": 4.35
+  },
+  "valid": true,
+  "zipf": 5.08
+ },
+ "agua": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "aguá": null
+  },
+  "valid": true,
+  "zipf": 5.44
+ },
+ "agüita": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.14
+ },
+ "ahí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.0
+ },
+ "aire": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "airé": 0.37,
+   "aíre": 1.86
+  },
+  "valid": true,
+  "zipf": 5.08
+ },
+ "alacrán": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.86
+ },
+ "aldea": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.24
+ },
+ "alegría": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.52
+ },
+ "alférez": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.63
+ },
+ "almacenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.59
+ },
+ "almacén": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.33
+ },
+ "almohada": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.06
+ },
+ "almíbar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.62
+ },
+ "amigo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "amigó": 0.98
+  },
+  "valid": true,
+  "zipf": 5.79
+ },
+ "amistad": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.52
+ },
+ "anciano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.19
+ },
+ "andate": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.21
+ },
+ "animal": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.67
+ },
+ "apóstrofo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "apostrofo": 0.37,
+   "apostrofó": null
+  },
+  "valid": true,
+  "zipf": 1.6
+ },
+ "arroz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.32
+ },
+ "artístico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.69
+ },
+ "asimismo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.82
+ },
+ "ataúd": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.07
+ },
+ "atención": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.12
+ },
+ "atlántico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.67
+ },
+ "aun": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "aún"
+  ],
+  "otherForms": {
+   "aún": 5.71
+  },
+  "valid": true,
+  "zipf": 4.94
+ },
+ "auto": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.34
+ },
+ "autobús": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "automóvil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.89
+ },
+ "averiguar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "avestruz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.21
+ },
+ "aviones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.33
+ },
+ "avisame": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "avísame"
+  ],
+  "otherForms": {
+   "avísame": 3.89
+  },
+  "valid": true,
+  "zipf": 2.73
+ },
+ "avión": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.97
+ },
+ "azúcar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.46
+ },
+ "aéreo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.02
+ },
+ "aún": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "aun"
+  ],
+  "otherForms": {
+   "aun": 4.94
+  },
+  "valid": true,
+  "zipf": 5.71
+ },
+ "balcón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.88
+ },
+ "balompié": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.85
+ },
+ "bambú": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.43
+ },
+ "banana": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.7
+ },
+ "batería": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.23
+ },
+ "baúl": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.88
+ },
+ "bebé": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "bebe"
+  ],
+  "otherForms": {
+   "bebe": 4.71
+  },
+  "valid": true,
+  "zipf": 5.32
+ },
+ "bicicleta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.33
+ },
+ "bien": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.68
+ },
+ "bisturí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.51
+ },
+ "boca": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.11
+ },
+ "boina": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.02
+ },
+ "bolígrafo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.75
+ },
+ "bota": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "botá": 0.37
+  },
+  "valid": true,
+  "zipf": 3.69
+ },
+ "botones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.01
+ },
+ "botón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.34
+ },
+ "brócoli": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.23
+ },
+ "brújula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.6
+ },
+ "bueno": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.38
+ },
+ "buey": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.53
+ },
+ "básico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.9
+ },
+ "básquet": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.13
+ },
+ "béisbol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.25
+ },
+ "bíceps": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.02
+ },
+ "búfalo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.62
+ },
+ "búho": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.47
+ },
+ "caballo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.92
+ },
+ "cacao": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.27
+ },
+ "cacatúa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.51
+ },
+ "cadáver": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.58
+ },
+ "café": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.18
+ },
+ "calabaza": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.78
+ },
+ "calculo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cálculo"
+  ],
+  "otherForms": {
+   "calculó": 2.84,
+   "cálculo": 3.68
+  },
+  "valid": true,
+  "zipf": 3.34
+ },
+ "calculó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cálculo",
+   "calculo"
+  ],
+  "otherForms": {
+   "calculo": 3.34,
+   "cálculo": 3.68
+  },
+  "valid": true,
+  "zipf": 2.84
+ },
+ "calendario": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.93
+ },
+ "cama": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.25
+ },
+ "camiones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "camisa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.57
+ },
+ "camión": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "canciones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.51
+ },
+ "canción": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.0
+ },
+ "canguro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.58
+ },
+ "canoa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.4
+ },
+ "cantan": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.77
+ },
+ "cantar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.7
+ },
+ "canto": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cantó"
+  ],
+  "otherForms": {
+   "cantó": 3.47
+  },
+  "valid": true,
+  "zipf": 4.18
+ },
+ "cantó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "canto"
+  ],
+  "otherForms": {
+   "canto": 4.18
+  },
+  "valid": true,
+  "zipf": 3.47
+ },
+ "caoba": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.89
+ },
+ "caracol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.37
+ },
+ "caracteres": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.18
+ },
+ "caramelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.96
+ },
+ "carey": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.31
+ },
+ "cartón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.59
+ },
+ "carácter": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.27
+ },
+ "casa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "casá": 1.33
+  },
+  "valid": true,
+  "zipf": 6.14
+ },
+ "castillo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.51
+ },
+ "causa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "causá": null
+  },
+  "valid": true,
+  "zipf": 4.9
+ },
+ "caída": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.3
+ },
+ "caótico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.12
+ },
+ "cebolla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.8
+ },
+ "cepillo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "cepilló": 2.11
+  },
+  "valid": true,
+  "zipf": 3.92
+ },
+ "champú": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.51
+ },
+ "chocolate": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.56
+ },
+ "ciclista": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.14
+ },
+ "cielo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.17
+ },
+ "ciempiés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.88
+ },
+ "cien": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "cíen": null
+  },
+  "valid": true,
+  "zipf": 4.62
+ },
+ "cigarra": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.4
+ },
+ "cigüeña": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.04
+ },
+ "cinturón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.33
+ },
+ "ciudad": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.48
+ },
+ "claramente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.59
+ },
+ "clímax": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.16
+ },
+ "cocodrilo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.72
+ },
+ "cohete": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.96
+ },
+ "cohetes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.75
+ },
+ "cohíbe": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.41
+ },
+ "colchón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.81
+ },
+ "colibrí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.91
+ },
+ "color": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.84
+ },
+ "comen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.15
+ },
+ "comer": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.31
+ },
+ "como": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cómo"
+  ],
+  "otherForms": {
+   "cómo": 6.31
+  },
+  "valid": true,
+  "zipf": 6.59
+ },
+ "compases": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.71
+ },
+ "computadora": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.54
+ },
+ "compás": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.36
+ },
+ "comé": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "come"
+  ],
+  "otherForms": {
+   "come": 4.75
+  },
+  "valid": true,
+  "zipf": 2.32
+ },
+ "comételo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.25
+ },
+ "comía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.71
+ },
+ "conejo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.25
+ },
+ "construido": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.09
+ },
+ "construí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.59
+ },
+ "contame": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.48
+ },
+ "continuo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "continuó",
+   "continúo"
+  ],
+  "otherForms": {
+   "continuó": 3.59,
+   "continúo": 3.23
+  },
+  "valid": true,
+  "zipf": 3.57
+ },
+ "continúa": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "continua"
+  ],
+  "otherForms": {
+   "continua": 4.09,
+   "continuá": 1.07
+  },
+  "valid": true,
+  "zipf": 4.57
+ },
+ "contámelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.85
+ },
+ "corazones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.35
+ },
+ "corazón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.45
+ },
+ "corren": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.85
+ },
+ "correo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "correó": null
+  },
+  "valid": true,
+  "zipf": 4.63
+ },
+ "correr": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.79
+ },
+ "cortacésped": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.62
+ },
+ "cortésmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.76
+ },
+ "coágulo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "coagulo": 2.07,
+   "coaguló": 1.85
+  },
+  "valid": true,
+  "zipf": 3.3
+ },
+ "creer": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.3
+ },
+ "crisis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.45
+ },
+ "cráter": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.37
+ },
+ "cráteres": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.87
+ },
+ "cuaderno": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.81
+ },
+ "cual": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuál"
+  ],
+  "otherForms": {
+   "cuál": 5.51
+  },
+  "valid": true,
+  "zipf": 5.17
+ },
+ "cuando": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuándo"
+  ],
+  "otherForms": {
+   "cuándo": 5.4
+  },
+  "valid": true,
+  "zipf": 6.34
+ },
+ "cuanto": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuánto"
+  ],
+  "otherForms": {
+   "cuánto": 5.46
+  },
+  "valid": true,
+  "zipf": 5.23
+ },
+ "cuchara": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.81
+ },
+ "cuchillo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.7
+ },
+ "cuello": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.8
+ },
+ "cuentagotas": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.3
+ },
+ "cuento": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.62
+ },
+ "cuidado": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.42
+ },
+ "cuidadoso": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.93
+ },
+ "cuidar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "cumpleaños": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.0
+ },
+ "cuota": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.69
+ },
+ "cuál": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cual"
+  ],
+  "otherForms": {
+   "cual": 5.17
+  },
+  "valid": true,
+  "zipf": 5.51
+ },
+ "cuándo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuando"
+  ],
+  "otherForms": {
+   "cuando": 6.34
+  },
+  "valid": true,
+  "zipf": 5.4
+ },
+ "cuánta": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuanta"
+  ],
+  "otherForms": {
+   "cuanta": 3.67
+  },
+  "valid": true,
+  "zipf": 4.13
+ },
+ "cuántas": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuantas"
+  ],
+  "otherForms": {
+   "cuantas": 4.44
+  },
+  "valid": true,
+  "zipf": 4.75
+ },
+ "cuánto": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuanto"
+  ],
+  "otherForms": {
+   "cuanto": 5.23
+  },
+  "valid": true,
+  "zipf": 5.46
+ },
+ "cuántos": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "cuantos"
+  ],
+  "otherForms": {
+   "cuantos": 4.48
+  },
+  "valid": true,
+  "zipf": 4.9
+ },
+ "cuéntamelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.6
+ },
+ "cuídatelo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.37
+ },
+ "cálculo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "calculo"
+  ],
+  "otherForms": {
+   "calculo": 3.34,
+   "calculó": 2.84
+  },
+  "valid": true,
+  "zipf": 3.68
+ },
+ "cáliz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.19
+ },
+ "cámara": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.98
+ },
+ "cántaro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.51
+ },
+ "cárcel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.99
+ },
+ "cáscara": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "cascara": 2.49,
+   "cascará": 0.37
+  },
+  "valid": true,
+  "zipf": 3.46
+ },
+ "césped": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.97
+ },
+ "círculo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "circulo"
+  ],
+  "otherForms": {
+   "circulo": 3.4,
+   "circuló": 2.13
+  },
+  "valid": true,
+  "zipf": 4.31
+ },
+ "cóctel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.74
+ },
+ "cómic": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.3
+ },
+ "cómo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "como"
+  ],
+  "otherForms": {
+   "como": 6.59
+  },
+  "valid": true,
+  "zipf": 6.31
+ },
+ "cómodamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.23
+ },
+ "cómodo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.43
+ },
+ "cómpraselo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.37
+ },
+ "cóndor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.87
+ },
+ "cúpula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.61
+ },
+ "cúspide": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.91
+ },
+ "da": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.45
+ },
+ "dame": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.31
+ },
+ "de": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "dé": 4.64
+  },
+  "valid": true,
+  "zipf": 7.53
+ },
+ "decime": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.13
+ },
+ "decimoséptimo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.86
+ },
+ "decí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.47
+ },
+ "decía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.99
+ },
+ "decímelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.92
+ },
+ "dedo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.63
+ },
+ "depósito": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "deposito": 3.19,
+   "depositó": 2.83
+  },
+  "valid": true,
+  "zipf": 4.31
+ },
+ "deseo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "deseó": 2.96
+  },
+  "valid": true,
+  "zipf": 4.96
+ },
+ "después": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.87
+ },
+ "destruí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.26
+ },
+ "detrás": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.17
+ },
+ "deuda": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.37
+ },
+ "devuélvemelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.43
+ },
+ "di": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "dí": 4.14
+  },
+  "valid": true,
+  "zipf": 5.23
+ },
+ "diamante": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "diamanté": null
+  },
+  "valid": true,
+  "zipf": 4.07
+ },
+ "dibujo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "dibujó"
+  ],
+  "otherForms": {
+   "dibujó": 3.37
+  },
+  "valid": true,
+  "zipf": 4.13
+ },
+ "dieciséis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.69
+ },
+ "diente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.04
+ },
+ "diez": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.2
+ },
+ "difícil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.39
+ },
+ "difícilmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.71
+ },
+ "dinosaurio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.63
+ },
+ "dinámico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.19
+ },
+ "dio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.25
+ },
+ "doctor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.39
+ },
+ "donde": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "dónde"
+  ],
+  "otherForms": {
+   "dónde": 6.11
+  },
+  "valid": true,
+  "zipf": 5.82
+ },
+ "dormir": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.24
+ },
+ "dos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.12
+ },
+ "dosis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.18
+ },
+ "doy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.93
+ },
+ "dragón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.3
+ },
+ "ducha": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "duchá": null
+  },
+  "valid": true,
+  "zipf": 4.43
+ },
+ "dulce": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.97
+ },
+ "dámelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.22
+ },
+ "dé": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "de"
+  ],
+  "otherForms": {
+   "de": 7.53
+  },
+  "valid": true,
+  "zipf": 4.64
+ },
+ "débil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.61
+ },
+ "débiles": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "débilmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.49
+ },
+ "día": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.97
+ },
+ "dígamelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.66
+ },
+ "díganselo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.47
+ },
+ "dólar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.21
+ },
+ "dónde": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "donde"
+  ],
+  "otherForms": {
+   "donde": 5.82
+  },
+  "valid": true,
+  "zipf": 6.11
+ },
+ "egoísta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.27
+ },
+ "ejército": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ejercito": 3.91,
+   "ejercitó": 1.79
+  },
+  "valid": true,
+  "zipf": 4.97
+ },
+ "el": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "él"
+  ],
+  "otherForms": {
+   "él": 6.34
+  },
+  "valid": true,
+  "zipf": 7.25
+ },
+ "elefante": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.06
+ },
+ "energía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.92
+ },
+ "entrégaselo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.36
+ },
+ "escalera": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.39
+ },
+ "escoba": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "escobá": null
+  },
+  "valid": true,
+  "zipf": 3.67
+ },
+ "escribime": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.85
+ },
+ "escribí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.36
+ },
+ "escribímelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": null
+ },
+ "escuela": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.33
+ },
+ "escóndetelo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": null
+ },
+ "esdrújula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.67
+ },
+ "español": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.35
+ },
+ "especímenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.06
+ },
+ "espejo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "espejó": 0.37
+  },
+  "valid": true,
+  "zipf": 4.46
+ },
+ "espátula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.93
+ },
+ "espécimen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.32
+ },
+ "esquí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.57
+ },
+ "esta": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "está"
+  ],
+  "otherForms": {
+   "está": 6.76,
+   "ésta": 5.06
+  },
+  "valid": true,
+  "zipf": 6.4
+ },
+ "estación": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.85
+ },
+ "estoy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.41
+ },
+ "estrella": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "estrellá": null
+  },
+  "valid": true,
+  "zipf": 4.85
+ },
+ "está": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "esta"
+  ],
+  "otherForms": {
+   "esta": 6.4,
+   "ésta": 5.06
+  },
+  "valid": true,
+  "zipf": 6.76
+ },
+ "examen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.59
+ },
+ "explíquemelo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.45
+ },
+ "exámenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.15
+ },
+ "fantasma": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.64
+ },
+ "fantasía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.25
+ },
+ "farmacéutico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.35
+ },
+ "fe": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.74
+ },
+ "feliz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.47
+ },
+ "felizmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.7
+ },
+ "feo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.41
+ },
+ "fideos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.79
+ },
+ "fiel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.18
+ },
+ "fijate": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "fíjate"
+  ],
+  "otherForms": {
+   "fíjate": 4.21
+  },
+  "valid": true,
+  "zipf": 3.09
+ },
+ "flor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.36
+ },
+ "franceses": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.21
+ },
+ "francés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.58
+ },
+ "freír": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.34
+ },
+ "frágil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.92
+ },
+ "frío": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "frio": 3.84,
+   "frió": 3.08
+  },
+  "valid": true,
+  "zipf": 4.92
+ },
+ "fue": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.27
+ },
+ "fuego": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.19
+ },
+ "fui": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.37
+ },
+ "fuimos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.78
+ },
+ "fábrica": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "fabrica"
+  ],
+  "otherForms": {
+   "fabrica": 3.58,
+   "fabricá": 0.37
+  },
+  "valid": true,
+  "zipf": 4.48
+ },
+ "fácil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.31
+ },
+ "fáciles": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.02
+ },
+ "fácilmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.44
+ },
+ "fénix": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.43
+ },
+ "fértil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.32
+ },
+ "fósforo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.45
+ },
+ "fósil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.2
+ },
+ "galleta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.96
+ },
+ "gato": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "germen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.85
+ },
+ "girasol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.93
+ },
+ "gol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.86
+ },
+ "golondrina": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.96
+ },
+ "gorrión": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.23
+ },
+ "gris": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.19
+ },
+ "gráfico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "grafico": 2.3,
+   "graficó": 0.37
+  },
+  "valid": true,
+  "zipf": 3.52
+ },
+ "grúa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.68
+ },
+ "guante": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.88
+ },
+ "guau": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.4
+ },
+ "guion": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.35
+ },
+ "habitación": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.3
+ },
+ "hablo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "habló"
+  ],
+  "otherForms": {
+   "habló": 4.65
+  },
+  "valid": true,
+  "zipf": 4.92
+ },
+ "habló": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "hablo"
+  ],
+  "otherForms": {
+   "hablo": 4.92
+  },
+  "valid": true,
+  "zipf": 4.65
+ },
+ "había": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.83
+ },
+ "halcón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.83
+ },
+ "hamaca": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "hamacá": null
+  },
+  "valid": true,
+  "zipf": 3.15
+ },
+ "heladera": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.35
+ },
+ "heladería": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.94
+ },
+ "helicóptero": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.31
+ },
+ "hielo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.72
+ },
+ "hipopótamo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.19
+ },
+ "hipérbola": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.33
+ },
+ "histórico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.78
+ },
+ "hormiga": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.45
+ },
+ "hoy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.75
+ },
+ "huelga": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.11
+ },
+ "huevo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "huevó": null
+  },
+  "valid": true,
+  "zipf": 4.36
+ },
+ "huracán": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.82
+ },
+ "huésped": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.89
+ },
+ "hábil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.73
+ },
+ "héroe": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.74
+ },
+ "hígado": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.16
+ },
+ "idea": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ideá": 0.37
+  },
+  "valid": true,
+  "zipf": 5.66
+ },
+ "imagen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.72
+ },
+ "imágenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.45
+ },
+ "incluí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.58
+ },
+ "increíble": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.18
+ },
+ "ingleses": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "inglés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ingles": 3.59
+  },
+  "valid": true,
+  "zipf": 4.76
+ },
+ "inútil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.6
+ },
+ "jabón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.01
+ },
+ "jamás": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "jamas": 3.61
+  },
+  "valid": true,
+  "zipf": 5.11
+ },
+ "japonés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "japones": 2.73
+  },
+  "valid": true,
+  "zipf": 4.11
+ },
+ "jardín": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.64
+ },
+ "jaula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.18
+ },
+ "jesuita": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.69
+ },
+ "jirafa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.34
+ },
+ "joven": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.29
+ },
+ "juego": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.37
+ },
+ "jugar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.17
+ },
+ "juguetería": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.78
+ },
+ "jugá": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.52
+ },
+ "jóvenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.79
+ },
+ "kilómetro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.74
+ },
+ "koala": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.88
+ },
+ "lavaplatos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.19
+ },
+ "lavarropas": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.61
+ },
+ "laúd": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.71
+ },
+ "lección": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.5
+ },
+ "leche": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.74
+ },
+ "lechuga": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.51
+ },
+ "lechuza": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.97
+ },
+ "leer": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.86
+ },
+ "lentamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.3
+ },
+ "ley": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.01
+ },
+ "leía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.58
+ },
+ "leído": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.55
+ },
+ "león": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.3
+ },
+ "libertad": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.95
+ },
+ "librería": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.73
+ },
+ "libro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "libró": 3.09
+  },
+  "valid": true,
+  "zipf": 5.18
+ },
+ "limones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.3
+ },
+ "limón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.96
+ },
+ "llego": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "llegó"
+  ],
+  "otherForms": {
+   "llegó": 5.05
+  },
+  "valid": true,
+  "zipf": 4.56
+ },
+ "llegó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "llego"
+  ],
+  "otherForms": {
+   "llego": 4.56
+  },
+  "valid": true,
+  "zipf": 5.05
+ },
+ "lluvia": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.56
+ },
+ "llévatelo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.71
+ },
+ "lobo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.47
+ },
+ "lombriz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.1
+ },
+ "luna": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.92
+ },
+ "lunes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.55
+ },
+ "lupa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.13
+ },
+ "luz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.24
+ },
+ "lágrima": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "lagrima": 2.45,
+   "lagrimá": null
+  },
+  "valid": true,
+  "zipf": 3.49
+ },
+ "lámpara": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "lampara": 2.82,
+   "lampará": null
+  },
+  "valid": true,
+  "zipf": 4.04
+ },
+ "lápices": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "lapices": 2.29
+  },
+  "valid": true,
+  "zipf": 3.48
+ },
+ "lápiz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.07
+ },
+ "láser": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.93
+ },
+ "léetelo": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.45
+ },
+ "línea": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "linea": 3.99,
+   "lineá": null
+  },
+  "valid": true,
+  "zipf": 5.04
+ },
+ "lógico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.99
+ },
+ "maestra": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.36
+ },
+ "maestro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.94
+ },
+ "mamá": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "mama": 4.57
+  },
+  "valid": true,
+  "zipf": 5.77
+ },
+ "mamífero": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.02
+ },
+ "mano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "manó": 1.37
+  },
+  "valid": true,
+  "zipf": 5.43
+ },
+ "mantel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.21
+ },
+ "manzana": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.32
+ },
+ "maní": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.77
+ },
+ "mar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.92
+ },
+ "maracuyá": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.13
+ },
+ "marea": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "mareá": 0.37
+  },
+  "valid": true,
+  "zipf": 3.91
+ },
+ "margen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.08
+ },
+ "mariposa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.88
+ },
+ "martes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.41
+ },
+ "mas": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "más"
+  ],
+  "otherForms": {
+   "más": 6.55
+  },
+  "valid": true,
+  "zipf": 5.39
+ },
+ "matemáticas": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.21
+ },
+ "maíz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.16
+ },
+ "maúlla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "maullá": null
+  },
+  "valid": true,
+  "zipf": 2.13
+ },
+ "mediodía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.22
+ },
+ "melón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.45
+ },
+ "menú": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.04
+ },
+ "mermelada": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.74
+ },
+ "mes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.03
+ },
+ "mesa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "mesá": null
+  },
+  "valid": true,
+  "zipf": 5.03
+ },
+ "mi": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "mí"
+  ],
+  "otherForms": {
+   "mí": 6.09
+  },
+  "valid": true,
+  "zipf": 6.75
+ },
+ "miau": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.27
+ },
+ "mil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.1
+ },
+ "miralo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "míralo"
+  ],
+  "otherForms": {
+   "míralo": 4.22
+  },
+  "valid": true,
+  "zipf": 3.21
+ },
+ "mirar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.91
+ },
+ "mirá": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "mira"
+  ],
+  "otherForms": {
+   "mira": 5.92
+  },
+  "valid": true,
+  "zipf": 3.75
+ },
+ "miércoles": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.29
+ },
+ "mochila": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.08
+ },
+ "mosquito": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.45
+ },
+ "motor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.51
+ },
+ "muela": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.24
+ },
+ "murcielaguito": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.63
+ },
+ "murciélago": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.68
+ },
+ "murciélagos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.54
+ },
+ "museo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.36
+ },
+ "muy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.41
+ },
+ "mágico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.17
+ },
+ "máquina": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "maquina": 3.7,
+   "maquiná": 0.67
+  },
+  "valid": true,
+  "zipf": 4.8
+ },
+ "márgenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "margenes": 1.72
+  },
+  "valid": true,
+  "zipf": 3.04
+ },
+ "mármol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.51
+ },
+ "más": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "mas": 5.39
+  },
+  "valid": true,
+  "zipf": 6.55
+ },
+ "mástil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.24
+ },
+ "médico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "medico": 3.66,
+   "medicó": 1.58
+  },
+  "valid": true,
+  "zipf": 5.11
+ },
+ "mí": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "mi"
+  ],
+  "otherForms": {
+   "mi": 6.75
+  },
+  "valid": true,
+  "zipf": 6.09
+ },
+ "móvil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.54
+ },
+ "músculo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "musculo": 2.58,
+   "musculó": null
+  },
+  "valid": true,
+  "zipf": 3.74
+ },
+ "música": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "musica": 3.79,
+   "musicá": null
+  },
+  "valid": true,
+  "zipf": 5.21
+ },
+ "nadar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.37
+ },
+ "nariz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "nena": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.84
+ },
+ "neumático": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.6
+ },
+ "ni": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.98
+ },
+ "nieve": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.54
+ },
+ "novio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "novió": 0.67
+  },
+  "valid": true,
+  "zipf": 5.02
+ },
+ "nube": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "nueve": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.81
+ },
+ "nuevo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.8
+ },
+ "nácar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.27
+ },
+ "náufrago": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "naufrago": 1.93,
+   "naufragó": 2.55
+  },
+  "valid": true,
+  "zipf": 2.67
+ },
+ "náutico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.69
+ },
+ "néctar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.2
+ },
+ "número": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "numero": 4.12,
+   "numeró": 1.15
+  },
+  "valid": true,
+  "zipf": 5.34
+ },
+ "océano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.39
+ },
+ "oigo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.49
+ },
+ "ombú": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.41
+ },
+ "orden": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.18
+ },
+ "origen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.18
+ },
+ "orígenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.48
+ },
+ "oso": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "osó": 2.18
+  },
+  "valid": true,
+  "zipf": 4.45
+ },
+ "oído": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.25
+ },
+ "oír": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.9
+ },
+ "pan": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.72
+ },
+ "panadería": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.56
+ },
+ "pantalón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.75
+ },
+ "papa": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "papá"
+  ],
+  "otherForms": {
+   "papá": 5.76
+  },
+  "valid": true,
+  "zipf": 4.71
+ },
+ "papel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.97
+ },
+ "papá": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "papa": 4.71
+  },
+  "valid": true,
+  "zipf": 5.76
+ },
+ "paraguas": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.82
+ },
+ "paraguayo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.65
+ },
+ "pared": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.72
+ },
+ "pasame": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "pásame"
+  ],
+  "otherForms": {
+   "pásame": 3.98
+  },
+  "valid": true,
+  "zipf": 2.94
+ },
+ "pasatiempo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.64
+ },
+ "paseo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "paseó": 2.3
+  },
+  "valid": true,
+  "zipf": 4.67
+ },
+ "paso": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "pasó"
+  ],
+  "otherForms": {
+   "pasó": 5.54
+  },
+  "valid": true,
+  "zipf": 5.22
+ },
+ "pastel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.62
+ },
+ "pasámela": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "pásamela": 2.98
+  },
+  "valid": true,
+  "zipf": 1.15
+ },
+ "pasó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "paso"
+  ],
+  "otherForms": {
+   "paso": 5.22
+  },
+  "valid": true,
+  "zipf": 5.54
+ },
+ "patio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.4
+ },
+ "pato": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.12
+ },
+ "pausa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "pausá": null
+  },
+  "valid": true,
+  "zipf": 3.94
+ },
+ "país": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.21
+ },
+ "países": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.24
+ },
+ "pañuelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.06
+ },
+ "peinado": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.81
+ },
+ "peine": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "peiné": 2.17
+  },
+  "valid": true,
+  "zipf": 3.45
+ },
+ "pelea": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "peleá": 0.67
+  },
+  "valid": true,
+  "zipf": 4.89
+ },
+ "pelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "peló": 2.08
+  },
+  "valid": true,
+  "zipf": 5.06
+ },
+ "pelota": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.5
+ },
+ "pelícano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.85
+ },
+ "película": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.17
+ },
+ "peor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.22
+ },
+ "perejil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.08
+ },
+ "periódico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.6
+ },
+ "perla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "perlá": null
+  },
+  "valid": true,
+  "zipf": 3.67
+ },
+ "perro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.17
+ },
+ "pescar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.19
+ },
+ "petróleo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "petroleo": 2.94,
+   "petroleó": null
+  },
+  "valid": true,
+  "zipf": 4.19
+ },
+ "pez": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.45
+ },
+ "piano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.37
+ },
+ "pie": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "pié": 3.45,
+   "píe": 1.98
+  },
+  "valid": true,
+  "zipf": 5.08
+ },
+ "pierna": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "pimienta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.79
+ },
+ "pincel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.2
+ },
+ "pingüino": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.55
+ },
+ "pintura": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.55
+ },
+ "pirata": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.98
+ },
+ "pirámide": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.65
+ },
+ "planeta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.86
+ },
+ "plástico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.22
+ },
+ "plátano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.62
+ },
+ "podés": {
+  "allowlisted": true,
+  "ambiguousWith": [
+   "podes"
+  ],
+  "otherForms": {
+   "podes": 3.42
+  },
+  "valid": true,
+  "zipf": 3.6
+ },
+ "poeta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.05
+ },
+ "polen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.33
+ },
+ "policía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.62
+ },
+ "ponete": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.6
+ },
+ "porque": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "porqué": 4.9
+  },
+  "valid": true,
+  "zipf": 6.21
+ },
+ "porqué": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "porque"
+  ],
+  "otherForms": {
+   "porque": 6.21
+  },
+  "valid": true,
+  "zipf": 4.9
+ },
+ "portátil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.98
+ },
+ "practico": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "práctico"
+  ],
+  "otherForms": {
+   "practicó": 2.72,
+   "práctico": 3.8
+  },
+  "valid": true,
+  "zipf": 3.3
+ },
+ "practicó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "práctico",
+   "practico"
+  ],
+  "otherForms": {
+   "practico": 3.3,
+   "práctico": 3.8
+  },
+  "valid": true,
+  "zipf": 2.72
+ },
+ "princesa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "profesor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.01
+ },
+ "prohíbe": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.52
+ },
+ "prácticamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.35
+ },
+ "práctico": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "practico"
+  ],
+  "otherForms": {
+   "practico": 3.3,
+   "practicó": 2.72
+  },
+  "valid": true,
+  "zipf": 3.8
+ },
+ "publico": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "público",
+   "publicó"
+  ],
+  "otherForms": {
+   "publicó": 3.55,
+   "público": 4.9
+  },
+  "valid": true,
+  "zipf": 3.63
+ },
+ "publicó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "público",
+   "publico"
+  ],
+  "otherForms": {
+   "publico": 3.63,
+   "público": 4.9
+  },
+  "valid": true,
+  "zipf": 3.55
+ },
+ "puerta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.5
+ },
+ "puntapié": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.71
+ },
+ "página": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "pagina": 3.35,
+   "paginá": null
+  },
+  "valid": true,
+  "zipf": 4.51
+ },
+ "pájaro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.43
+ },
+ "pétalo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.72
+ },
+ "pídeselo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.99
+ },
+ "póquer": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.8
+ },
+ "púa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "puá": null
+  },
+  "valid": true,
+  "zipf": 2.88
+ },
+ "públicamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.64
+ },
+ "público": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "publico": 3.63,
+   "publicó": 3.55
+  },
+  "valid": true,
+  "zipf": 4.9
+ },
+ "que": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "qué"
+  ],
+  "otherForms": {
+   "qué": 6.99
+  },
+  "valid": true,
+  "zipf": 7.53
+ },
+ "querés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.83
+ },
+ "quien": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "quién"
+  ],
+  "otherForms": {
+   "quién": 6.13
+  },
+  "valid": true,
+  "zipf": 5.65
+ },
+ "quienes": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "quiénes"
+  ],
+  "otherForms": {
+   "quiénes": 4.74
+  },
+  "valid": true,
+  "zipf": 4.7
+ },
+ "quizás": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.49
+ },
+ "quién": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "quien"
+  ],
+  "otherForms": {
+   "quien": 5.65
+  },
+  "valid": true,
+  "zipf": 6.13
+ },
+ "quiénes": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "quienes"
+  ],
+  "otherForms": {
+   "quienes": 4.7
+  },
+  "valid": true,
+  "zipf": 4.74
+ },
+ "qué": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "que"
+  ],
+  "otherForms": {
+   "que": 7.53
+  },
+  "valid": true,
+  "zipf": 6.99
+ },
+ "química": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.15
+ },
+ "radio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "radió": 1.15
+  },
+  "valid": true,
+  "zipf": 4.87
+ },
+ "rascacielos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.26
+ },
+ "ratones": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.83
+ },
+ "ratón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.13
+ },
+ "raíz": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.91
+ },
+ "real": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.18
+ },
+ "reconstruí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.36
+ },
+ "red": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.74
+ },
+ "regla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "reglá": null
+  },
+  "valid": true,
+  "zipf": 4.48
+ },
+ "regímenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.61
+ },
+ "reina": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "reiná": 0.37,
+   "reína": 0.98
+  },
+  "valid": true,
+  "zipf": 4.9
+ },
+ "reloj": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "relámpago": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.64
+ },
+ "resumen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.89
+ },
+ "resúmenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.66
+ },
+ "rey": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.2
+ },
+ "reía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.52
+ },
+ "reír": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.29
+ },
+ "reúne": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.77
+ },
+ "rio": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "río",
+   "rió"
+  ],
+  "otherForms": {
+   "rió": 3.52,
+   "río": 4.82
+  },
+  "valid": true,
+  "zipf": 3.93
+ },
+ "rioplatense": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.67
+ },
+ "robots": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.93
+ },
+ "rompecabezas": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.89
+ },
+ "rosa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.57
+ },
+ "rubí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.29
+ },
+ "rueda": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.28
+ },
+ "ruido": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "rápidamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.54
+ },
+ "rápido": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.51
+ },
+ "récord": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.96
+ },
+ "régimen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.82
+ },
+ "río": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "rio"
+  ],
+  "otherForms": {
+   "rio": 3.93,
+   "rió": 3.52
+  },
+  "valid": true,
+  "zipf": 4.82
+ },
+ "sabana": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "sábana"
+  ],
+  "otherForms": {
+   "sábana": 3.45
+  },
+  "valid": true,
+  "zipf": 3.0
+ },
+ "sabés": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "sabes"
+  ],
+  "otherForms": {
+   "sabes": 6.18
+  },
+  "valid": true,
+  "zipf": 3.86
+ },
+ "sabía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "sabia": 4.37
+  },
+  "valid": true,
+  "zipf": 5.57
+ },
+ "sacacorchos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.01
+ },
+ "sacapuntas": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.48
+ },
+ "sal": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.99
+ },
+ "saltan": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.33
+ },
+ "saltar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.46
+ },
+ "salí": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.46
+ },
+ "sandía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "sandia": 2.27
+  },
+  "valid": true,
+  "zipf": 3.34
+ },
+ "sapo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.62
+ },
+ "sartén": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.51
+ },
+ "se": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "sé"
+  ],
+  "otherForms": {
+   "sé": 6.33
+  },
+  "valid": true,
+  "zipf": 6.86
+ },
+ "sed": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.32
+ },
+ "seis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "séis": 1.93
+  },
+  "valid": true,
+  "zipf": 5.26
+ },
+ "semilla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.82
+ },
+ "semáforo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.49
+ },
+ "sentate": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.86
+ },
+ "si": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "sí"
+  ],
+  "otherForms": {
+   "sí": 6.74
+  },
+  "valid": true,
+  "zipf": 6.74
+ },
+ "siete": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.02
+ },
+ "silla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.71
+ },
+ "sobreesdrújula": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": null
+ },
+ "sofá": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.43
+ },
+ "sol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.03
+ },
+ "solamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.74
+ },
+ "sombrero": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.63
+ },
+ "sonreír": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.01
+ },
+ "sopa": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "sopá": 0.37
+  },
+  "valid": true,
+  "zipf": 4.46
+ },
+ "soy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.25
+ },
+ "suelo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.99
+ },
+ "suéter": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.79
+ },
+ "sábado": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.59
+ },
+ "sábana": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "sabana"
+  ],
+  "otherForms": {
+   "sabana": 3.0
+  },
+  "valid": true,
+  "zipf": 3.45
+ },
+ "sándwich": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "sé": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "se"
+  ],
+  "otherForms": {
+   "se": 6.86
+  },
+  "valid": true,
+  "zipf": 6.33
+ },
+ "sí": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "si"
+  ],
+  "otherForms": {
+   "si": 6.74
+  },
+  "valid": true,
+  "zipf": 6.74
+ },
+ "sílaba": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "silaba": 1.92,
+   "silabá": null
+  },
+  "valid": true,
+  "zipf": 2.79
+ },
+ "sótano": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.46
+ },
+ "también": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.06
+ },
+ "tambor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.71
+ },
+ "tatú": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.79
+ },
+ "taza": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "tazá": 0.37
+  },
+  "valid": true,
+  "zipf": 4.5
+ },
+ "te": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "té": 4.88
+  },
+  "valid": true,
+  "zipf": 6.86
+ },
+ "teatro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.63
+ },
+ "televisor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.87
+ },
+ "teléfono": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.35
+ },
+ "tenedor": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.72
+ },
+ "tenis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.09
+ },
+ "tenés": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tenes"
+  ],
+  "otherForms": {
+   "tenes": 3.57
+  },
+  "valid": true,
+  "zipf": 3.93
+ },
+ "tenía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "tenia": 4.55
+  },
+  "valid": true,
+  "zipf": 5.83
+ },
+ "terapéutico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.99
+ },
+ "termino": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "terminó",
+   "término"
+  ],
+  "otherForms": {
+   "terminó": 4.76,
+   "término": 4.08
+  },
+  "valid": true,
+  "zipf": 4.15
+ },
+ "terminó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "termino",
+   "término"
+  ],
+  "otherForms": {
+   "termino": 4.15,
+   "término": 4.08
+  },
+  "valid": true,
+  "zipf": 4.76
+ },
+ "tesis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.7
+ },
+ "tesoro": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.52
+ },
+ "ti": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.05
+ },
+ "tiburón": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "tictac": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.81
+ },
+ "tierra": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.38
+ },
+ "tijera": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.28
+ },
+ "tiza": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.34
+ },
+ "toalla": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.1
+ },
+ "tobogán": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.14
+ },
+ "tomate": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tómate"
+  ],
+  "otherForms": {
+   "tómate": 4.17
+  },
+  "valid": true,
+  "zipf": 3.97
+ },
+ "tomá": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "toma"
+  ],
+  "otherForms": {
+   "toma": 5.39
+  },
+  "valid": true,
+  "zipf": 3.1
+ },
+ "torta": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.98
+ },
+ "tortuga": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.99
+ },
+ "traeme": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tráeme"
+  ],
+  "otherForms": {
+   "tráeme": 4.22
+  },
+  "valid": true,
+  "zipf": 3.23
+ },
+ "tranquilamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.81
+ },
+ "transeúnte": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.72
+ },
+ "traémelo": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tráemelo"
+  ],
+  "otherForms": {
+   "tráemelo": 3.07
+  },
+  "valid": true,
+  "zipf": 1.85
+ },
+ "tren": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.95
+ },
+ "tres": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.75
+ },
+ "triángulo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "triangulo": 2.67,
+   "trianguló": 1.28
+  },
+  "valid": true,
+  "zipf": 3.69
+ },
+ "tráfico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "trafico": 3.35,
+   "traficó": 1.63
+  },
+  "valid": true,
+  "zipf": 4.47
+ },
+ "tráigaselo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.67
+ },
+ "trébol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.16
+ },
+ "tríceps": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.28
+ },
+ "tu": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tú"
+  ],
+  "otherForms": {
+   "tú": 6.33
+  },
+  "valid": true,
+  "zipf": 6.58
+ },
+ "té": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "te"
+  ],
+  "otherForms": {
+   "te": 6.86
+  },
+  "valid": true,
+  "zipf": 4.88
+ },
+ "término": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "terminó",
+   "termino"
+  ],
+  "otherForms": {
+   "termino": 4.15,
+   "terminó": 4.76
+  },
+  "valid": true,
+  "zipf": 4.08
+ },
+ "tía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.94
+ },
+ "tímido": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.0
+ },
+ "tío": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.48
+ },
+ "tórax": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.38
+ },
+ "tú": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "tu"
+  ],
+  "otherForms": {
+   "tu": 6.58
+  },
+  "valid": true,
+  "zipf": 6.33
+ },
+ "túnel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.26
+ },
+ "ultimó": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "último",
+   "ultimo"
+  ],
+  "otherForms": {
+   "ultimo": 3.96,
+   "último": 5.25
+  },
+  "valid": true,
+  "zipf": 0.67
+ },
+ "uruguayo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.03
+ },
+ "va": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.1
+ },
+ "vaca": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "vacá": null
+  },
+  "valid": true,
+  "zipf": 4.33
+ },
+ "ve": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "vé": 3.82
+  },
+  "valid": true,
+  "zipf": 5.63
+ },
+ "vehículo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.4
+ },
+ "veintidós": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.26
+ },
+ "veintiséis": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.86
+ },
+ "veintitrés": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.04
+ },
+ "vela": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "velá": null
+  },
+  "valid": true,
+  "zipf": 4.15
+ },
+ "ventana": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.87
+ },
+ "ventilador": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.62
+ },
+ "vení": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.53
+ },
+ "verdad": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.14
+ },
+ "vergüenza": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.68
+ },
+ "vestido": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.93
+ },
+ "vestite": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.79
+ },
+ "vi": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.45
+ },
+ "viento": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.69
+ },
+ "viernes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.67
+ },
+ "vio": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 5.08
+ },
+ "virrey": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.01
+ },
+ "virus": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.44
+ },
+ "vivía": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.47
+ },
+ "volar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "volcán": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.76
+ },
+ "volumen": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.05
+ },
+ "volúmenes": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 2.96
+ },
+ "vos": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.79
+ },
+ "voy": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.18
+ },
+ "víbora": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.65
+ },
+ "ya": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 6.42
+ },
+ "yacaré": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.22
+ },
+ "zanahoria": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.61
+ },
+ "zapato": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.16
+ },
+ "zoológico": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.86
+ },
+ "ábremela": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.22
+ },
+ "ágil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.3
+ },
+ "ágilmente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.52
+ },
+ "águila": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.03
+ },
+ "álbum": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.08
+ },
+ "ámbar": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.33
+ },
+ "ángel": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.61
+ },
+ "árbol": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.73
+ },
+ "árboles": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "arboles": 3.29
+  },
+  "valid": true,
+  "zipf": 4.5
+ },
+ "él": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "el"
+  ],
+  "otherForms": {
+   "el": 7.25
+  },
+  "valid": true,
+  "zipf": 6.34
+ },
+ "éxito": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.87
+ },
+ "índice": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "indice": 2.25,
+   "indicé": null
+  },
+  "valid": true,
+  "zipf": 3.66
+ },
+ "ñandú": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 0.85
+ },
+ "ómnibus": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.19
+ },
+ "ónix": {
+  "allowlisted": true,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 1.88
+ },
+ "órdenes": {
+  "allowlisted": false,
+  "ambiguousWith": [
+   "ordenes"
+  ],
+  "otherForms": {
+   "ordenes": 3.97
+  },
+  "valid": true,
+  "zipf": 4.85
+ },
+ "óvalo": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ovalo": 1.15,
+   "ovaló": null
+  },
+  "valid": true,
+  "zipf": 2.25
+ },
+ "últimamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.65
+ },
+ "último": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "ultimo": 3.96,
+   "ultimó": 0.67
+  },
+  "valid": true,
+  "zipf": 5.25
+ },
+ "únicamente": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {
+   "unicamente": 2.76
+  },
+  "valid": true,
+  "zipf": 3.86
+ },
+ "útil": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 4.51
+ },
+ "útiles": {
+  "allowlisted": false,
+  "ambiguousWith": [],
+  "otherForms": {},
+  "valid": true,
+  "zipf": 3.72
+ }
+}

@@ -1,0 +1,1537 @@
+{
+ "world": 9,
+ "name": "El Bosque de las Preguntas",
+ "topic": "qué, cómo, dónde",
+ "words": [
+  {
+   "id": "que-644325",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "qué",
+   "sentence": "Quiero [que] vengas a mi cumple.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "que-37329a",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "qué",
+   "sentence": "El libro [que] leí es de dragones.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "que-f211d1",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "qué",
+   "sentence": "Me dijo [que] mañana no hay clases.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "qué-8f191f",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "que",
+   "sentence": "¿[Qué] querés comer?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-4247ba",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "que",
+   "sentence": "¿[Qué] hora es?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-cc58c2",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "que",
+   "sentence": "¡[Qué] lindo día!",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-43924a",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "que",
+   "sentence": "¿Para [qué] sirve esto?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "como-ae2175",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cómo",
+   "sentence": "Mi gato es [como] un tigre chiquito.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "como-6855ca",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cómo",
+   "sentence": "Yo [como] fideos los domingos.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "como-f4352b",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cómo",
+   "sentence": "Hacelo [como] te expliqué.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "cuando-8d119b",
+   "word": "cuando",
+   "syllables": [
+    "cuan",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cuándo",
+   "sentence": "[Cuando] llueve, me quedo en casa.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.34
+  },
+  {
+   "id": "cómo-1c5a74",
+   "word": "cómo",
+   "syllables": [
+    "có",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "como",
+   "sentence": "¿[Cómo] te llamás?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.31
+  },
+  {
+   "id": "cómo-ee9b5d",
+   "word": "cómo",
+   "syllables": [
+    "có",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "como",
+   "sentence": "¿[Cómo] estás?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.31
+  },
+  {
+   "id": "quién-009e47",
+   "word": "quién",
+   "syllables": [
+    "quién"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "quien",
+   "sentence": "¿[Quién] ganó el partido?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.13
+  },
+  {
+   "id": "dónde-8c500d",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "donde",
+   "sentence": "¿[Dónde] está mi cartuchera?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "dónde-f60913",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "donde",
+   "sentence": "¿[Dónde] vivís?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "dónde-98b797",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "donde",
+   "sentence": "¿De [dónde] sos?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "donde-4f7557",
+   "word": "donde",
+   "syllables": [
+    "don",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "dónde",
+   "sentence": "La plaza [donde] jugamos tiene hamacas.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.82
+  },
+  {
+   "id": "quien-11a8ba",
+   "word": "quien",
+   "syllables": [
+    "quien"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "quién",
+   "sentence": "Fue Juan [quien] trajo la pelota.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.65
+  },
+  {
+   "id": "cuál-57c534",
+   "word": "cuál",
+   "syllables": [
+    "cuál"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cual",
+   "sentence": "¿[Cuál] es tu color favorito?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.51
+  },
+  {
+   "id": "cuál-9e8acf",
+   "word": "cuál",
+   "syllables": [
+    "cuál"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cual",
+   "sentence": "¿[Cuál] querés?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.51
+  },
+  {
+   "id": "cuánto-23feb6",
+   "word": "cuánto",
+   "syllables": [
+    "cuán",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cuanto",
+   "sentence": "¿[Cuánto] cuesta el alfajor?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.46
+  },
+  {
+   "id": "cuándo-93cee3",
+   "word": "cuándo",
+   "syllables": [
+    "cuán",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cuando",
+   "sentence": "¿[Cuándo] empiezan las vacaciones?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.4
+  },
+  {
+   "id": "cuántos-66ada4",
+   "word": "cuántos",
+   "syllables": [
+    "cuán",
+    "tos"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 1,
+   "distractor": "cuantos",
+   "sentence": "¿[Cuántos] años tenés?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "que-f27021",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "qué",
+   "sentence": "Ojalá [que] no llueva.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "que-035c47",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "qué",
+   "sentence": "Es más alto [que] yo.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "qué-3a40b3",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "que",
+   "sentence": "No sé [qué] hacer.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-7ac043",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "que",
+   "sentence": "Contame [qué] pasó.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-78c741",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "que",
+   "sentence": "¡[Qué] miedo!",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-c2e273",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "que",
+   "sentence": "¿Por [qué] llorás?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "como-f1c28e",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cómo",
+   "sentence": "[Como] no viniste, me fui.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "cuando-ecb633",
+   "word": "cuando",
+   "syllables": [
+    "cuan",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuándo",
+   "sentence": "Avisame [cuando] llegues.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.34
+  },
+  {
+   "id": "cómo-56a081",
+   "word": "cómo",
+   "syllables": [
+    "có",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "como",
+   "sentence": "No entiendo [cómo] se hace.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.31
+  },
+  {
+   "id": "cómo-e743b9",
+   "word": "cómo",
+   "syllables": [
+    "có",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "como",
+   "sentence": "¡[Cómo] llueve!",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.31
+  },
+  {
+   "id": "quién-1d257a",
+   "word": "quién",
+   "syllables": [
+    "quién"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "quien",
+   "sentence": "Adiviná [quién] vino.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.13
+  },
+  {
+   "id": "quién-73a876",
+   "word": "quién",
+   "syllables": [
+    "quién"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "quien",
+   "sentence": "¿Con [quién] vas al cine?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.13
+  },
+  {
+   "id": "dónde-8298dd",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "donde",
+   "sentence": "Decime [dónde] lo dejaste.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "donde-01ec0f",
+   "word": "donde",
+   "syllables": [
+    "don",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "dónde",
+   "sentence": "Lo dejé [donde] siempre.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.82
+  },
+  {
+   "id": "quien-aead04",
+   "word": "quien",
+   "syllables": [
+    "quien"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "quién",
+   "sentence": "Ella es [quien] me ayudó.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.65
+  },
+  {
+   "id": "cuál-61886d",
+   "word": "cuál",
+   "syllables": [
+    "cuál"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cual",
+   "sentence": "No sé [cuál] elegir.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.51
+  },
+  {
+   "id": "cuánto-357969",
+   "word": "cuánto",
+   "syllables": [
+    "cuán",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuanto",
+   "sentence": "¡[Cuánto] te extrañé!",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.46
+  },
+  {
+   "id": "cuándo-70908d",
+   "word": "cuándo",
+   "syllables": [
+    "cuán",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuando",
+   "sentence": "No sé [cuándo] vuelve papá.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.4
+  },
+  {
+   "id": "cuanto-01b49b",
+   "word": "cuanto",
+   "syllables": [
+    "cuan",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuánto",
+   "sentence": "[Cuanto] más leés, mejor escribís.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.23
+  },
+  {
+   "id": "cual-8bec02",
+   "word": "cual",
+   "syllables": [
+    "cual"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuál",
+   "sentence": "El cuento, el [cual] me encantó, es de piratas.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "adónde-360af6",
+   "word": "adónde",
+   "syllables": [
+    "a",
+    "dón",
+    "de"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "adonde",
+   "sentence": "¿[Adónde] vamos de excursión?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.08
+  },
+  {
+   "id": "porqué-e5dbd6",
+   "word": "porqué",
+   "syllables": [
+    "por",
+    "qué"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "porque",
+   "sentence": "No entiendo el [porqué] de su enojo.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "cuántas-ffcbfc",
+   "word": "cuántas",
+   "syllables": [
+    "cuán",
+    "tas"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuantas",
+   "sentence": "¿[Cuántas] figuritas te faltan?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.75
+  },
+  {
+   "id": "adonde-f8b4ed",
+   "word": "adonde",
+   "syllables": [
+    "a",
+    "don",
+    "de"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "adónde",
+   "sentence": "Vamos [adonde] vos quieras.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 4.35
+  },
+  {
+   "id": "cuánta-9fea3b",
+   "word": "cuánta",
+   "syllables": [
+    "cuán",
+    "ta"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 2,
+   "distractor": "cuanta",
+   "sentence": "¡[Cuánta] gente hay en la plaza!",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.13
+  },
+  {
+   "id": "que-a9571d",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "qué",
+   "sentence": "Me contó [que] hoy hay acto.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "que-cae2e5",
+   "word": "que",
+   "syllables": [
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "qué",
+   "sentence": "¡[Que] te mejores!",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "qué-a7f85c",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "que",
+   "sentence": "Preguntale [qué] trajo para la merienda.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-7325da",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "que",
+   "sentence": "Me preguntó [qué] hora era.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-8ef6ef",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "que",
+   "sentence": "¡Mirá [qué] grande está el cachorro!",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "qué-de455b",
+   "word": "qué",
+   "syllables": [
+    "qué"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "que",
+   "sentence": "¿Sabés [qué]? ¡Gané!",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.99
+  },
+  {
+   "id": "como-1a88e5",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cómo",
+   "sentence": "Salta [como] un canguro.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "como-bc4a87",
+   "word": "como",
+   "syllables": [
+    "co",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cómo",
+   "sentence": "Es tan alto [como] su papá.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.59
+  },
+  {
+   "id": "cuando-161286",
+   "word": "cuando",
+   "syllables": [
+    "cuan",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cuándo",
+   "sentence": "La prueba es [cuando] volvamos del receso.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.34
+  },
+  {
+   "id": "cómo-8f5050",
+   "word": "cómo",
+   "syllables": [
+    "có",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "como",
+   "sentence": "Mirá [cómo] salta.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 6.31
+  },
+  {
+   "id": "porque-6ef9ab",
+   "word": "porque",
+   "syllables": [
+    "por",
+    "que"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "porqué",
+   "sentence": "No vine [porque] estaba enfermo.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.21
+  },
+  {
+   "id": "quién-b7dd8b",
+   "word": "quién",
+   "syllables": [
+    "quién"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "quien",
+   "sentence": "Nadie sabe [quién] rompió el vidrio.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.13
+  },
+  {
+   "id": "dónde-950ede",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "donde",
+   "sentence": "Ya sé [dónde] está el tesoro.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "dónde-c2067d",
+   "word": "dónde",
+   "syllables": [
+    "dón",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "donde",
+   "sentence": "¿Por [dónde] se va al museo?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.11
+  },
+  {
+   "id": "donde-c810c6",
+   "word": "donde",
+   "syllables": [
+    "don",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "dónde",
+   "sentence": "Enterramos el tesoro [donde] crece el ombú.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.82
+  },
+  {
+   "id": "quien-d43c85",
+   "word": "quien",
+   "syllables": [
+    "quien"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "quién",
+   "sentence": "[Quien] rompe, paga.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.65
+  },
+  {
+   "id": "cuál-d11131",
+   "word": "cuál",
+   "syllables": [
+    "cuál"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cual",
+   "sentence": "Elegí [cuál] te gusta más.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.51
+  },
+  {
+   "id": "cuánto-9fab06",
+   "word": "cuánto",
+   "syllables": [
+    "cuán",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cuanto",
+   "sentence": "Calculá [cuánto] falta para el recreo.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.46
+  },
+  {
+   "id": "cuándo-644762",
+   "word": "cuándo",
+   "syllables": [
+    "cuán",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cuando",
+   "sentence": "Preguntale a la seño [cuándo] es la prueba.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.4
+  },
+  {
+   "id": "cuanto-ec74c7",
+   "word": "cuanto",
+   "syllables": [
+    "cuan",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cuánto",
+   "sentence": "Te llamo en [cuanto] llegue.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.23
+  },
+  {
+   "id": "cual-023016",
+   "word": "cual",
+   "syllables": [
+    "cual"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "cuál",
+   "sentence": "Tal [cual] lo dibujaste.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "porqué-c53187",
+   "word": "porqué",
+   "syllables": [
+    "por",
+    "qué"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "porque",
+   "sentence": "Quiero saber el [porqué].",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.9
+  },
+  {
+   "id": "quiénes-377e00",
+   "word": "quiénes",
+   "syllables": [
+    "quié",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "quienes",
+   "sentence": "¿[Quiénes] vienen al cumple?",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.74
+  },
+  {
+   "id": "quienes-f9a6bf",
+   "word": "quienes",
+   "syllables": [
+    "quie",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "interrogativa",
+   "world": 9,
+   "tier": 3,
+   "distractor": "quiénes",
+   "sentence": "Mis primos, [quienes] viven en Salta, vienen el sábado.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.7
+  }
+ ]
+}

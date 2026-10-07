@@ -1,0 +1,90 @@
+// Mundo 2 · El Tejado Puntiagudo — agudas: tilde si terminan en n, s o vocal
+@world 2
+
+@tier 1
+café
+sofá
+bebé | El [bebé] duerme en la cuna.
+menú
+maní
+jabón
+ratón
+botón
+limón
+camión
+avión
+canción
+corazón
+melón
+reloj
+pared
+feliz
+nariz
+mantel
+pastel
+saltar
+correr
+nadar
+volar
+tenés #voseo | ¿[Tenés] hambre?
+querés #voseo | ¿[Querés] jugar a la pelota?
+vení #voseo
+jugá #voseo
+
+@tier 2
+francés
+inglés
+japonés
+después
+quizás
+detrás
+además
+jamás
+sabés #voseo | ¿Vos [sabés] nadar?
+podés #voseo | ¿[Podés] venir mañana?
+mirá #voseo | Si querés, [mirá] la tele un rato.
+tomá #voseo | [Tomá], acá tenés tu lápiz.
+comé #voseo | Si tenés hambre, [comé] una fruta.
+escribí #voseo
+decí #voseo
+salí #voseo
+verdad
+amistad
+libertad
+español
+girasol
+caracol
+motor
+doctor
+profesor
+lombriz
+tiburón
+volcán
+
+@tier 3
+colibrí
+champú
+bambú
+ombú
+ñandú
+yacaré
+tatú
+maracuyá
+bisturí
+rubí
+esquí
+virrey
+carey
+estoy
+robots
+tictac
+huracán
+alacrán
+colchón
+ciempiés
+autobús
+perejil
+almacén
+compás
+arroz
+avestruz

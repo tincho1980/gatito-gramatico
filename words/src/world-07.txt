@@ -1,0 +1,90 @@
+// Mundo 7 · El Puente Roto — hiatos
+// i/u tónica junto a a, e, o: tilde SIEMPRE, aunque la regla general diga lo contrario (río, baúl).
+// Dos vocales abiertas juntas: hiato que sigue las reglas generales (poeta, león).
+@world 7
+
+@tier 1
+día
+tía
+tío
+frío
+maíz
+raíz
+país
+baúl
+oído
+policía
+alegría
+sandía
+fantasía
+panadería
+librería
+heladería
+juguetería
+grúa
+búho
+poeta
+teatro
+león
+leer
+idea
+museo
+paseo
+feo
+canoa
+
+@tier 2
+reír #verbo
+oír #verbo
+freír #verbo
+sonreír #verbo
+caída
+leído
+energía
+batería
+ataúd
+laúd
+cacatúa
+púa
+ahí
+increíble
+egoísta
+había #verbo
+tenía #verbo
+decía #verbo
+comía #verbo
+vivía #verbo
+sabía #verbo
+reía #verbo
+leía #verbo
+caoba
+cacao
+toalla
+koala
+pelea
+correo
+deseo
+real
+maestra
+héroe
+aéreo
+océano
+petróleo
+
+@tier 3
+río | El [río] Paraná es enorme.
+rio | Mi hermano se [rio] del chiste.
+continúa | El partido [continúa] después del entretiempo.
+continuo | Hay un ruido [continuo] en la calle.
+prohíbe | El cartel [prohíbe] pisar el pasto.
+maúlla #verbo
+reúne #verbo
+transeúnte
+vehículo
+cohíbe #verbo
+coágulo
+caótico
+peor
+creer #verbo
+aldea
+marea

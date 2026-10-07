@@ -1,0 +1,83 @@
+// Mundo 9 · El Bosque de las Preguntas — qué, cómo, dónde...
+// Llevan tilde cuando preguntan o exclaman, aunque no haya signos (No sé qué hacer).
+// Sin tilde cuando unen o relacionan (El libro que leí; Cuando llueve, me quedo).
+@world 9
+
+@tier 1
+qué | ¿[Qué] querés comer? !interrogativa #voseo
+qué | ¿[Qué] hora es? !interrogativa
+qué | ¡[Qué] lindo día! !interrogativa
+que | Quiero [que] vengas a mi cumple. !interrogativa
+que | El libro [que] leí es de dragones. !interrogativa
+cómo | ¿[Cómo] te llamás? !interrogativa #voseo
+cómo | ¿[Cómo] estás? !interrogativa
+como | Mi gato es [como] un tigre chiquito. !interrogativa
+como | Yo [como] fideos los domingos. !interrogativa
+dónde | ¿[Dónde] está mi cartuchera? !interrogativa
+dónde | ¿[Dónde] vivís? !interrogativa #voseo
+donde | La plaza [donde] jugamos tiene hamacas. !interrogativa
+cuándo | ¿[Cuándo] empiezan las vacaciones? !interrogativa
+cuando | [Cuando] llueve, me quedo en casa. !interrogativa
+quién | ¿[Quién] ganó el partido? !interrogativa
+quien | Fue Juan [quien] trajo la pelota. !interrogativa
+cuánto | ¿[Cuánto] cuesta el alfajor? !interrogativa
+cuántos | ¿[Cuántos] años tenés? !interrogativa #voseo
+cuál | ¿[Cuál] es tu color favorito? !interrogativa
+cuál | ¿[Cuál] querés? !interrogativa #voseo
+qué | ¿Para [qué] sirve esto? !interrogativa
+que | Me dijo [que] mañana no hay clases. !interrogativa
+dónde | ¿De [dónde] sos? !interrogativa #voseo
+como | Hacelo [como] te expliqué. !interrogativa
+
+@tier 2
+qué | No sé [qué] hacer. !interrogativa
+qué | Contame [qué] pasó. !interrogativa #voseo
+qué | ¡[Qué] miedo! !interrogativa
+que | Ojalá [que] no llueva. !interrogativa
+que | Es más alto [que] yo. !interrogativa
+cómo | No entiendo [cómo] se hace. !interrogativa
+cómo | ¡[Cómo] llueve! !interrogativa
+como | [Como] no viniste, me fui. !interrogativa
+dónde | Decime [dónde] lo dejaste. !interrogativa #voseo
+donde | Lo dejé [donde] siempre. !interrogativa
+cuándo | No sé [cuándo] vuelve papá. !interrogativa
+cuando | Avisame [cuando] llegues. !interrogativa #voseo
+quién | Adiviná [quién] vino. !interrogativa #voseo
+quién | ¿Con [quién] vas al cine? !interrogativa #voseo
+quien | Ella es [quien] me ayudó. !interrogativa
+cuánto | ¡[Cuánto] te extrañé! !interrogativa
+cuánta | ¡[Cuánta] gente hay en la plaza! !interrogativa
+cuántas | ¿[Cuántas] figuritas te faltan? !interrogativa
+cuanto | [Cuanto] más leés, mejor escribís. !interrogativa #voseo
+cuál | No sé [cuál] elegir. !interrogativa
+cual | El cuento, el [cual] me encantó, es de piratas. !interrogativa
+adónde | ¿[Adónde] vamos de excursión? !interrogativa
+adonde | Vamos [adonde] vos quieras. !interrogativa #voseo
+porqué | No entiendo el [porqué] de su enojo. !interrogativa
+qué | ¿Por [qué] llorás? !interrogativa #voseo
+
+@tier 3
+qué | Preguntale [qué] trajo para la merienda. !interrogativa #voseo
+qué | Me preguntó [qué] hora era. !interrogativa
+que | Me contó [que] hoy hay acto. !interrogativa
+cómo | Mirá [cómo] salta. !interrogativa #voseo
+como | Salta [como] un canguro. !interrogativa
+dónde | Ya sé [dónde] está el tesoro. !interrogativa
+donde | Enterramos el tesoro [donde] crece el ombú. !interrogativa
+cuándo | Preguntale a la seño [cuándo] es la prueba. !interrogativa #voseo
+cuando | La prueba es [cuando] volvamos del receso. !interrogativa
+quién | Nadie sabe [quién] rompió el vidrio. !interrogativa
+quien | [Quien] rompe, paga. !interrogativa
+cuánto | Calculá [cuánto] falta para el recreo. !interrogativa #voseo
+cuanto | Te llamo en [cuanto] llegue. !interrogativa
+cuál | Elegí [cuál] te gusta más. !interrogativa #voseo
+cual | Tal [cual] lo dibujaste. !interrogativa
+qué | ¡Mirá [qué] grande está el cachorro! !interrogativa #voseo
+que | ¡[Que] te mejores! !interrogativa
+qué | ¿Sabés [qué]? ¡Gané! !interrogativa #voseo
+porque | No vine [porque] estaba enfermo. !interrogativa
+porqué | Quiero saber el [porqué]. !interrogativa
+quiénes | ¿[Quiénes] vienen al cumple? !interrogativa
+quienes | Mis primos, [quienes] viven en Salta, vienen el sábado. !interrogativa
+dónde | ¿Por [dónde] se va al museo? !interrogativa
+como | Es tan alto [como] su papá. !interrogativa

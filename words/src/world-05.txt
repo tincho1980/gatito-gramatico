@@ -1,0 +1,89 @@
+// Mundo 5 · El Mercado de los Ovillos — las tres mezcladas y palabras trampa
+// Las trampas llevan oración: sin contexto, "termino" / "término" / "terminó" son todas correctas.
+@world 5
+
+@tier 1
+tenedor
+cuchara
+cuchillo
+sartén
+heladera
+tijera
+ventilador
+almohada
+cartón
+cepillo
+pañuelo
+mochila
+cuento
+dragón
+estrella
+planeta
+fantasma
+princesa
+tesoro
+castillo
+espejo
+jardín
+balcón
+pincel
+cohetes =cohete
+ducha
+
+@tier 2
+lavaplatos
+cebolla
+zanahoria
+lechuga
+fideos
+pimienta
+semilla
+hormiga
+mosquito
+cigarra
+gorrión
+halcón
+búfalo
+lechuza
+pelícano
+canguro
+jirafa
+águila
+hamaca
+espátula
+ciclista
+almíbar
+cáliz
+nácar
+diamante
+
+@tier 3
+papá | Mi [papá] hace unas pizzas buenísimas.
+papa | Para la cena comimos [papa] al horno.
+mamá | [Mamá] nos llevó a la plaza.
+está | La merienda [está] lista.
+esta | [Esta] mochila es nueva.
+término | Llegamos al [término] del camino.
+termino | Si [termino] la tarea, salgo a jugar.
+terminó | La película [terminó] tarde.
+último | Llegué [último] a la meta.
+ultimó | El técnico [ultimó] los detalles del partido.
+público | El [público] aplaudió de pie.
+publicó | La maestra [publicó] las notas.
+publico | Hoy [publico] mi dibujo en la cartelera.
+práctico | Este estuche es muy [práctico].
+practicó | Ayer Lucía [practicó] piano.
+practico | Todos los días [practico] con la pelota.
+cálculo | Hice el [cálculo] de memoria.
+calculo | Con los dedos [calculo] más rápido.
+calculó | Tomás [calculó] cuánto faltaba.
+sábana | Cambiamos la [sábana] de la cama.
+sabana | Los leones viven en la [sabana].
+cantó | El gallo [cantó] a la mañana.
+canto | Yo [canto] en el coro de la escuela.
+llegó | La seño [llegó] temprano.
+llego | Si [llego] tarde, me retan.
+habló | El director [habló] en el acto.
+hablo | Siempre [hablo] con mi abuela por teléfono.
+pasó | ¿Qué [pasó] en el recreo?
+paso | Te [paso] a buscar a las cinco.

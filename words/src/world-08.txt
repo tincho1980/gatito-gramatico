@@ -1,0 +1,89 @@
+// Mundo 8 · La Casa de los Gemelos — monosílabos y tilde diacrítica
+// Monosílabos: nunca llevan tilde (fue, dio, vio, ti). Solo los gemelos que la tilde distingue.
+// Los gemelos van siempre en oración: sin contexto no hay respuesta.
+@world 8
+
+@tier 1
+fue
+fui
+dio
+vio
+ti
+sol
+pan
+mar
+pie
+sal
+tren
+pez
+luz
+mes
+dos
+tres
+gol
+red
+flor
+vos #voseo
+voy
+hoy
+muy
+rey
+mi | [Mi] perro se llama Pancho. !diacritica
+mí | Este regalo es para [mí].
+tu | [Tu] mochila es la roja. !diacritica
+tú | El dibujo más lindo lo hiciste [tú].
+el | [El] gato duerme en la silla. !diacritica
+él | [Él] juega de arquero.
+sí | Le pregunté si venía y dijo que [sí].
+si | [Si] llueve, no salimos al patio. !diacritica
+té | La abuela toma [té] con leche.
+te | [Te] espero a la salida. !diacritica
+
+@tier 2
+di
+vi
+fe
+ni
+ya
+va
+da
+ve
+bien
+gris
+diez
+seis
+cien
+mil
+sed
+doy
+soy
+ley
+mí | A [mí] me encanta el helado.
+mi | Vení con [mi] hermana. !diacritica
+él | Se lo di a [él].
+el | Me gusta [el] dulce de leche. !diacritica
+sé | Yo [sé] la respuesta.
+se | [Se] cayó la taza. !diacritica
+sé | No [sé] andar en patineta.
+dé | Pedile a la seño que te [dé] la hoja.
+de | La casa [de] mi abuela tiene un limonero. !diacritica
+más | Quiero [más] helado.
+más | Dos [más] dos son cuatro.
+tú | ¿Lo escribiste [tú]?
+tu | ¿Esa es [tu] campera? !diacritica
+
+@tier 3
+guion #rae2010
+fiel
+dé | Ojalá que me [dé] permiso.
+se | Martina [se] lava los dientes. !diacritica
+sé | [Sé] bueno con tu hermano.
+mas | Quería ir, [mas] no pude. !diacritica
+sí | Lo hizo por [sí] mismo.
+si | No sé [si] venir mañana. !diacritica
+té | Prepará un [té] de manzanilla.
+te | ¿[Te] gustó la película? !diacritica
+aún | [Aún] no llegó el colectivo.
+aun | [Aun] así, ganamos el partido. !diacritica
+aún | Tengo hambre [aún].
+aun | Todos vinieron, [aun] los que estaban enfermos. !diacritica

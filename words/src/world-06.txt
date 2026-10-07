@@ -1,0 +1,90 @@
+// Mundo 6 · El Río de los Abrazos — diptongos y triptongos con las reglas generales
+// Si lleva tilde, va en la vocal abierta (a, e, o); si son i+u, en la segunda.
+@world 6
+
+@tier 1
+puerta
+nieve
+tierra
+fuego
+bueno
+cielo
+aire
+peine
+auto
+reina
+piano
+agua
+juego
+nuevo
+viento
+siete
+nueve
+diente
+hielo
+huevo
+abuelo
+pierna
+muela
+rueda
+suelo
+ciudad
+cuaderno
+escuela
+también
+adiós
+
+@tier 2
+estación
+lección
+atención
+habitación
+huésped
+béisbol
+periódico
+farmacéutico
+náutico
+cuello
+viernes
+jaula
+causa
+pausa
+deuda
+oigo
+boina
+peinado
+patio
+radio
+novio
+lluvia
+cuidado
+ruido
+cuidar
+fuimos
+cuota
+guante
+cuidadoso
+anciano
+
+@tier 3
+reconstruí
+destruí
+construí
+incluí
+jesuita
+construido
+buey #triptongo
+guau #triptongo
+miau #triptongo
+uruguayo
+paraguayo
+averiguar
+huelga
+murcielaguito
+acuático
+neumático
+terapéutico
+pingüino
+cigüeña
+vergüenza
+agüita

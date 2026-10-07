@@ -1,0 +1,89 @@
+// Mundo 10 · La Torre de la Gata Sabia — casos especiales
+// Plurales que ganan o pierden la tilde, adverbios en -mente, compuestos y verbos con pronombres pegados.
+@world 10
+
+@tier 1
+canciones =canción #plural
+camiones =camión #plural
+corazones =corazón #plural
+aviones =avión #plural
+ratones =ratón #plural
+botones =botón #plural
+limones =limón #plural
+jóvenes =joven #plural
+exámenes =examen #plural
+imágenes =imagen #plural
+lápices =lápiz #plural
+fáciles =fácil #plural
+fácilmente =fácil #mente !mente
+rápidamente =rápido #mente !mente
+lentamente =lento #mente !mente
+felizmente =feliz #mente !mente
+solamente =solo #mente !mente
+claramente =claro #mente !mente
+veintidós #compuesto
+veintitrés #compuesto
+dieciséis #compuesto
+puntapié #compuesto
+decime =decí #enclitico #voseo
+contame =contá #enclitico #voseo
+miralo =mirá #enclitico #voseo | Si no me creés, [miralo] vos.
+dame =da #enclitico
+
+@tier 2
+resúmenes =resumen #plural
+volúmenes =volumen #plural
+órdenes =orden #plural | La seño nos dio dos [órdenes] claras.
+márgenes =margen #plural
+orígenes =origen #plural
+almacenes =almacén #plural
+franceses =francés #plural
+ingleses =inglés #plural
+compases =compás #plural
+útiles =útil #plural
+países =país #plural
+últimamente =último #mente !mente
+difícilmente =difícil #mente !mente
+cómodamente =cómodo #mente !mente
+públicamente =público #mente !mente
+únicamente =único #mente !mente
+tranquilamente =tranquilo #mente !mente
+cortésmente =cortés #mente !mente
+veintiséis #compuesto
+cortacésped #compuesto
+rascacielos #compuesto
+cuentagotas #compuesto
+pasatiempo #compuesto
+mediodía #compuesto
+decímelo =decí #enclitico #voseo
+contámelo =contá #enclitico #voseo
+dámelo =da #enclitico
+pasame =pasá #enclitico #voseo | Vos que estás cerca, [pasame] la sal.
+pasámela =pasá #enclitico #voseo | Si ya terminaste con la pelota, [pasámela].
+avisame =avisá #enclitico #voseo | Cuando estés en casa, [avisame], ¿querés?
+escribime =escribí #enclitico #voseo
+escribímelo =escribí #enclitico #voseo
+
+@tier 3
+caracteres =carácter #plural
+regímenes =régimen #plural
+especímenes =espécimen #plural
+cráteres =cráter #plural
+débiles =débil #plural
+prácticamente =práctico #mente !mente
+ágilmente =ágil #mente !mente
+débilmente =débil #mente !mente
+decimoséptimo #compuesto
+balompié #compuesto
+sacacorchos #compuesto
+rioplatense #compuesto
+asimismo #compuesto
+comételo =comé #enclitico #voseo
+traeme =traé #enclitico #voseo | Si vas a la cocina, [traeme] un vaso, ¿querés?
+traémelo =traé #enclitico #voseo | Si encontrás mi buzo, [traémelo], ¿podés?
+ponete =poné #enclitico #voseo
+sentate =sentá #enclitico #voseo
+fijate =fijá #enclitico #voseo | Vos [fijate] si cerraste la puerta.
+acordate =acordá #enclitico #voseo
+vestite =vestí #enclitico #voseo
+andate =andá #enclitico #voseo

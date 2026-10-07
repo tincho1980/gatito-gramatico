@@ -1,0 +1,87 @@
+// Mundo 4 · El Árbol Trepador — esdrújulas y sobreesdrújulas: siempre tilde
+@world 4
+
+@tier 1
+música
+pájaro
+sábado
+médico
+número
+plátano
+lámpara
+cámara
+película
+rápido
+último
+sílaba
+mágico
+página
+fábrica | Visitamos una [fábrica] de alfajores.
+lágrima
+brócoli
+círculo | Dibujá un [círculo] rojo.
+triángulo
+pirámide
+pétalo
+víbora
+cúspide
+tímido
+óvalo
+línea
+árboles =árbol
+
+@tier 2
+académico
+artístico
+atlántico
+bolígrafo
+cántaro
+cáscara
+cúpula
+depósito
+ejército
+éxito
+fósforo
+gráfico
+hígado
+histórico
+índice
+kilómetro
+lógico
+mamífero
+miércoles
+músculo
+náufrago
+ómnibus
+plástico
+básico
+química
+relámpago
+sótano
+tráfico
+zoológico
+dinámico
+cómodo
+
+@tier 3
+régimen
+espécimen
+hipérbola
+esdrújula
+sobreesdrújula
+apóstrofo
+murciélagos =murciélago
+dígamelo
+cuéntamelo
+tráigaselo
+explíquemelo
+devuélvemelo
+entrégaselo
+cómpraselo
+llévatelo
+escóndetelo
+díganselo
+cuídatelo
+pídeselo
+ábremela
+léetelo

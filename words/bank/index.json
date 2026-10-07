@@ -1,0 +1,125 @@
+{
+ "version": 1,
+ "worlds": [
+  {
+   "world": 1,
+   "name": "La Sílaba que Ronronea",
+   "topic": "sílaba tónica",
+   "file": "world-01.json",
+   "count": 80,
+   "byTier": [
+    28,
+    25,
+    27
+   ]
+  },
+  {
+   "world": 2,
+   "name": "El Tejado Puntiagudo",
+   "topic": "agudas",
+   "file": "world-02.json",
+   "count": 82,
+   "byTier": [
+    28,
+    28,
+    26
+   ]
+  },
+  {
+   "world": 3,
+   "name": "Las Llanuras de la Siesta",
+   "topic": "graves",
+   "file": "world-03.json",
+   "count": 80,
+   "byTier": [
+    28,
+    31,
+    21
+   ]
+  },
+  {
+   "world": 4,
+   "name": "El Árbol Trepador",
+   "topic": "esdrújulas y sobreesdrújulas",
+   "file": "world-04.json",
+   "count": 79,
+   "byTier": [
+    27,
+    31,
+    21
+   ]
+  },
+  {
+   "world": 5,
+   "name": "El Mercado de los Ovillos",
+   "topic": "las tres mezcladas",
+   "file": "world-05.json",
+   "count": 80,
+   "byTier": [
+    26,
+    25,
+    29
+   ]
+  },
+  {
+   "world": 6,
+   "name": "El Río de los Abrazos",
+   "topic": "diptongos",
+   "file": "world-06.json",
+   "count": 81,
+   "byTier": [
+    30,
+    30,
+    21
+   ]
+  },
+  {
+   "world": 7,
+   "name": "El Puente Roto",
+   "topic": "hiatos",
+   "file": "world-07.json",
+   "count": 80,
+   "byTier": [
+    28,
+    36,
+    16
+   ]
+  },
+  {
+   "world": 8,
+   "name": "La Casa de los Gemelos",
+   "topic": "monosílabos y diacrítica",
+   "file": "world-08.json",
+   "count": 79,
+   "byTier": [
+    34,
+    31,
+    14
+   ]
+  },
+  {
+   "world": 9,
+   "name": "El Bosque de las Preguntas",
+   "topic": "qué, cómo, dónde",
+   "file": "world-09.json",
+   "count": 73,
+   "byTier": [
+    24,
+    25,
+    24
+   ]
+  },
+  {
+   "world": 10,
+   "name": "La Torre de la Gata Sabia",
+   "topic": "casos especiales",
+   "file": "world-10.json",
+   "count": 80,
+   "byTier": [
+    26,
+    32,
+    22
+   ]
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+// Palabras correctas que el diccionario Hunspell es_AR no trae.
+// Una por línea; después de // va el motivo. Revisar contra el DLE antes de sumar.
+brócoli // DLE: brócoli
+comételo // imperativo voseante + enclíticos
+cortacésped // DLE: cortacésped
+cuídatelo // imperativo tuteante + enclíticos
+cómpraselo // imperativo + enclíticos
+entrégaselo // imperativo + enclíticos
+escóndetelo // imperativo + enclíticos
+explíquemelo // imperativo + enclíticos
+llévatelo // imperativo + enclíticos
+léetelo // imperativo + enclíticos
+ábremela // imperativo + enclíticos
+juguetería // DLE: juguetería
+koala // DLE: koala
+lavarropas // DLE: lavarropas (Arg.)
+maracuyá // DLE: maracuyá
+murcielaguito // diminutivo regular de murciélago
+podés // voseo de poder
+tatú // DLE: tatú
+yacaré // DLE: yacaré
+ónix // DLE: ónix
