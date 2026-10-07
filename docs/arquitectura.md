@@ -36,7 +36,7 @@ flowchart TD
 | Lenguaje | TypeScript estricto en todo | `strict: true`, `noUncheckedIndexedAccess: true` |
 | Monorepo | npm workspaces | `app`, `api`, `shared`, `words` |
 | Node | 22 LTS | `.nvmrc` |
-| App | React 19 + Vite 6 | SPA |
+| App | React 19 + Vite 7 | SPA |
 | Estilos | Tailwind CSS v4 con `@tailwindcss/vite` | Reemplaza el CDN actual |
 | Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/ronda`, `/coleccion`, `/perfil`, `/aula/:id` |
 | Estado de UI | Zustand | Estado de la ronda en curso |

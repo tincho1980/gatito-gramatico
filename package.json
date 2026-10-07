@@ -1,23 +1,32 @@
 {
-  "name": "gatito-gramático",
+  "name": "gatita-gramatica",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  "workspaces": [
+    "app",
+    "shared",
+    "api"
+  ],
+  "engines": {
+    "node": ">=22"
   },
-  "dependencies": {
-    "react": "^19.2.0",
-    "@google/genai": "^1.30.0",
-    "react-dom": "^19.2.0",
-    "recharts": "^3.5.0"
+  "scripts": {
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "npm test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "check:secrets": "node scripts/check-secrets.mjs app/dist"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
+    "typescript": "~5.8",
+    "typescript-eslint": "^8.71.1"
   }
 }
