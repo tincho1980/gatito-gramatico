@@ -25,6 +25,8 @@ La app queda en http://localhost:3000. No hace falta ninguna clave ni archivo `.
 | `npm run format` | Formatea con Prettier |
 | `npm test` | Tests (Vitest) de todos los workspaces |
 | `npm run build` | Build de todos los workspaces |
+| `npm run build -w words` | Regenera el banco de palabras |
+| `npm run validate -w words` | Valida el banco publicado |
 | `npm run check:secrets` | Busca claves en `app/dist` (corre en CI después del build) |
 
 ## Estructura
@@ -34,7 +36,7 @@ Monorepo con npm workspaces:
 - `app/`: la PWA (React + Vite + Tailwind).
 - `shared/`: lógica pura del juego y tipos, sin DOM ni red. La usan `app` y `api`.
 - `api/`: Cloudflare Worker (etapa 7).
-- `words/`: banco de palabras (se integra a los workspaces en la etapa 1).
+- `words/`: banco de palabras. Se editan los `.txt` de `words/src/` y se corre `npm run build -w words`, que regenera `words/bank/` y `app/public/words/`.
 
 ## Documentación
 

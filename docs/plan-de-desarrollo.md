@@ -61,14 +61,14 @@ Criterios de aceptación:
 
 Punto de partida: el pipeline completo ya está en `words/` (fuentes `.txt`, motor, build, validador, lexicón y 51 tests en verde). `npm run build` reproduce `words/bank/` sin diferencias. Ver [banco-de-palabras.md](banco-de-palabras.md).
 
-- [ ] Sumar `words` a los workspaces de la raíz; `npm test` de la raíz corre también `npm test -w words`.
-- [ ] Definir en `shared/src/schemas.ts` los esquemas Zod `WordEntrySchema`, `WorldFileSchema` (`{ world, name, topic, words }`) e `IndexSchema`, y sus tipos. `validate.mjs` valida también contra estos esquemas.
-- [ ] Nombres y temas de los mundos: una sola fuente. Moverlos de `WORLDS` en `words/lib/bank.mjs` a `shared/src/data/worlds.ts` (junto con el grafo de desbloqueo) e importarlos desde ahí.
-- [ ] `index.json`: `version` pasa a ser un hash del contenido de los mundos (hoy es `1` fijo).
-- [ ] El build copia `words/bank/*` a `app/public/words/`.
-- [ ] Agregar a los tests del motor los 8 errores del prototipo viejo, si no están: `mamá`, `lápiz`, `examen`, `gramática`, `agrícola`, `idiosincrasia`, `esternocleidomastoideo`, `electroencefalografista`.
-- [ ] `npm run validate -w words` en CI.
-- [ ] Loader en `shared/` (`loadWorld(n)`, `loadIndex()`), con `fetch` inyectable para testear.
+- [x] Sumar `words` a los workspaces de la raíz; `npm test` de la raíz corre también `npm test -w words`.
+- [x] Definir en `shared/src/schemas.ts` los esquemas Zod `WordEntrySchema`, `WorldFileSchema` (`{ world, name, topic, words }`) e `IndexSchema`, y sus tipos. `validate.mjs` valida también contra estos esquemas.
+- [x] Nombres y temas de los mundos: una sola fuente. Moverlos de `WORLDS` en `words/lib/bank.mjs` a `shared/src/data/worlds.ts` (junto con el grafo de desbloqueo) e importarlos desde ahí.
+- [x] `index.json`: `version` pasa a ser un hash del contenido de los mundos (hoy es `1` fijo).
+- [x] El build copia `words/bank/*` a `app/public/words/`.
+- [x] Agregar a los tests del motor los 8 errores del prototipo viejo, si no están: `mamá`, `lápiz`, `examen`, `gramática`, `agrícola`, `idiosincrasia`, `esternocleidomastoideo`, `electroencefalografista`.
+- [x] `npm run validate -w words` en CI.
+- [x] Loader en `shared/` (`loadWorld(n)`, `loadIndex()`), con `fetch` inyectable para testear.
 - [ ] Opcional: pasar `words/lib` a TypeScript.
 
 Criterios de aceptación:

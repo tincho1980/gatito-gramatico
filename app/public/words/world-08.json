@@ -1,0 +1,1558 @@
+{
+ "world": 8,
+ "name": "La Casa de los Gemelos",
+ "topic": "monosílabos y diacrítica",
+ "words": [
+  {
+   "id": "el-a9ea4f",
+   "word": "el",
+   "syllables": [
+    "el"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "él",
+   "sentence": "[El] gato duerme en la silla.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.25
+  },
+  {
+   "id": "te-c01a28",
+   "word": "te",
+   "syllables": [
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "té",
+   "sentence": "[Te] espero a la salida.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.86
+  },
+  {
+   "id": "mi-66b2db",
+   "word": "mi",
+   "syllables": [
+    "mi"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "mí",
+   "sentence": "[Mi] perro se llama Pancho.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.75
+  },
+  {
+   "id": "sí-1b2545",
+   "word": "sí",
+   "syllables": [
+    "sí"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "si",
+   "sentence": "Le pregunté si venía y dijo que [sí].",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.74
+  },
+  {
+   "id": "si-90532f",
+   "word": "si",
+   "syllables": [
+    "si"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "sí",
+   "sentence": "[Si] llueve, no salimos al patio.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.74
+  },
+  {
+   "id": "tu-1984bf",
+   "word": "tu",
+   "syllables": [
+    "tu"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "tú",
+   "sentence": "[Tu] mochila es la roja.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.58
+  },
+  {
+   "id": "muy",
+   "word": "muy",
+   "syllables": [
+    "muy"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "múy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.41
+  },
+  {
+   "id": "él-b33436",
+   "word": "él",
+   "syllables": [
+    "él"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "el",
+   "sentence": "[Él] juega de arquero.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.34
+  },
+  {
+   "id": "tú-b94524",
+   "word": "tú",
+   "syllables": [
+    "tú"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "tu",
+   "sentence": "El dibujo más lindo lo hiciste [tú].",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.33
+  },
+  {
+   "id": "fue",
+   "word": "fue",
+   "syllables": [
+    "fue"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "fué",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.27
+  },
+  {
+   "id": "voy",
+   "word": "voy",
+   "syllables": [
+    "voy"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "vóy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.18
+  },
+  {
+   "id": "dos",
+   "word": "dos",
+   "syllables": [
+    "dos"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "dós",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.12
+  },
+  {
+   "id": "mí-f8d3e8",
+   "word": "mí",
+   "syllables": [
+    "mí"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "mi",
+   "sentence": "Este regalo es para [mí].",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.09
+  },
+  {
+   "id": "ti",
+   "word": "ti",
+   "syllables": [
+    "ti"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "tí",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.05
+  },
+  {
+   "id": "tres",
+   "word": "tres",
+   "syllables": [
+    "tres"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "trés",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.75
+  },
+  {
+   "id": "hoy",
+   "word": "hoy",
+   "syllables": [
+    "hoy"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "hóy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.75
+  },
+  {
+   "id": "fui",
+   "word": "fui",
+   "syllables": [
+    "fui"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "fuí",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.37
+  },
+  {
+   "id": "dio",
+   "word": "dio",
+   "syllables": [
+    "dio"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "dió",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.25
+  },
+  {
+   "id": "luz",
+   "word": "luz",
+   "syllables": [
+    "luz"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "lúz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.24
+  },
+  {
+   "id": "rey",
+   "word": "rey",
+   "syllables": [
+    "rey"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "réy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.2
+  },
+  {
+   "id": "vio",
+   "word": "vio",
+   "syllables": [
+    "vio"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "vió",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.08
+  },
+  {
+   "id": "pie",
+   "word": "pie",
+   "syllables": [
+    "pie"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "pié",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.08
+  },
+  {
+   "id": "sol",
+   "word": "sol",
+   "syllables": [
+    "sol"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "sól",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.03
+  },
+  {
+   "id": "mes",
+   "word": "mes",
+   "syllables": [
+    "mes"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "més",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.03
+  },
+  {
+   "id": "sal",
+   "word": "sal",
+   "syllables": [
+    "sal"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "sál",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.99
+  },
+  {
+   "id": "tren",
+   "word": "tren",
+   "syllables": [
+    "tren"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "trén",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.95
+  },
+  {
+   "id": "mar",
+   "word": "mar",
+   "syllables": [
+    "mar"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "már",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.92
+  },
+  {
+   "id": "té-045f59",
+   "word": "té",
+   "syllables": [
+    "té"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 1,
+   "distractor": "te",
+   "sentence": "La abuela toma [té] con leche.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.88
+  },
+  {
+   "id": "vos",
+   "word": "vos",
+   "syllables": [
+    "vos"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "vós",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 4.79
+  },
+  {
+   "id": "red",
+   "word": "red",
+   "syllables": [
+    "red"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "réd",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.74
+  },
+  {
+   "id": "pan",
+   "word": "pan",
+   "syllables": [
+    "pan"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "pán",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.72
+  },
+  {
+   "id": "pez",
+   "word": "pez",
+   "syllables": [
+    "pez"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "péz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.45
+  },
+  {
+   "id": "flor",
+   "word": "flor",
+   "syllables": [
+    "flor"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "flór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.36
+  },
+  {
+   "id": "gol",
+   "word": "gol",
+   "syllables": [
+    "gol"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 1,
+   "distractor": "gól",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.86
+  },
+  {
+   "id": "de-a12036",
+   "word": "de",
+   "syllables": [
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "dé",
+   "sentence": "La casa [de] mi abuela tiene un limonero.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.53
+  },
+  {
+   "id": "el-5f8afe",
+   "word": "el",
+   "syllables": [
+    "el"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "él",
+   "sentence": "Me gusta [el] dulce de leche.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 7.25
+  },
+  {
+   "id": "se-586e0d",
+   "word": "se",
+   "syllables": [
+    "se"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "sé",
+   "sentence": "[Se] cayó la taza.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.86
+  },
+  {
+   "id": "mi-fa2638",
+   "word": "mi",
+   "syllables": [
+    "mi"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "mí",
+   "sentence": "Vení con [mi] hermana.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.75
+  },
+  {
+   "id": "bien",
+   "word": "bien",
+   "syllables": [
+    "bien"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "bién",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.68
+  },
+  {
+   "id": "tu-7baaff",
+   "word": "tu",
+   "syllables": [
+    "tu"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "tú",
+   "sentence": "¿Esa es [tu] campera?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.58
+  },
+  {
+   "id": "más-64f7b7",
+   "word": "más",
+   "syllables": [
+    "más"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "mas",
+   "sentence": "Quiero [más] helado.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.55
+  },
+  {
+   "id": "más-d709c4",
+   "word": "más",
+   "syllables": [
+    "más"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "mas",
+   "sentence": "Dos [más] dos son cuatro.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.55
+  },
+  {
+   "id": "ya",
+   "word": "ya",
+   "syllables": [
+    "ya"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "yá",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.42
+  },
+  {
+   "id": "él-260bfe",
+   "word": "él",
+   "syllables": [
+    "él"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "el",
+   "sentence": "Se lo di a [él].",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.34
+  },
+  {
+   "id": "sé-ecd742",
+   "word": "sé",
+   "syllables": [
+    "sé"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "se",
+   "sentence": "Yo [sé] la respuesta.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.33
+  },
+  {
+   "id": "sé-f6d90e",
+   "word": "sé",
+   "syllables": [
+    "sé"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "se",
+   "sentence": "No [sé] andar en patineta.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.33
+  },
+  {
+   "id": "tú-c37fda",
+   "word": "tú",
+   "syllables": [
+    "tú"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "tu",
+   "sentence": "¿Lo escribiste [tú]?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.33
+  },
+  {
+   "id": "soy",
+   "word": "soy",
+   "syllables": [
+    "soy"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "sóy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.25
+  },
+  {
+   "id": "va",
+   "word": "va",
+   "syllables": [
+    "va"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "vá",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.1
+  },
+  {
+   "id": "mí-342450",
+   "word": "mí",
+   "syllables": [
+    "mí"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "mi",
+   "sentence": "A [mí] me encanta el helado.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.09
+  },
+  {
+   "id": "ni",
+   "word": "ni",
+   "syllables": [
+    "ni"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "ní",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.98
+  },
+  {
+   "id": "ve",
+   "word": "ve",
+   "syllables": [
+    "ve"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "vé",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.63
+  },
+  {
+   "id": "vi",
+   "word": "vi",
+   "syllables": [
+    "vi"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "ví",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.45
+  },
+  {
+   "id": "da",
+   "word": "da",
+   "syllables": [
+    "da"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "dá",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.45
+  },
+  {
+   "id": "seis",
+   "word": "seis",
+   "syllables": [
+    "seis"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "séis",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.26
+  },
+  {
+   "id": "di",
+   "word": "di",
+   "syllables": [
+    "di"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "dí",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.23
+  },
+  {
+   "id": "diez",
+   "word": "diez",
+   "syllables": [
+    "diez"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "diéz",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.2
+  },
+  {
+   "id": "mil",
+   "word": "mil",
+   "syllables": [
+    "mil"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "míl",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.1
+  },
+  {
+   "id": "ley",
+   "word": "ley",
+   "syllables": [
+    "ley"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "léy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.01
+  },
+  {
+   "id": "doy",
+   "word": "doy",
+   "syllables": [
+    "doy"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "dóy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.93
+  },
+  {
+   "id": "fe",
+   "word": "fe",
+   "syllables": [
+    "fe"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "fé",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.74
+  },
+  {
+   "id": "dé-1dc351",
+   "word": "dé",
+   "syllables": [
+    "dé"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 2,
+   "distractor": "de",
+   "sentence": "Pedile a la seño que te [dé] la hoja.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.64
+  },
+  {
+   "id": "cien",
+   "word": "cien",
+   "syllables": [
+    "cien"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "cién",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.62
+  },
+  {
+   "id": "sed",
+   "word": "sed",
+   "syllables": [
+    "sed"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "séd",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.32
+  },
+  {
+   "id": "gris",
+   "word": "gris",
+   "syllables": [
+    "gris"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 2,
+   "distractor": "grís",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.19
+  },
+  {
+   "id": "se-1675e0",
+   "word": "se",
+   "syllables": [
+    "se"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "sé",
+   "sentence": "Martina [se] lava los dientes.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.86
+  },
+  {
+   "id": "te-2feadd",
+   "word": "te",
+   "syllables": [
+    "te"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "té",
+   "sentence": "¿[Te] gustó la película?",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.86
+  },
+  {
+   "id": "sí-e61fd4",
+   "word": "sí",
+   "syllables": [
+    "sí"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "si",
+   "sentence": "Lo hizo por [sí] mismo.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.74
+  },
+  {
+   "id": "si-45572a",
+   "word": "si",
+   "syllables": [
+    "si"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "sí",
+   "sentence": "No sé [si] venir mañana.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.74
+  },
+  {
+   "id": "sé-467078",
+   "word": "sé",
+   "syllables": [
+    "sé"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "se",
+   "sentence": "[Sé] bueno con tu hermano.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.33
+  },
+  {
+   "id": "aún-784c8c",
+   "word": "aún",
+   "syllables": [
+    "a",
+    "ún"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 8,
+   "tier": 3,
+   "distractor": "aun",
+   "sentence": "[Aún] no llegó el colectivo.",
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.71
+  },
+  {
+   "id": "aún-cba531",
+   "word": "aún",
+   "syllables": [
+    "a",
+    "ún"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "hiato",
+   "world": 8,
+   "tier": 3,
+   "distractor": "aun",
+   "sentence": "Tengo hambre [aún].",
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.71
+  },
+  {
+   "id": "mas-cfd91e",
+   "word": "mas",
+   "syllables": [
+    "mas"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "más",
+   "sentence": "Quería ir, [mas] no pude.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.39
+  },
+  {
+   "id": "aun-f87f09",
+   "word": "aun",
+   "syllables": [
+    "aun"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "aún",
+   "sentence": "[Aun] así, ganamos el partido.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.94
+  },
+  {
+   "id": "aun-0c7cf8",
+   "word": "aun",
+   "syllables": [
+    "aun"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "aún",
+   "sentence": "Todos vinieron, [aun] los que estaban enfermos.",
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.94
+  },
+  {
+   "id": "té-01d1d3",
+   "word": "té",
+   "syllables": [
+    "té"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "te",
+   "sentence": "Prepará un [té] de manzanilla.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.88
+  },
+  {
+   "id": "dé-e9c042",
+   "word": "dé",
+   "syllables": [
+    "dé"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": true,
+   "rule": "diacritica",
+   "world": 8,
+   "tier": 3,
+   "distractor": "de",
+   "sentence": "Ojalá que me [dé] permiso.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.64
+  },
+  {
+   "id": "fiel",
+   "word": "fiel",
+   "syllables": [
+    "fiel"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 3,
+   "distractor": "fiél",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.18
+  },
+  {
+   "id": "guion",
+   "word": "guion",
+   "syllables": [
+    "guion"
+   ],
+   "stressIndex": 0,
+   "type": "monosilaba",
+   "hasTilde": false,
+   "rule": "monosilabo",
+   "world": 8,
+   "tier": 3,
+   "distractor": "guión",
+   "sentence": null,
+   "tags": [
+    "rae2010"
+   ],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.35
+  }
+ ]
+}

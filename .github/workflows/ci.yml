@@ -18,6 +18,10 @@ jobs:
       - run: npm run typecheck
       - run: npm run lint
       - run: npm test
+      - name: Validación del banco de palabras
+        run: npm run validate -w words
       - run: npm run build
+      - name: El banco generado coincide con el versionado
+        run: git diff --exit-code -- words/bank app/public/words
       - name: Chequeo de claves en app/dist
         run: npm run check:secrets

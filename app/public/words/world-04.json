@@ -1,0 +1,1732 @@
+{
+ "world": 4,
+ "name": "El Árbol Trepador",
+ "topic": "esdrújulas y sobreesdrújulas",
+ "words": [
+  {
+   "id": "rápido",
+   "word": "rápido",
+   "syllables": [
+    "rá",
+    "pi",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "rapido",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.51
+  },
+  {
+   "id": "número",
+   "word": "número",
+   "syllables": [
+    "nú",
+    "me",
+    "ro"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "numero",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.34
+  },
+  {
+   "id": "último",
+   "word": "último",
+   "syllables": [
+    "úl",
+    "ti",
+    "mo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "ultimo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.25
+  },
+  {
+   "id": "música",
+   "word": "música",
+   "syllables": [
+    "mú",
+    "si",
+    "ca"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "musica",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.21
+  },
+  {
+   "id": "película",
+   "word": "película",
+   "syllables": [
+    "pe",
+    "lí",
+    "cu",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "pelicula",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "médico",
+   "word": "médico",
+   "syllables": [
+    "mé",
+    "di",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "medico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.11
+  },
+  {
+   "id": "línea",
+   "word": "línea",
+   "syllables": [
+    "lí",
+    "ne",
+    "a"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "linea",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5.04
+  },
+  {
+   "id": "cámara",
+   "word": "cámara",
+   "syllables": [
+    "cá",
+    "ma",
+    "ra"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "camara",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.98
+  },
+  {
+   "id": "sábado",
+   "word": "sábado",
+   "syllables": [
+    "sá",
+    "ba",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "sabado",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.59
+  },
+  {
+   "id": "página",
+   "word": "página",
+   "syllables": [
+    "pá",
+    "gi",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "pagina",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.51
+  },
+  {
+   "id": "árboles",
+   "word": "árboles",
+   "syllables": [
+    "ár",
+    "bo",
+    "les"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "arboles",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": "árbol",
+   "freq": 4.5
+  },
+  {
+   "id": "fábrica-f6e2af",
+   "word": "fábrica",
+   "syllables": [
+    "fá",
+    "bri",
+    "ca"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "fabrica",
+   "sentence": "Visitamos una [fábrica] de alfajores.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.48
+  },
+  {
+   "id": "pájaro",
+   "word": "pájaro",
+   "syllables": [
+    "pá",
+    "ja",
+    "ro"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "pajaro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.43
+  },
+  {
+   "id": "círculo-e9772e",
+   "word": "círculo",
+   "syllables": [
+    "cír",
+    "cu",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "circulo",
+   "sentence": "Dibujá un [círculo] rojo.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.31
+  },
+  {
+   "id": "mágico",
+   "word": "mágico",
+   "syllables": [
+    "má",
+    "gi",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "magico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.17
+  },
+  {
+   "id": "lámpara",
+   "word": "lámpara",
+   "syllables": [
+    "lám",
+    "pa",
+    "ra"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "lampara",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.04
+  },
+  {
+   "id": "tímido",
+   "word": "tímido",
+   "syllables": [
+    "tí",
+    "mi",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "timido",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4
+  },
+  {
+   "id": "triángulo",
+   "word": "triángulo",
+   "syllables": [
+    "trián",
+    "gu",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "triangulo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.69
+  },
+  {
+   "id": "pirámide",
+   "word": "pirámide",
+   "syllables": [
+    "pi",
+    "rá",
+    "mi",
+    "de"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "piramide",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.65
+  },
+  {
+   "id": "víbora",
+   "word": "víbora",
+   "syllables": [
+    "ví",
+    "bo",
+    "ra"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "vibora",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.65
+  },
+  {
+   "id": "plátano",
+   "word": "plátano",
+   "syllables": [
+    "plá",
+    "ta",
+    "no"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "platano",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.62
+  },
+  {
+   "id": "lágrima",
+   "word": "lágrima",
+   "syllables": [
+    "lá",
+    "gri",
+    "ma"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "lagrima",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.49
+  },
+  {
+   "id": "brócoli",
+   "word": "brócoli",
+   "syllables": [
+    "bró",
+    "co",
+    "li"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "brocoli",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.23
+  },
+  {
+   "id": "cúspide",
+   "word": "cúspide",
+   "syllables": [
+    "cús",
+    "pi",
+    "de"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "cuspide",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.91
+  },
+  {
+   "id": "sílaba",
+   "word": "sílaba",
+   "syllables": [
+    "sí",
+    "la",
+    "ba"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "silaba",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.79
+  },
+  {
+   "id": "pétalo",
+   "word": "pétalo",
+   "syllables": [
+    "pé",
+    "ta",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "petalo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.72
+  },
+  {
+   "id": "óvalo",
+   "word": "óvalo",
+   "syllables": [
+    "ó",
+    "va",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 1,
+   "distractor": "ovalo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.25
+  },
+  {
+   "id": "ejército",
+   "word": "ejército",
+   "syllables": [
+    "e",
+    "jér",
+    "ci",
+    "to"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "ejercito",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.97
+  },
+  {
+   "id": "éxito",
+   "word": "éxito",
+   "syllables": [
+    "é",
+    "xi",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "exito",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.87
+  },
+  {
+   "id": "tráfico",
+   "word": "tráfico",
+   "syllables": [
+    "trá",
+    "fi",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "trafico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.47
+  },
+  {
+   "id": "sótano",
+   "word": "sótano",
+   "syllables": [
+    "só",
+    "ta",
+    "no"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "sotano",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.46
+  },
+  {
+   "id": "cómodo",
+   "word": "cómodo",
+   "syllables": [
+    "có",
+    "mo",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "comodo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.43
+  },
+  {
+   "id": "depósito",
+   "word": "depósito",
+   "syllables": [
+    "de",
+    "pó",
+    "si",
+    "to"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "deposito",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.31
+  },
+  {
+   "id": "miércoles",
+   "word": "miércoles",
+   "syllables": [
+    "miér",
+    "co",
+    "les"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "miercoles",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.29
+  },
+  {
+   "id": "plástico",
+   "word": "plástico",
+   "syllables": [
+    "plás",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "plastico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.22
+  },
+  {
+   "id": "hígado",
+   "word": "hígado",
+   "syllables": [
+    "hí",
+    "ga",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "higado",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.16
+  },
+  {
+   "id": "química",
+   "word": "química",
+   "syllables": [
+    "quí",
+    "mi",
+    "ca"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "quimica",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.15
+  },
+  {
+   "id": "lógico",
+   "word": "lógico",
+   "syllables": [
+    "ló",
+    "gi",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "logico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.99
+  },
+  {
+   "id": "básico",
+   "word": "básico",
+   "syllables": [
+    "bá",
+    "si",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "basico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.9
+  },
+  {
+   "id": "zoológico",
+   "word": "zoológico",
+   "syllables": [
+    "zo",
+    "o",
+    "ló",
+    "gi",
+    "co"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "zoologico",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.86
+  },
+  {
+   "id": "histórico",
+   "word": "histórico",
+   "syllables": [
+    "his",
+    "tó",
+    "ri",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "historico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.78
+  },
+  {
+   "id": "bolígrafo",
+   "word": "bolígrafo",
+   "syllables": [
+    "bo",
+    "lí",
+    "gra",
+    "fo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "boligrafo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.75
+  },
+  {
+   "id": "kilómetro",
+   "word": "kilómetro",
+   "syllables": [
+    "ki",
+    "ló",
+    "me",
+    "tro"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "kilometro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.74
+  },
+  {
+   "id": "músculo",
+   "word": "músculo",
+   "syllables": [
+    "mús",
+    "cu",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "musculo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.74
+  },
+  {
+   "id": "artístico",
+   "word": "artístico",
+   "syllables": [
+    "ar",
+    "tís",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "artistico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.69
+  },
+  {
+   "id": "atlántico",
+   "word": "atlántico",
+   "syllables": [
+    "at",
+    "lán",
+    "ti",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "atlantico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.67
+  },
+  {
+   "id": "índice",
+   "word": "índice",
+   "syllables": [
+    "ín",
+    "di",
+    "ce"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "indice",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.66
+  },
+  {
+   "id": "relámpago",
+   "word": "relámpago",
+   "syllables": [
+    "re",
+    "lám",
+    "pa",
+    "go"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "relampago",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.64
+  },
+  {
+   "id": "cúpula",
+   "word": "cúpula",
+   "syllables": [
+    "cú",
+    "pu",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "cupula",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.61
+  },
+  {
+   "id": "gráfico",
+   "word": "gráfico",
+   "syllables": [
+    "grá",
+    "fi",
+    "co"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "grafico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.52
+  },
+  {
+   "id": "académico",
+   "word": "académico",
+   "syllables": [
+    "a",
+    "ca",
+    "dé",
+    "mi",
+    "co"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "academico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.49
+  },
+  {
+   "id": "cáscara",
+   "word": "cáscara",
+   "syllables": [
+    "cás",
+    "ca",
+    "ra"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "cascara",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.46
+  },
+  {
+   "id": "fósforo",
+   "word": "fósforo",
+   "syllables": [
+    "fós",
+    "fo",
+    "ro"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "fosforo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.45
+  },
+  {
+   "id": "ómnibus",
+   "word": "ómnibus",
+   "syllables": [
+    "óm",
+    "ni",
+    "bus"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "omnibus",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.19
+  },
+  {
+   "id": "dinámico",
+   "word": "dinámico",
+   "syllables": [
+    "di",
+    "ná",
+    "mi",
+    "co"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "dinamico",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.19
+  },
+  {
+   "id": "mamífero",
+   "word": "mamífero",
+   "syllables": [
+    "ma",
+    "mí",
+    "fe",
+    "ro"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "mamifero",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.02
+  },
+  {
+   "id": "náufrago",
+   "word": "náufrago",
+   "syllables": [
+    "náu",
+    "fra",
+    "go"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "naufrago",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.67
+  },
+  {
+   "id": "cántaro",
+   "word": "cántaro",
+   "syllables": [
+    "cán",
+    "ta",
+    "ro"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 2,
+   "distractor": "cantaro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.51
+  },
+  {
+   "id": "régimen",
+   "word": "régimen",
+   "syllables": [
+    "ré",
+    "gi",
+    "men"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "regimen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.82
+  },
+  {
+   "id": "llévatelo",
+   "word": "llévatelo",
+   "syllables": [
+    "llé",
+    "va",
+    "te",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "llevatelo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.71
+  },
+  {
+   "id": "dígamelo",
+   "word": "dígamelo",
+   "syllables": [
+    "dí",
+    "ga",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "digamelo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.66
+  },
+  {
+   "id": "cuéntamelo",
+   "word": "cuéntamelo",
+   "syllables": [
+    "cuén",
+    "ta",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "cuentamelo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.6
+  },
+  {
+   "id": "murciélagos",
+   "word": "murciélagos",
+   "syllables": [
+    "mur",
+    "cié",
+    "la",
+    "gos"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "murcielagos",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": "murciélago",
+   "freq": 3.54
+  },
+  {
+   "id": "devuélvemelo",
+   "word": "devuélvemelo",
+   "syllables": [
+    "de",
+    "vuél",
+    "ve",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "devuelvemelo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.43
+  },
+  {
+   "id": "espécimen",
+   "word": "espécimen",
+   "syllables": [
+    "es",
+    "pé",
+    "ci",
+    "men"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "especimen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.32
+  },
+  {
+   "id": "pídeselo",
+   "word": "pídeselo",
+   "syllables": [
+    "pí",
+    "de",
+    "se",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "pideselo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.99
+  },
+  {
+   "id": "díganselo",
+   "word": "díganselo",
+   "syllables": [
+    "dí",
+    "gan",
+    "se",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "diganselo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.47
+  },
+  {
+   "id": "explíquemelo",
+   "word": "explíquemelo",
+   "syllables": [
+    "ex",
+    "plí",
+    "que",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "expliquemelo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.45
+  },
+  {
+   "id": "entrégaselo",
+   "word": "entrégaselo",
+   "syllables": [
+    "en",
+    "tré",
+    "ga",
+    "se",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "entregaselo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.36
+  },
+  {
+   "id": "apóstrofo",
+   "word": "apóstrofo",
+   "syllables": [
+    "a",
+    "pós",
+    "tro",
+    "fo"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "apostrofo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.6
+  },
+  {
+   "id": "léetelo",
+   "word": "léetelo",
+   "syllables": [
+    "lé",
+    "e",
+    "te",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "leetelo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 1.45
+  },
+  {
+   "id": "cómpraselo",
+   "word": "cómpraselo",
+   "syllables": [
+    "cóm",
+    "pra",
+    "se",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "compraselo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.37
+  },
+  {
+   "id": "hipérbola",
+   "word": "hipérbola",
+   "syllables": [
+    "hi",
+    "pér",
+    "bo",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "hiperbola",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.33
+  },
+  {
+   "id": "ábremela",
+   "word": "ábremela",
+   "syllables": [
+    "á",
+    "bre",
+    "me",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "abremela",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.22
+  },
+  {
+   "id": "esdrújula",
+   "word": "esdrújula",
+   "syllables": [
+    "es",
+    "drú",
+    "ju",
+    "la"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "esdrujula",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 0.67
+  },
+  {
+   "id": "tráigaselo",
+   "word": "tráigaselo",
+   "syllables": [
+    "trái",
+    "ga",
+    "se",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "traigaselo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 0.67
+  },
+  {
+   "id": "cuídatelo",
+   "word": "cuídatelo",
+   "syllables": [
+    "cuí",
+    "da",
+    "te",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "cuidatelo",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 0.37
+  },
+  {
+   "id": "sobreesdrújula",
+   "word": "sobreesdrújula",
+   "syllables": [
+    "so",
+    "bre",
+    "es",
+    "drú",
+    "ju",
+    "la"
+   ],
+   "stressIndex": 3,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "sobreesdrujula",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": null
+  },
+  {
+   "id": "escóndetelo",
+   "word": "escóndetelo",
+   "syllables": [
+    "es",
+    "cón",
+    "de",
+    "te",
+    "lo"
+   ],
+   "stressIndex": 1,
+   "type": "sobreesdrujula",
+   "hasTilde": true,
+   "rule": "sobreesdrujula",
+   "world": 4,
+   "tier": 3,
+   "distractor": "escondetelo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": null
+  }
+ ]
+}

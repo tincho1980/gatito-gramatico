@@ -1,19 +1,17 @@
 // Lógica compartida del banco de palabras: parseo de fuentes, armado de entradas y reglas de validación.
 import { createHash } from 'node:crypto';
+import { WORLDS as WORLD_LIST } from '@gatita/shared';
 import { analyze, distractor, stripTildes, tildeVariants, RULES, TYPES } from './acentuacion.mjs';
 
-export const WORLDS = {
-  1: { name: 'La Sílaba que Ronronea', topic: 'sílaba tónica' },
-  2: { name: 'El Tejado Puntiagudo', topic: 'agudas' },
-  3: { name: 'Las Llanuras de la Siesta', topic: 'graves' },
-  4: { name: 'El Árbol Trepador', topic: 'esdrújulas y sobreesdrújulas' },
-  5: { name: 'El Mercado de los Ovillos', topic: 'las tres mezcladas' },
-  6: { name: 'El Río de los Abrazos', topic: 'diptongos' },
-  7: { name: 'El Puente Roto', topic: 'hiatos' },
-  8: { name: 'La Casa de los Gemelos', topic: 'monosílabos y diacrítica' },
-  9: { name: 'El Bosque de las Preguntas', topic: 'qué, cómo, dónde' },
-  10: { name: 'La Torre de la Gata Sabia', topic: 'casos especiales' },
-};
+// Nombres y temas de los mundos: la fuente es shared/src/data/worlds.ts.
+export const WORLDS = Object.fromEntries(WORLD_LIST.map(({ id, name, topic }) => [id, { name, topic }]));
+
+// Versión del banco: hash del contenido de los world-XX.json, en orden.
+export function bankVersion(worldJsons) {
+  const h = createHash('sha256');
+  for (const json of worldJsons) h.update(json);
+  return h.digest('hex').slice(0, 12);
+}
 
 export const INTERROGATIVAS = new Set([
   'qué', 'que', 'quién', 'quien', 'quiénes', 'quienes', 'cuál', 'cual', 'cuáles', 'cuales',

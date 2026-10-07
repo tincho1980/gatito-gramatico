@@ -161,7 +161,7 @@ El jefe de un mundo se habilita cuando:
 | 9 | El Bosque de las Preguntas | 8 |
 | 10 | La Torre de la Gata Sabia | 7 **y** 9 |
 
-- Se define como datos en `shared/src/engine/worlds.ts` (`requires: number[]`), no como código condicional.
+- Se define como datos en `shared/src/data/worlds.ts` (`requires: number[]`), no como código condicional. La lógica de desbloqueo vive en `shared/src/engine/worlds.ts`.
 - Lo desbloqueado nunca se vuelve a bloquear.
 - Un docente puede abrir un mundo para su aula (`teacher_unlocks`); queda desbloqueado para esos perfiles aunque no hayan vencido al jefe anterior.
 

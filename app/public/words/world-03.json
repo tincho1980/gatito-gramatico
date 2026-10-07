@@ -1,0 +1,1632 @@
+{
+ "world": 3,
+ "name": "Las Llanuras de la Siesta",
+ "topic": "graves",
+ "words": [
+  {
+   "id": "fácil",
+   "word": "fácil",
+   "syllables": [
+    "fá",
+    "cil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "facil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.31
+  },
+  {
+   "id": "joven",
+   "word": "joven",
+   "syllables": [
+    "jo",
+    "ven"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "jóven",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.29
+  },
+  {
+   "id": "libro",
+   "word": "libro",
+   "syllables": [
+    "li",
+    "bro"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "líbro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.18
+  },
+  {
+   "id": "dulce",
+   "word": "dulce",
+   "syllables": [
+    "dul",
+    "ce"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "dúlce",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.97
+  },
+  {
+   "id": "nena",
+   "word": "nena",
+   "syllables": [
+    "ne",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "néna",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.84
+  },
+  {
+   "id": "árbol",
+   "word": "árbol",
+   "syllables": [
+    "ár",
+    "bol"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "arbol",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "imagen",
+   "word": "imagen",
+   "syllables": [
+    "i",
+    "ma",
+    "gen"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "imágen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.72
+  },
+  {
+   "id": "ángel",
+   "word": "ángel",
+   "syllables": [
+    "án",
+    "gel"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "angel",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.61
+  },
+  {
+   "id": "lunes",
+   "word": "lunes",
+   "syllables": [
+    "lu",
+    "nes"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "lúnes",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.55
+  },
+  {
+   "id": "útil",
+   "word": "útil",
+   "syllables": [
+    "ú",
+    "til"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "util",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.51
+  },
+  {
+   "id": "regla",
+   "word": "regla",
+   "syllables": [
+    "re",
+    "gla"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "régla",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.48
+  },
+  {
+   "id": "azúcar",
+   "word": "azúcar",
+   "syllables": [
+    "a",
+    "zú",
+    "car"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "azucar",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.46
+  },
+  {
+   "id": "virus",
+   "word": "virus",
+   "syllables": [
+    "vi",
+    "rus"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "vírus",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.44
+  },
+  {
+   "id": "martes",
+   "word": "martes",
+   "syllables": [
+    "mar",
+    "tes"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "mártes",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.41
+  },
+  {
+   "id": "dólar",
+   "word": "dólar",
+   "syllables": [
+    "dó",
+    "lar"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "dolar",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.21
+  },
+  {
+   "id": "vela",
+   "word": "vela",
+   "syllables": [
+    "ve",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "véla",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.15
+  },
+  {
+   "id": "comen",
+   "word": "comen",
+   "syllables": [
+    "co",
+    "men"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "cómen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.15
+  },
+  {
+   "id": "tenis",
+   "word": "tenis",
+   "syllables": [
+    "te",
+    "nis"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "ténis",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.09
+  },
+  {
+   "id": "lápiz",
+   "word": "lápiz",
+   "syllables": [
+    "lá",
+    "piz"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "lapiz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.07
+  },
+  {
+   "id": "torta",
+   "word": "torta",
+   "syllables": [
+    "tor",
+    "ta"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "tórta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.98
+  },
+  {
+   "id": "corren",
+   "word": "corren",
+   "syllables": [
+    "co",
+    "rren"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "córren",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.85
+  },
+  {
+   "id": "cantan",
+   "word": "cantan",
+   "syllables": [
+    "can",
+    "tan"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "cántan",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.77
+  },
+  {
+   "id": "perla",
+   "word": "perla",
+   "syllables": [
+    "per",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "pérla",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.67
+  },
+  {
+   "id": "tiza",
+   "word": "tiza",
+   "syllables": [
+    "ti",
+    "za"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "tíza",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.34
+  },
+  {
+   "id": "saltan",
+   "word": "saltan",
+   "syllables": [
+    "sal",
+    "tan"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "sáltan",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.33
+  },
+  {
+   "id": "básquet",
+   "word": "básquet",
+   "syllables": [
+    "bás",
+    "quet"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "basquet",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.13
+  },
+  {
+   "id": "lupa",
+   "word": "lupa",
+   "syllables": [
+    "lu",
+    "pa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 1,
+   "distractor": "lúpa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.13
+  },
+  {
+   "id": "cóndor",
+   "word": "cóndor",
+   "syllables": [
+    "cón",
+    "dor"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 1,
+   "distractor": "condor",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.87
+  },
+  {
+   "id": "difícil",
+   "word": "difícil",
+   "syllables": [
+    "di",
+    "fí",
+    "cil"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "dificil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.39
+  },
+  {
+   "id": "orden",
+   "word": "orden",
+   "syllables": [
+    "or",
+    "den"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "órden",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.18
+  },
+  {
+   "id": "débil",
+   "word": "débil",
+   "syllables": [
+    "dé",
+    "bil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "debil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.61
+  },
+  {
+   "id": "inútil",
+   "word": "inútil",
+   "syllables": [
+    "i",
+    "nú",
+    "til"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "inutil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.6
+  },
+  {
+   "id": "examen",
+   "word": "examen",
+   "syllables": [
+    "e",
+    "xa",
+    "men"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "exámen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.59
+  },
+  {
+   "id": "crisis",
+   "word": "crisis",
+   "syllables": [
+    "cri",
+    "sis"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "crísis",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.45
+  },
+  {
+   "id": "túnel",
+   "word": "túnel",
+   "syllables": [
+    "tú",
+    "nel"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "tunel",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.26
+  },
+  {
+   "id": "origen",
+   "word": "origen",
+   "syllables": [
+    "o",
+    "ri",
+    "gen"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "orígen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.18
+  },
+  {
+   "id": "dosis",
+   "word": "dosis",
+   "syllables": [
+    "do",
+    "sis"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "dósis",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.18
+  },
+  {
+   "id": "dibujo-bb9e1b",
+   "word": "dibujo",
+   "syllables": [
+    "di",
+    "bu",
+    "jo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "dibujó",
+   "sentence": "Hice un [dibujo] de mi gato.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.13
+  },
+  {
+   "id": "álbum",
+   "word": "álbum",
+   "syllables": [
+    "ál",
+    "bum"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "album",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.08
+  },
+  {
+   "id": "margen",
+   "word": "margen",
+   "syllables": [
+    "mar",
+    "gen"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "márgen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.08
+  },
+  {
+   "id": "volumen",
+   "word": "volumen",
+   "syllables": [
+    "vo",
+    "lu",
+    "men"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "volúmen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.05
+  },
+  {
+   "id": "portátil",
+   "word": "portátil",
+   "syllables": [
+    "por",
+    "tá",
+    "til"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "portatil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.98
+  },
+  {
+   "id": "césped",
+   "word": "césped",
+   "syllables": [
+    "cés",
+    "ped"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "cesped",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.97
+  },
+  {
+   "id": "récord",
+   "word": "récord",
+   "syllables": [
+    "ré",
+    "cord"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "record",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.96
+  },
+  {
+   "id": "láser",
+   "word": "láser",
+   "syllables": [
+    "lá",
+    "ser"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "laser",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "frágil",
+   "word": "frágil",
+   "syllables": [
+    "frá",
+    "gil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "fragil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.92
+  },
+  {
+   "id": "automóvil",
+   "word": "automóvil",
+   "syllables": [
+    "au",
+    "to",
+    "mó",
+    "vil"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "automovil",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.89
+  },
+  {
+   "id": "resumen",
+   "word": "resumen",
+   "syllables": [
+    "re",
+    "su",
+    "men"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "resúmen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.89
+  },
+  {
+   "id": "póquer",
+   "word": "póquer",
+   "syllables": [
+    "pó",
+    "quer"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "poquer",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.8
+  },
+  {
+   "id": "suéter",
+   "word": "suéter",
+   "syllables": [
+    "sué",
+    "ter"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "sueter",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.79
+  },
+  {
+   "id": "hábil",
+   "word": "hábil",
+   "syllables": [
+    "há",
+    "bil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "habil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.73
+  },
+  {
+   "id": "tesis",
+   "word": "tesis",
+   "syllables": [
+    "te",
+    "sis"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 2,
+   "distractor": "tésis",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.7
+  },
+  {
+   "id": "mármol",
+   "word": "mármol",
+   "syllables": [
+    "már",
+    "mol"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "marmol",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.51
+  },
+  {
+   "id": "cráter",
+   "word": "cráter",
+   "syllables": [
+    "crá",
+    "ter"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "crater",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.37
+  },
+  {
+   "id": "fértil",
+   "word": "fértil",
+   "syllables": [
+    "fér",
+    "til"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "fertil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.32
+  },
+  {
+   "id": "ágil",
+   "word": "ágil",
+   "syllables": [
+    "á",
+    "gil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "agil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.3
+  },
+  {
+   "id": "cómic",
+   "word": "cómic",
+   "syllables": [
+    "có",
+    "mic"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "comic",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.3
+  },
+  {
+   "id": "mástil",
+   "word": "mástil",
+   "syllables": [
+    "más",
+    "til"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "mastil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.24
+  },
+  {
+   "id": "néctar",
+   "word": "néctar",
+   "syllables": [
+    "néc",
+    "tar"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 2,
+   "distractor": "nectar",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.2
+  },
+  {
+   "id": "cárcel",
+   "word": "cárcel",
+   "syllables": [
+    "cár",
+    "cel"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "carcel",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.99
+  },
+  {
+   "id": "cadáver",
+   "word": "cadáver",
+   "syllables": [
+    "ca",
+    "dá",
+    "ver"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "cadaver",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.58
+  },
+  {
+   "id": "móvil",
+   "word": "móvil",
+   "syllables": [
+    "mó",
+    "vil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "movil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.54
+  },
+  {
+   "id": "carácter",
+   "word": "carácter",
+   "syllables": [
+    "ca",
+    "rác",
+    "ter"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "caracter",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.27
+  },
+  {
+   "id": "sándwich",
+   "word": "sándwich",
+   "syllables": [
+    "sánd",
+    "wich"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "sandwich",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.1
+  },
+  {
+   "id": "paraguas",
+   "word": "paraguas",
+   "syllables": [
+    "pa",
+    "ra",
+    "guas"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 3,
+   "distractor": "paráguas",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.82
+  },
+  {
+   "id": "cóctel",
+   "word": "cóctel",
+   "syllables": [
+    "cóc",
+    "tel"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "coctel",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.74
+  },
+  {
+   "id": "abdomen",
+   "word": "abdomen",
+   "syllables": [
+    "ab",
+    "do",
+    "men"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 3,
+   "distractor": "abdómen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.7
+  },
+  {
+   "id": "alférez",
+   "word": "alférez",
+   "syllables": [
+    "al",
+    "fé",
+    "rez"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "alferez",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.63
+  },
+  {
+   "id": "fénix",
+   "word": "fénix",
+   "syllables": [
+    "fé",
+    "nix"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "fenix",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.43
+  },
+  {
+   "id": "tórax",
+   "word": "tórax",
+   "syllables": [
+    "tó",
+    "rax"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "torax",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.38
+  },
+  {
+   "id": "polen",
+   "word": "polen",
+   "syllables": [
+    "po",
+    "len"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 3,
+   "distractor": "pólen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.33
+  },
+  {
+   "id": "ámbar",
+   "word": "ámbar",
+   "syllables": [
+    "ám",
+    "bar"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "ambar",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.33
+  },
+  {
+   "id": "fósil",
+   "word": "fósil",
+   "syllables": [
+    "fó",
+    "sil"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "fosil",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.2
+  },
+  {
+   "id": "clímax",
+   "word": "clímax",
+   "syllables": [
+    "clí",
+    "max"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "climax",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.16
+  },
+  {
+   "id": "trébol",
+   "word": "trébol",
+   "syllables": [
+    "tré",
+    "bol"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "trebol",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.16
+  },
+  {
+   "id": "bíceps",
+   "word": "bíceps",
+   "syllables": [
+    "bí",
+    "ceps"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "biceps",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.02
+  },
+  {
+   "id": "germen",
+   "word": "germen",
+   "syllables": [
+    "ger",
+    "men"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 3,
+   "distractor": "gérmen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.85
+  },
+  {
+   "id": "lavarropas",
+   "word": "lavarropas",
+   "syllables": [
+    "la",
+    "va",
+    "rro",
+    "pas"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 3,
+   "tier": 3,
+   "distractor": "lavarrópas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.61
+  },
+  {
+   "id": "tríceps",
+   "word": "tríceps",
+   "syllables": [
+    "trí",
+    "ceps"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "triceps",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.28
+  },
+  {
+   "id": "ónix",
+   "word": "ónix",
+   "syllables": [
+    "ó",
+    "nix"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": true,
+   "rule": "grave_otra",
+   "world": 3,
+   "tier": 3,
+   "distractor": "onix",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.88
+  }
+ ]
+}
