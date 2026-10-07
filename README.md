@@ -24,6 +24,7 @@ La app queda en http://localhost:3000. No hace falta ninguna clave ni archivo `.
 | `npm run lint` | ESLint + chequeo de Prettier |
 | `npm run format` | Formatea con Prettier |
 | `npm test` | Tests (Vitest) de todos los workspaces |
+| `npm run test:e2e -w app` | Tests e2e con Playwright (la primera vez: `npx playwright install chromium` en `app/`) |
 | `npm run build` | Build de todos los workspaces |
 | `npm run build -w words` | Regenera el banco de palabras |
 | `npm run validate -w words` | Valida el banco publicado |

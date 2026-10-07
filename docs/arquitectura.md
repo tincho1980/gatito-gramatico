@@ -106,14 +106,12 @@ Base Dexie `gatita`, versión 1:
 
 | Tabla | Clave | Campos |
 | --- | --- | --- |
-| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt` |
+| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt`, `sound` (sonido y vibración) |
 | `rounds` | `id` (uuid) | `profileId`, `world`, `stop`, `kind: 'practice' \| 'boss' \| 'lesson'`, `startedAt`, `finishedAt`, `tzOffsetMin`, `wordsVersion`, `turns: TurnResult[]`, `synced: boolean` |
-| `wordMastery` | `[profileId+wordId]` | `box`, `dueRound`, `lastRound`, `lastSeenAt`, `errors`, `fullStreak`, `firstBox3At?`, `firstBox5At?` |
-| `ruleMastery` | `[profileId+rule+world]` | `ema`, `attempts`, `recent` (últimos 30 resultados) |
-| `progress` | `profileId` | `roundsPlayed`, `xp`, `croquetas`, `worlds: Record<number, { unlocked, stopsDone, stars }>`, `streak`, `napWeek`, `badges`, `owned` |
+| `profileState` | `profileId` | `state: ProfileState` (de `shared/engine`: cajas por palabra, EMA por regla y mundo, progreso de mundos, XP, croquetas, racha, insignias, colección), `updatedAt` |
 | `meta` | `key` | `activeProfileId`, `wordsVersion` |
 
-- `rounds` es el registro fuente. Las otras tablas son derivadas: se pueden reconstruir aplicando `shared/engine` a las rondas en orden de `finishedAt` (función `replay(rounds) → state`). Esto se usa para tests, migraciones y para aplicar la respuesta del servidor.
+- `rounds` es el registro fuente. `profileState` es derivado y se guarda entero, con el mismo shape que `profile_state.state` en el servidor (§5): se puede reconstruir aplicando `shared/engine` a las rondas en orden de `finishedAt` (función `replay(rounds) → state`). Esto se usa para tests, migraciones y para aplicar la respuesta del servidor.
 
 ## 5. Modelo de datos remoto (Postgres)
 

@@ -113,15 +113,15 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] Dexie: esquema de [arquitectura §4](arquitectura.md#4-modelo-de-datos-local-indexeddb) y repositorios (`profilesRepo`, `roundsRepo`, `stateRepo`).
-- [ ] Perfil invitado: pantalla de bienvenida con alias + elección de avatar de gatito. Sin email. Borrar `Auth.tsx` y el `localStorage` viejo.
-- [ ] Componente de turno: paso `tonica` (sílabas como botones grandes), `tipo`, `tilde`; versión oración para mundos 8–9. Un paso por pantalla, botones en la mitad inferior, mínimo 48 px.
-- [ ] Feedback del turno (§2.3) con la gatita y el error común.
-- [ ] Ronda: Zustand para el estado en curso; usa `round.ts` para armarla y `nextWord` para el ajuste. Pista visual cuando corresponde.
-- [ ] Pantalla de resultados (§4.4).
-- [ ] Al terminar, guardar la ronda en Dexie y aplicar `applyRound`.
-- [ ] Sonidos (reutilizar `soundService`) y vibración corta, con un interruptor en el perfil.
-- [ ] Router con React Router 7.
+- [x] Dexie: esquema de [arquitectura §4](arquitectura.md#4-modelo-de-datos-local-indexeddb) y repositorios (`profilesRepo`, `roundsRepo`, `stateRepo`).
+- [x] Perfil invitado: pantalla de bienvenida con alias + elección de avatar de gatito. Sin email. Borrar `Auth.tsx` y el `localStorage` viejo.
+- [x] Componente de turno: paso `tonica` (sílabas como botones grandes), `tipo`, `tilde`; versión oración para mundos 8–9. Un paso por pantalla, botones en la mitad inferior, mínimo 48 px.
+- [x] Feedback del turno (§2.3) con la gatita y el error común.
+- [x] Ronda: Zustand para el estado en curso; usa `round.ts` para armarla y `nextWord` para el ajuste. Pista visual cuando corresponde.
+- [x] Pantalla de resultados (§4.4).
+- [x] Al terminar, guardar la ronda en Dexie y aplicar `applyRound`.
+- [x] Sonidos (reutilizar `soundService`) y vibración corta, con un interruptor en el perfil.
+- [x] Router con React Router 7.
 
 Criterios de aceptación:
 

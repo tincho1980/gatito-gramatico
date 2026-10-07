@@ -11,6 +11,21 @@ const TYPE_NAMES: Record<WordEntry['type'], string> = {
   sobreesdrujula: 'sobreesdrújula',
 };
 
+/** Nombre corto de cada regla, para resultados y progreso. */
+export const RULE_NAMES: Record<Rule, string> = {
+  aguda_n_s_vocal: 'Agudas que terminan en n, s o vocal',
+  aguda_otra: 'Agudas que terminan en otra letra',
+  grave_n_s_vocal: 'Graves que terminan en n, s o vocal',
+  grave_otra: 'Graves que terminan en otra letra',
+  esdrujula: 'Esdrújulas',
+  sobreesdrujula: 'Sobreesdrújulas',
+  hiato: 'Hiatos',
+  monosilabo: 'Monosílabos',
+  diacritica: 'Tilde diacrítica',
+  interrogativa: 'Qué, cómo, dónde…',
+  mente: 'Palabras terminadas en -mente',
+};
+
 export const RULE_TEXTS: Record<Rule, RuleText> = {
   aguda_n_s_vocal: () => 'Es aguda y termina en n, s o vocal: lleva tilde.',
   aguda_otra: () => 'Es aguda y no termina en n, s ni vocal: no lleva tilde.',
