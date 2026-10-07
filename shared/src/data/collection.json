@@ -1,0 +1,65 @@
+[
+  {
+    "id": "gato-tejado",
+    "kind": "gato",
+    "name": "Gato de tejado",
+    "price": 0,
+    "unlockedBy": { "boss": 2 }
+  },
+  {
+    "id": "gato-dormilon",
+    "kind": "gato",
+    "name": "Gato dormilón",
+    "price": 0,
+    "unlockedBy": { "boss": 3 }
+  },
+  {
+    "id": "gato-trepador",
+    "kind": "gato",
+    "name": "Gato trepador",
+    "price": 0,
+    "unlockedBy": { "boss": 4 }
+  },
+  {
+    "id": "gato-mercader",
+    "kind": "gato",
+    "name": "Gato mercader",
+    "price": 0,
+    "unlockedBy": { "boss": 5 }
+  },
+  {
+    "id": "gato-nadador",
+    "kind": "gato",
+    "name": "Gato nadador",
+    "price": 0,
+    "unlockedBy": { "boss": 6 }
+  },
+  {
+    "id": "gato-equilibrista",
+    "kind": "gato",
+    "name": "Gato equilibrista",
+    "price": 0,
+    "unlockedBy": { "boss": 7 }
+  },
+  {
+    "id": "gatos-gemelos",
+    "kind": "gato",
+    "name": "Gatos gemelos",
+    "price": 0,
+    "unlockedBy": { "boss": 8 }
+  },
+  {
+    "id": "gato-curioso",
+    "kind": "gato",
+    "name": "Gato curioso",
+    "price": 0,
+    "unlockedBy": { "boss": 9 }
+  },
+  {
+    "id": "corona-gata-sabia",
+    "kind": "accesorio",
+    "name": "Corona de la Gata Sabia",
+    "price": 0,
+    "unlockedBy": { "boss": 10 }
+  }
+]

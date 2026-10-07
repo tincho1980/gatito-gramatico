@@ -4,3 +4,5 @@
 export * from './data/worlds.ts';
 export * from './schemas.ts';
 export * from './words/loader.ts';
+export * from './data/catalogs.ts';
+export * from './engine/index.ts';

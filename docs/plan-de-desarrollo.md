@@ -85,17 +85,17 @@ Criterios de aceptación:
 
 Módulos en `shared/src/engine/`, en este orden:
 
-- [ ] `config.ts`: los valores ajustables (especificación §10).
-- [ ] `rng.ts`: generador con semilla (mulberry32 o similar) y sorteo ponderado.
-- [ ] `turn.ts`: pasos según la palabra (§2.1) y evaluación de un turno → `TurnResult`.
-- [ ] `ruleTexts.ts`: texto de feedback por `rule` (§2.3), en voseo.
-- [ ] `scoring.ts`: XP de una ronda (§3).
-- [ ] `leitner.ts`: transición de cajas, `dueRound`, elegibilidad con la regla de 24 h (§5).
-- [ ] `mastery.ts`: EMA por regla y jefe habilitado (§6).
-- [ ] `worlds.ts`: grafo de mundos como datos, paradas, desbloqueos, estrellas (§7).
-- [ ] `round.ts`: armado de la ronda con sus cupos, relleno, penalización y orden (§4.1); ronda del jefe (§4.2); ajuste dentro de la ronda (§4.3) como función `nextWord(roundState, ...)`.
-- [ ] `rewards.ts` y `badges.ts`: racha con siesta, croquetas, insignias (§8).
-- [ ] `state.ts`: tipo `ProfileState`, `applyRound(state, round, words, config)` y `replay(rounds)`.
+- [x] `config.ts`: los valores ajustables (especificación §10).
+- [x] `rng.ts`: generador con semilla (mulberry32 o similar) y sorteo ponderado.
+- [x] `turn.ts`: pasos según la palabra (§2.1) y evaluación de un turno → `TurnResult`.
+- [x] `ruleTexts.ts`: texto de feedback por `rule` (§2.3), en voseo.
+- [x] `scoring.ts`: XP de una ronda (§3).
+- [x] `leitner.ts`: transición de cajas, `dueRound`, elegibilidad con la regla de 24 h (§5).
+- [x] `mastery.ts`: EMA por regla y jefe habilitado (§6).
+- [x] `worlds.ts`: grafo de mundos como datos, paradas, desbloqueos, estrellas (§7).
+- [x] `round.ts`: armado de la ronda con sus cupos, relleno, penalización y orden (§4.1); ronda del jefe (§4.2); ajuste dentro de la ronda (§4.3) como función `nextWord(roundState, ...)`.
+- [x] `rewards.ts` y `badges.ts`: racha con siesta, croquetas, insignias (§8).
+- [x] `state.ts`: tipo `ProfileState`, `applyRound(state, round, words, config)` y `replay(rounds)`.
 
 Criterios de aceptación:
 

@@ -25,7 +25,9 @@ Fuente de verdad de la lógica. Todo lo que está acá se implementa como funcio
 | Palabra con oración (mundos 8 y 9, y cualquier entrada con `sentence`) | `tilde` (la palabra aparece destacada dentro de la oración) |
 
 - **`tonica`:** la palabra aparece sin tilde, separada en sílabas. El chico toca la sílaba que suena más fuerte. Correcto si toca `stressIndex`.
-- **`tipo`:** elige entre Aguda, Grave, Esdrújula (y Sobreesdrújula desde el mundo 4). En monosílabos este paso se omite. Correcto si coincide con `type`.
+- **`tipo`:** elige entre Aguda, Grave, Esdrújula (y Sobreesdrújula si la ronda o la palabra son del mundo 4 en adelante, así un repaso del mundo 4 se puede responder en cualquier ronda). Correcto si coincide con `type`.
+- **Monosílabos sueltos** (sin oración): solo el paso `tilde`. No hay tónica que elegir ni tipo.
+- Si la entrada tiene `sentence`, manda la oración aunque sea del mundo 1: solo `tilde`.
 - **`tilde`:** elige "Con tilde" o "Sin tilde". Correcto si coincide con `hasTilde`.
 - Cada paso se responde una vez; no se puede volver atrás.
 - Si el paso `tonica` falla, igual se muestra el siguiente con la sílaba correcta marcada. El turno ya cuenta como no completo, pero el chico sigue razonando sobre la palabra correcta.
@@ -38,11 +40,13 @@ type TurnResult = {
   steps: { step: 'tonica' | 'tipo' | 'tilde'; correct: boolean }[]
   full: boolean        // todos los pasos correctos
   hinted: boolean      // se mostró pista antes de responder (4.3)
+  challenge: boolean   // vino por el cupo de desafío: suma el bonus de §3
   ms: number           // tiempo total del turno
 }
 ```
 
-- `full = true` solo si todos los pasos son correctos y no hubo pista en `tonica`. Si hubo pista, el paso `tonica` se da por resuelto y no cuenta.
+- `full = true` solo si todos los pasos son correctos y no hubo pista. Si hubo pista, el paso `tonica` se da por resuelto y no se registra en `steps`; el turno nunca es `full`.
+- Un paso sin respuesta cuenta como incorrecto.
 
 ### 2.3 Feedback
 
@@ -64,6 +68,8 @@ Después del último paso, siempre:
 | Palabra de desafío resuelta `full` | +5 |
 | Jefe vencido | +50 |
 
+La lección no da XP (sus turnos no afectan nada, ver 4.2).
+
 ## 4. La ronda
 
 ### 4.1 Composición (10 palabras) — ajustable
@@ -78,7 +84,10 @@ Después del último paso, siempre:
 - Si un cupo no se llena, el faltante se completa con el cupo "Nuevas o en curso"; si tampoco alcanza, con cualquier palabra del mundo actual.
 - Nunca la misma palabra dos veces en una ronda.
 - Penalización por repetición: una palabra que apareció en cualquiera de las últimas 2 rondas tiene peso × 0,2 en el sorteo.
-- Dentro de cada cupo el sorteo es ponderado: `peso = (1 + errores previos en esa palabra) × penalización`.
+- Dentro de cada cupo el sorteo es ponderado: `peso = (1 + errores previos en esa palabra) × penalización`. Cuando el cupo tiene prioridades (nuevas: caja 1–2 antes que caja 0; repasos: caja más baja, después `due_round`), se respetan en orden y el sorteo ponderado decide entre las que empatan. Las de caja 0 se ordenan por `freq`.
+- "Errores previos" son los turnos no `full` sin pista en esa palabra.
+- Regla floja: entre las reglas con intentos de los mundos con jefe vencido. Si no hay ninguno, el cupo queda vacío y se rellena.
+- Desafío: entre las candidatas se prefieren las que todavía no llegaron a caja 3.
 - El orden final de la ronda se mezcla, salvo que el desafío nunca va primero.
 - El armado recibe un `rng` (generador con semilla) para que los tests sean deterministas.
 
@@ -89,7 +98,7 @@ Después del último paso, siempre:
 
 ### 4.3 Ajuste dentro de la ronda — ajustable
 
-- **3 turnos seguidos no `full`:** la siguiente palabra se reemplaza por una del tier inferior del mismo mundo (si existe) y se muestra con pista: la sílaba tónica viene resaltada. El contador vuelve a 0.
+- **3 turnos seguidos no `full`:** la siguiente palabra se reemplaza por una del tier inferior del mismo mundo y se muestra con pista: la sílaba tónica viene resaltada. Si no hay tier inferior (práctica de tier 1), se muestra la palabra planeada, con pista. El contador vuelve a 0.
 - **5 turnos `full` seguidos:** se agrega una palabra de desafío extra al final (la ronda pasa a 11). Máximo una vez por ronda.
 - No aplica a la ronda del jefe.
 
@@ -110,7 +119,7 @@ Una ronda se guarda como un registro con sus turnos; todo lo derivado (cajas, EM
 | Turno con pista | No cambia la caja |
 | Turno de lección | No cambia nada |
 
-Cada vez que una palabra se juega se guarda `last_round` (número de ronda del perfil) y `last_seen_at` (fecha y hora).
+Cada vez que una palabra se juega se guarda `last_round` (número de ronda del perfil) y `last_seen_at` (fecha y hora de fin de la ronda). Además se cuentan los errores (turnos no `full` sin pista) y los `full` seguidos; un turno con pista no cambia ninguno de los dos.
 
 ### 5.2 Cuándo vuelve una palabra — ajustable
 
@@ -136,13 +145,18 @@ Por cada perfil y cada `rule`:
 
 - `ema` empieza en 0,5 y `attempts` en 0.
 - Cada turno (sin pista, no lección) actualiza: `ema = 0,8 × ema + 0,2 × (full ? 1 : 0)`, `attempts += 1`. **Ajustable:** el 0,2.
+- La EMA se guarda por regla **y por mundo de la palabra** (`mundo:regla`), porque 6.2 cuenta solo intentos de ese mundo.
+- También se guardan los últimos 30 resultados (`full` o no) de cada regla, para 6.2.
 
 ### 6.2 Jefe habilitado
 
 El jefe de un mundo se habilita cuando:
 
 1. Se completaron las paradas anteriores del mundo (7.2), y
-2. Toda regla con palabras en ese mundo tiene `ema >= 0,85` y `attempts >= 20` (**ajustable**), contando solo intentos con palabras de ese mundo.
+2. Cada regla del mundo tiene `ema >= 0,85` y, en sus **últimos 30 intentos, al menos 85 % `full`** (**ajustable**), contando solo intentos con palabras de ese mundo.
+
+- **Qué reglas cuentan:** las que tienen al menos el 15 % de las palabras del mundo (**ajustable**). Una regla con una o dos palabras sueltas (por ejemplo, la única aguda terminada en vocal del mundo 7) no puede bloquear al jefe.
+- **Por qué la ventana de 30 y no solo la EMA:** con α = 0,2 la EMA pasa de 0,5 a 0,85 con 6 aciertos seguidos, algo que un chico que acierta la mitad logra seguido. En la simulación, con solo EMA ≥ 0,85 y 20 intentos, un chico del 50 % venció al jefe del mundo 1. Con la ventana, el del 50 % no habilita ningún jefe en 100 rondas (30 de 30 semillas) y un chico perfecto vence los 10 jefes en unas 120 rondas.
 
 ## 7. Mundos y mapa
 
@@ -176,8 +190,9 @@ El jefe de un mundo se habilita cuando:
 | 4 | Desafío | Rondas con tier 3 | Una ronda con ≥ 6 de 10 `full` |
 | 5 | Jefe | Ronda del jefe | Ver 7.3 |
 
-- Las paradas son secuenciales. Una parada completada se puede volver a jugar.
-- El mundo 1 tiene solo lección, práctica, práctica + y jefe (no tiene tier 3 obligatorio si el banco no lo trae).
+- Las paradas son secuenciales (empezando por la lección). Una ronda de una parada cuyas anteriores no están completas no la completa. Una parada completada se puede volver a jugar.
+- El mundo 1 tiene solo lección, práctica, práctica + y jefe: no tiene parada de desafío. Sus palabras de tier 3 aparecen como desafío y en el jefe.
+- Si terminó las paradas pero el jefe todavía no está habilitado (6.2), sigue jugando la última parada de práctica.
 - Botón "Jugar" en el inicio: arranca una ronda en la parada más avanzada no completada del último mundo jugado.
 
 ### 7.3 Jefe final — ajustable
@@ -200,8 +215,8 @@ Las estrellas solo suben, nunca bajan.
 
 ### 8.1 Racha diaria
 
-- Un día cuenta si se terminó al menos una ronda (zona horaria del dispositivo).
-- Una "siesta de gato" por semana (lunes a domingo): si falta un día, se consume la siesta y la racha sigue. Si ya se usó, la racha vuelve a 0.
+- Un día cuenta si se terminó al menos una ronda (no lección), en la zona horaria del dispositivo. Cada ronda guarda su offset (`tzOffsetMin`) para que el cálculo dé lo mismo en el servidor.
+- Una "siesta de gato" por semana (lunes a domingo): si falta un día, se consume la siesta de la semana de ese día y la racha sigue. Si ya se usó, la racha vuelve a empezar. Faltar dos días seguidos corta la racha.
 
 ### 8.2 Croquetas (moneda)
 
@@ -225,7 +240,7 @@ Catálogo en `shared/src/data/badges.json`. Cada insignia tiene un `id` y una fu
 | --- | --- |
 | Primera ronda | Terminar una ronda |
 | Cazadora de agudas (y una por mundo) | Mundo con ★★★ |
-| Remontada | Una regla sube ≥ 0,20 de EMA en los últimos 7 días |
+| Remontada | Una regla jugada en la ronda tiene una EMA ≥ 0,20 más alta que hace 7 días (si no tenía valor hace 7 días, no cuenta) |
 | Ya no me engañan | Una palabra falló ≥ 3 veces y después tuvo 5 `full` seguidos |
 | Racha de 3 / 7 / 30 | Racha de esos días |
 | Gata trasnochadora (secreta) | Terminar una ronda entre las 0 y las 5 |
@@ -249,12 +264,18 @@ export const CONFIG = {
   minHoursForBoxes: { 4: 24, 5: 24 },
   emaAlpha: 0.2,
   emaInitial: 0.5,
-  bossGate: { minEma: 0.85, minAttempts: 20 },
+  bossGate: { minEma: 0.85, window: 30, minAccuracy: 0.85, minRuleShare: 0.15 },
   stopPass: { 2: 7, 3: 7, 4: 6 },           // full sobre 10 por parada
+  worldsWithoutChallengeStop: [1],
+  bossTiers: [3, 4, 3],
   bossWin: 8,
   bossTwoStars: 9,
   threeStarsBoxShare: 0.8,
   inRound: { errorsForHint: 3, fullsForChallenge: 5 },
   xp: { full: 10, partial: 4, streakBonus: 2, streakFrom: 3, challenge: 5, boss: 50 },
-} as const
+  croquetas: { box3: 1, box5: 2, boss: 10 },
+  badges: { streaks: [3, 7, 30], comeback: { days: 7, minRise: 0.2 },
+            notFooled: { minErrors: 3, fulls: 5 }, nightOwl: { fromHour: 0, toHour: 5 } },
+  // y maxBox, threeStarsMinBox (ver config.ts)
+}
 ```
