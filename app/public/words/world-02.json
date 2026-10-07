@@ -1,0 +1,1711 @@
+{
+ "world": 2,
+ "name": "El Tejado Puntiagudo",
+ "topic": "agudas",
+ "words": [
+  {
+   "id": "feliz",
+   "word": "feliz",
+   "syllables": [
+    "fe",
+    "liz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "felíz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.47
+  },
+  {
+   "id": "corazón",
+   "word": "corazón",
+   "syllables": [
+    "co",
+    "ra",
+    "zón"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "corazon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.45
+  },
+  {
+   "id": "bebé-0c8e2f",
+   "word": "bebé",
+   "syllables": [
+    "be",
+    "bé"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "bebe",
+   "sentence": "El [bebé] duerme en la cuna.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.32
+  },
+  {
+   "id": "café",
+   "word": "café",
+   "syllables": [
+    "ca",
+    "fé"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "cafe",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.18
+  },
+  {
+   "id": "canción",
+   "word": "canción",
+   "syllables": [
+    "can",
+    "ción"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "cancion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5
+  },
+  {
+   "id": "avión",
+   "word": "avión",
+   "syllables": [
+    "a",
+    "vión"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "avion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.97
+  },
+  {
+   "id": "correr",
+   "word": "correr",
+   "syllables": [
+    "co",
+    "rrer"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "corrér",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.79
+  },
+  {
+   "id": "camión",
+   "word": "camión",
+   "syllables": [
+    "ca",
+    "mión"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "camion",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "reloj",
+   "word": "reloj",
+   "syllables": [
+    "re",
+    "loj"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "relój",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "volar",
+   "word": "volar",
+   "syllables": [
+    "vo",
+    "lar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "volár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "pared",
+   "word": "pared",
+   "syllables": [
+    "pa",
+    "red"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "paréd",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.72
+  },
+  {
+   "id": "nariz",
+   "word": "nariz",
+   "syllables": [
+    "na",
+    "riz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "naríz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.68
+  },
+  {
+   "id": "pastel",
+   "word": "pastel",
+   "syllables": [
+    "pas",
+    "tel"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "pastél",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.62
+  },
+  {
+   "id": "saltar",
+   "word": "saltar",
+   "syllables": [
+    "sal",
+    "tar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "saltár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.46
+  },
+  {
+   "id": "sofá",
+   "word": "sofá",
+   "syllables": [
+    "so",
+    "fá"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "sofa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.43
+  },
+  {
+   "id": "nadar",
+   "word": "nadar",
+   "syllables": [
+    "na",
+    "dar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "nadár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.37
+  },
+  {
+   "id": "botón",
+   "word": "botón",
+   "syllables": [
+    "bo",
+    "tón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "boton",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.34
+  },
+  {
+   "id": "ratón",
+   "word": "ratón",
+   "syllables": [
+    "ra",
+    "tón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "raton",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.13
+  },
+  {
+   "id": "menú",
+   "word": "menú",
+   "syllables": [
+    "me",
+    "nú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "menu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.04
+  },
+  {
+   "id": "jabón",
+   "word": "jabón",
+   "syllables": [
+    "ja",
+    "bón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "jabon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.01
+  },
+  {
+   "id": "limón",
+   "word": "limón",
+   "syllables": [
+    "li",
+    "món"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "limon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.96
+  },
+  {
+   "id": "tenés-1d012d",
+   "word": "tenés",
+   "syllables": [
+    "te",
+    "nés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "tenes",
+   "sentence": "¿[Tenés] hambre?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "querés-658e3a",
+   "word": "querés",
+   "syllables": [
+    "que",
+    "rés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "queres",
+   "sentence": "¿[Querés] jugar a la pelota?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.83
+  },
+  {
+   "id": "maní",
+   "word": "maní",
+   "syllables": [
+    "ma",
+    "ní"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "mani",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.77
+  },
+  {
+   "id": "vení",
+   "word": "vení",
+   "syllables": [
+    "ve",
+    "ní"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "veni",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.53
+  },
+  {
+   "id": "melón",
+   "word": "melón",
+   "syllables": [
+    "me",
+    "lón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "melon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.45
+  },
+  {
+   "id": "mantel",
+   "word": "mantel",
+   "syllables": [
+    "man",
+    "tel"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 1,
+   "distractor": "mantél",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.21
+  },
+  {
+   "id": "jugá",
+   "word": "jugá",
+   "syllables": [
+    "ju",
+    "gá"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 1,
+   "distractor": "juga",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 1.52
+  },
+  {
+   "id": "verdad",
+   "word": "verdad",
+   "syllables": [
+    "ver",
+    "dad"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "verdád",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.14
+  },
+  {
+   "id": "después",
+   "word": "después",
+   "syllables": [
+    "des",
+    "pués"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "despues",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 5.87
+  },
+  {
+   "id": "quizás",
+   "word": "quizás",
+   "syllables": [
+    "qui",
+    "zás"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "quizas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.49
+  },
+  {
+   "id": "doctor",
+   "word": "doctor",
+   "syllables": [
+    "doc",
+    "tor"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "doctór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.39
+  },
+  {
+   "id": "además",
+   "word": "además",
+   "syllables": [
+    "a",
+    "de",
+    "más"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "ademas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.25
+  },
+  {
+   "id": "detrás",
+   "word": "detrás",
+   "syllables": [
+    "de",
+    "trás"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "detras",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "jamás",
+   "word": "jamás",
+   "syllables": [
+    "ja",
+    "más"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "jamas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.11
+  },
+  {
+   "id": "profesor",
+   "word": "profesor",
+   "syllables": [
+    "pro",
+    "fe",
+    "sor"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "profesór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.01
+  },
+  {
+   "id": "libertad",
+   "word": "libertad",
+   "syllables": [
+    "li",
+    "ber",
+    "tad"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "libertád",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.95
+  },
+  {
+   "id": "inglés",
+   "word": "inglés",
+   "syllables": [
+    "in",
+    "glés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "ingles",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.76
+  },
+  {
+   "id": "francés",
+   "word": "francés",
+   "syllables": [
+    "fran",
+    "cés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "frances",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.58
+  },
+  {
+   "id": "amistad",
+   "word": "amistad",
+   "syllables": [
+    "a",
+    "mis",
+    "tad"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "amistád",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.52
+  },
+  {
+   "id": "motor",
+   "word": "motor",
+   "syllables": [
+    "mo",
+    "tor"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "motór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.51
+  },
+  {
+   "id": "salí",
+   "word": "salí",
+   "syllables": [
+    "sa",
+    "lí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "sali",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 4.46
+  },
+  {
+   "id": "escribí",
+   "word": "escribí",
+   "syllables": [
+    "es",
+    "cri",
+    "bí"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "escribi",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 4.36
+  },
+  {
+   "id": "español",
+   "word": "español",
+   "syllables": [
+    "es",
+    "pa",
+    "ñol"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "españól",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.35
+  },
+  {
+   "id": "japonés",
+   "word": "japonés",
+   "syllables": [
+    "ja",
+    "po",
+    "nés"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "japones",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.11
+  },
+  {
+   "id": "tiburón",
+   "word": "tiburón",
+   "syllables": [
+    "ti",
+    "bu",
+    "rón"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "tiburon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.1
+  },
+  {
+   "id": "sabés-fbc092",
+   "word": "sabés",
+   "syllables": [
+    "sa",
+    "bés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "sabes",
+   "sentence": "¿Vos [sabés] nadar?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.86
+  },
+  {
+   "id": "volcán",
+   "word": "volcán",
+   "syllables": [
+    "vol",
+    "cán"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "volcan",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.76
+  },
+  {
+   "id": "mirá-7d4edb",
+   "word": "mirá",
+   "syllables": [
+    "mi",
+    "rá"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "mira",
+   "sentence": "Si querés, [mirá] la tele un rato.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.75
+  },
+  {
+   "id": "podés-74f5c9",
+   "word": "podés",
+   "syllables": [
+    "po",
+    "dés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "podes",
+   "sentence": "¿[Podés] venir mañana?",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.6
+  },
+  {
+   "id": "caracol",
+   "word": "caracol",
+   "syllables": [
+    "ca",
+    "ra",
+    "col"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "caracól",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.37
+  },
+  {
+   "id": "tomá-aac2f9",
+   "word": "tomá",
+   "syllables": [
+    "to",
+    "má"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "toma",
+   "sentence": "[Tomá], acá tenés tu lápiz.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 3.1
+  },
+  {
+   "id": "lombriz",
+   "word": "lombriz",
+   "syllables": [
+    "lom",
+    "briz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "lombríz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.1
+  },
+  {
+   "id": "girasol",
+   "word": "girasol",
+   "syllables": [
+    "gi",
+    "ra",
+    "sol"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 2,
+   "distractor": "girasól",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.93
+  },
+  {
+   "id": "decí",
+   "word": "decí",
+   "syllables": [
+    "de",
+    "cí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "deci",
+   "sentence": null,
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 2.47
+  },
+  {
+   "id": "comé-7b1944",
+   "word": "comé",
+   "syllables": [
+    "co",
+    "mé"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 2,
+   "distractor": "come",
+   "sentence": "Si tenés hambre, [comé] una fruta.",
+   "tags": [
+    "voseo"
+   ],
+   "features": [],
+   "related": null,
+   "freq": 2.32
+  },
+  {
+   "id": "estoy",
+   "word": "estoy",
+   "syllables": [
+    "es",
+    "toy"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "estóy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 6.41
+  },
+  {
+   "id": "autobús",
+   "word": "autobús",
+   "syllables": [
+    "au",
+    "to",
+    "bús"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "autobus",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 4.68
+  },
+  {
+   "id": "almacén",
+   "word": "almacén",
+   "syllables": [
+    "al",
+    "ma",
+    "cén"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "almacen",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.33
+  },
+  {
+   "id": "arroz",
+   "word": "arroz",
+   "syllables": [
+    "a",
+    "rroz"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "arróz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.32
+  },
+  {
+   "id": "robots",
+   "word": "robots",
+   "syllables": [
+    "ro",
+    "bots"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "robóts",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "huracán",
+   "word": "huracán",
+   "syllables": [
+    "hu",
+    "ra",
+    "cán"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "huracan",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.82
+  },
+  {
+   "id": "colchón",
+   "word": "colchón",
+   "syllables": [
+    "col",
+    "chón"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "colchon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.81
+  },
+  {
+   "id": "esquí",
+   "word": "esquí",
+   "syllables": [
+    "es",
+    "quí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "esqui",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.57
+  },
+  {
+   "id": "champú",
+   "word": "champú",
+   "syllables": [
+    "cham",
+    "pú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "champu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.51
+  },
+  {
+   "id": "bisturí",
+   "word": "bisturí",
+   "syllables": [
+    "bis",
+    "tu",
+    "rí"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "bisturi",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.51
+  },
+  {
+   "id": "bambú",
+   "word": "bambú",
+   "syllables": [
+    "bam",
+    "bú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "bambu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.43
+  },
+  {
+   "id": "compás",
+   "word": "compás",
+   "syllables": [
+    "com",
+    "pás"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "compas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.36
+  },
+  {
+   "id": "carey",
+   "word": "carey",
+   "syllables": [
+    "ca",
+    "rey"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "caréy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.31
+  },
+  {
+   "id": "rubí",
+   "word": "rubí",
+   "syllables": [
+    "ru",
+    "bí"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "rubi",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.29
+  },
+  {
+   "id": "avestruz",
+   "word": "avestruz",
+   "syllables": [
+    "a",
+    "ves",
+    "truz"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "avestrúz",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.21
+  },
+  {
+   "id": "perejil",
+   "word": "perejil",
+   "syllables": [
+    "pe",
+    "re",
+    "jil"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "perejíl",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.08
+  },
+  {
+   "id": "virrey",
+   "word": "virrey",
+   "syllables": [
+    "vi",
+    "rrey"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "virréy",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.01
+  },
+  {
+   "id": "colibrí",
+   "word": "colibrí",
+   "syllables": [
+    "co",
+    "li",
+    "brí"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "colibri",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.91
+  },
+  {
+   "id": "ciempiés",
+   "word": "ciempiés",
+   "syllables": [
+    "ciem",
+    "piés"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "ciempies",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.88
+  },
+  {
+   "id": "tictac",
+   "word": "tictac",
+   "syllables": [
+    "tic",
+    "tac"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 2,
+   "tier": 3,
+   "distractor": "tictác",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.81
+  },
+  {
+   "id": "maracuyá",
+   "word": "maracuyá",
+   "syllables": [
+    "ma",
+    "ra",
+    "cu",
+    "yá"
+   ],
+   "stressIndex": 3,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "maracuya",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.13
+  },
+  {
+   "id": "alacrán",
+   "word": "alacrán",
+   "syllables": [
+    "a",
+    "la",
+    "crán"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "alacran",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.86
+  },
+  {
+   "id": "tatú",
+   "word": "tatú",
+   "syllables": [
+    "ta",
+    "tú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "tatu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.79
+  },
+  {
+   "id": "ombú",
+   "word": "ombú",
+   "syllables": [
+    "om",
+    "bú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "ombu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.41
+  },
+  {
+   "id": "yacaré",
+   "word": "yacaré",
+   "syllables": [
+    "ya",
+    "ca",
+    "ré"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "yacare",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 1.22
+  },
+  {
+   "id": "ñandú",
+   "word": "ñandú",
+   "syllables": [
+    "ñan",
+    "dú"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 2,
+   "tier": 3,
+   "distractor": "ñandu",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 0.85
+  }
+ ]
+}

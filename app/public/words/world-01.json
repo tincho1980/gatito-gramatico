@@ -1,0 +1,1700 @@
+{
+ "world": 1,
+ "name": "La Sílaba que Ronronea",
+ "topic": "sílaba tónica",
+ "words": [
+  {
+   "id": "casa",
+   "word": "casa",
+   "syllables": [
+    "ca",
+    "sa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "cása",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 6.14
+  },
+  {
+   "id": "mano",
+   "word": "mano",
+   "syllables": [
+    "ma",
+    "no"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "máno",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.43
+  },
+  {
+   "id": "comer",
+   "word": "comer",
+   "syllables": [
+    "co",
+    "mer"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "comér",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.31
+  },
+  {
+   "id": "cama",
+   "word": "cama",
+   "syllables": [
+    "ca",
+    "ma"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "cáma",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.25
+  },
+  {
+   "id": "dormir",
+   "word": "dormir",
+   "syllables": [
+    "dor",
+    "mir"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "dormír",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.24
+  },
+  {
+   "id": "perro",
+   "word": "perro",
+   "syllables": [
+    "pe",
+    "rro"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "pérro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "jugar",
+   "word": "jugar",
+   "syllables": [
+    "ju",
+    "gar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "jugár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.17
+  },
+  {
+   "id": "boca",
+   "word": "boca",
+   "syllables": [
+    "bo",
+    "ca"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "bóca",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.11
+  },
+  {
+   "id": "pelo",
+   "word": "pelo",
+   "syllables": [
+    "pe",
+    "lo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "pélo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.06
+  },
+  {
+   "id": "mesa",
+   "word": "mesa",
+   "syllables": [
+    "me",
+    "sa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "mésa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.03
+  },
+  {
+   "id": "papel",
+   "word": "papel",
+   "syllables": [
+    "pa",
+    "pel"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "papél",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.97
+  },
+  {
+   "id": "luna",
+   "word": "luna",
+   "syllables": [
+    "lu",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "lúna",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.92
+  },
+  {
+   "id": "mirar",
+   "word": "mirar",
+   "syllables": [
+    "mi",
+    "rar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "mirár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.91
+  },
+  {
+   "id": "color",
+   "word": "color",
+   "syllables": [
+    "co",
+    "lor"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 1,
+   "distractor": "colór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.84
+  },
+  {
+   "id": "leche",
+   "word": "leche",
+   "syllables": [
+    "le",
+    "che"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "léche",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.74
+  },
+  {
+   "id": "gato",
+   "word": "gato",
+   "syllables": [
+    "ga",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "gáto",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.73
+  },
+  {
+   "id": "silla",
+   "word": "silla",
+   "syllables": [
+    "si",
+    "lla"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "sílla",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.71
+  },
+  {
+   "id": "dedo",
+   "word": "dedo",
+   "syllables": [
+    "de",
+    "do"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "dédo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.63
+  },
+  {
+   "id": "rosa",
+   "word": "rosa",
+   "syllables": [
+    "ro",
+    "sa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "rósa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.57
+  },
+  {
+   "id": "taza",
+   "word": "taza",
+   "syllables": [
+    "ta",
+    "za"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "táza",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.5
+  },
+  {
+   "id": "lobo",
+   "word": "lobo",
+   "syllables": [
+    "lo",
+    "bo"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "lóbo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.47
+  },
+  {
+   "id": "sopa",
+   "word": "sopa",
+   "syllables": [
+    "so",
+    "pa"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "sópa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.46
+  },
+  {
+   "id": "oso",
+   "word": "oso",
+   "syllables": [
+    "o",
+    "so"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "óso",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.45
+  },
+  {
+   "id": "vaca",
+   "word": "vaca",
+   "syllables": [
+    "va",
+    "ca"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "váca",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.33
+  },
+  {
+   "id": "pato",
+   "word": "pato",
+   "syllables": [
+    "pa",
+    "to"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "páto",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.12
+  },
+  {
+   "id": "nube",
+   "word": "nube",
+   "syllables": [
+    "nu",
+    "be"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "núbe",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.1
+  },
+  {
+   "id": "bota",
+   "word": "bota",
+   "syllables": [
+    "bo",
+    "ta"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "bóta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.69
+  },
+  {
+   "id": "sapo",
+   "word": "sapo",
+   "syllables": [
+    "sa",
+    "po"
+   ],
+   "stressIndex": 0,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 1,
+   "distractor": "sápo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.62
+  },
+  {
+   "id": "amigo",
+   "word": "amigo",
+   "syllables": [
+    "a",
+    "mi",
+    "go"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "amígo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.79
+  },
+  {
+   "id": "maestro",
+   "word": "maestro",
+   "syllables": [
+    "ma",
+    "es",
+    "tro"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "maéstro",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 4.94
+  },
+  {
+   "id": "vestido",
+   "word": "vestido",
+   "syllables": [
+    "ves",
+    "ti",
+    "do"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "vestído",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.93
+  },
+  {
+   "id": "caballo",
+   "word": "caballo",
+   "syllables": [
+    "ca",
+    "ba",
+    "llo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "cabállo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.92
+  },
+  {
+   "id": "ventana",
+   "word": "ventana",
+   "syllables": [
+    "ven",
+    "ta",
+    "na"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "ventána",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.87
+  },
+  {
+   "id": "máquina",
+   "word": "máquina",
+   "syllables": [
+    "má",
+    "qui",
+    "na"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 2,
+   "distractor": "maquina",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.8
+  },
+  {
+   "id": "cantar",
+   "word": "cantar",
+   "syllables": [
+    "can",
+    "tar"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 2,
+   "distractor": "cantár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.7
+  },
+  {
+   "id": "animal",
+   "word": "animal",
+   "syllables": [
+    "a",
+    "ni",
+    "mal"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 2,
+   "distractor": "animál",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.67
+  },
+  {
+   "id": "sombrero",
+   "word": "sombrero",
+   "syllables": [
+    "som",
+    "bre",
+    "ro"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "sombréro",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.63
+  },
+  {
+   "id": "camisa",
+   "word": "camisa",
+   "syllables": [
+    "ca",
+    "mi",
+    "sa"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "camísa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.57
+  },
+  {
+   "id": "pintura",
+   "word": "pintura",
+   "syllables": [
+    "pin",
+    "tu",
+    "ra"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "pintúra",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.55
+  },
+  {
+   "id": "pelota",
+   "word": "pelota",
+   "syllables": [
+    "pe",
+    "lo",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "pelóta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.5
+  },
+  {
+   "id": "manzana",
+   "word": "manzana",
+   "syllables": [
+    "man",
+    "za",
+    "na"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "manzána",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.32
+  },
+  {
+   "id": "conejo",
+   "word": "conejo",
+   "syllables": [
+    "co",
+    "ne",
+    "jo"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "conéjo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.25
+  },
+  {
+   "id": "pescar",
+   "word": "pescar",
+   "syllables": [
+    "pes",
+    "car"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 2,
+   "distractor": "pescár",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.19
+  },
+  {
+   "id": "zapato",
+   "word": "zapato",
+   "syllables": [
+    "za",
+    "pa",
+    "to"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "zapáto",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.16
+  },
+  {
+   "id": "tortuga",
+   "word": "tortuga",
+   "syllables": [
+    "tor",
+    "tu",
+    "ga"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "tortúga",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.99
+  },
+  {
+   "id": "pirata",
+   "word": "pirata",
+   "syllables": [
+    "pi",
+    "ra",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "piráta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.98
+  },
+  {
+   "id": "tomate-74605b",
+   "word": "tomate",
+   "syllables": [
+    "to",
+    "ma",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "tómate",
+   "sentence": "La ensalada tiene [tomate] y lechuga.",
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.97
+  },
+  {
+   "id": "galleta",
+   "word": "galleta",
+   "syllables": [
+    "ga",
+    "lle",
+    "ta"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "galléta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.96
+  },
+  {
+   "id": "cohete",
+   "word": "cohete",
+   "syllables": [
+    "co",
+    "he",
+    "te"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "cohéte",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 3.96
+  },
+  {
+   "id": "tambor",
+   "word": "tambor",
+   "syllables": [
+    "tam",
+    "bor"
+   ],
+   "stressIndex": 1,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 2,
+   "distractor": "tambór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.71
+  },
+  {
+   "id": "banana",
+   "word": "banana",
+   "syllables": [
+    "ba",
+    "na",
+    "na"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "banána",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.7
+  },
+  {
+   "id": "escoba",
+   "word": "escoba",
+   "syllables": [
+    "es",
+    "co",
+    "ba"
+   ],
+   "stressIndex": 1,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 2,
+   "distractor": "escóba",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.67
+  },
+  {
+   "id": "brújula",
+   "word": "brújula",
+   "syllables": [
+    "brú",
+    "ju",
+    "la"
+   ],
+   "stressIndex": 0,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 2,
+   "distractor": "brujula",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.6
+  },
+  {
+   "id": "teléfono",
+   "word": "teléfono",
+   "syllables": [
+    "te",
+    "lé",
+    "fo",
+    "no"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "telefono",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 5.35
+  },
+  {
+   "id": "cumpleaños",
+   "word": "cumpleaños",
+   "syllables": [
+    "cum",
+    "ple",
+    "a",
+    "ños"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "cumpleáños",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "hiato"
+   ],
+   "related": null,
+   "freq": 5
+  },
+  {
+   "id": "chocolate",
+   "word": "chocolate",
+   "syllables": [
+    "cho",
+    "co",
+    "la",
+    "te"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "chocoláte",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.56
+  },
+  {
+   "id": "computadora",
+   "word": "computadora",
+   "syllables": [
+    "com",
+    "pu",
+    "ta",
+    "do",
+    "ra"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "computadóra",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.54
+  },
+  {
+   "id": "escalera",
+   "word": "escalera",
+   "syllables": [
+    "es",
+    "ca",
+    "le",
+    "ra"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "escaléra",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.39
+  },
+  {
+   "id": "bicicleta",
+   "word": "bicicleta",
+   "syllables": [
+    "bi",
+    "ci",
+    "cle",
+    "ta"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "bicicléta",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.33
+  },
+  {
+   "id": "cinturón",
+   "word": "cinturón",
+   "syllables": [
+    "cin",
+    "tu",
+    "rón"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "cinturon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.33
+  },
+  {
+   "id": "helicóptero",
+   "word": "helicóptero",
+   "syllables": [
+    "he",
+    "li",
+    "cóp",
+    "te",
+    "ro"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "helicoptero",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.31
+  },
+  {
+   "id": "matemáticas",
+   "word": "matemáticas",
+   "syllables": [
+    "ma",
+    "te",
+    "má",
+    "ti",
+    "cas"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "matematicas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.21
+  },
+  {
+   "id": "elefante",
+   "word": "elefante",
+   "syllables": [
+    "e",
+    "le",
+    "fan",
+    "te"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "elefánte",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 4.06
+  },
+  {
+   "id": "caramelo",
+   "word": "caramelo",
+   "syllables": [
+    "ca",
+    "ra",
+    "me",
+    "lo"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "caramélo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.96
+  },
+  {
+   "id": "calendario",
+   "word": "calendario",
+   "syllables": [
+    "ca",
+    "len",
+    "da",
+    "rio"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "calendário",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.93
+  },
+  {
+   "id": "rompecabezas",
+   "word": "rompecabezas",
+   "syllables": [
+    "rom",
+    "pe",
+    "ca",
+    "be",
+    "zas"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "rompecabézas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.89
+  },
+  {
+   "id": "mariposa",
+   "word": "mariposa",
+   "syllables": [
+    "ma",
+    "ri",
+    "po",
+    "sa"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "maripósa",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.88
+  },
+  {
+   "id": "televisor",
+   "word": "televisor",
+   "syllables": [
+    "te",
+    "le",
+    "vi",
+    "sor"
+   ],
+   "stressIndex": 3,
+   "type": "aguda",
+   "hasTilde": false,
+   "rule": "aguda_otra",
+   "world": 1,
+   "tier": 3,
+   "distractor": "televisór",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.87
+  },
+  {
+   "id": "calabaza",
+   "word": "calabaza",
+   "syllables": [
+    "ca",
+    "la",
+    "ba",
+    "za"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "calabáza",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.78
+  },
+  {
+   "id": "pantalón",
+   "word": "pantalón",
+   "syllables": [
+    "pan",
+    "ta",
+    "lón"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "pantalon",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.75
+  },
+  {
+   "id": "mermelada",
+   "word": "mermelada",
+   "syllables": [
+    "mer",
+    "me",
+    "la",
+    "da"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "mermeláda",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.74
+  },
+  {
+   "id": "cocodrilo",
+   "word": "cocodrilo",
+   "syllables": [
+    "co",
+    "co",
+    "dri",
+    "lo"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "cocodrílo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.72
+  },
+  {
+   "id": "murciélago",
+   "word": "murciélago",
+   "syllables": [
+    "mur",
+    "cié",
+    "la",
+    "go"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "murcielago",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.68
+  },
+  {
+   "id": "dinosaurio",
+   "word": "dinosaurio",
+   "syllables": [
+    "di",
+    "no",
+    "sau",
+    "rio"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "dinosáurio",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 3.63
+  },
+  {
+   "id": "semáforo",
+   "word": "semáforo",
+   "syllables": [
+    "se",
+    "má",
+    "fo",
+    "ro"
+   ],
+   "stressIndex": 1,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "semaforo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.49
+  },
+  {
+   "id": "hipopótamo",
+   "word": "hipopótamo",
+   "syllables": [
+    "hi",
+    "po",
+    "pó",
+    "ta",
+    "mo"
+   ],
+   "stressIndex": 2,
+   "type": "esdrujula",
+   "hasTilde": true,
+   "rule": "esdrujula",
+   "world": 1,
+   "tier": 3,
+   "distractor": "hipopotamo",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.19
+  },
+  {
+   "id": "tobogán",
+   "word": "tobogán",
+   "syllables": [
+    "to",
+    "bo",
+    "gán"
+   ],
+   "stressIndex": 2,
+   "type": "aguda",
+   "hasTilde": true,
+   "rule": "aguda_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "tobogan",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 3.14
+  },
+  {
+   "id": "golondrina",
+   "word": "golondrina",
+   "syllables": [
+    "go",
+    "lon",
+    "dri",
+    "na"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "golondrína",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.96
+  },
+  {
+   "id": "abecedario",
+   "word": "abecedario",
+   "syllables": [
+    "a",
+    "be",
+    "ce",
+    "da",
+    "rio"
+   ],
+   "stressIndex": 3,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "abecedário",
+   "sentence": null,
+   "tags": [],
+   "features": [
+    "diptongo"
+   ],
+   "related": null,
+   "freq": 2.61
+  },
+  {
+   "id": "sacapuntas",
+   "word": "sacapuntas",
+   "syllables": [
+    "sa",
+    "ca",
+    "pun",
+    "tas"
+   ],
+   "stressIndex": 2,
+   "type": "grave",
+   "hasTilde": false,
+   "rule": "grave_n_s_vocal",
+   "world": 1,
+   "tier": 3,
+   "distractor": "sacapúntas",
+   "sentence": null,
+   "tags": [],
+   "features": [],
+   "related": null,
+   "freq": 2.48
+  }
+ ]
+}

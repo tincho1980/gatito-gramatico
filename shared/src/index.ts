@@ -1,5 +1,6 @@
-// Lógica pura del juego, compartida entre `app` y `api`. Sin DOM ni red.
-// El motor llega en la etapa 2 (ver docs/plan-de-desarrollo.md).
+// Lógica pura del juego, compartida entre `app` y `api`. Sin DOM ni red
+// (salvo el loader del banco, que recibe `fetch` inyectado).
 
-export const clamp = (value: number, min: number, max: number): number =>
-  Math.min(max, Math.max(min, value));
+export * from './data/worlds.ts';
+export * from './schemas.ts';
+export * from './words/loader.ts';

@@ -6,7 +6,7 @@
 
 ## Qué hay
 
-| Mundo | Tema | Entradas | Tiers 1/2/3 |
+| Mundo | Contenido | Entradas | Tiers 1/2/3 |
 | --- | --- | --- | --- |
 | 1 · La Sílaba que Ronronea | sílaba tónica | 80 | 28/25/27 |
 | 2 · El Tejado Puntiagudo | agudas | 82 | 28/28/26 |
@@ -19,6 +19,8 @@
 | 9 · El Bosque de las Preguntas | qué, cómo, dónde | 73 | 24/25/24 |
 | 10 · La Torre de la Gata Sabia | plurales, -mente, compuestos, enclíticos | 80 | 26/32/22 |
 
+El nombre y el tema que ve el chico están en la especificación §7.1 (fuente en `shared/src/data/worlds.ts`); acá la columna Contenido describe qué palabras trae cada mundo.
+
 Incluye voseo rioplatense (`tenés`, `vení`, `decime`, `contámelo`), con tag `voseo`.
 
 ## Archivos (en el monorepo)
@@ -30,29 +32,30 @@ Incluye voseo rioplatense (`tenés`, `vení`, `decime`, `contámelo`), con tag `
 | `words/src/world-XX.txt` | **Fuente.** Una palabra por línea (formato abajo). |
 | `words/data/lexicon.json` | Cache de diccionario es_AR y frecuencias (lo genera `check-lexicon.py`). El build lo usa sin necesitar Python. |
 | `words/data/lexicon-allow.txt` | Palabras correctas que el diccionario Hunspell no trae (enclíticos, regionalismos). |
-| `words/lib/acentuacion.mjs` | Motor: sílabas, tónica, tipo, regla, distractor. Tests en `acentuacion.test.mjs`. |
-| `words/lib/bank.mjs` | Parseo de los `.txt`, nombres de los mundos (`WORLDS`) y reglas de validación por mundo. |
-| `words/scripts/build.mjs` | `src/*.txt` + lexicón → `bank/*.json` + `index.json`. Falla si algo no valida. |
-| `words/scripts/validate.mjs` | Re-deriva cada campo de `bank/` y falla si algo no coincide (gate de CI). |
+| `words/lib/acentuacion.ts` | Motor: sílabas, tónica, tipo, regla, distractor. Tests en `acentuacion.test.ts`. |
+| `words/lib/bank.ts` | Parseo de los `.txt`, reglas de validación por mundo y hash de versión. Los nombres y temas de los mundos vienen de `shared/src/data/worlds.ts`. |
+| `words/scripts/build.ts` | `src/*.txt` + lexicón → `bank/*.json` + `index.json`, y copia a `app/public/words/`. Falla si algo no valida. |
+| `words/lib/validate.ts` + `words/scripts/validate.ts` | Valida `bank/` contra los esquemas Zod, re-deriva cada campo, chequea la versión y que `app/public/words/` sea igual (gate de CI). |
+| `words/lib/paths.ts` | Rutas del banco y lectura del lexicón. |
 | `words/scripts/check-lexicon.py` | Regenera `data/lexicon.json`. Necesario solo al sumar palabras nuevas. |
 | `words/bank/` | **Salida** generada: `world-XX.json` + `index.json`. Versionada en git. No se edita a mano. |
-| `app/public/words/` | Copia de `words/bank/` que sirve la app (etapa 1). No se edita a mano. |
+| `app/public/words/` | Copia de `words/bank/` que sirve la app. La escribe el build. No se edita a mano. |
 
 ### Formato de los archivos
 
 Cada `world-XX.json` es un objeto con los datos del mundo y sus palabras:
 
 ```json
-{ "world": 8, "name": "La Casa de los Gemelos", "topic": "monosílabos y diacrítica", "words": [ /* WordEntry[] */ ] }
+{ "world": 8, "name": "La Casa de los Gemelos", "topic": "tú / tu, él / el", "words": [ /* WordEntry[] */ ] }
 ```
 
 `index.json`:
 
 ```json
-{ "version": 1, "worlds": [ { "world": 1, "name": "La Sílaba que Ronronea", "topic": "sílaba tónica", "file": "world-01.json", "count": 80, "byTier": [28, 25, 27] } ] }
+{ "version": "c4c24f3c7bcd", "worlds": [ { "world": 1, "name": "La Sílaba que Ronronea", "topic": "sílaba tónica", "file": "world-01.json", "count": 80, "byTier": [28, 25, 27] } ] }
 ```
 
-Hoy el build escribe `version: 1` fijo. En la etapa 1 pasa a ser un hash del contenido, porque cada ronda guarda con qué versión se jugó (ver arquitectura §8).
+`version` es un hash (SHA-256, 12 caracteres) del contenido de los `world-XX.json`: cambia solo si cambian las palabras. Cada ronda guarda con qué versión se jugó (ver arquitectura §8).
 
 ## Formato de la fuente `.txt`
 
@@ -97,17 +100,19 @@ fácilmente =fácil #mente !mente
 2. **Restricción por mundo:** el mundo 2 solo acepta agudas, el 7 exige hiato, etc. Si una palabra cae en el mundo equivocado, falla.
 3. **Diccionario es_AR:** si la palabra no existe tal como está escrita, falla (salvo `lexicon-allow.txt`).
 4. **Ambigüedad:** si la forma sin tilde (o con tilde en otra vocal) es una palabra común, exige oración. Criterio: la otra forma tiene Zipf ≥ 3 y no es más de 10 veces menos frecuente.
-5. **Test en CI:** `npm test -w words` re-deriva todos los campos del JSON publicado. Nadie puede editar a mano un `type` sin que el test lo detecte.
+5. **Esquemas:** cada archivo cumple `WorldFileSchema` / `IndexSchema` de `shared/src/schemas.ts`.
+6. **Test en CI:** `npm test -w words` y `npm run validate -w words` re-derivan todos los campos del JSON publicado; además CI corre el build y falla si `words/bank/` o `app/public/words/` cambian. Nadie puede editar a mano un `type` sin que CI lo detecte.
 
 ## Comandos
 
+Todo `words/` está en TypeScript y Node 22 lo ejecuta directo (sin compilar). Los scripts importan los esquemas y los mundos de `shared/`.
+
 ```bash
 npm run build -w words      # src/*.txt → bank/*.json (falla si algo no valida)
-npm run validate -w words   # solo valida bank/
+npm run validate -w words   # solo valida bank/ y la copia de la app
 npm test -w words           # tests del motor + banco (node --test)
 ```
 
-Hasta que la etapa 0 arme los workspaces en la raíz, se corren desde la carpeta: `cd words && npm run build`.
 
 Al sumar palabras nuevas, regenerar antes el lexicón (necesita Python, `pip install spylls` y los archivos de diccionario y frecuencias; ver el encabezado del script):
 

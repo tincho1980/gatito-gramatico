@@ -1,9 +1,9 @@
 // Tests del motor: npm test -w words
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { analyze, syllabify, distractor, tildeVariants } from './acentuacion.mjs';
+import { analyze, syllabify, distractor, tildeVariants } from './acentuacion.ts';
 
-const cases = [
+const cases: [word: string, syllables: string, stress: number, type: string, rule: string][] = [
   // palabra, sílabas, tónica, tipo, regla
   ['casa', 'ca-sa', 0, 'grave', 'grave_n_s_vocal'],
   ['camisa', 'ca-mi-sa', 1, 'grave', 'grave_n_s_vocal'],
@@ -77,7 +77,8 @@ test('-mente conserva la tilde del adjetivo', () => {
 });
 
 test('detecta tildes que sobran', () => {
-  for (const w of ['exámen', 'relój', 'fué', 'dió', 'jóven']) assert.ok(analyze(w).errors.length, w);
+  for (const w of ['exámen', 'relój', 'fué', 'dió', 'jóven'])
+    assert.ok(analyze(w).errors.length, w);
 });
 
 test('distractores', () => {

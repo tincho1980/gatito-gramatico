@@ -3,9 +3,10 @@
   "private": true,
   "type": "module",
   "workspaces": [
-    "app",
     "shared",
-    "api"
+    "words",
+    "api",
+    "app"
   ],
   "engines": {
     "node": ">=22"

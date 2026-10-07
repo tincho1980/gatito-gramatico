@@ -4,8 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs",
-    "validate": "node scripts/validate.mjs",
-    "test": "node --test lib/*.test.mjs scripts/*.test.mjs"
+    "build": "node scripts/build.ts",
+    "validate": "node scripts/validate.ts",
+    "typecheck": "tsc",
+    "test": "node --test lib/*.test.ts"
+  },
+  "dependencies": {
+    "@gatita/shared": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5"
   }
 }

@@ -177,12 +177,12 @@ flowchart TD
     subgraph E1["Elegís el orden"]
         M2["2 · El Tejado Puntiagudo<br/>agudas"]
         M3["3 · Las Llanuras de la Siesta<br/>graves"]
-        M4["4 · El Árbol Trepador<br/>esdrújulas y sobreesdrújulas"]
+        M4["4 · El Árbol Trepador<br/>esdrújulas"]
     end
     M5["5 · El Mercado de los Ovillos<br/>las tres mezcladas"]
     subgraph E2["Elegís el camino"]
         M6["6 · El Río de los Abrazos<br/>diptongos"] --> M7["7 · El Puente Roto<br/>hiatos"]
-        M8["8 · La Casa de los Gemelos<br/>monosílabos y diacrítica"] --> M9["9 · El Bosque de las Preguntas<br/>qué, cómo, dónde"]
+        M8["8 · La Casa de los Gemelos<br/>tú / tu, él / el"] --> M9["9 · El Bosque de las Preguntas<br/>qué, cómo"]
     end
     M10["10 · La Torre de la Gata Sabia<br/>casos especiales"]
     M1 --> M2 & M3 & M4
