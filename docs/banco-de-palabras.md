@@ -6,7 +6,7 @@
 
 ## Qué hay
 
-| Mundo | Tema | Entradas | Tiers 1/2/3 |
+| Mundo | Contenido | Entradas | Tiers 1/2/3 |
 | --- | --- | --- | --- |
 | 1 · La Sílaba que Ronronea | sílaba tónica | 80 | 28/25/27 |
 | 2 · El Tejado Puntiagudo | agudas | 82 | 28/28/26 |
@@ -19,6 +19,8 @@
 | 9 · El Bosque de las Preguntas | qué, cómo, dónde | 73 | 24/25/24 |
 | 10 · La Torre de la Gata Sabia | plurales, -mente, compuestos, enclíticos | 80 | 26/32/22 |
 
+El nombre y el tema que ve el chico están en la especificación §7.1 (fuente en `shared/src/data/worlds.ts`); acá la columna Contenido describe qué palabras trae cada mundo.
+
 Incluye voseo rioplatense (`tenés`, `vení`, `decime`, `contámelo`), con tag `voseo`.
 
 ## Archivos (en el monorepo)
@@ -30,10 +32,11 @@ Incluye voseo rioplatense (`tenés`, `vení`, `decime`, `contámelo`), con tag `
 | `words/src/world-XX.txt` | **Fuente.** Una palabra por línea (formato abajo). |
 | `words/data/lexicon.json` | Cache de diccionario es_AR y frecuencias (lo genera `check-lexicon.py`). El build lo usa sin necesitar Python. |
 | `words/data/lexicon-allow.txt` | Palabras correctas que el diccionario Hunspell no trae (enclíticos, regionalismos). |
-| `words/lib/acentuacion.mjs` | Motor: sílabas, tónica, tipo, regla, distractor. Tests en `acentuacion.test.mjs`. |
-| `words/lib/bank.mjs` | Parseo de los `.txt`, reglas de validación por mundo y hash de versión. Los nombres y temas de los mundos vienen de `shared/src/data/worlds.ts`. |
-| `words/scripts/build.mjs` | `src/*.txt` + lexicón → `bank/*.json` + `index.json`, y copia a `app/public/words/`. Falla si algo no valida. |
-| `words/scripts/validate.mjs` | Valida `bank/` contra los esquemas Zod, re-deriva cada campo, chequea la versión y que `app/public/words/` sea igual (gate de CI). |
+| `words/lib/acentuacion.ts` | Motor: sílabas, tónica, tipo, regla, distractor. Tests en `acentuacion.test.ts`. |
+| `words/lib/bank.ts` | Parseo de los `.txt`, reglas de validación por mundo y hash de versión. Los nombres y temas de los mundos vienen de `shared/src/data/worlds.ts`. |
+| `words/scripts/build.ts` | `src/*.txt` + lexicón → `bank/*.json` + `index.json`, y copia a `app/public/words/`. Falla si algo no valida. |
+| `words/lib/validate.ts` + `words/scripts/validate.ts` | Valida `bank/` contra los esquemas Zod, re-deriva cada campo, chequea la versión y que `app/public/words/` sea igual (gate de CI). |
+| `words/lib/paths.ts` | Rutas del banco y lectura del lexicón. |
 | `words/scripts/check-lexicon.py` | Regenera `data/lexicon.json`. Necesario solo al sumar palabras nuevas. |
 | `words/bank/` | **Salida** generada: `world-XX.json` + `index.json`. Versionada en git. No se edita a mano. |
 | `app/public/words/` | Copia de `words/bank/` que sirve la app. La escribe el build. No se edita a mano. |
@@ -43,13 +46,13 @@ Incluye voseo rioplatense (`tenés`, `vení`, `decime`, `contámelo`), con tag `
 Cada `world-XX.json` es un objeto con los datos del mundo y sus palabras:
 
 ```json
-{ "world": 8, "name": "La Casa de los Gemelos", "topic": "monosílabos y diacrítica", "words": [ /* WordEntry[] */ ] }
+{ "world": 8, "name": "La Casa de los Gemelos", "topic": "tú / tu, él / el", "words": [ /* WordEntry[] */ ] }
 ```
 
 `index.json`:
 
 ```json
-{ "version": "143eb827a68f", "worlds": [ { "world": 1, "name": "La Sílaba que Ronronea", "topic": "sílaba tónica", "file": "world-01.json", "count": 80, "byTier": [28, 25, 27] } ] }
+{ "version": "c4c24f3c7bcd", "worlds": [ { "world": 1, "name": "La Sílaba que Ronronea", "topic": "sílaba tónica", "file": "world-01.json", "count": 80, "byTier": [28, 25, 27] } ] }
 ```
 
 `version` es un hash (SHA-256, 12 caracteres) del contenido de los `world-XX.json`: cambia solo si cambian las palabras. Cada ronda guarda con qué versión se jugó (ver arquitectura §8).
@@ -101,6 +104,8 @@ fácilmente =fácil #mente !mente
 6. **Test en CI:** `npm test -w words` y `npm run validate -w words` re-derivan todos los campos del JSON publicado; además CI corre el build y falla si `words/bank/` o `app/public/words/` cambian. Nadie puede editar a mano un `type` sin que CI lo detecte.
 
 ## Comandos
+
+Todo `words/` está en TypeScript y Node 22 lo ejecuta directo (sin compilar). Los scripts importan los esquemas y los mundos de `shared/`.
 
 ```bash
 npm run build -w words      # src/*.txt → bank/*.json (falla si algo no valida)

@@ -69,7 +69,7 @@ Punto de partida: el pipeline completo ya está en `words/` (fuentes `.txt`, mot
 - [x] Agregar a los tests del motor los 8 errores del prototipo viejo, si no están: `mamá`, `lápiz`, `examen`, `gramática`, `agrícola`, `idiosincrasia`, `esternocleidomastoideo`, `electroencefalografista`.
 - [x] `npm run validate -w words` en CI.
 - [x] Loader en `shared/` (`loadWorld(n)`, `loadIndex()`), con `fetch` inyectable para testear.
-- [ ] Opcional: pasar `words/lib` a TypeScript.
+- [x] Opcional: pasar `words/lib` a TypeScript (también `scripts/`; queda en Python solo `check-lexicon.py`).
 
 Criterios de aceptación:
 

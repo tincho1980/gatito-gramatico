@@ -1,7 +1,7 @@
 import { WordChallenge, WordType } from '../types';
 
 // Banco mínimo y provisorio para el juego viejo, hasta que la app use el banco de `words/`
-// y el motor de `shared/` (etapas 1–3). Cada palabra está verificada con `words/lib/acentuacion.mjs`.
+// y el motor de `shared/` (etapas 1–3). Cada palabra está verificada con `words/lib/acentuacion.ts`.
 
 const WORD_COUNT = 20;
 

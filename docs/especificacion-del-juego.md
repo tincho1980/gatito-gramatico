@@ -148,19 +148,20 @@ El jefe de un mundo se habilita cuando:
 
 ### 7.1 Grafo de desbloqueo
 
-| Mundo | Nombre | Se desbloquea al vencer al jefe de |
-| --- | --- | --- |
-| 1 | La Sílaba que Ronronea | (abierto desde el inicio) |
-| 2 | El Tejado Puntiagudo | 1 |
-| 3 | Las Llanuras de la Siesta | 1 |
-| 4 | El Árbol Trepador | 1 |
-| 5 | El Mercado de los Ovillos | 2 **y** 3 **y** 4 |
-| 6 | El Río de los Abrazos | 5 |
-| 7 | El Puente Roto | 6 |
-| 8 | La Casa de los Gemelos | 5 |
-| 9 | El Bosque de las Preguntas | 8 |
-| 10 | La Torre de la Gata Sabia | 7 **y** 9 |
+| Mundo | Nombre | Tema | Se desbloquea al vencer al jefe de |
+| --- | --- | --- | --- |
+| 1 | La Sílaba que Ronronea | sílaba tónica | (abierto desde el inicio) |
+| 2 | El Tejado Puntiagudo | agudas | 1 |
+| 3 | Las Llanuras de la Siesta | graves | 1 |
+| 4 | El Árbol Trepador | esdrújulas | 1 |
+| 5 | El Mercado de los Ovillos | las tres mezcladas | 2 **y** 3 **y** 4 |
+| 6 | El Río de los Abrazos | diptongos | 5 |
+| 7 | El Puente Roto | hiatos | 6 |
+| 8 | La Casa de los Gemelos | tú / tu, él / el | 5 |
+| 9 | El Bosque de las Preguntas | qué, cómo | 8 |
+| 10 | La Torre de la Gata Sabia | casos especiales | 7 **y** 9 |
 
+- **Nombre** es el nombre de fantasía del mundo; **Tema** es el detalle corto que se muestra debajo en el mapa. Para el chico, no es una descripción completa del contenido (eso está en [banco-de-palabras.md](banco-de-palabras.md)).
 - Se define como datos en `shared/src/data/worlds.ts` (`requires: number[]`), no como código condicional. La lógica de desbloqueo vive en `shared/src/engine/worlds.ts`.
 - Lo desbloqueado nunca se vuelve a bloquear.
 - Un docente puede abrir un mundo para su aula (`teacher_unlocks`); queda desbloqueado para esos perfiles aunque no hayan vencido al jefe anterior.

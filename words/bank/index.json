@@ -1,5 +1,5 @@
 {
- "version": "143eb827a68f",
+ "version": "c4c24f3c7bcd",
  "worlds": [
   {
    "world": 1,
@@ -40,7 +40,7 @@
   {
    "world": 4,
    "name": "El Árbol Trepador",
-   "topic": "esdrújulas y sobreesdrújulas",
+   "topic": "esdrújulas",
    "file": "world-04.json",
    "count": 79,
    "byTier": [
@@ -88,7 +88,7 @@
   {
    "world": 8,
    "name": "La Casa de los Gemelos",
-   "topic": "monosílabos y diacrítica",
+   "topic": "tú / tu, él / el",
    "file": "world-08.json",
    "count": 79,
    "byTier": [
@@ -100,7 +100,7 @@
   {
    "world": 9,
    "name": "El Bosque de las Preguntas",
-   "topic": "qué, cómo, dónde",
+   "topic": "qué, cómo",
    "file": "world-09.json",
    "count": 73,
    "byTier": [
