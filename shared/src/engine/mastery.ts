@@ -66,5 +66,8 @@ export function isBossEnabled(
   const stopsReady = requiredStopsBeforeBoss(world, config).every((s) =>
     progress.stopsDone.includes(s),
   );
-  return stopsReady && rulesReadyForBoss(state, world, worldWords, config);
+  // §7.3 Una vez habilitado, sigue habilitado aunque pierda (la EMA puede bajar en el intento).
+  return (
+    stopsReady && (!!progress.bossReady || rulesReadyForBoss(state, world, worldWords, config))
+  );
 }

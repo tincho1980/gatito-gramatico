@@ -69,6 +69,8 @@ export interface WorldProgress {
   stopsDone: Stop[];
   /** Mejor resultado contra el jefe (`full` sobre 10), si lo venció. */
   bossBest: number | null;
+  /** El jefe ya se habilitó alguna vez: sigue habilitado aunque pierda (§7.3). */
+  bossReady?: boolean;
   stars: number;
 }
 

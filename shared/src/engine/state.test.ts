@@ -347,3 +347,36 @@ describe('§8.4 insignias', () => {
     expect(applyRound(s, bossRound(10), WORDS).badges['mundo-2']).toBeDefined();
   });
 });
+
+describe('§7.3 el jefe sigue habilitado', () => {
+  it('§7.3 un jefe que arrancó habilitado queda habilitado al perder', () => {
+    const s = applyRound(bossReady(), bossRound(0), WORDS);
+    expect(s.worlds[2]?.bossReady).toBe(true);
+  });
+
+  it('§7.3 perder no deshabilita al jefe aunque baje la EMA', () => {
+    let s = bossReady();
+    // Una ronda de práctica deja registrado que el jefe se habilitó.
+    s = applyRound(
+      s,
+      round({
+        id: 'p',
+        world: 2,
+        stop: 4,
+        turns: fulls(
+          world(2)
+            .slice(0, 10)
+            .map((w) => w.id),
+          10,
+        ),
+      }),
+      WORDS,
+    );
+    expect(s.worlds[2]?.bossReady).toBe(true);
+    // Pierde con 0 de 10: la EMA baja, pero el jefe sigue habilitado.
+    s = applyRound(s, { ...bossRound(0), id: 'b1', finishedAt: '2026-03-02T15:00:00.000Z' }, WORDS);
+    expect(s.worlds[2]).toMatchObject({ bossBest: null, bossReady: true });
+    s = applyRound(s, { ...bossRound(8), id: 'b2', finishedAt: '2026-03-02T16:00:00.000Z' }, WORDS);
+    expect(s.worlds[2]?.bossBest).toBe(8);
+  });
+});

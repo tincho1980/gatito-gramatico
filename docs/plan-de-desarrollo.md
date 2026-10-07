@@ -139,13 +139,13 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] Pantalla de mapa vertical con scroll, los 10 mundos con su nombre, las dos bifurcaciones, estados (bloqueado, disponible, en curso, completo con estrellas) y la gatita en el mundo actual.
-- [ ] Pantalla de mundo con sus paradas (§7.2) y su estado.
-- [ ] Lección de cada mundo: contenido en `app/src/content/lessons/world-XX.ts` (regla + 3 ejemplos + 3 turnos guiados).
-- [ ] Jefe: habilitación (§6.2), ronda especial, pantalla de victoria con animación, estrellas y gato amigo; pantalla de derrota con ánimo.
-- [ ] Al elegir camino en una bifurcación, el mapa muestra las opciones abiertas sin forzar orden.
-- [ ] Botón "Jugar" del inicio según §7.2.
-- [ ] Ilustración simple por mundo (puede ser un color y un ícono al principio).
+- [x] Pantalla de mapa vertical con scroll, los 10 mundos con su nombre, las dos bifurcaciones, estados (bloqueado, disponible, en curso, completo con estrellas) y la gatita en el mundo actual.
+- [x] Pantalla de mundo con sus paradas (§7.2) y su estado.
+- [x] Lección de cada mundo: contenido en `app/src/content/lessons/world-XX.ts` (regla + 3 ejemplos + 3 turnos guiados).
+- [x] Jefe: habilitación (§6.2), ronda especial, pantalla de victoria con animación, estrellas y gato amigo; pantalla de derrota con ánimo.
+- [x] Al elegir camino en una bifurcación, el mapa muestra las opciones abiertas sin forzar orden.
+- [x] Botón "Jugar" del inicio según §7.2.
+- [x] Ilustración simple por mundo (puede ser un color y un ícono al principio).
 
 Criterios de aceptación:
 
