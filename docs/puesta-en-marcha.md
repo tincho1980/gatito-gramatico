@@ -54,7 +54,15 @@ Antes del piloto con escuelas reales, pasar el proyecto a Pro (plan, etapa 9).
 
 ## 3. Cloudflare y la conexión del Worker
 
-1. En tu terminal: `npx wrangler login` (abre el navegador para autorizar).
+1. En tu terminal, desde la carpeta `api` (ahí está instalado `wrangler`):
+
+   ```bash
+   cd api
+   npx wrangler login
+   cd ..
+   ```
+
+   Abre el navegador para autorizar.
 2. Conectá el Worker con la base:
 
    ```bash
