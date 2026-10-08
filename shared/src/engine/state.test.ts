@@ -198,6 +198,10 @@ describe('aplicar una ronda', () => {
 describe('replay', () => {
   const { rounds } = simulate(perfectPlayer, { maxRounds: 40 });
 
+  it('replay de las rondas de la simulación da el estado al que llegó jugando', () => {
+    expect(replay(rounds, WORDS)).toEqual(simulate(perfectPlayer, { maxRounds: 40 }).state);
+  });
+
   it('replay de las mismas rondas da siempre el mismo estado', () => {
     expect(replay(rounds, WORDS)).toEqual(replay(rounds, WORDS));
   });

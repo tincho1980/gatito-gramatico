@@ -10,6 +10,7 @@ import { backgroundClass, BACKGROUNDS } from '../../content/collection.ts';
 import type { Look } from '../../db/db.ts';
 import { profilesRepo, purchasesRepo } from '../../db/repos.ts';
 import { reactTo } from '../../lib/feedback.ts';
+import { requestSync } from '../../sync/store.ts';
 import { useNotices } from '../notify/store.ts';
 import { useActiveProfile, useProfileState, useWallet } from '../profile/hooks.ts';
 
@@ -46,6 +47,7 @@ export function ShopPage() {
   const buy = async (i: CollectionItem) => {
     const problem = await purchasesRepo.buy(profile.id, i.id);
     if (problem) return;
+    requestSync();
     reactTo('success', profile.sound);
     push({ icon: '🛍️', text: `¡Compraste ${i.name}!` });
     await wear(i, true);

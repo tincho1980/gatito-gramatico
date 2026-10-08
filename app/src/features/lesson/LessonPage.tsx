@@ -3,6 +3,7 @@
 import { useMemo, useRef, useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router';
 import {
+  CONFIG,
   evaluateTurn,
   ruleText,
   stepsFor,
@@ -16,6 +17,7 @@ import { Gatita } from '../../components/Gatita.tsx';
 import { LESSONS } from '../../content/lessons/index.ts';
 import { worldLook } from '../../content/worlds.ts';
 import { saveRound } from '../../db/repos.ts';
+import { requestSync } from '../../sync/store.ts';
 import { reactTo } from '../../lib/feedback.ts';
 import { useWords } from '../../words/words.ts';
 import { useActiveProfile, useProfileState } from '../profile/hooks.ts';
@@ -73,6 +75,7 @@ export function LessonPage() {
       },
       words.index,
     );
+    requestSync();
     setPhase({ kind: 'done' });
   };
 
@@ -212,8 +215,8 @@ export function LessonPage() {
                 return;
               }
               const ms = Math.min(
-                600_000,
-                Math.max(300, Math.round(performance.now() - phase.startedAt)),
+                CONFIG.api.maxMs,
+                Math.max(CONFIG.api.minMs, Math.round(performance.now() - phase.startedAt)),
               );
               const turn = evaluateTurn(word, answers, { ms });
               turns.current.push(turn);

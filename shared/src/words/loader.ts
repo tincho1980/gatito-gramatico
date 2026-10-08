@@ -18,7 +18,7 @@ export const worldFileName = (world: number): string =>
   `world-${String(world).padStart(2, '0')}.json`;
 
 async function getJson(file: string, { fetch, baseUrl = '/words' }: LoaderOptions) {
-  const doFetch = fetch ?? (globalThis as { fetch?: FetchLike }).fetch;
+  const doFetch = fetch ?? (globalThis as unknown as { fetch?: FetchLike }).fetch;
   if (!doFetch) throw new Error('No hay fetch disponible');
   const url = `${baseUrl.replace(/\/$/, '')}/${file}`;
   const res = await doFetch(url);

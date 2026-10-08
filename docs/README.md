@@ -15,7 +15,7 @@ Juego web (PWA, mobile first) para que chicos y adolescentes practiquen la acent
 ## Decisiones cerradas
 
 - **Juego offline-first:** se juega sin red; IndexedDB es la copia local y se sincroniza al terminar cada ronda.
-- **Sin SSR ni Next.js:** Vite + React como SPA estática en Cloudflare Pages.
+- **Sin SSR ni Next.js:** Vite + React como SPA estática, servida por el mismo Worker de Cloudflare que la API.
 - **API:** un Cloudflare Worker (Hono + Zod) es la única puerta a los datos. El cliente nunca habla directo con la base.
 - **Datos y login:** Supabase (Postgres + Auth). Tablas en esquema `private`, sin permisos para roles públicos; RLS como segunda línea.
 - **Palabras:** banco JSON curado y validado por código. Nada de IA en runtime. La lista actual se da por buena para desarrollo; se amplía y revisa antes del MVP.

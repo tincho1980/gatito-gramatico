@@ -204,15 +204,16 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] Supabase: proyecto de desarrollo; migraciones del esquema `private` ([arquitectura §5](arquitectura.md#5-modelo-de-datos-remoto-postgres)); `supabase start` para local.
-- [ ] Test de seguridad: con la clave pública, un `select` sobre cualquier tabla de `private` falla.
-- [ ] Worker con Hono: `auth.ts` (JWKS de Supabase), `db.ts` (postgres.js + Hyperdrive), rutas `accounts/me`, `profiles`, `rounds`, `profiles/:id/state`.
-- [ ] `POST /api/rounds` con todas las validaciones de arquitectura §6, idempotente, recalculando con `shared/engine`. `POST /api/purchases` validando el saldo con `purchaseProblem`.
-- [ ] Cron diario de keepalive.
-- [ ] Rate limiting.
-- [ ] Cliente: cola de sincronización (arquitectura §7) de rondas y compras, reintentos con backoff, indicador discreto de "sincronizado".
-- [ ] Proxy de `/api` en Vite para desarrollo; `wrangler.toml` con entornos preview y producción.
-- [ ] Deploy: Pages + Worker en el mismo dominio.
+- [x] Migraciones del esquema `private` ([arquitectura §5](arquitectura.md#5-modelo-de-datos-remoto-postgres)) y `supabase/config.toml` para `supabase start` en local.
+- [ ] Supabase: crear el proyecto de desarrollo y aplicar las migraciones (manual, [puesta-en-marcha.md](puesta-en-marcha.md) §1).
+- [x] Test de seguridad: con los roles de la clave pública (`anon`, `authenticated`), un `select` sobre cualquier tabla de `private` falla. Contra el proyecto real, con `curl` (puesta-en-marcha §1.4).
+- [x] Worker con Hono: `auth.ts` (JWKS de Supabase), `db.ts` (postgres.js + Hyperdrive), rutas `accounts/me`, `profiles`, `rounds`, `profiles/:id/state`.
+- [x] `POST /api/rounds` con todas las validaciones de arquitectura §6, idempotente, recalculando con `shared/engine`. `POST /api/purchases` validando el saldo con `purchaseProblem`.
+- [x] Cron diario de keepalive.
+- [x] Rate limiting (rondas y compras; el de `classrooms/join` va con las aulas en la etapa 8).
+- [x] Cliente: cola de sincronización (arquitectura §7) de rondas y compras, reintentos con backoff, indicador discreto de "sincronizado".
+- [x] Proxy de `/api` en Vite para desarrollo; `api/wrangler.jsonc` con entornos preview y producción.
+- [ ] Deploy: un solo Worker con la app como assets y la API en `/api` (mismo dominio). Manual, puesta-en-marcha §2.
 
 Criterios de aceptación:
 

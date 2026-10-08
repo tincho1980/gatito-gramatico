@@ -187,7 +187,10 @@ export function simulate(
     const progress = state.worlds[world];
     let stop = currentStop(progress, world, config);
     if (stop === 1) {
-      state = applyRound(state, lesson(world, finishedAt), WORDS, { config });
+      // Un minuto antes de la ronda que sigue: el orden no depende de los ids.
+      const l = lesson(world, new Date(Date.parse(finishedAt) - 60_000).toISOString());
+      rounds.push(l);
+      state = applyRound(state, l, WORDS, { config });
       continue;
     }
     const enabled = isBossEnabled(state, world, WORDS.byWorld.get(world) ?? [], config);

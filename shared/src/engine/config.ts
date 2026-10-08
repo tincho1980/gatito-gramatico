@@ -35,6 +35,19 @@ export const CONFIG = {
   /** Rondas terminadas antes de ofrecer instalar la app (plan, etapa 6). */
   installAfterRounds: 2,
   croquetas: { box3: 1, box5: 2, boss: 10 },
+  /** Validaciones del Worker al recibir rondas y compras (arquitectura §6). */
+  api: {
+    maxRoundsPerRequest: 20,
+    maxPurchasesPerRequest: 20,
+    maxTurns: 11,
+    maxLessonTurns: 3,
+    minMs: 300,
+    maxMs: 600_000,
+    /** Minutos que una ronda puede venir "del futuro" por relojes desfasados. */
+    futureToleranceMin: 5,
+  },
+  /** Reintentos de la sincronización sin red o con el servidor caído: 2 s, 4 s… hasta 5 min. */
+  syncBackoff: { baseMs: 2_000, maxMs: 300_000 },
   badges: {
     streaks: [3, 7, 30],
     comeback: { days: 7, minRise: 0.2 },

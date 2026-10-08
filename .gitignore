@@ -34,3 +34,9 @@ dist-ssr
 # Playwright
 test-results/
 playwright-report/
+
+# Cloudflare y Supabase locales
+.wrangler/
+.dev.vars*
+supabase/.branches
+supabase/.temp

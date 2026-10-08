@@ -25,11 +25,15 @@ export interface Look {
 export interface StoredPurchase extends Purchase {
   profileId: string;
   synced: boolean;
+  rejected?: string;
 }
 
 export interface StoredRound extends Round {
   profileId: string;
+  /** El servidor la aceptó (arquitectura §7). */
   synced: boolean;
+  /** El servidor la rechazó por inválida: no se reintenta. */
+  rejected?: string;
 }
 
 export interface StoredState {

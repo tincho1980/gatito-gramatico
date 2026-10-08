@@ -1,0 +1,2 @@
+-- Datos de prueba para `supabase start` / `supabase db reset`. Vacío: los perfiles se crean
+-- desde la app. Nunca datos reales de chicos.

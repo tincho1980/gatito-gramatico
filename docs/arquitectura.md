@@ -10,7 +10,7 @@ flowchart TD
         SW["Service worker<br/>app + palabras en caché"]
     end
     subgraph CF["Cloudflare"]
-        PG["Pages<br/>app estática + /words/*.json"]
+        PG["Assets del Worker<br/>app estática + /words/*.json"]
         WK["Worker /api<br/>Hono + Zod · cron · rate limit"]
         HD["Hyperdrive"]
     end
@@ -27,7 +27,7 @@ flowchart TD
 
 - El juego completo corre en el cliente con la lógica de `shared/`. Sin cuenta, el progreso vive solo en IndexedDB.
 - Con cuenta, cada ronda terminada se encola y se sube al Worker. El Worker recalcula todo con la misma lógica de `shared/` y su resultado manda.
-- La PWA y la API están en el mismo dominio (`/api/*` enrutado al Worker): sin CORS.
+- La PWA y la API están en el mismo dominio: **un solo Worker** sirve la app estática (`assets` de wrangler, con `app/dist`) y responde `/api/*` (`run_worker_first`). Sin CORS ni rutas que configurar. Antes se pensaba en Pages + un Worker aparte; Cloudflare unificó ambos en Workers con assets estáticos.
 
 ## 2. Stack
 
@@ -208,21 +208,22 @@ alter table private.accounts enable row level security;
 revoke all on schema private from anon, authenticated;
 ```
 
+- Rol `gatita_worker`: el único con permisos sobre `private` (más una política de RLS propia en cada tabla). Se crea sin contraseña en la migración; `npm run setup:db -w api -- --env <entorno>` le genera una aleatoria, la aplica y crea o actualiza Hyperdrive con ella: no se muestra ni se guarda en otro lado. La conexión de administrador que usa el script está en `.env.local` (no versionado).
 - `profile_state.state` guarda el estado derivado completo (cajas, EMA, progreso) para responder rápido. Si cambia la lógica, se recalcula con `replay` desde `rounds` + `turns`.
 - Índices: `rounds(profile_id, finished_at)`, `turns(word_id)`, `profiles(classroom_id)`.
 
 ## 6. API (Worker)
 
-Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization: Bearer <JWT de Supabase>`. Entradas y salidas validadas con los esquemas Zod de `shared/src/schemas.ts`.
+Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization: Bearer <JWT de Supabase>` (firma con el JWKS del proyecto, emisor `<SUPABASE_URL>/auth/v1`, audiencia `authenticated`). Entradas validadas con los esquemas Zod de `shared/src/api.ts`. Código en `api/src`: `app.ts` (rutas), `sync.ts` (recepción y recálculo), `db.ts` (SQL), `auth.ts`, `index.ts` (fetch, assets y cron).
 
 | Método y ruta | Quién | Qué hace |
 | --- | --- | --- |
 | `POST /api/accounts/me` | adulto | Crea o devuelve la cuenta (`role`). |
 | `GET /api/profiles` | adulto | Perfiles del adulto (familia) o de sus aulas (docente). |
-| `POST /api/profiles` | adulto | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, rounds? }`. Si trae `rounds`, se importan. |
-| `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds }`. |
-| `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds }`. |
-| `GET /api/profiles/:id/state` | dueño del perfil | Estado completo y compras, para un dispositivo nuevo. |
+| `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). |
+| `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds, rejected: [{ id, reason }] }`: cada ronda se acepta o rechaza por separado. |
+| `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds, rejected }`. |
+| `GET /api/profiles/:id/state` | dueño del perfil | `{ state, rounds, purchases }`, para un dispositivo nuevo: el estado y los registros fuente. |
 | `POST /api/classrooms` | docente | Crea un aula y devuelve el código. |
 | `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin }` → crea o recupera el perfil y devuelve un token de perfil. |
 | `GET /api/classrooms/:id/dashboard` | docente del aula | Por perfil y por regla: EMA, intentos, mundo actual, última actividad. |
@@ -232,11 +233,15 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 
 **Validaciones de `POST /api/rounds`:**
 
-- Máximo 20 rondas por request, máximo 11 turnos por ronda (1 de lección: 3).
-- Cada `wordId` existe en el banco de la `words_version` informada (el Worker lleva un índice de ids por versión).
+- Máximo 20 rondas por request, máximo 11 turnos por ronda (1 de lección: 3). Los límites están en `CONFIG.api`.
+- Forma: `RoundSchema` (sin campos de más; el jefe es la parada 5 y la lección la 1; `full` tiene que coincidir con los pasos y la pista, no se puede declarar un acierto).
+- Si la ronda viene con la versión actual del banco, cada `wordId` tiene que existir. Con una versión vieja no se rechaza: las palabras que ya no están se ignoran al aplicar (§8). Inventar ids no da nada, porque `applyRound` ignora las palabras que no conoce.
+- Un `id` de ronda que ya es de otro perfil se rechaza; uno que ya es del mismo perfil se acepta sin duplicar (idempotencia).
 - `ms` por turno entre 300 y 600 000.
 - `finished_at` no en el futuro (tolerancia 5 min) ni anterior al alta del perfil.
 - Una ronda de jefe solo se acepta si el jefe estaba habilitado según el estado recalculado; si no, se guarda pero no da desbloqueos.
+
+- Cada subida bloquea la fila del perfil (`select … for update`) y recalcula con `replay` sobre todas sus rondas: el resultado no depende del orden en que lleguen.
 
 **Cron diario:** `SELECT 1` contra la base para que el plan gratis de Supabase no pause el proyecto.
 
@@ -247,8 +252,9 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 1. Al terminar una ronda, el cliente la guarda en `rounds` con `synced: false` y actualiza el estado local con `shared/engine`.
 2. Si el perfil está vinculado y hay red, se envían todas las rondas pendientes en orden. Después, las compras pendientes (`purchases` con `synced: false`); el servidor las valida con el estado ya actualizado.
 3. El servidor responde con `state` y `acceptedIds`. El cliente marca esas rondas como `synced`, reemplaza el estado local por `state` y vuelve a aplicar encima las rondas que sigan pendientes (si se jugó algo mientras viajaba la request).
-4. Reintentos con backoff ante error de red; un 4xx de validación marca la ronda como rechazada y se reporta en consola (no se reintenta).
-5. Al abrir la app en un dispositivo nuevo con un perfil vinculado: `GET /state` y se usa como estado inicial.
+4. Reintentos sin red, con 429 o con 5xx: 2 s, 4 s, 8 s… hasta 5 minutos (`CONFIG.syncBackoff`). Una ronda o compra que el servidor rechaza queda marcada con `rejected` y el motivo, se reporta en consola y no se reintenta. Sin token (perfil no vinculado o sesión vencida) no se intenta.
+5. Se sincroniza al abrir la app, al volver la red (`online`) y al terminar una ronda, una lección o una compra. El inicio muestra un indicador discreto ("Todo guardado en la nube" o cuántas faltan subir).
+6. Al abrir la app en un dispositivo nuevo con un perfil vinculado: `GET /state`; se guardan sus rondas y compras como sincronizadas y su estado como estado inicial.
 
 La misma función `applyRound(state, round, words, config)` corre en el cliente y en el Worker. Es determinista: no usa `Date.now()` ni azar (las fechas vienen en la ronda).
 
@@ -276,9 +282,11 @@ La misma función `applyRound(state, round, words, config)` corre en el cliente 
 
 | Entorno | App | API | Base |
 | --- | --- | --- | --- |
-| Local | `npm run dev -w app` (Vite) | `wrangler dev` | `supabase start` (Docker) |
-| Preview | Pages preview por PR | Worker `env.preview` | Proyecto Supabase de desarrollo |
-| Producción | Pages | Worker | Proyecto Supabase de producción |
+| Local | `npm run dev -w app` (Vite) | `npm run dev -w api` (`wrangler dev`) | `supabase start` (Docker) |
+| Preview | Worker `--env preview` (mismo Worker, con la app) | idem | Proyecto Supabase de desarrollo |
+| Producción | Worker `--env production` | idem | Proyecto Supabase de producción |
+
+Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las migraciones reales y llama a la API con tokens firmados en el test. No hace falta Docker. Pasos para crear los proyectos y publicar: [puesta-en-marcha.md](puesta-en-marcha.md).
 
 En local, Vite hace proxy de `/api` a `wrangler dev`.
 
