@@ -88,6 +88,66 @@ export const ProfileRequestSchema = z.strictObject({
   rounds: z.optional(z.array(z.unknown()).check(z.maxLength(2000))),
 });
 
+const { classroom } = CONFIG;
+
+export const ClassroomRequestSchema = z.strictObject({
+  name: z.string().check(z.trim(), z.minLength(1), z.maxLength(60)),
+});
+
+/** Código del aula: se acepta con minúsculas y espacios, se normaliza a mayúsculas. */
+export const normalizeClassroomCode = (raw: string): string =>
+  raw.toUpperCase().replace(/[^A-Z]/g, '');
+
+export const isClassroomCode = (code: string): boolean =>
+  code.length === classroom.codeLength &&
+  [...code].every((c) => classroom.codeAlphabet.includes(c));
+
+export const JoinRequestSchema = z.strictObject({
+  code: z.string().check(z.maxLength(20)),
+  alias: z.string().check(z.maxLength(40)),
+  pin: z.string().check(z.regex(new RegExp(`^[0-9]{${classroom.pinLength}}$`))),
+  avatar: z.optional(z.enum(AVATARS)),
+  /** Perfil invitado del dispositivo que entra al aula por primera vez (conserva su id). */
+  profileId: z.optional(uuid()),
+  createdAt: z.optional(isoDate()),
+});
+
+export const UnlockRequestSchema = z.strictObject({ world: WorldIdSchema });
+
+export interface JoinResponse {
+  /** Token de perfil (JWT del Worker): el chico no tiene cuenta. */
+  token: string;
+  profile: { id: string; alias: string; avatar: string; classroomId: string };
+  /** `true` si el perfil ya existía (otro dispositivo): conviene bajar su estado. */
+  existing: boolean;
+}
+
+export interface ClassroomSummary {
+  id: string;
+  name: string;
+  code: string;
+  students: number;
+  unlocks: number[];
+}
+
+export interface DashboardStudent {
+  id: string;
+  alias: string;
+  avatar: string;
+  /** Mundo que está jugando (§7.2). */
+  world: number;
+  lastActivity: string | null;
+  roundsPlayed: number;
+  /** Clave `mundo:regla` (ver `ruleKey`) → EMA e intentos. */
+  rules: Record<string, { ema: number; attempts: number }>;
+  stars: Record<number, number>;
+}
+
+export interface DashboardResponse {
+  classroom: ClassroomSummary;
+  students: DashboardStudent[];
+}
+
 /** Una ronda o compra que el Worker no aceptó, con el motivo. No se reintenta. */
 export interface Rejected {
   id: string;

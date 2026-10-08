@@ -10,8 +10,15 @@ export interface Env {
   HYPERDRIVE: { connectionString: string };
   /** URL del proyecto de Supabase (pública): de ahí salen el emisor y las claves del JWT. */
   SUPABASE_URL: string;
+  /**
+   * Secreto del Worker (`wrangler secret put APP_SECRET`, ver `npm run setup:secret -w api`):
+   * firma los tokens de los chicos de aula y protege el PIN y la IP.
+   */
+  APP_SECRET: string;
   /** 60 subidas por minuto por perfil (arquitectura §6). */
   ROUNDS_LIMITER?: RateLimiter;
+  /** 10 ingresos al aula por minuto por IP. */
+  JOIN_LIMITER?: RateLimiter;
   /** La app estática (app/dist). */
   ASSETS: { fetch: (request: Request) => Promise<Response> };
 }

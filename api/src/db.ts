@@ -173,3 +173,173 @@ export async function insertPurchase(sql: Tx, profileId: string, p: Purchase): P
     values (${p.id}, ${profileId}, ${p.itemId}, ${p.at})
     on conflict do nothing`;
 }
+
+// —— Aulas (etapa 8) ——
+
+export interface ClassroomRow {
+  id: string;
+  teacherId: string;
+  name: string;
+  code: string;
+}
+
+export async function insertClassroom(
+  sql: Tx,
+  c: { teacherId: string; name: string; code: string },
+): Promise<ClassroomRow | null> {
+  const [row] = await sql<ClassroomRow[]>`
+    insert into private.classrooms (teacher_id, name, code)
+    values (${c.teacherId}, ${c.name}, ${c.code})
+    on conflict (code) do nothing
+    returning id, teacher_id as "teacherId", name, code`;
+  return row ?? null; // null: el código ya existía, se prueba otro
+}
+
+export async function getClassroom(sql: Tx, id: string): Promise<ClassroomRow | null> {
+  const [row] = await sql<ClassroomRow[]>`
+    select id, teacher_id as "teacherId", name, code from private.classrooms where id = ${id}`;
+  return row ?? null;
+}
+
+export async function classroomByCode(sql: Tx, code: string): Promise<ClassroomRow | null> {
+  const [row] = await sql<ClassroomRow[]>`
+    select id, teacher_id as "teacherId", name, code from private.classrooms where code = ${code}`;
+  return row ?? null;
+}
+
+export async function classroomsOf(
+  sql: Tx,
+  teacherId: string,
+): Promise<(ClassroomRow & { students: number; unlocks: number[] })[]> {
+  return sql`
+    select c.id, c.teacher_id as "teacherId", c.name, c.code,
+           (select count(*)::int from private.profiles p where p.classroom_id = c.id) as students,
+           coalesce((select array_agg(u.world order by u.world) from private.teacher_unlocks u
+                     where u.classroom_id = c.id), '{}') as unlocks
+    from private.classrooms c
+    where c.teacher_id = ${teacherId}
+    order by c.created_at`;
+}
+
+export async function unlocksOf(sql: Tx, classroomId: string): Promise<number[]> {
+  const rows = await sql<{ world: number }[]>`
+    select world from private.teacher_unlocks where classroom_id = ${classroomId} order by world`;
+  return rows.map((r) => r.world);
+}
+
+export async function addUnlock(sql: Tx, classroomId: string, world: number): Promise<void> {
+  await sql`
+    insert into private.teacher_unlocks (classroom_id, world) values (${classroomId}, ${world})
+    on conflict do nothing`;
+}
+
+export async function profileInClassroom(
+  sql: Tx,
+  classroomId: string,
+  alias: string,
+): Promise<(ProfileRow & { pinHash: string | null }) | null> {
+  const [row] = await sql<(ProfileRow & { pinHash: string | null })[]>`
+    select id, owner_id as "ownerId", classroom_id as "classroomId", alias, avatar,
+           created_at as "createdAt", pin_hash as "pinHash"
+    from private.profiles
+    where classroom_id = ${classroomId} and lower(alias) = lower(${alias})`;
+  return row ?? null;
+}
+
+export async function insertClassroomProfile(
+  sql: Tx,
+  p: {
+    id: string;
+    classroomId: string;
+    alias: string;
+    avatar: string;
+    pinHash: string;
+    createdAt: string;
+  },
+): Promise<void> {
+  await sql`
+    insert into private.profiles (id, classroom_id, alias, avatar, pin_hash, created_at)
+    values (${p.id}, ${p.classroomId}, ${p.alias}, ${p.avatar}, ${p.pinHash}, ${p.createdAt})`;
+}
+
+export async function profilesOfClassrooms(sql: Tx, teacherId: string): Promise<ProfileRow[]> {
+  return sql<ProfileRow[]>`
+    select p.id, p.owner_id as "ownerId", p.classroom_id as "classroomId", p.alias, p.avatar,
+           p.created_at as "createdAt"
+    from private.profiles p
+    join private.classrooms c on c.id = p.classroom_id
+    where c.teacher_id = ${teacherId}
+    order by c.created_at, lower(p.alias)`;
+}
+
+/** Registra un intento de ingreso y devuelve cuántos hubo en la ventana (incluido este). */
+export async function recordJoinAttempt(
+  sql: Tx,
+  ipHash: string,
+  windowMin: number,
+): Promise<number> {
+  await sql`insert into private.join_attempts (ip_hash) values (${ipHash})`;
+  const [row] = await sql<{ n: number }[]>`
+    select count(*)::int as n from private.join_attempts
+    where ip_hash = ${ipHash} and at > now() - make_interval(mins => ${windowMin})`;
+  return row!.n;
+}
+
+export async function pruneJoinAttempts(sql: Tx): Promise<void> {
+  await sql`delete from private.join_attempts where at < now() - interval '1 day'`;
+}
+
+export interface StudentRow {
+  id: string;
+  alias: string;
+  avatar: string;
+  roundsPlayed: number | null;
+  lastWorld: number | null;
+  rules: Record<string, { ema: number; attempts: number }> | null;
+  worlds: Record<string, { stars: number }> | null;
+  lastActivity: Date | null;
+}
+
+/** Datos del tablero: solo lo que muestra, no el estado entero de cada chico. */
+export async function studentsOf(sql: Tx, classroomId: string): Promise<StudentRow[]> {
+  return sql<StudentRow[]>`
+    select p.id, p.alias, p.avatar, s.rounds_played as "roundsPlayed",
+           (s.state->>'lastWorld')::int as "lastWorld",
+           s.state->'rules' as rules, s.state->'worlds' as worlds,
+           (select max(r.finished_at) from private.rounds r where r.profile_id = p.id)
+             as "lastActivity"
+    from private.profiles p
+    left join private.profile_state s on s.profile_id = p.id
+    where p.classroom_id = ${classroomId}
+    order by lower(p.alias)`;
+}
+
+/** Abre un mundo en el estado guardado de cada chico del aula, sin recalcular rondas. */
+export async function statesOfClassroom(
+  sql: Tx,
+  classroomId: string,
+): Promise<{ profileId: string; state: ProfileState }[]> {
+  return sql<{ profileId: string; state: ProfileState }[]>`
+    select s.profile_id as "profileId", s.state
+    from private.profile_state s
+    join private.profiles p on p.id = s.profile_id
+    where p.classroom_id = ${classroomId}`;
+}
+
+export async function storedState(sql: Tx, profileId: string): Promise<ProfileState | null> {
+  const [row] = await sql<{ state: ProfileState }[]>`
+    select state from private.profile_state where profile_id = ${profileId}`;
+  return row?.state ?? null;
+}
+
+/** Clave de orden de la última ronda guardada (`finishedAt`, id), para aplicar solo lo nuevo. */
+export async function lastRoundKey(
+  sql: Tx,
+  profileId: string,
+): Promise<{ finishedAt: string; id: string } | null> {
+  const [row] = await sql<{ finishedAt: Date; id: string }[]>`
+    select finished_at as "finishedAt", id from private.rounds
+    where profile_id = ${profileId}
+    order by finished_at desc, id desc limit 1`;
+  return row ? { finishedAt: row.finishedAt.toISOString(), id: row.id } : null;
+}

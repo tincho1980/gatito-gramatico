@@ -8,12 +8,13 @@ import {
   sortRounds,
   type Avatar,
   type ProfileState,
+  type ProfileStateResponse,
   type Purchase,
   type PurchaseProblem,
   type Round,
   type WordIndex,
 } from '@gatita/shared';
-import { db as defaultDb, type GatitaDB, type Look, type Profile } from './db.ts';
+import { db as defaultDb, type GatitaDB, type Look, type Profile, type ProfileLink } from './db.ts';
 
 export const profilesRepo = {
   async create(
@@ -47,6 +48,74 @@ export const profilesRepo = {
 
   async setLook(id: string, look: Look, db: GatitaDB = defaultDb): Promise<void> {
     await db.profiles.update(id, { look });
+  },
+
+  async list(db: GatitaDB = defaultDb): Promise<Profile[]> {
+    return db.profiles.orderBy('createdAt').toArray();
+  },
+
+  async setActive(id: string, db: GatitaDB = defaultDb): Promise<void> {
+    await db.meta.put({ key: 'activeProfileId', value: id });
+  },
+
+  /** Vincula un perfil del dispositivo: desde ahora sus rondas y compras se sincronizan. */
+  async link(id: string, link: ProfileLink, db: GatitaDB = defaultDb): Promise<void> {
+    await db.profiles.update(id, { kind: 'linked', link });
+  },
+
+  /**
+   * Trae un perfil del servidor a este dispositivo (otro celular, o un chico que recupera su
+   * perfil con apodo y PIN): sus rondas y compras quedan como sincronizadas y su estado, el del
+   * servidor. Si ya estaba en el dispositivo, se reemplaza. Queda como perfil activo.
+   */
+  async importRemote(
+    remote: ProfileStateResponse & {
+      profile: { id: string; alias: string; avatar: Avatar };
+    },
+    link: ProfileLink,
+    { db = defaultDb, now = new Date().toISOString() } = {},
+  ): Promise<Profile> {
+    const previous = await db.profiles.get(remote.profile.id);
+    const profile: Profile = {
+      id: remote.profile.id,
+      alias: remote.profile.alias,
+      avatar: remote.profile.avatar,
+      kind: 'linked',
+      link,
+      createdAt: previous?.createdAt ?? now,
+      sound: previous?.sound ?? true,
+      look: previous?.look,
+    };
+    await db.transaction(
+      'rw',
+      [db.profiles, db.rounds, db.purchases, db.profileState, db.meta],
+      async () => {
+        const id = profile.id;
+        // Lo que estaba sin subir en este dispositivo se conserva y se sube después.
+        const pending = await db.rounds
+          .where('profileId')
+          .equals(id)
+          .filter((r) => !r.synced && !r.rejected)
+          .toArray();
+        await db.rounds.where('profileId').equals(id).delete();
+        await db.purchases
+          .where('profileId')
+          .equals(id)
+          .filter((p) => p.synced)
+          .delete();
+        await db.profiles.put(profile);
+        await db.rounds.bulkPut([
+          ...remote.rounds.map((r) => ({ ...r, profileId: id, synced: true })),
+          ...pending.filter((p) => !remote.rounds.some((r) => r.id === p.id)),
+        ]);
+        await db.purchases.bulkPut(
+          remote.purchases.map((p) => ({ ...p, profileId: id, synced: true })),
+        );
+        await db.profileState.put({ profileId: id, state: remote.state, updatedAt: now });
+        await db.meta.put({ key: 'activeProfileId', value: id });
+      },
+    );
+    return profile;
   },
 };
 

@@ -7,14 +7,22 @@ export interface Profile {
   id: string;
   alias: string;
   avatar: Avatar;
+  /** Invitado: solo en este dispositivo. Vinculado: se sincroniza (ver `link`). */
   kind: 'guest' | 'linked';
-  remoteId?: string;
+  link?: ProfileLink;
   createdAt: string;
   /** Sonidos y vibración. */
   sound: boolean;
   /** Accesorio y fondo puestos (ids de la colección). */
   look?: Look;
 }
+
+/**
+ * Con qué se sincroniza un perfil vinculado: el login del adulto (familia) o el token del
+ * chico de aula, que no tiene cuenta (arquitectura §6).
+ */
+export type ProfileLink =
+  { via: 'family'; accountId: string } | { via: 'classroom'; classroomId: string; token: string };
 
 export interface Look {
   accesorio?: string;

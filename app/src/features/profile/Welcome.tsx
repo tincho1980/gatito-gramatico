@@ -1,11 +1,13 @@
 // Perfil invitado: apodo + gatito. Sin email ni nombre real.
 import { useState, type FormEvent } from 'react';
+import { Link } from 'react-router';
 import { aliasProblem, ALIAS_MAX, AVATARS, type Avatar } from '@gatita/shared';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
 import { profilesRepo } from '../../db/repos.ts';
 
-export function Welcome() {
+/** `onCreated`: a dónde ir después (al agregar un perfil desde /nuevo-perfil). */
+export function Welcome({ onCreated }: { onCreated?: () => void } = {}) {
   const [alias, setAlias] = useState('');
   const [avatar, setAvatar] = useState<Avatar>('negro');
   const [touched, setTouched] = useState(false);
@@ -18,6 +20,7 @@ export function Welcome() {
     if (problem || saving) return;
     setSaving(true);
     await profilesRepo.create({ alias, avatar });
+    onCreated?.();
   };
 
   return (
@@ -77,9 +80,17 @@ export function Welcome() {
         </div>
       </fieldset>
 
-      <Button type="submit" size="lg" className="mt-auto min-h-14 w-full" disabled={saving}>
-        ¡A jugar!
-      </Button>
+      <div className="mt-auto grid gap-2">
+        <Button type="submit" size="lg" className="min-h-14 w-full" disabled={saving}>
+          ¡A jugar!
+        </Button>
+        <Link
+          to="/entrar-al-aula"
+          className="flex min-h-12 items-center justify-center rounded-2xl font-heading font-bold text-pink-600"
+        >
+          Tengo un código de aula
+        </Link>
+      </div>
     </form>
   );
 }

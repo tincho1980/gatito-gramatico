@@ -71,6 +71,23 @@ export function unlockedWorlds(
 }
 
 /** Proporción de palabras del mundo en caja ≥ `threeStarsMinBox`. */
+/**
+ * §7.1 Mundos abiertos por el docente para el aula. El Worker los aplica sobre el estado que
+ * devuelve: abrir un mundo no cambia nada más, así que no hace falta recalcular las rondas.
+ */
+export function applyTeacherUnlocks(
+  state: ProfileState,
+  teacherUnlocks: readonly number[],
+): ProfileState {
+  if (teacherUnlocks.every((id) => state.worlds[id]?.unlocked)) return state;
+  const worlds = { ...state.worlds };
+  for (const id of teacherUnlocks) {
+    if (!WORLDS.some((w) => w.id === id)) continue;
+    worlds[id] = { ...(worlds[id] ?? initialWorldProgress(true)), unlocked: true };
+  }
+  return { ...state, worlds };
+}
+
 export function boxShare(
   worldWords: readonly WordEntry[],
   words: Record<string, WordMastery>,

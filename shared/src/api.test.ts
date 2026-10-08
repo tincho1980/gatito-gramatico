@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { PurchaseSchema, RoundSchema } from './api.ts';
+import {
+  isClassroomCode,
+  JoinRequestSchema,
+  normalizeClassroomCode,
+  PurchaseSchema,
+  RoundSchema,
+} from './api.ts';
 
 const turn = (over = {}) => ({
   wordId: 'casa',
@@ -60,5 +66,23 @@ describe('contrato de compras', () => {
     };
     expect(PurchaseSchema.safeParse(p).success).toBe(true);
     expect(PurchaseSchema.safeParse({ ...p, price: 0 }).success).toBe(false);
+  });
+});
+
+describe('contrato del ingreso al aula', () => {
+  const join = (over = {}) => ({ code: 'ABCDEF', alias: 'Michi', pin: '1234', ...over });
+
+  it('PIN de 4 dígitos', () => {
+    expect(JoinRequestSchema.safeParse(join()).success).toBe(true);
+    expect(JoinRequestSchema.safeParse(join({ pin: '123' })).success).toBe(false);
+    expect(JoinRequestSchema.safeParse(join({ pin: '12345' })).success).toBe(false);
+    expect(JoinRequestSchema.safeParse(join({ pin: 'abcd' })).success).toBe(false);
+  });
+
+  it('el código se normaliza y no usa letras que se confunden con números', () => {
+    expect(normalizeClassroomCode(' abc-def ')).toBe('ABCDEF');
+    expect(isClassroomCode('ABCDEF')).toBe(true);
+    expect(isClassroomCode('ABCDEO')).toBe(false);
+    expect(isClassroomCode('ABCDE')).toBe(false);
   });
 });

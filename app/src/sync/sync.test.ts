@@ -1,6 +1,7 @@
 import 'fake-indexeddb/auto';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import {
+  applyTeacherUnlocks,
   indexWords,
   replay,
   type Purchase,
@@ -53,6 +54,7 @@ function fakeServer() {
   const rounds = new Map<string, Round>();
   const purchases: Purchase[] = [];
   let online = true;
+  const unlocks: number[] = [];
   const api: Api = {
     postRounds: async (_profileId, sent) => {
       if (!online) throw new ApiError(0, true);
@@ -68,6 +70,10 @@ function fakeServer() {
       }
       return { state: replay([...rounds.values()], words), acceptedIds, rejected };
     },
+    getState: async () => {
+      if (!online) throw new ApiError(0, true);
+      return { state: applyTeacherUnlocks(replay([...rounds.values()], words), unlocks) };
+    },
     postPurchases: async (_profileId, sent): Promise<PurchasesResponse> => {
       if (!online) throw new ApiError(0, true);
       purchases.push(...(sent as Purchase[]));
@@ -81,12 +87,16 @@ function fakeServer() {
     setOnline: (v: boolean) => {
       online = v;
     },
+    unlock: (world: number) => unlocks.push(world),
   };
 }
 
 async function linkedProfile(db: GatitaDB) {
   const p = await profilesRepo.create({ alias: 'Michi', avatar: 'gris' }, { db });
-  await db.profiles.update(p.id, { kind: 'linked' });
+  await db.profiles.update(p.id, {
+    kind: 'linked',
+    link: { via: 'family', accountId: 'a1' },
+  });
   return p.id;
 }
 
@@ -172,6 +182,17 @@ describe('sincronización (arquitectura §7)', () => {
     expect(server.purchases.map((p) => p.itemId)).toEqual(['mono-rosa']);
     expect(server.purchases[0]).not.toHaveProperty('synced');
     expect(await pendingCount(id, db)).toBe(0);
+  });
+
+  it('sin nada para subir, trae los cambios del servidor (un mundo abierto por el docente)', async () => {
+    const db = fresh();
+    const id = await linkedProfile(db);
+    const server = fakeServer();
+    await saveRound(id, round(0), words, { db });
+    await syncProfile(id, { api: server.api, words, db });
+    server.unlock(8);
+    await syncProfile(id, { api: server.api, words, db });
+    expect((await stateRepo.get(id, db)).worlds[8]?.unlocked).toBe(true);
   });
 
   it('un perfil invitado no se sincroniza', async () => {

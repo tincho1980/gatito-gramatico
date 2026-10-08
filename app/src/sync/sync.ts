@@ -18,7 +18,7 @@ export interface SyncResult {
 }
 
 // Solo los campos del contrato: lo local (perfil, estado de la subida) no viaja.
-const toRound = (r: StoredRound): Round => ({
+export const toRound = (r: StoredRound): Round => ({
   id: r.id,
   world: r.world,
   stop: r.stop,
@@ -81,6 +81,17 @@ export async function syncProfile(
     result.rejected += res.rejected.length;
     // Lo que el servidor no contestó (ni aceptó ni rechazó) se reintenta en la próxima vuelta.
     if (res.acceptedIds.length + res.rejected.length === 0) break;
+  }
+
+  // Sin rondas para subir, igual se pide el estado: puede haber cambiado en el servidor (un
+  // mundo abierto por el docente, rondas jugadas en otro dispositivo).
+  if (result.sent + result.rejected === 0) {
+    const { state } = await api.getState(profileId);
+    await db.transaction('rw', db.rounds, db.profileState, async () => {
+      const rest = await pendingRounds(db, profileId);
+      const merged = rest.reduce((s, r) => applyRound(s, toRound(r), words), state);
+      await db.profileState.put({ profileId, state: merged, updatedAt: new Date().toISOString() });
+    });
   }
 
   const purchases = (

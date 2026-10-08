@@ -46,6 +46,20 @@ export const CONFIG = {
     /** Minutos que una ronda puede venir "del futuro" por relojes desfasados. */
     futureToleranceMin: 5,
   },
+  /** Aulas (plan, etapa 8). */
+  classroom: {
+    /** Código de 6 letras, sin las que se confunden con números (I, O). */
+    codeLength: 6,
+    codeAlphabet: 'ABCDEFGHJKLMNPQRSTUVWXYZ',
+    pinLength: 4,
+    /** Intentos de ingreso por IP en la ventana; el siguiente se bloquea (arquitectura §6). */
+    joinAttempts: 10,
+    joinWindowMin: 1,
+    /** Días que dura el token de un chico de aula. */
+    profileTokenDays: 90,
+  },
+  /** Colores del tablero docente por EMA de la regla. */
+  dashboard: { good: 0.85, ok: 0.6 },
   /** Reintentos de la sincronización sin red o con el servidor caído: 2 s, 4 s… hasta 5 min. */
   syncBackoff: { baseMs: 2_000, maxMs: 300_000 },
   badges: {

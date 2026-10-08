@@ -13,6 +13,7 @@ Resumen de comandos:
 | `npm run dev:local` | API local sobre `.local-db/` | Tu máquina |
 | `npm run db:push` | Aplica las migraciones pendientes en Supabase | Tu máquina (`.env.local`) |
 | `npm run setup:db -w api` | Contraseña de `gatita_worker` + Hyperdrive | Tu máquina (`.env.local`) |
+| `npm run setup:secret -w api` | Secreto del Worker para los chicos de aula (una sola vez) | Tu máquina |
 | `npm run deploy -w api` | Publica app + API en producción | GitHub Actions al mergear a `main` (o tu máquina la primera vez) |
 
 ## 1. Probar en local (sin Docker)
@@ -20,12 +21,13 @@ Resumen de comandos:
 Dos terminales desde la raíz:
 
 ```bash
-npm run dev:local     # API en http://127.0.0.1:8787/api, base en .local-db/
-npm run dev -w app    # app en http://localhost:3000, con proxy de /api a :8787
+npm run dev:local           # API en http://127.0.0.1:8787/api, base en .local-db/
+npm run dev:local -w app    # app en http://localhost:3000, con proxy de /api y login de prueba
 ```
 
 - `dev:local` aplica las mismas migraciones que producción sobre PGlite y guarda los datos en `.local-db/` (no se versiona). Para empezar de cero, borrá esa carpeta.
-- El login es de mentira: cualquier token `local-<uuid>` vale como el adulto con ese id. Solo existe en ese script; lo publicado verifica los JWT de Supabase. El login de verdad llega en la etapa 8.
+- El login de adultos es de prueba: en **Familias y docentes** escribís cualquier email y entrás sin enlace (botón "Entrar (prueba local)"). Solo existe en `npm run dev:local -w app` (modo `localauth` de Vite) y en los e2e; el build que se publica (`production`) no lo tiene y la API publicada verifica los JWT de Supabase.
+- Para probar un aula: entrá como docente, creá un aula y, en otra ventana privada (otro "celular"), **Entrar a mi aula** con el código.
 - Datos de prueba solamente: nunca datos reales de chicos.
 - Los tests del Worker (`npm test -w api`) usan la misma base embebida, en memoria.
 - Alternativa con Docker, si algún día hace falta probar Auth de Supabase en local: `npx supabase@2.117.0 start` y `npm run dev -w api` (usa `localConnectionString` de `wrangler.jsonc`).
@@ -112,6 +114,34 @@ Al mergear un PR a `main`, `.github/workflows/ci.yml` corre `check` y `e2e` y, s
 
 **Migraciones.** El CI no migra la base (no tiene la conexión). Si un PR trae una migración nueva, corré `npm run db:push` **antes** de mergear a `main`, para que el Worker nuevo no arranque contra un esquema viejo. Las migraciones tienen que ser compatibles con el Worker anterior: agregar tablas o columnas, no renombrar ni borrar en el mismo paso.
 
-## Qué queda para la etapa 8
+## 5. Login de adultos y aulas (etapa 8)
 
-El login adulto (Google y enlace por email) se configura en el panel de Supabase (**Authentication → Providers** y **URL Configuration**, con la URL del Worker). La app va a necesitar la URL y la clave publicable (públicas) en el build. Hasta entonces no hay perfiles vinculados y la app no sincroniza.
+Una sola vez, en este orden:
+
+1. **Migración nueva** (índice de apodos por aula): `npm run db:push`.
+2. **Secreto del Worker**, que firma los tokens de los chicos de aula y protege los PIN:
+
+   ```bash
+   npm run setup:secret -w api
+   ```
+
+   Genera un valor aleatorio y lo carga en Cloudflare sin mostrarlo. **No se cambia nunca**: los PIN guardados dependen de él, y con otro secreto ningún chico podría volver a entrar. Por eso el script no hace nada si ya existe.
+
+3. **Supabase, panel → Authentication**:
+   - *JWT Keys*: el proyecto tiene que firmar con una clave **asimétrica** (ECC P-256 o RSA). El Worker verifica contra las claves públicas y no guarda ningún secreto de Supabase. Si todavía usa el *Legacy JWT secret*, migrá desde esa pantalla.
+   - *Sign In / Providers → Email*: activado (enlace por email). El envío de emails del plan gratis tiene un límite bajo por hora; alcanza para probar. Para el piloto conviene un SMTP propio (*Emails → SMTP Settings*).
+   - *Sign In / Providers → Google*: activado, con una credencial OAuth de Google Cloud (*APIs y servicios → Credenciales → ID de cliente de OAuth*, tipo "Aplicación web") cuyo *URI de redireccionamiento autorizado* sea `https://<ref>.supabase.co/auth/v1/callback`. El ID y el secreto del cliente se pegan en el panel de Supabase, nunca acá ni en el repo.
+   - *URL Configuration*: **Site URL** `https://gatita-gramatica.miramallo.workers.dev`; **Redirect URLs**: `https://gatita-gramatica.miramallo.workers.dev/adultos` y `http://localhost:3000/adultos`.
+
+4. **La URL y la clave publicable en el build** (son públicas):
+   - En tu `.env.local`: `VITE_SUPABASE_URL` y `VITE_SUPABASE_PUBLISHABLE_KEY` (la `sb_publishable_…` de *Project Settings → API Keys*, no la anon legada).
+   - En GitHub, para el deploy automático:
+
+     ```bash
+     gh variable set VITE_SUPABASE_URL --repo tincho1980/gatito-gramatico --env production --body "https://<ref>.supabase.co"
+     gh variable set VITE_SUPABASE_PUBLISHABLE_KEY --repo tincho1980/gatito-gramatico --env production --body "<sb_publishable_…>"
+     ```
+
+5. Publicar: `npm run build` y `npm run deploy -w api`.
+
+Para probar: abrí la app, **Perfil → Para familias y docentes**, entrá con tu email (te llega el enlace) o con Google y elegí "Soy docente". Creá un aula y entrá desde el celular con **Entrar a mi aula** y el código.

@@ -78,7 +78,11 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
-      # Banco de palabras y app (app/dist): el Worker los publica como assets.
+      # Banco de palabras y app (app/dist): el Worker los publica como assets. La URL y la clave
+      # publicable de Supabase son públicas (terminan en la app): van como variables.
       - run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY }}
       - name: Deploy del Worker (app + API)
         run: npm run deploy -w api

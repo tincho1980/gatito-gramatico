@@ -38,14 +38,15 @@ flowchart TD
 | Node | 22 LTS | `.nvmrc` |
 | App | React 19 + Vite 7 | SPA |
 | Estilos | Tailwind CSS v4 con `@tailwindcss/vite` | Reemplaza el CDN actual |
-| Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/mundo/:id/leccion`, `/ronda`, `/tienda`, `/coleccion`, `/progreso`, `/perfil`, `/aula/:id` |
+| Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/mundo/:id/leccion`, `/ronda`, `/tienda`, `/coleccion`, `/progreso`, `/perfil`, `/nuevo-perfil`, `/entrar-al-aula`, `/adultos` (login y paneles de familia y docente), `/aula/:id` (tablero) |
 | Estado de UI | Zustand | Estado de la ronda en curso |
 | Datos locales | Dexie + `dexie-react-hooks` | IndexedDB |
 | PWA | `vite-plugin-pwa` 1.x (Workbox, `generateSW`) | Precache del shell, las fuentes (solo el subconjunto latin) y `/words/*.json`. Actualización con aviso (`registerType: 'prompt'`): la versión nueva se activa cuando el chico toca "Actualizar", nunca durante una ronda o una lección. Íconos generados desde `app/public/icon.svg` con `npm run icons -w app`. |
 | Validación | Zod (`zod/mini`) | Esquemas compartidos en `shared/`. La variante mini tiene la misma validación con menos peso en el bundle. |
 | API | Cloudflare Workers + Hono | `wrangler` |
 | Acceso a datos | `postgres` (postgres.js) vía Hyperdrive | SQL explícito, sin ORM |
-| JWT | `jose` | JWKS de Supabase Auth |
+| JWT | `jose` | JWKS de Supabase Auth (adultos) y HS256 propio (chicos de aula) |
+| Login adulto en la app | `@supabase/supabase-js` | Solo Auth (Google y enlace por email). Se carga recién en el área de adultos o al sincronizar un perfil de familia, para no sumarle peso a la app de los chicos. Con `vite --mode localauth` (desarrollo y e2e) hay un login de prueba sin Supabase; el build `production` no lo incluye. |
 | Base y login | Supabase (Postgres 15+, Auth) | Migraciones con Supabase CLI |
 | Tests | Vitest (+ Testing Library), Playwright para e2e | |
 | Calidad | ESLint + Prettier, `tsc --noEmit` | |
@@ -109,7 +110,7 @@ Base Dexie `gatita`, versión 2 (la 2 agrega `purchases`):
 
 | Tabla | Clave | Campos |
 | --- | --- | --- |
-| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt`, `sound` (sonido y vibración), `look?: { accesorio?, fondo? }` (lo que tiene puesto) |
+| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `link?: { via: 'family', accountId } \| { via: 'classroom', classroomId, token }` (con qué se sincroniza: la sesión del adulto o el token del chico), `createdAt`, `sound` (sonido y vibración), `look?: { accesorio?, fondo? }` (lo que tiene puesto) |
 | `rounds` | `id` (uuid) | `profileId`, `world`, `stop`, `kind: 'practice' \| 'boss' \| 'lesson'`, `startedAt`, `finishedAt`, `tzOffsetMin`, `wordsVersion`, `turns: TurnResult[]`, `synced: boolean` |
 | `profileState` | `profileId` | `state: ProfileState` (de `shared/engine`: cajas por palabra, EMA por regla y mundo, progreso de mundos, XP, croquetas, racha, insignias, colección), `updatedAt` |
 | `purchases` | `id` (uuid) | `profileId`, `itemId`, `at`, `synced: boolean` (desde la versión 2) |
@@ -210,11 +211,11 @@ revoke all on schema private from anon, authenticated;
 
 - Rol `gatita_worker`: el único con permisos sobre `private` (más una política de RLS propia en cada tabla). Se crea sin contraseña en la migración; `npm run setup:db -w api` le genera una aleatoria, la aplica y crea o actualiza Hyperdrive con ella: no se muestra ni se guarda en otro lado. La conexión de administrador que usa el script está en `.env.local` (no versionado).
 - `profile_state.state` guarda el estado derivado completo (cajas, EMA, progreso) para responder rápido. Si cambia la lógica, se recalcula con `replay` desde `rounds` + `turns`.
-- Índices: `rounds(profile_id, finished_at)`, `turns(word_id)`, `profiles(classroom_id)`.
+- Índices: `rounds(profile_id, finished_at)`, `turns(word_id)`, `profiles(classroom_id)`, `classrooms(teacher_id)` y único `profiles(classroom_id, lower(alias))`: un apodo no se repite dentro de un aula, porque apodo + PIN identifica al chico.
 
 ## 6. API (Worker)
 
-Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization: Bearer <JWT de Supabase>` (firma con el JWKS del proyecto, emisor `<SUPABASE_URL>/auth/v1`, audiencia `authenticated`). Entradas validadas con los esquemas Zod de `shared/src/api.ts`. Código en `api/src`: `app.ts` (rutas), `sync.ts` (recepción y recálculo), `db.ts` (SQL), `auth.ts`, `index.ts` (fetch, assets y cron).
+Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization: Bearer <token>`: el JWT de Supabase de un adulto o el token de perfil de un chico de aula (firma con el JWKS del proyecto, emisor `<SUPABASE_URL>/auth/v1`, audiencia `authenticated`). Entradas validadas con los esquemas Zod de `shared/src/api.ts`. Código en `api/src`: `app.ts` (rutas), `sync.ts` (recepción y recálculo), `db.ts` (SQL), `auth.ts` (JWT de Supabase), `secrets.ts` (token de perfil, PIN e IP), `index.ts` (fetch, assets y cron).
 
 | Método y ruta | Quién | Qué hace |
 | --- | --- | --- |
@@ -223,13 +224,16 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 | `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). |
 | `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds, rejected: [{ id, reason }] }`: cada ronda se acepta o rechaza por separado. |
 | `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds, rejected }`. |
-| `GET /api/profiles/:id/state` | dueño del perfil | `{ state, rounds, purchases }`, para un dispositivo nuevo: el estado y los registros fuente. |
-| `POST /api/classrooms` | docente | Crea un aula y devuelve el código. |
-| `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin }` → crea o recupera el perfil y devuelve un token de perfil. |
-| `GET /api/classrooms/:id/dashboard` | docente del aula | Por perfil y por regla: EMA, intentos, mundo actual, última actividad. |
-| `POST /api/classrooms/:id/unlocks` | docente del aula | `{ world }` → abre ese mundo para el aula. |
+| `GET /api/profiles/:id/state` | dueño del perfil (adulto o el propio chico) | `{ state, rounds, purchases, profile }`, para un dispositivo nuevo: el estado y los registros fuente. Con `?only=state`, solo el estado (para traer cambios del servidor). |
+| `GET /api/classrooms` | docente | Sus aulas: nombre, código, cantidad de alumnos y mundos abiertos. |
+| `POST /api/classrooms` | docente | `{ name }` → crea un aula con un código de 6 letras al azar (sin I ni O; si ya existe, prueba otro). |
+| `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin, avatar?, profileId?, createdAt? }` → si el apodo ya existe en el aula (sin distinguir mayúsculas), comprueba el PIN y devuelve su token (`existing: true`, para traerlo a otro dispositivo); si no, crea el perfil (con el id del perfil invitado del dispositivo, si viene) y devuelve su token. |
+| `GET /api/classrooms/:id/dashboard` | docente del aula | Por alumno: apodo, mundo actual, rondas, última actividad, EMA e intentos por regla y estrellas por mundo. Lee solo esas partes del estado guardado. |
+| `POST /api/classrooms/:id/unlocks` | docente del aula | `{ world }` → abre ese mundo para el aula. Abrir un mundo solo marca `unlocked` (`applyTeacherUnlocks`): se aplica sobre el estado guardado de cada alumno, sin recalcular sus rondas, y también en cada estado que devuelve la API. |
 
-**Chicos que entran por aula** no tienen cuenta de Supabase. `classrooms/join` devuelve un **token de perfil** firmado por el Worker (JWT HS256 con secreto propio, `sub = profileId`, vence a los 90 días). El Worker acepta ambos tipos de token: el de Supabase (adulto) y el de perfil (chico), y verifica permisos según el tipo.
+**Chicos que entran por aula** no tienen cuenta de Supabase. `classrooms/join` devuelve un **token de perfil** firmado por el Worker (JWT HS256, `sub = profileId`, vence a los 90 días). El Worker acepta ambos tipos de token: el de Supabase (adulto) y el de perfil (chico), y verifica permisos según el tipo: un chico solo sube y lee su propio perfil; no ve aulas, cuentas ni otros perfiles.
+
+**Secreto del Worker (`APP_SECRET`, `wrangler secret`):** de él se derivan claves distintas (HMAC con una etiqueta por uso) para firmar los tokens de perfil, para el hash del PIN y para el de la IP. Lo crea `npm run setup:secret -w api` y no se cambia: los PIN guardados dependen de él.
 
 **Validaciones de `POST /api/rounds`:**
 
@@ -245,7 +249,9 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 
 **Cron diario:** `SELECT 1` contra la base para que el plan gratis de Supabase no pause el proyecto.
 
-**Rate limit:** binding de Rate Limiting de Workers: 10 intentos por minuto por IP en `classrooms/join`; 60 por minuto por perfil en `rounds`.
+**Rate limit:** binding de Rate Limiting de Workers: 10 intentos por minuto por IP en `classrooms/join` (`JOIN_LIMITER`); 60 por minuto por perfil en `rounds` y `purchases`. El ingreso al aula además cuenta los intentos en `join_attempts` (por hash de la IP, ventana de `CONFIG.classroom.joinWindowMin`): el 11.º intento del minuto se rechaza aunque el binding no esté (desarrollo, tests). El cron borra los intentos de más de un día.
+
+**Recálculo incremental:** al recibir rondas, si todas son posteriores a la última guardada (lo normal), se aplican sobre el estado guardado; si llega alguna anterior, se recalcula con `replay`. Da el mismo resultado y gasta mucho menos CPU (el plan gratis de Workers tiene 10 ms por pedido).
 
 ## 7. Sincronización
 
@@ -254,7 +260,9 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 3. El servidor responde con `state` y `acceptedIds`. El cliente marca esas rondas como `synced`, reemplaza el estado local por `state` y vuelve a aplicar encima las rondas que sigan pendientes (si se jugó algo mientras viajaba la request).
 4. Reintentos sin red, con 429 o con 5xx: 2 s, 4 s, 8 s… hasta 5 minutos (`CONFIG.syncBackoff`). Una ronda o compra que el servidor rechaza queda marcada con `rejected` y el motivo, se reporta en consola y no se reintenta. Sin token (perfil no vinculado o sesión vencida) no se intenta.
 5. Se sincroniza al abrir la app, al volver la red (`online`) y al terminar una ronda, una lección o una compra. El inicio muestra un indicador discreto ("Todo guardado en la nube" o cuántas faltan subir).
-6. Al abrir la app en un dispositivo nuevo con un perfil vinculado: `GET /state`; se guardan sus rondas y compras como sincronizadas y su estado como estado inicial.
+6. Si no había nada para subir, se pide `GET /state?only=state` y se aplican encima las rondas pendientes: así llegan los cambios del servidor (un mundo abierto por el docente, rondas jugadas en otro dispositivo).
+7. Al traer un perfil a un dispositivo nuevo (familia: "Jugar acá"; chico de aula: mismo apodo y PIN), `GET /state` completo: se guardan sus rondas y compras como sincronizadas y su estado como estado inicial.
+8. Token de cada perfil vinculado: el de la sesión del adulto en ese dispositivo (familia) o el token de perfil guardado en el perfil (aula).
 
 La misma función `applyRound(state, round, words, config)` corre en el cliente y en el Worker. Es determinista: no usa `Date.now()` ni azar (las fechas vienen en la ronda).
 
@@ -273,7 +281,7 @@ La misma función `applyRound(state, round, words, config)` corre en el cliente 
 4. Zod en cada entrada.
 5. Cajas, XP, desbloqueos y premios se recalculan en el servidor.
 6. RLS habilitado en todas las tablas sin políticas permisivas (segunda línea).
-7. PIN de aula guardado con hash (`scrypt` vía WebCrypto/`@noble/hashes`), nunca en claro. Rate limit en el ingreso.
+7. PIN de aula guardado con hash, nunca en claro: HMAC-SHA256 con una clave derivada del secreto del Worker, sobre aula + apodo + PIN. Con 4 dígitos hay solo 10 000 combinaciones: un hash lento (`scrypt`) no protege si se filtra la base (se prueban todas en segundos) y además excede el límite de CPU de Workers. Lo que protege es el secreto, que no está en la base. Rate limit en el ingreso (11 intentos por minuto y por IP, bloqueado). La IP tampoco se guarda: solo su hash.
 8. Secretos solo en el Worker (`wrangler secret`): cadena de Hyperdrive, secreto de tokens de perfil. El cliente solo conoce la URL de Supabase y la clave pública, para el login adulto.
 9. Datos personales mínimos: los chicos nunca dan email ni nombre real. El alias se valida (largo 2–20, sin URLs ni números de teléfono).
 10. Sin Gemini ni otras claves en el bundle. CI busca patrones de claves (`AIza`, `sk-`, `eyJ` largos) en `app/dist` y falla si encuentra.
