@@ -1,6 +1,7 @@
 // La ronda en curso: qué palabra y qué paso se muestran, y cómo se arma el registro final.
 // Funciones puras sobre el motor de shared/; el store de Zustand solo las envuelve.
 import {
+  CONFIG,
   buildBossRound,
   buildRound,
   createRng,
@@ -23,8 +24,7 @@ import {
 } from '@gatita/shared';
 
 /** Límites de `ms` que acepta el servidor (arquitectura §6). */
-const MIN_MS = 300;
-const MAX_MS = 600_000;
+const { minMs: MIN_MS, maxMs: MAX_MS } = CONFIG.api;
 
 export interface Session {
   id: string;

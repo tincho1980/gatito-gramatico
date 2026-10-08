@@ -4,9 +4,26 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "typecheck": "tsc"
+    "typecheck": "tsc && tsc -p test",
+    "test": "vitest run",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --env production",
+    "setup:db": "node scripts/setup-db.ts",
+    "db:push": "node scripts/db-push.ts",
+    "dev:local": "node scripts/dev-local.ts"
   },
   "dependencies": {
-    "@gatita/shared": "*"
+    "@gatita/shared": "*",
+    "hono": "~4.13.8",
+    "jose": "~6.2.12",
+    "postgres": "~3.4.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260921.1",
+    "@electric-sql/pglite": "~0.5.8",
+    "@electric-sql/pglite-socket": "~0.2.11",
+    "@hono/node-server": "~2.1.1",
+    "vitest": "^4.1.11",
+    "wrangler": "4.136.1"
   }
 }

@@ -7,6 +7,8 @@ export default defineConfig({
   server: {
     port: 3000,
     host: '0.0.0.0',
+    // En desarrollo la API es `wrangler dev` (npm run dev -w api).
+    proxy: { '/api': 'http://127.0.0.1:8787' },
   },
   plugins: [
     react(),

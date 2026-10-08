@@ -7,3 +7,4 @@ export * from './words/loader.ts';
 export * from './data/catalogs.ts';
 export * from './engine/index.ts';
 export * from './profile.ts';
+export * from './api.ts';

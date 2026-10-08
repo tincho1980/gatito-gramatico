@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router';
 import { Toaster } from './features/notify/Toaster.tsx';
 import { UpdatePrompt } from './features/pwa/UpdatePrompt.tsx';
+import { SyncManager } from './sync/SyncManager.tsx';
 
 /** Marco de todas las pantallas: la página, los avisos encima y el de versión nueva. */
 export function Layout() {
@@ -9,6 +10,7 @@ export function Layout() {
       <Outlet />
       <Toaster />
       <UpdatePrompt />
+      <SyncManager />
     </>
   );
 }

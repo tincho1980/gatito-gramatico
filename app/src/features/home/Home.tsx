@@ -19,6 +19,7 @@ import { DebugPanel } from '../debug/DebugPanel.tsx';
 import { isDebug } from '../debug/flag.ts';
 import { useActiveProfile, useProfileState, useWallet } from '../profile/hooks.ts';
 import { Welcome } from '../profile/Welcome.tsx';
+import { SyncBadge } from '../../sync/SyncBadge.tsx';
 import { InstallCard } from '../pwa/InstallCard.tsx';
 import { actionPath } from '../round/paths.ts';
 
@@ -43,7 +44,10 @@ export function Home() {
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-4 py-6">
       <header className="flex items-center justify-between">
-        <h1 className="font-heading text-2xl font-bold text-pink-600">¡Hola, {profile.alias}!</h1>
+        <div>
+          <h1 className="font-heading text-2xl font-bold text-pink-600">¡Hola, {profile.alias}!</h1>
+          {profile.kind === 'linked' && <SyncBadge profileId={profile.id} />}
+        </div>
         <Link to="/perfil" aria-label="Tu perfil" className="rounded-full">
           <Gatita
             avatar={profile.avatar}

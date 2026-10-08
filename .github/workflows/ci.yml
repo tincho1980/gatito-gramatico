@@ -1,9 +1,26 @@
+# CI y deploy.
+# - check y e2e: en cada PR y en cada push a develop/main.
+# - deploy: solo en push a main (al mergear un PR) y solo si check y e2e pasaron. Publica el
+#   Worker (app + API) con el token de Cloudflare del environment `production`, que GitHub solo
+#   le da a jobs sobre main. La base NO se migra acá: `npm run db:push` se corre a mano antes
+#   de mergear un cambio de esquema (docs/puesta-en-marcha.md).
 name: CI
 
 on:
   pull_request:
   push:
     branches: [main, develop]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  # En PRs se cancela la corrida vieja; en develop/main no, para no cortar un deploy a la mitad.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+permissions:
+  contents: read
+
+env:
+  WRANGLER_SEND_METRICS: false
 
 jobs:
   check:
@@ -43,3 +60,25 @@ jobs:
         with:
           name: playwright-traces
           path: app/test-results
+
+  deploy:
+    needs: [check, e2e]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: production
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      # Banco de palabras y app (app/dist): el Worker los publica como assets.
+      - run: npm run build
+      - name: Deploy del Worker (app + API)
+        run: npm run deploy -w api
