@@ -78,8 +78,11 @@ export function LessonPage() {
 
   if (phase.kind === 'rule') {
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 py-6">
-        <Link to={`/mundo/${world}`} className="self-start font-bold text-pink-600">
+      <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 pt-6 pb-safe">
+        <Link
+          to={`/mundo/${world}`}
+          className="-my-3 flex min-h-12 items-center self-start pr-3 font-bold text-pink-600"
+        >
           ← Volver
         </Link>
         <header className="flex items-center gap-3">
@@ -125,7 +128,7 @@ export function LessonPage() {
 
   if (phase.kind === 'done') {
     return (
-      <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 px-4 py-6 text-center">
+      <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 px-4 pt-6 pb-safe text-center">
         <Gatita
           avatar={profile.avatar}
           accessory={profile.look?.accesorio}

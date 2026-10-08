@@ -41,8 +41,8 @@ flowchart TD
 | Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/mundo/:id/leccion`, `/ronda`, `/tienda`, `/coleccion`, `/progreso`, `/perfil`, `/aula/:id` |
 | Estado de UI | Zustand | Estado de la ronda en curso |
 | Datos locales | Dexie + `dexie-react-hooks` | IndexedDB |
-| PWA | `vite-plugin-pwa` (Workbox) | Precache del shell y de `/words/*.json` |
-| Validación | Zod | Esquemas compartidos en `shared/` |
+| PWA | `vite-plugin-pwa` 1.x (Workbox, `generateSW`) | Precache del shell, las fuentes (solo el subconjunto latin) y `/words/*.json`. Actualización con aviso (`registerType: 'prompt'`): la versión nueva se activa cuando el chico toca "Actualizar", nunca durante una ronda o una lección. Íconos generados desde `app/public/icon.svg` con `npm run icons -w app`. |
+| Validación | Zod (`zod/mini`) | Esquemas compartidos en `shared/`. La variante mini tiene la misma validación con menos peso en el bundle. |
 | API | Cloudflare Workers + Hono | `wrangler` |
 | Acceso a datos | `postgres` (postgres.js) vía Hyperdrive | SQL explícito, sin ORM |
 | JWT | `jose` | JWKS de Supabase Auth |

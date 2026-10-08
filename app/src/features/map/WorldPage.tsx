@@ -47,8 +47,11 @@ export function WorldPage() {
   const gate = bossGateStatus(state, id, worldWords);
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 py-6">
-      <Link to="/mapa" className="self-start font-bold text-pink-600">
+    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 pt-6 pb-safe">
+      <Link
+        to="/mapa"
+        className="-my-3 flex min-h-12 items-center self-start pr-3 font-bold text-pink-600"
+      >
         ← El camino
       </Link>
       <header className="flex items-center gap-3">

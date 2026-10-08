@@ -8,8 +8,11 @@ export function ProfilePage() {
   if (!profile) return null;
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-6 px-4 py-6">
-      <Link to="/" className="self-start font-bold text-pink-600">
+    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-6 px-4 pt-6 pb-safe">
+      <Link
+        to="/"
+        className="-my-3 flex min-h-12 items-center self-start pr-3 font-bold text-pink-600"
+      >
         ← Volver
       </Link>
       <div className="text-center">

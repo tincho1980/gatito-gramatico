@@ -6,6 +6,7 @@ import { LessonPage } from './features/lesson/LessonPage.tsx';
 import { MapPage } from './features/map/MapPage.tsx';
 import { WorldPage } from './features/map/WorldPage.tsx';
 import { ProfilePage } from './features/profile/ProfilePage.tsx';
+import { InstallHelp } from './features/pwa/InstallHelp.tsx';
 import { ProgressPage } from './features/progress/ProgressPage.tsx';
 import { RoundPage } from './features/round/RoundPage.tsx';
 import { ShopPage } from './features/shop/ShopPage.tsx';
@@ -24,6 +25,7 @@ export const router = createBrowserRouter([
       { path: '/tienda', element: <ShopPage /> },
       { path: '/coleccion', element: <CollectionPage /> },
       { path: '/progreso', element: <ProgressPage /> },
+      { path: '/instalar', element: <InstallHelp /> },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },

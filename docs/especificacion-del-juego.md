@@ -287,6 +287,7 @@ export const CONFIG = {
   inRound: { errorsForHint: 3, fullsForChallenge: 5 },
   xp: { full: 10, partial: 4, streakBonus: 2, streakFrom: 3, challenge: 5, boss: 50 },
   level: { step: 100 },                      // del nivel n al n + 1: step · n XP
+  installAfterRounds: 2,                     // rondas antes de ofrecer instalar la app
   croquetas: { box3: 1, box5: 2, boss: 10 },
   badges: { streaks: [3, 7, 30], comeback: { days: 7, minRise: 0.2 },
             notFooled: { minErrors: 3, fulls: 5 }, nightOwl: { fromHour: 0, toHour: 5 } },

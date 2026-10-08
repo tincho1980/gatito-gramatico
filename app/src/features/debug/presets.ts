@@ -98,6 +98,7 @@ export const PRESETS: Preset[] = [
       s.worlds[5] = open([1]);
       s.lastWorld = 5;
       s.xp = 1250;
+      s.roundsPlayed = 12;
       s.croquetas = 100;
       s.owned = ['gato-tejado', 'gato-dormilon', 'gato-trepador'];
       const at = '2026-03-02T14:00:00.000Z';
