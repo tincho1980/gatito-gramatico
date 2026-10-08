@@ -4,6 +4,7 @@ import {
   currentHyperdriveId,
   parseAdminUrl,
   parseHyperdriveId,
+  PLACEHOLDER_ID,
   updateWranglerConfig,
   workerConnectionString,
 } from '../scripts/setup-db-lib.ts';
@@ -52,8 +53,13 @@ describe('setup-db', () => {
 
   it('actualiza producción en wrangler.jsonc sin tocar lo local ni los comentarios', () => {
     const id = '0123456789abcdef0123456789abcdef';
-    expect(currentHyperdriveId(CONFIG)).toBeNull(); // todavía el de ejemplo
-    const updated = updateWranglerConfig(CONFIG, {
+    // El wrangler.jsonc del repo, con producción todavía sin configurar (como antes del script).
+    const example = updateWranglerConfig(CONFIG, {
+      hyperdriveId: PLACEHOLDER_ID,
+      supabaseUrl: 'https://REEMPLAZAR.supabase.co',
+    });
+    expect(currentHyperdriveId(example)).toBeNull();
+    const updated = updateWranglerConfig(example, {
       hyperdriveId: id,
       supabaseUrl: `https://${REF}.supabase.co`,
     });
