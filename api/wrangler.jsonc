@@ -44,8 +44,8 @@
   "env": {
     "production": {
       "name": "gatita-gramatica",
-      "vars": { "SUPABASE_URL": "https://REEMPLAZAR-prod.supabase.co" },
-      "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "00000000000000000000000000000000" }],
+      "vars": { "SUPABASE_URL": "https://yepljlazehfasnpxjgbb.supabase.co" },
+      "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "cd00b8c80b224b13b8de23dc20bc66cf" }],
       "ratelimits": [
         {
           "name": "ROUNDS_LIMITER",
