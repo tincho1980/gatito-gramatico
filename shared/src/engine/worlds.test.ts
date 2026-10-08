@@ -3,6 +3,7 @@ import { initialState } from './state.ts';
 import { word } from './testing.ts';
 import type { WorldProgress } from './types.ts';
 import {
+  applyTeacherUnlocks,
   boxShare,
   canPlayStop,
   currentStop,
@@ -119,5 +120,23 @@ describe('§7.4 estrellas', () => {
     });
     expect(boxShare(ws, { a: m(3), b: m(5), c: m(2) })).toBe(0.5);
     expect(boxShare([], {})).toBe(0);
+  });
+});
+
+describe('§7.1 mundos abiertos por el docente', () => {
+  it('abre los mundos pedidos sin tocar nada más', () => {
+    const s = initialState();
+    const opened = applyTeacherUnlocks(s, [5, 8]);
+    expect(opened.worlds[5]?.unlocked).toBe(true);
+    expect(opened.worlds[8]?.unlocked).toBe(true);
+    expect(opened.worlds[2]?.unlocked).toBe(false);
+    expect({ ...opened, worlds: s.worlds }).toEqual(s);
+    expect(s.worlds[5]?.unlocked).toBe(false); // no modifica el original
+  });
+
+  it('sin cambios devuelve el mismo estado; ignora mundos inexistentes', () => {
+    const s = initialState();
+    expect(applyTeacherUnlocks(s, [1])).toBe(s);
+    expect(applyTeacherUnlocks(s, [99]).worlds[99]).toBeUndefined();
   });
 });

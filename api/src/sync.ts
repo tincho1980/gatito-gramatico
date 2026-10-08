@@ -1,11 +1,14 @@
 // Recepción de rondas y compras (arquitectura §6 y §7). El Worker recalcula todo con la
 // misma lógica de `shared/`: lo que diga el cliente sobre XP, cajas o premios no cuenta.
 import {
+  applyRound,
+  applyTeacherUnlocks,
   CONFIG,
   PurchaseSchema,
   purchaseProblem,
   replay,
   RoundSchema,
+  sortRounds,
   type ProfileState,
   type Purchase,
   type Rejected,
@@ -17,9 +20,11 @@ import {
   existingRounds,
   insertPurchase,
   insertRound,
+  lastRoundKey,
   purchasesOf,
   roundsOf,
   saveState,
+  storedState,
   teacherUnlocksOf,
   type ProfileRow,
 } from './db.ts';
@@ -81,12 +86,43 @@ async function lockProfile(tx: TransactionSql, profileId: string) {
   await tx`select id from private.profiles where id = ${profileId} for update`;
 }
 
-async function recompute(tx: TransactionSql, profileId: string, bank: Bank) {
-  const state = replay(await roundsOf(tx, profileId), bank.index, {
-    teacherUnlocks: await teacherUnlocksOf(tx, profileId),
-  });
+type Key = { finishedAt: string; id: string };
+const after = (r: Key, last: Key) =>
+  Date.parse(r.finishedAt) > Date.parse(last.finishedAt) ||
+  (r.finishedAt === last.finishedAt && r.id.localeCompare(last.id) > 0);
+
+/**
+ * Estado del perfil con todas sus rondas. Si las nuevas son todas posteriores a la última
+ * guardada (lo normal: se suben en orden), se aplican sobre el estado guardado; si no, se
+ * recalcula desde cero. Da lo mismo, pero lo primero gasta mucho menos CPU.
+ */
+async function recompute(
+  tx: TransactionSql,
+  profileId: string,
+  bank: Bank,
+  { added, last }: { added: Round[]; last: Key | null },
+) {
+  const teacherUnlocks = await teacherUnlocksOf(tx, profileId);
+  const stored = last ? await storedState(tx, profileId) : null;
+  const incremental = stored !== null && last !== null && added.every((r) => after(r, last));
+  const state = applyTeacherUnlocks(
+    incremental
+      ? sortRounds(added).reduce((s, r) => applyRound(s, r, bank.index, { teacherUnlocks }), stored)
+      : replay(await roundsOf(tx, profileId), bank.index, { teacherUnlocks }),
+    teacherUnlocks,
+  );
   await saveState(tx, profileId, state);
   return state;
+}
+
+/** Estado actual del perfil (el guardado, o recalculado si todavía no hay). */
+export async function currentState(tx: Sql | TransactionSql, profileId: string, bank: Bank) {
+  const teacherUnlocks = await teacherUnlocksOf(tx, profileId);
+  const stored = await storedState(tx, profileId);
+  return applyTeacherUnlocks(
+    stored ?? replay(await roundsOf(tx, profileId), bank.index, { teacherUnlocks }),
+    teacherUnlocks,
+  );
 }
 
 export async function receiveRounds(
@@ -105,21 +141,26 @@ export async function receiveRounds(
 
   return sql.begin(async (tx) => {
     await lockProfile(tx, profile.id);
+    const last = await lastRoundKey(tx, profile.id);
     const existing = await existingRounds(
       tx,
       valid.map((r) => r.id),
     );
     const acceptedIds: string[] = [];
+    const added: Round[] = [];
     for (const round of valid) {
       const owner = existing.get(round.id);
       if (owner && owner !== profile.id) {
         rejected.push({ id: round.id, reason: 'el id ya es de otro perfil' });
         continue;
       }
-      if (!owner) await insertRound(tx, profile.id, round);
+      if (!owner) {
+        await insertRound(tx, profile.id, round);
+        added.push(round);
+      }
       acceptedIds.push(round.id); // si ya estaba, se acepta igual: idempotente
     }
-    const state = await recompute(tx, profile.id, ctx.bank);
+    const state = await recompute(tx, profile.id, ctx.bank, { added, last });
     return { state, acceptedIds, rejected };
   });
 }
@@ -132,9 +173,7 @@ export async function receivePurchases(
 ): Promise<{ acceptedIds: string[]; rejected: Rejected[] }> {
   return sql.begin(async (tx) => {
     await lockProfile(tx, profile.id);
-    const state = replay(await roundsOf(tx, profile.id), ctx.bank.index, {
-      teacherUnlocks: await teacherUnlocksOf(tx, profile.id),
-    });
+    const state = await currentState(tx, profile.id, ctx.bank);
     const owned = await purchasesOf(tx, profile.id);
     const existing = await existingPurchases(tx, raws.map(idOf).filter(Boolean));
     const acceptedIds: string[] = [];

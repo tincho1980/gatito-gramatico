@@ -3,13 +3,19 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
+const API_URL = process.env.GATITA_API_URL ?? 'http://127.0.0.1:8787';
+
 export default defineConfig({
+  // Las variables VITE_* (URL y clave publicable de Supabase) salen del .env.local de la raíz.
+  envDir: '..',
   server: {
     port: 3000,
     host: '0.0.0.0',
     // En desarrollo la API es `wrangler dev` (npm run dev -w api).
-    proxy: { '/api': 'http://127.0.0.1:8787' },
+    proxy: { '/api': API_URL },
   },
+  // `vite preview` (e2e): la misma API local, en el puerto que diga GATITA_API_URL.
+  preview: { proxy: { '/api': API_URL } },
   plugins: [
     react(),
     tailwindcss(),

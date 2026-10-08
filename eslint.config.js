@@ -6,7 +6,15 @@ import prettier from 'eslint-config-prettier';
 import globals from 'globals';
 
 export default tseslint.config(
-  { ignores: ['**/dist/**', '**/node_modules/**', 'words/bank/**', 'app/public/words/**'] },
+  {
+    ignores: [
+      '**/dist/**',
+      '**/dist-e2e/**',
+      '**/node_modules/**',
+      'words/bank/**',
+      'app/public/words/**',
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

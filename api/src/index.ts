@@ -1,8 +1,9 @@
 // Cloudflare Worker: `/api/*` va a Hono; el resto es la app estática (assets de wrangler,
 // con `run_worker_first` solo para `/api/*`). El cron diario evita que el plan gratis de
-// Supabase pause el proyecto (arquitectura §6).
+// Supabase pause el proyecto (arquitectura §6) y borra los intentos de ingreso viejos.
 import postgres from 'postgres';
 import { createApp } from './app.ts';
+import { pruneJoinAttempts } from './db.ts';
 import { supabaseVerifier, type VerifyToken } from './auth.ts';
 import type { Env } from './env.ts';
 import { BANK } from './words.ts';
@@ -27,6 +28,12 @@ const app = createApp({
     return verifier.verify;
   },
   limiter: (env) => env.ROUNDS_LIMITER,
+  joinLimiter: (env) => env.JOIN_LIMITER,
+  appSecret: (env) => {
+    if (!env.APP_SECRET)
+      throw new Error('Falta el secreto APP_SECRET (npm run setup:secret -w api)');
+    return env.APP_SECRET;
+  },
 });
 
 export default {
@@ -39,6 +46,7 @@ export default {
     const sql = connect(env);
     try {
       await sql`select 1`;
+      await pruneJoinAttempts(sql);
     } finally {
       await sql.end();
     }

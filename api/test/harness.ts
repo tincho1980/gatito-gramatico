@@ -23,6 +23,16 @@ export interface Harness {
   call: (sub: string | null, method: string, path: string, body?: unknown) => Promise<Response>;
   setNow: (iso: string) => void;
   setLimiter: (l: RateLimiter | undefined) => void;
+  /** Próximos códigos de aula que se van a generar. */
+  queueCodes: (...codes: string[]) => void;
+  /** Llama a la API con un token cualquiera (por ejemplo, el de un chico de aula). */
+  callWith: (
+    token: string | null,
+    method: string,
+    path: string,
+    body?: unknown,
+    headers?: Record<string, string>,
+  ) => Promise<Response>;
   close: () => Promise<void>;
 }
 
@@ -63,12 +73,15 @@ export async function startHarness(): Promise<Harness> {
 
   let now = new Date('2026-04-01T12:00:00.000Z');
   let limiter: RateLimiter | undefined;
+  const codes: string[] = [];
   const deps: Deps = {
     bank: BANK,
     now: () => now,
     openDb: () => ({ sql, close: async () => {} }),
     verifier: () => supabaseVerifier(SUPABASE_URL, jwks),
     limiter: () => limiter,
+    appSecret: () => 'secreto-de-test',
+    randomCode: () => codes.shift() ?? 'ZZZZZZ',
   };
   const app = createApp(deps);
   const env = { SUPABASE_URL } as Env;
@@ -92,6 +105,24 @@ export async function startHarness(): Promise<Harness> {
     },
     setLimiter: (l) => {
       limiter = l;
+    },
+    queueCodes: (...next) => {
+      codes.push(...next);
+    },
+    async callWith(token, method, path, body, headers = {}) {
+      return app.request(
+        `/api${path}`,
+        {
+          method,
+          headers: {
+            'Content-Type': 'application/json',
+            ...(token ? { Authorization: `Bearer ${token}` } : {}),
+            ...headers,
+          },
+          body: body === undefined ? undefined : JSON.stringify(body),
+        },
+        env,
+      );
     },
     async close() {
       await sql.end();

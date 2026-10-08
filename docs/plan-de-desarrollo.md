@@ -231,13 +231,13 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] Login adulto con Supabase Auth (Google y magic link). Elección de rol: familia o docente.
-- [ ] Familia: crear perfiles de chicos y vincular un perfil invitado existente (sube su historial).
-- [ ] Docente: crear aula, ver y copiar el código de 6 letras.
-- [ ] Chico: "Entrar a mi aula" con código + alias + PIN de 4 dígitos; recibe token de perfil. Recuperar el perfil en otro dispositivo con el mismo alias + PIN.
-- [ ] Tablero docente: tabla de chicos × reglas con EMA (color + texto), mundo actual, última actividad; vista por chico.
-- [ ] Abrir un mundo para todo el aula.
-- [ ] Desafío semanal del aula (el curso suma como equipo) — opcional para el MVP.
+- [x] Login adulto con Supabase Auth (Google y magic link). Elección de rol: familia o docente. (Configurar Google y las URLs en el panel de Supabase: [puesta-en-marcha.md](puesta-en-marcha.md) §5.)
+- [x] Familia: crear perfiles de chicos y vincular un perfil invitado existente (sube su historial). También traer a este dispositivo un perfil de la cuenta.
+- [x] Docente: crear aula, ver y copiar el código de 6 letras.
+- [x] Chico: "Entrar a mi aula" con código + alias + PIN de 4 dígitos; recibe token de perfil. Recuperar el perfil en otro dispositivo con el mismo alias + PIN.
+- [x] Tablero docente: tabla de chicos × reglas con EMA (color + texto), mundo actual, última actividad; vista por chico. Además, promedio del curso por regla y la regla para repasar.
+- [x] Abrir un mundo para todo el aula.
+- [ ] Desafío semanal del aula (el curso suma como equipo) — opcional para el MVP; queda para después del piloto.
 
 Criterios de aceptación:
 
