@@ -44,9 +44,24 @@
   }
 }
 
+/* Margen de abajo que respeta la barra de inicio del iPhone (viewport-fit=cover). */
+@utility pb-safe {
+  padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
+}
+
 @layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
   body {
     background-color: #fff1f2;
+    /* Sin el doble toque para hacer zoom ni el rebote al tirar de la pantalla. */
+    touch-action: manipulation;
+    overscroll-behavior-y: none;
+    /* Con viewport-fit=cover: que nada quede debajo de la muesca en horizontal. */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
   }
   h1,
   h2,

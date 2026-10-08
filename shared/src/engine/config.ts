@@ -32,6 +32,8 @@ export const CONFIG = {
   xp: { full: 10, partial: 4, streakBonus: 2, streakFrom: 3, challenge: 5, boss: 50 },
   /** §3 Nivel: pasar del nivel n al n + 1 cuesta `step * n` XP. */
   level: { step: 100 },
+  /** Rondas terminadas antes de ofrecer instalar la app (plan, etapa 6). */
+  installAfterRounds: 2,
   croquetas: { box3: 1, box5: 2, boss: 10 },
   badges: {
     streaks: [3, 7, 30],

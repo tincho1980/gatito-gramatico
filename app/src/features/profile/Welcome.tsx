@@ -21,7 +21,10 @@ export function Welcome() {
   };
 
   return (
-    <form onSubmit={submit} className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-4 py-6">
+    <form
+      onSubmit={submit}
+      className="mx-auto flex min-h-dvh max-w-md flex-col gap-5 px-4 pt-6 pb-safe"
+    >
       <header className="text-center">
         <Gatita avatar={avatar} className="mx-auto h-28 w-28" />
         <h1 className="mt-2 font-heading text-3xl font-bold text-pink-600">La Gatita Gramática</h1>

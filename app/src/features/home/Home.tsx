@@ -19,6 +19,7 @@ import { DebugPanel } from '../debug/DebugPanel.tsx';
 import { isDebug } from '../debug/flag.ts';
 import { useActiveProfile, useProfileState, useWallet } from '../profile/hooks.ts';
 import { Welcome } from '../profile/Welcome.tsx';
+import { InstallCard } from '../pwa/InstallCard.tsx';
 import { actionPath } from '../round/paths.ts';
 
 export function Home() {
@@ -139,6 +140,8 @@ export function Home() {
           <p className="text-gray-600">¡Completaste este mundo! Elegí el próximo en el camino.</p>
         )}
       </section>
+
+      {state && <InstallCard roundsPlayed={state.roundsPlayed} />}
 
       {isDebug() && <DebugPanel profileId={profile.id} />}
 

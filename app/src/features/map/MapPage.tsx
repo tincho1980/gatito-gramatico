@@ -23,9 +23,9 @@ export function MapPage() {
   const node = (id: number) => <WorldNode key={id} id={id} state={state} profile={profile} />;
 
   return (
-    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-3 px-4 py-6">
+    <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-3 px-4 pt-6 pb-safe">
       <header className="flex items-center justify-between">
-        <Link to="/" className="font-bold text-pink-600">
+        <Link to="/" className="flex min-h-12 items-center pr-3 font-bold text-pink-600">
           ← Inicio
         </Link>
         <h1 className="font-heading text-2xl font-bold text-gray-800">El camino</h1>

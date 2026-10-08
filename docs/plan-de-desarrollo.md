@@ -182,11 +182,11 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] `vite-plugin-pwa`: manifest (nombre, `short_name`, colores, `display: standalone`, orientación vertical), íconos 192/512 y maskable.
-- [ ] Precache del shell, fuentes y `words/*.json`.
-- [ ] Botón "Instalar" propio que aparece después de la segunda ronda (`beforeinstallprompt`); pantalla de ayuda para iOS ("Compartir → Agregar a inicio").
-- [ ] Aviso "Hay una versión nueva" cuando se actualiza el service worker.
-- [ ] Revisión mobile completa: zona del pulgar, tamaños táctiles, `100dvh`, áreas seguras (`env(safe-area-inset-*)`).
+- [x] `vite-plugin-pwa`: manifest (nombre, `short_name`, colores, `display: standalone`, orientación vertical), íconos 192/512 y maskable.
+- [x] Precache del shell, fuentes y `words/*.json`.
+- [x] Botón "Instalar" propio que aparece después de la segunda ronda (`beforeinstallprompt`); pantalla de ayuda para iOS ("Compartir → Agregar a inicio").
+- [x] Aviso "Hay una versión nueva" cuando se actualiza el service worker.
+- [x] Revisión mobile completa: zona del pulgar, tamaños táctiles, `100dvh`, áreas seguras (`env(safe-area-inset-*)`).
 
 Criterios de aceptación:
 

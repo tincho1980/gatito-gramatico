@@ -1,6 +1,10 @@
-// Esquemas Zod: contratos del banco de palabras (y, más adelante, de la API).
-import { z } from 'zod';
+// Esquemas Zod: contratos del banco de palabras (y, más adelante, de la API). Se usa
+// `zod/mini` (API funcional, mismo motor) para que pese poco en el bundle de la app.
+import { z } from 'zod/mini';
 import { WORLD_IDS } from './data/worlds.ts';
+
+const text = () => z.string().check(z.minLength(1));
+const count = () => z.int().check(z.nonnegative());
 
 export const WordTypeSchema = z.enum([
   'monosilaba',
@@ -27,57 +31,54 @@ export const RuleSchema = z.enum([
 export const FeatureSchema = z.enum(['diptongo', 'triptongo', 'hiato']);
 
 export const WorldIdSchema = z
-  .number()
   .int()
-  .refine((n) => WORLD_IDS.includes(n), 'mundo inexistente');
+  .check(z.refine((n) => WORLD_IDS.includes(n), 'mundo inexistente'));
 
 export const TierSchema = z.union([z.literal(1), z.literal(2), z.literal(3)]);
 
 export const WordEntrySchema = z
   .strictObject({
-    id: z.string().min(1),
-    word: z.string().min(1),
-    syllables: z.array(z.string().min(1)).min(1),
-    stressIndex: z.number().int().nonnegative(),
+    id: text(),
+    word: text(),
+    syllables: z.array(text()).check(z.minLength(1)),
+    stressIndex: count(),
     type: WordTypeSchema,
     hasTilde: z.boolean(),
     rule: RuleSchema,
     world: WorldIdSchema,
     tier: TierSchema,
-    distractor: z.string().min(1),
-    sentence: z.string().min(1).nullable(),
-    tags: z.array(z.string().min(1)),
+    distractor: text(),
+    sentence: z.nullable(text()),
+    tags: z.array(text()),
     features: z.array(FeatureSchema),
-    related: z.string().min(1).nullable(),
-    freq: z.number().nullable(),
+    related: z.nullable(text()),
+    freq: z.nullable(z.number()),
   })
-  .refine((e) => e.stressIndex < e.syllables.length, 'stressIndex fuera de las sílabas')
-  .refine((e) => e.syllables.join('') === e.word, 'las sílabas no forman la palabra');
+  .check(
+    z.refine((e) => e.stressIndex < e.syllables.length, 'stressIndex fuera de las sílabas'),
+    z.refine((e) => e.syllables.join('') === e.word, 'las sílabas no forman la palabra'),
+  );
 
 export const WorldFileSchema = z
   .strictObject({
     world: WorldIdSchema,
-    name: z.string().min(1),
-    topic: z.string().min(1),
+    name: text(),
+    topic: text(),
     words: z.array(WordEntrySchema),
   })
-  .refine((f) => f.words.every((e) => e.world === f.world), 'hay palabras de otro mundo');
+  .check(z.refine((f) => f.words.every((e) => e.world === f.world), 'hay palabras de otro mundo'));
 
 export const IndexSchema = z.strictObject({
   /** Hash del contenido de los mundos: cada ronda guarda con qué versión se jugó. */
-  version: z.string().min(1),
+  version: text(),
   worlds: z.array(
     z.strictObject({
       world: WorldIdSchema,
-      name: z.string().min(1),
-      topic: z.string().min(1),
-      file: z.string().regex(/^world-\d{2}\.json$/),
-      count: z.number().int().nonnegative(),
-      byTier: z.tuple([
-        z.number().int().nonnegative(),
-        z.number().int().nonnegative(),
-        z.number().int().nonnegative(),
-      ]),
+      name: text(),
+      topic: text(),
+      file: z.string().check(z.regex(/^world-\d{2}\.json$/)),
+      count: count(),
+      byTier: z.tuple([count(), count(), count()]),
     }),
   ),
 });
@@ -91,20 +92,20 @@ export type WorldFile = z.infer<typeof WorldFileSchema>;
 export type WordsIndex = z.infer<typeof IndexSchema>;
 
 export const CollectionItemSchema = z.strictObject({
-  id: z.string().min(1),
+  id: text(),
   kind: z.enum(['accesorio', 'fondo', 'gato']),
-  name: z.string().min(1),
-  price: z.number().int().nonnegative(),
+  name: text(),
+  price: count(),
   /** Se gana al vencer al jefe de ese mundo (no se compra). */
-  unlockedBy: z.strictObject({ boss: WorldIdSchema }).optional(),
+  unlockedBy: z.optional(z.strictObject({ boss: WorldIdSchema })),
 });
 
 export const BadgeSchema = z.strictObject({
-  id: z.string().min(1),
-  name: z.string().min(1),
-  description: z.string().min(1),
+  id: text(),
+  name: text(),
+  description: text(),
   /** Se muestra como "?" hasta ganarla. */
-  secret: z.boolean().optional(),
+  secret: z.optional(z.boolean()),
 });
 
 export type CollectionItem = z.infer<typeof CollectionItemSchema>;
