@@ -28,3 +28,22 @@ export function roundXp(
   }
   return total + (bossWon ? xp.boss : 0);
 }
+
+export interface Level {
+  level: number;
+  /** XP juntado dentro del nivel actual. */
+  into: number;
+  /** XP que hace falta para pasar al siguiente. */
+  needed: number;
+}
+
+/** §3 Nivel según el XP total: del nivel n al n + 1 hacen falta `step * n` XP. */
+export function levelFor(xp: number, config: Config = CONFIG): Level {
+  let level = 1;
+  let rest = Math.max(0, xp);
+  while (rest >= config.level.step * level) {
+    rest -= config.level.step * level;
+    level += 1;
+  }
+  return { level, into: rest, needed: config.level.step * level };
+}

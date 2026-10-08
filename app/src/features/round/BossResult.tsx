@@ -12,6 +12,7 @@ interface BossResultProps {
   summary: RoundSummary;
   stars: number;
   avatar: Avatar;
+  accessory?: string;
   sound: boolean;
   onMap: () => void;
   onPractice: () => void;
@@ -23,6 +24,7 @@ export function BossResult({
   summary,
   stars,
   avatar,
+  accessory,
   sound,
   onMap,
   onPractice,
@@ -35,7 +37,7 @@ export function BossResult({
   if (!won) {
     return (
       <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 px-4 py-6 text-center">
-        <Gatita avatar={avatar} mood="error" className="h-32 w-32" />
+        <Gatita avatar={avatar} accessory={accessory} mood="error" className="h-32 w-32" />
         <h1 className="font-heading text-3xl font-bold text-gray-800">¡Casi!</h1>
         <p className="text-lg text-gray-700">
           Hiciste {summary.fulls} de {summary.total}. Para ganarle al jefe hacen falta{' '}
@@ -60,7 +62,12 @@ export function BossResult({
   return (
     <main className="relative mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 overflow-hidden px-4 py-6 text-center">
       <Confetti />
-      <Gatita avatar={avatar} mood="success" className="h-36 w-36 animate-bounce" />
+      <Gatita
+        avatar={avatar}
+        accessory={accessory}
+        mood="success"
+        className="h-36 w-36 animate-bounce"
+      />
       <h1 className="font-heading text-4xl font-bold text-pink-600">¡Le ganaste al jefe!</h1>
       <Stars count={stars} className="animate-fade-in-up text-5xl" />
       <p className="text-lg font-semibold text-gray-700">

@@ -1,7 +1,7 @@
-// IndexedDB con Dexie (arquitectura §4). `rounds` es el registro fuente; `profileState` es el
-// estado derivado (se puede reconstruir con `replay`).
+// IndexedDB con Dexie (arquitectura §4). `rounds` y `purchases` son el registro fuente;
+// `profileState` es el estado derivado de las rondas (se puede reconstruir con `replay`).
 import Dexie, { type EntityTable } from 'dexie';
-import type { Avatar, ProfileState, Round } from '@gatita/shared';
+import type { Avatar, ProfileState, Purchase, Round } from '@gatita/shared';
 
 export interface Profile {
   id: string;
@@ -12,6 +12,19 @@ export interface Profile {
   createdAt: string;
   /** Sonidos y vibración. */
   sound: boolean;
+  /** Accesorio y fondo puestos (ids de la colección). */
+  look?: Look;
+}
+
+export interface Look {
+  accesorio?: string;
+  fondo?: string;
+}
+
+/** Compra en la tienda (§8.3): registro fuente, como las rondas. */
+export interface StoredPurchase extends Purchase {
+  profileId: string;
+  synced: boolean;
 }
 
 export interface StoredRound extends Round {
@@ -34,6 +47,7 @@ export class GatitaDB extends Dexie {
   profiles!: EntityTable<Profile, 'id'>;
   rounds!: EntityTable<StoredRound, 'id'>;
   profileState!: EntityTable<StoredState, 'profileId'>;
+  purchases!: EntityTable<StoredPurchase, 'id'>;
   meta!: EntityTable<Meta, 'key'>;
 
   constructor(name = 'gatita') {
@@ -44,6 +58,7 @@ export class GatitaDB extends Dexie {
       profileState: 'profileId',
       meta: 'key',
     });
+    this.version(2).stores({ purchases: 'id, profileId, synced' });
   }
 }
 

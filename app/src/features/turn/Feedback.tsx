@@ -19,11 +19,12 @@ interface FeedbackProps {
   word: WordEntry;
   turn: TurnResult;
   avatar: Avatar;
+  accessory?: string;
   sound: boolean;
   onNext: () => void;
 }
 
-export function Feedback({ word, turn, avatar, sound, onNext }: FeedbackProps) {
+export function Feedback({ word, turn, avatar, accessory, sound, onNext }: FeedbackProps) {
   const message = useMemo(() => pick(turn.full ? GATITA.success : GATITA.error), [turn]);
   const commonError = commonErrorText(word, turn.full);
 
@@ -37,6 +38,7 @@ export function Feedback({ word, turn, avatar, sound, onNext }: FeedbackProps) {
         <Gatita
           mood={turn.full ? 'success' : 'error'}
           avatar={avatar}
+          accessory={accessory}
           className="h-24 w-24 shrink-0"
         />
         <p className="font-bold text-gray-600" role="status">

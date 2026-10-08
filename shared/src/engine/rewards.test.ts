@@ -6,6 +6,7 @@ import {
   croquetasForWord,
   currentStreak,
   initialStreak,
+  napAvailable,
   updateStreak,
 } from './rewards.ts';
 
@@ -100,5 +101,14 @@ describe('§8.2 croquetas', () => {
     expect(bossRewards(1)).toEqual([]);
     expect(bossRewards(2)).toEqual(['gato-tejado']);
     expect(bossRewards(10)).toEqual(['corona-gata-sabia']);
+  });
+});
+
+describe('§8.1 siesta disponible', () => {
+  it('hay una siesta por semana, de lunes a domingo', () => {
+    expect(napAvailable(initialStreak(), '2026-03-04')).toBe(true);
+    const napped = playDays(['2026-03-02', '2026-03-04']);
+    expect(napAvailable(napped, '2026-03-08')).toBe(false); // domingo de la misma semana
+    expect(napAvailable(napped, '2026-03-09')).toBe(true); // lunes siguiente
   });
 });

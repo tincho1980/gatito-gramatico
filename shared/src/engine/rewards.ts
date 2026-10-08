@@ -32,6 +32,10 @@ export function currentStreak(streak: Streak, today: string): number {
   return 0;
 }
 
+/** §8.1 La siesta de esta semana todavía no se usó. */
+export const napAvailable = (streak: Streak, today: string): boolean =>
+  streak.napWeek !== weekOf(today);
+
 /** §8.2 Croquetas por llegar por primera vez a caja 3 o 5. */
 export function croquetasForWord(
   before: WordMastery | undefined,

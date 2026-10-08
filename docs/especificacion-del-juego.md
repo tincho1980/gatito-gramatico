@@ -70,6 +70,8 @@ Después del último paso, siempre:
 
 La lección no da XP (sus turnos no afectan nada, ver 4.2).
 
+**Nivel:** sale del XP total y solo sirve para mostrar avance (no abre nada: lo que se aprende lo miden las reglas y los mundos). Pasar del nivel *n* al *n* + 1 cuesta `100 · n` XP (**ajustable**): nivel 2 con 100 XP, nivel 3 con 300, nivel 10 con 4500. Una ronda buena da unos 100 XP, así que se sube seguido al principio y más despacio después.
+
 ## 4. La ronda
 
 ### 4.1 Composición (10 palabras) — ajustable
@@ -218,6 +220,7 @@ Las estrellas solo suben, nunca bajan.
 
 - Un día cuenta si se terminó al menos una ronda (no lección), en la zona horaria del dispositivo. Cada ronda guarda su offset (`tzOffsetMin`) para que el cálculo dé lo mismo en el servidor.
 - Una "siesta de gato" por semana (lunes a domingo): si falta un día, se consume la siesta de la semana de ese día y la racha sigue. Si ya se usó, la racha vuelve a empezar. Faltar dos días seguidos corta la racha.
+- En el inicio se muestra la racha de hoy (si ya no se puede salvar jugando hoy, 0) y si la siesta de esta semana está libre o usada.
 
 ### 8.2 Croquetas (moneda)
 
@@ -229,9 +232,18 @@ Las estrellas solo suben, nunca bajan.
 
 Las croquetas solo vienen de dominio, nunca de jugar mucho.
 
+- `state.croquetas` es lo **ganado**. El **saldo** que ve el chico es lo ganado menos lo gastado en la tienda (8.3).
+- Con 100 rondas acertando la mitad, un chico no gana croquetas de jefe ni estrellas (test de simulación).
+
 ### 8.3 Colección
 
 Catálogo en `shared/src/data/collection.json`: `{ id, kind: 'accesorio' | 'fondo' | 'gato', name, price, unlockedBy? }`. Los gatos amigos (uno por mundo) no se compran: se ganan con el jefe. Accesorios y fondos se compran con croquetas.
+
+- **Premios de jefe:** un gato amigo por los jefes de los mundos 2 a 9 y la corona de la Gata Sabia (un accesorio) por el del 10. El jefe del mundo 1 no da ítem: ya abre tres mundos.
+- **Tienda:** se vende todo accesorio o fondo sin `unlockedBy`, al precio del catálogo. Se puede comprar si el saldo (8.2) alcanza y todavía no es del perfil. Lo comprado no se pierde.
+- **Las compras son un registro propio**, como las rondas: `{ id, itemId, at }`. No cambian el estado que sale de las rondas; el saldo y los ítems del perfil se calculan con `wallet(state, compras)` en `shared/src/engine/shop.ts`. Como lo ganado nunca baja, una compra válida sigue siéndolo aunque lleguen rondas después. Una compra sin saldo, repetida o de algo que no se vende no cuenta.
+- **Puesto:** el chico elige un accesorio y un fondo de los suyos (o ninguno). Es una preferencia del perfil, no estado del juego. La vista previa de la tienda muestra la gatita con lo elegido antes de comprar.
+- Al ganar una insignia, un ítem o un nivel aparece un aviso arriba de la pantalla (dentro de la app, no notificación push).
 
 ### 8.4 Insignias
 
@@ -274,6 +286,7 @@ export const CONFIG = {
   threeStarsBoxShare: 0.8,
   inRound: { errorsForHint: 3, fullsForChallenge: 5 },
   xp: { full: 10, partial: 4, streakBonus: 2, streakFrom: 3, challenge: 5, boss: 50 },
+  level: { step: 100 },                      // del nivel n al n + 1: step · n XP
   croquetas: { box3: 1, box5: 2, boss: 10 },
   badges: { streaks: [3, 7, 30], comeback: { days: 7, minRise: 0.2 },
             notFooled: { minErrors: 3, fulls: 5 }, nightOwl: { fromHour: 0, toHour: 5 } },

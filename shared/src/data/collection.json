@@ -4,62 +4,158 @@
     "kind": "gato",
     "name": "Gato de tejado",
     "price": 0,
-    "unlockedBy": { "boss": 2 }
+    "unlockedBy": {
+      "boss": 2
+    }
   },
   {
     "id": "gato-dormilon",
     "kind": "gato",
     "name": "Gato dormilón",
     "price": 0,
-    "unlockedBy": { "boss": 3 }
+    "unlockedBy": {
+      "boss": 3
+    }
   },
   {
     "id": "gato-trepador",
     "kind": "gato",
     "name": "Gato trepador",
     "price": 0,
-    "unlockedBy": { "boss": 4 }
+    "unlockedBy": {
+      "boss": 4
+    }
   },
   {
     "id": "gato-mercader",
     "kind": "gato",
     "name": "Gato mercader",
     "price": 0,
-    "unlockedBy": { "boss": 5 }
+    "unlockedBy": {
+      "boss": 5
+    }
   },
   {
     "id": "gato-nadador",
     "kind": "gato",
     "name": "Gato nadador",
     "price": 0,
-    "unlockedBy": { "boss": 6 }
+    "unlockedBy": {
+      "boss": 6
+    }
   },
   {
     "id": "gato-equilibrista",
     "kind": "gato",
     "name": "Gato equilibrista",
     "price": 0,
-    "unlockedBy": { "boss": 7 }
+    "unlockedBy": {
+      "boss": 7
+    }
   },
   {
     "id": "gatos-gemelos",
     "kind": "gato",
     "name": "Gatos gemelos",
     "price": 0,
-    "unlockedBy": { "boss": 8 }
+    "unlockedBy": {
+      "boss": 8
+    }
   },
   {
     "id": "gato-curioso",
     "kind": "gato",
     "name": "Gato curioso",
     "price": 0,
-    "unlockedBy": { "boss": 9 }
+    "unlockedBy": {
+      "boss": 9
+    }
   },
   {
     "id": "corona-gata-sabia",
     "kind": "accesorio",
     "name": "Corona de la Gata Sabia",
     "price": 0,
-    "unlockedBy": { "boss": 10 }
+    "unlockedBy": {
+      "boss": 10
+    }
+  },
+  {
+    "id": "mono-rosa",
+    "kind": "accesorio",
+    "name": "Moño rosa",
+    "price": 20
+  },
+  {
+    "id": "flor",
+    "kind": "accesorio",
+    "name": "Flor en la oreja",
+    "price": 25
+  },
+  {
+    "id": "collar-cascabel",
+    "kind": "accesorio",
+    "name": "Collar con cascabel",
+    "price": 30
+  },
+  {
+    "id": "pajarita",
+    "kind": "accesorio",
+    "name": "Pajarita",
+    "price": 35
+  },
+  {
+    "id": "lentes",
+    "kind": "accesorio",
+    "name": "Lentes de lectura",
+    "price": 40
+  },
+  {
+    "id": "bufanda",
+    "kind": "accesorio",
+    "name": "Bufanda",
+    "price": 50
+  },
+  {
+    "id": "galera",
+    "kind": "accesorio",
+    "name": "Galera",
+    "price": 80
+  },
+  {
+    "id": "gorro-mago",
+    "kind": "accesorio",
+    "name": "Gorro de mago",
+    "price": 120
+  },
+  {
+    "id": "fondo-jardin",
+    "kind": "fondo",
+    "name": "Jardín",
+    "price": 40
+  },
+  {
+    "id": "fondo-playa",
+    "kind": "fondo",
+    "name": "Playa",
+    "price": 60
+  },
+  {
+    "id": "fondo-noche",
+    "kind": "fondo",
+    "name": "Noche estrellada",
+    "price": 80
+  },
+  {
+    "id": "fondo-biblioteca",
+    "kind": "fondo",
+    "name": "Biblioteca",
+    "price": 100
+  },
+  {
+    "id": "fondo-arcoiris",
+    "kind": "fondo",
+    "name": "Arcoíris",
+    "price": 150
   }
 ]

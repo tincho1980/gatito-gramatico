@@ -70,7 +70,12 @@ function WorldNode({ id, state, profile }: { id: number; state: ProfileState; pr
     >
       {here && (
         <span className="absolute top-1 right-1">
-          <Gatita avatar={profile.avatar} className="h-8 w-8" label="Estás acá" />
+          <Gatita
+            avatar={profile.avatar}
+            accessory={profile.look?.accesorio}
+            className="h-8 w-8"
+            label="Estás acá"
+          />
         </span>
       )}
       <span

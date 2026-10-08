@@ -3,14 +3,17 @@ import {
   applyRound,
   initialState,
   normalizeAlias,
+  purchaseProblem,
   replay,
   sortRounds,
   type Avatar,
   type ProfileState,
+  type Purchase,
+  type PurchaseProblem,
   type Round,
   type WordIndex,
 } from '@gatita/shared';
-import { db as defaultDb, type GatitaDB, type Profile } from './db.ts';
+import { db as defaultDb, type GatitaDB, type Look, type Profile } from './db.ts';
 
 export const profilesRepo = {
   async create(
@@ -40,6 +43,39 @@ export const profilesRepo = {
 
   async setSound(id: string, sound: boolean, db: GatitaDB = defaultDb): Promise<void> {
     await db.profiles.update(id, { sound });
+  },
+
+  async setLook(id: string, look: Look, db: GatitaDB = defaultDb): Promise<void> {
+    await db.profiles.update(id, { look });
+  },
+};
+
+export const purchasesRepo = {
+  async byProfile(profileId: string, db: GatitaDB = defaultDb): Promise<Purchase[]> {
+    return (await db.purchases.where('profileId').equals(profileId).sortBy('at')).map(
+      ({ id, itemId, at }) => ({ id, itemId, at }),
+    );
+  },
+
+  /** Compra un ítem si alcanza el saldo (§8.3). Devuelve el problema si no se pudo. */
+  async buy(
+    profileId: string,
+    itemId: string,
+    { db = defaultDb, now = new Date().toISOString() } = {},
+  ): Promise<PurchaseProblem | null> {
+    return db.transaction('rw', db.purchases, db.profileState, async () => {
+      const state = await stateRepo.get(profileId, db);
+      const problem = purchaseProblem(state, await purchasesRepo.byProfile(profileId, db), itemId);
+      if (problem) return problem;
+      await db.purchases.add({
+        id: crypto.randomUUID(),
+        profileId,
+        itemId,
+        at: now,
+        synced: false,
+      });
+      return null;
+    });
   },
 };
 

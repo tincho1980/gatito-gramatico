@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { Avatar } from '@gatita/shared';
+import { ACCESSORY_SHAPES } from '../content/accessories.tsx';
 
 export type GatitaMood = 'idle' | 'success' | 'error';
 
@@ -25,8 +26,10 @@ interface GatitaProps {
   mood?: GatitaMood;
   avatar?: Avatar;
   className?: string;
-  /** Texto para lectores de pantalla. */
+  /** Texto para lectores de pantalla; vacío si es decorativa. */
   label?: string;
+  /** Accesorio puesto (id de la colección, §8.3). */
+  accessory?: string;
 }
 
 export function Gatita({
@@ -34,6 +37,7 @@ export function Gatita({
   avatar = 'negro',
   className = 'w-32 h-32',
   label,
+  accessory,
 }: GatitaProps) {
   const [blink, setBlink] = useState(false);
   const p = PALETTES[avatar];
@@ -49,8 +53,13 @@ export function Gatita({
   }, [mood]);
 
   return (
-    <div className={`relative ${className}`} role="img" aria-label={label ?? 'La gatita'}>
-      <svg viewBox="0 0 100 100" className="h-full w-full drop-shadow-xl">
+    <div
+      className={`relative ${className}`}
+      {...(label === ''
+        ? { 'aria-hidden': true }
+        : { role: 'img', 'aria-label': label ?? 'La gatita' })}
+    >
+      <svg viewBox="0 0 100 100" className="h-full w-full overflow-visible drop-shadow-xl">
         <path
           d="M80 80 Q95 60 85 50 Q75 40 85 30"
           fill="none"
@@ -152,6 +161,7 @@ export function Gatita({
           <line x1="70" y1="52" x2="90" y2="48" />
           <line x1="70" y1="55" x2="90" y2="55" />
         </g>
+        {accessory && ACCESSORY_SHAPES[accessory]}
       </svg>
     </div>
   );

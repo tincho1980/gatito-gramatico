@@ -15,3 +15,4 @@ export * from './types.ts';
 export * from './worlds.ts';
 export * from './summary.ts';
 export * from './play.ts';
+export * from './shop.ts';
