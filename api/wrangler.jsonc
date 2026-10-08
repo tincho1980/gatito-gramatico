@@ -39,20 +39,9 @@
     "crons": ["0 12 * * *"],
   },
   "observability": { "enabled": true },
+  // Arriba: desarrollo local (`wrangler dev` contra `supabase start`). Abajo: el único proyecto
+  // de Supabase en la nube, el de producción (`npm run setup:db -w api` completa id y URL).
   "env": {
-    "preview": {
-      "name": "gatita-gramatica-preview",
-      "vars": { "SUPABASE_URL": "https://REEMPLAZAR-dev.supabase.co" },
-      "hyperdrive": [{ "binding": "HYPERDRIVE", "id": "00000000000000000000000000000000" }],
-      "ratelimits": [
-        {
-          "name": "ROUNDS_LIMITER",
-          "namespace_id": "1002",
-          "simple": { "limit": 60, "period": 60 },
-        },
-      ],
-      "triggers": { "crons": ["0 12 * * *"] },
-    },
     "production": {
       "name": "gatita-gramatica",
       "vars": { "SUPABASE_URL": "https://REEMPLAZAR-prod.supabase.co" },

@@ -7,7 +7,7 @@
     "typecheck": "tsc && tsc -p test",
     "test": "vitest run",
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "wrangler deploy --env production",
     "setup:db": "node scripts/setup-db.ts"
   },
   "dependencies": {

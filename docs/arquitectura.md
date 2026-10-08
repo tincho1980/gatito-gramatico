@@ -208,7 +208,7 @@ alter table private.accounts enable row level security;
 revoke all on schema private from anon, authenticated;
 ```
 
-- Rol `gatita_worker`: el único con permisos sobre `private` (más una política de RLS propia en cada tabla). Se crea sin contraseña en la migración; `npm run setup:db -w api -- --env <entorno>` le genera una aleatoria, la aplica y crea o actualiza Hyperdrive con ella: no se muestra ni se guarda en otro lado. La conexión de administrador que usa el script está en `.env.local` (no versionado).
+- Rol `gatita_worker`: el único con permisos sobre `private` (más una política de RLS propia en cada tabla). Se crea sin contraseña en la migración; `npm run setup:db -w api` le genera una aleatoria, la aplica y crea o actualiza Hyperdrive con ella: no se muestra ni se guarda en otro lado. La conexión de administrador que usa el script está en `.env.local` (no versionado).
 - `profile_state.state` guarda el estado derivado completo (cajas, EMA, progreso) para responder rápido. Si cambia la lógica, se recalcula con `replay` desde `rounds` + `turns`.
 - Índices: `rounds(profile_id, finished_at)`, `turns(word_id)`, `profiles(classroom_id)`.
 
@@ -283,10 +283,11 @@ La misma función `applyRound(state, round, words, config)` corre en el cliente 
 | Entorno | App | API | Base |
 | --- | --- | --- | --- |
 | Local | `npm run dev -w app` (Vite) | `npm run dev -w api` (`wrangler dev`) | `supabase start` (Docker) |
-| Preview | Worker `--env preview` (mismo Worker, con la app) | idem | Proyecto Supabase de desarrollo |
-| Producción | Worker `--env production` | idem | Proyecto Supabase de producción |
+| Producción | Worker `--env production` (`npm run deploy -w api`), con la app | idem | El único proyecto de Supabase en la nube |
 
-Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las migraciones reales y llama a la API con tokens firmados en el test. No hace falta Docker. Pasos para crear los proyectos y publicar: [puesta-en-marcha.md](puesta-en-marcha.md).
+No hay un proyecto de Supabase de desarrollo: las pruebas se hacen contra `supabase start` en local, y los cambios de esquema se prueban ahí antes de `db push`.
+
+Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las migraciones reales y llama a la API con tokens firmados en el test. No hace falta Docker. Pasos para probar en local, crear el proyecto y publicar: [puesta-en-marcha.md](puesta-en-marcha.md).
 
 En local, Vite hace proxy de `/api` a `wrangler dev`.
 

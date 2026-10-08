@@ -1,11 +1,7 @@
 // Partes puras del script setup-db (sin red ni archivos), para poder probarlas.
 
-export type DeployEnv = 'preview' | 'production';
-
-export const isDeployEnv = (v: unknown): v is DeployEnv => v === 'preview' || v === 'production';
-
-/** Nombre de la variable de `.env.local` con la conexión de administrador de cada entorno. */
-export const adminUrlVar = (env: DeployEnv) => `SUPABASE_ADMIN_DB_URL_${env.toUpperCase()}`;
+/** Variable de `.env.local` con la conexión de administrador del proyecto de producción. */
+export const ADMIN_URL_VAR = 'SUPABASE_ADMIN_DB_URL';
 
 export interface AdminUrl {
   ref: string;
@@ -52,20 +48,19 @@ export function parseHyperdriveId(output: string): string | null {
 
 export const PLACEHOLDER_ID = '00000000000000000000000000000000';
 
-/** Id de Hyperdrive del entorno en `wrangler.jsonc`, o `null` si todavía es el de ejemplo. */
-export function currentHyperdriveId(config: string, env: DeployEnv): string | null {
-  const section = config.slice(envStart(config, env));
+/** Id de Hyperdrive de producción en `wrangler.jsonc`, o `null` si todavía es el de ejemplo. */
+export function currentHyperdriveId(config: string): string | null {
+  const section = config.slice(productionStart(config));
   const id = section.match(/"id":\s*"([0-9a-f]{32})"/)?.[1] ?? null;
   return id === PLACEHOLDER_ID ? null : id;
 }
 
-/** Escribe el id de Hyperdrive y la URL de Supabase del entorno, sin tocar comentarios. */
+/** Escribe el id de Hyperdrive y la URL de Supabase de producción, sin tocar comentarios. */
 export function updateWranglerConfig(
   config: string,
-  env: DeployEnv,
   { hyperdriveId, supabaseUrl }: { hyperdriveId: string; supabaseUrl: string },
 ): string {
-  const start = envStart(config, env);
+  const start = productionStart(config);
   const section = config
     .slice(start)
     .replace(/("id":\s*")[0-9a-f]{32}(")/, `$1${hyperdriveId}$2`)
@@ -73,8 +68,8 @@ export function updateWranglerConfig(
   return config.slice(0, start) + section;
 }
 
-function envStart(config: string, env: DeployEnv): number {
-  const i = config.indexOf(`"${env}": {`);
-  if (i < 0) throw new Error(`No encontré el entorno "${env}" en wrangler.jsonc.`);
+function productionStart(config: string): number {
+  const i = config.indexOf('"production": {');
+  if (i < 0) throw new Error('No encontré el entorno "production" en wrangler.jsonc.');
   return i;
 }

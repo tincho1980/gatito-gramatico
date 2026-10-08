@@ -1,5 +1,6 @@
-// Conecta el Worker con la base de un entorno (docs/puesta-en-marcha.md):
-//   npm run setup:db -w api -- --env preview
+// Conecta el Worker con la base de producción, el único proyecto de Supabase en la nube
+// (docs/puesta-en-marcha.md). Para probar se usa la base local de `supabase start`.
+//   npm run setup:db -w api
 //
 // 1. Lee la conexión de administrador de `.env.local` (no se versiona).
 // 2. Genera una contraseña aleatoria para `gatita_worker` y se la pone en Supabase.
@@ -14,12 +15,10 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseArgs } from 'node:util';
 import postgres from 'postgres';
 import {
-  adminUrlVar,
+  ADMIN_URL_VAR,
   currentHyperdriveId,
-  isDeployEnv,
   parseAdminUrl,
   parseHyperdriveId,
   updateWranglerConfig,
@@ -36,14 +35,10 @@ function fail(message: string): never {
   process.exit(1);
 }
 
-const { values } = parseArgs({ options: { env: { type: 'string' } } });
-const env = values.env;
-if (!isDeployEnv(env)) fail('Indicá el entorno: --env preview o --env production');
-
 if (!existsSync(ENV_FILE)) fail('Falta .env.local en la raíz del repo (copiá .env.example).');
 process.loadEnvFile(ENV_FILE);
-const rawAdmin = process.env[adminUrlVar(env)];
-if (!rawAdmin) fail(`Falta ${adminUrlVar(env)} en .env.local.`);
+const rawAdmin = process.env[ADMIN_URL_VAR];
+if (!rawAdmin) fail(`Falta ${ADMIN_URL_VAR} en .env.local.`);
 
 let admin;
 try {
@@ -52,7 +47,7 @@ try {
   fail((e as Error).message);
 }
 const supabaseUrl = `https://${admin.ref}.supabase.co`;
-console.log(`→ Proyecto de Supabase ${admin.ref} (${env})`);
+console.log(`→ Proyecto de Supabase ${admin.ref} (producción)`);
 
 // base64url: sin comillas ni caracteres que haya que escapar en SQL o en la URL.
 const password = randomBytes(32).toString('base64url');
@@ -104,17 +99,17 @@ const wrangler = (args: string[]) => {
 };
 
 const config = readFileSync(WRANGLER_CONFIG, 'utf8');
-let hyperdriveId = currentHyperdriveId(config, env);
+let hyperdriveId = currentHyperdriveId(config);
 if (hyperdriveId) {
   wrangler(['hyperdrive', 'update', hyperdriveId, '--connection-string', workerUrl]);
   console.log(`✓ Hyperdrive ${hyperdriveId} actualizado`);
 } else {
-  const out = wrangler(['hyperdrive', 'create', `gatita-${env}`, '--connection-string', workerUrl]);
+  const out = wrangler(['hyperdrive', 'create', 'gatita', '--connection-string', workerUrl]);
   hyperdriveId = parseHyperdriveId(out);
   if (!hyperdriveId) fail('No pude leer el id de Hyperdrive en la salida de wrangler.');
-  console.log(`✓ Hyperdrive gatita-${env} creado: ${hyperdriveId}`);
+  console.log(`✓ Hyperdrive gatita creado: ${hyperdriveId}`);
 }
 
-writeFileSync(WRANGLER_CONFIG, updateWranglerConfig(config, env, { hyperdriveId, supabaseUrl }));
-console.log(`✓ wrangler.jsonc: env.${env} apunta a ${supabaseUrl}`);
-console.log(`\nListo. Publicá con: npm run build && npm run deploy -w api -- --env ${env}`);
+writeFileSync(WRANGLER_CONFIG, updateWranglerConfig(config, { hyperdriveId, supabaseUrl }));
+console.log(`✓ wrangler.jsonc: env.production apunta a ${supabaseUrl}`);
+console.log('\nListo. Publicá con: npm run build && npm run deploy -w api');

@@ -50,18 +50,19 @@ describe('setup-db', () => {
     expect(parseHyperdriveId('sin id')).toBeNull();
   });
 
-  it('actualiza solo el entorno pedido de wrangler.jsonc y conserva los comentarios', () => {
+  it('actualiza producción en wrangler.jsonc sin tocar lo local ni los comentarios', () => {
     const id = '0123456789abcdef0123456789abcdef';
-    expect(currentHyperdriveId(CONFIG, 'preview')).toBeNull(); // todavía el de ejemplo
-    const updated = updateWranglerConfig(CONFIG, 'preview', {
+    expect(currentHyperdriveId(CONFIG)).toBeNull(); // todavía el de ejemplo
+    const updated = updateWranglerConfig(CONFIG, {
       hyperdriveId: id,
       supabaseUrl: `https://${REF}.supabase.co`,
     });
-    expect(currentHyperdriveId(updated, 'preview')).toBe(id);
-    expect(currentHyperdriveId(updated, 'production')).toBeNull();
+    expect(currentHyperdriveId(updated)).toBe(id);
     expect(updated).toContain(`"SUPABASE_URL": "https://${REF}.supabase.co"`);
-    expect(updated).toContain('"SUPABASE_URL": "http://127.0.0.1:54321"'); // local, intacto
-    expect(updated).toContain('"SUPABASE_URL": "https://REEMPLAZAR-prod.supabase.co"');
+    // Lo local queda igual: la base de `supabase start`.
+    expect(updated).toContain('"SUPABASE_URL": "http://127.0.0.1:54321"');
+    expect(updated).toContain('"localConnectionString"');
+    expect(updated.match(/"id": "0{32}"/g)).toHaveLength(1); // el id local de ejemplo
     expect(updated.split('\n').filter((l) => l.trim().startsWith('//'))).toEqual(
       CONFIG.split('\n').filter((l) => l.trim().startsWith('//')),
     );
