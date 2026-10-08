@@ -8,7 +8,9 @@
     "test": "vitest run",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy --env production",
-    "setup:db": "node scripts/setup-db.ts"
+    "setup:db": "node scripts/setup-db.ts",
+    "db:push": "node scripts/db-push.ts",
+    "dev:local": "node scripts/dev-local.ts"
   },
   "dependencies": {
     "@gatita/shared": "*",
@@ -20,6 +22,7 @@
     "@cloudflare/workers-types": "5.20260921.1",
     "@electric-sql/pglite": "~0.5.8",
     "@electric-sql/pglite-socket": "~0.2.11",
+    "@hono/node-server": "~2.1.1",
     "vitest": "^4.1.11",
     "wrangler": "4.136.1"
   }

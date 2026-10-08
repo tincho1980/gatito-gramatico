@@ -205,15 +205,16 @@ Criterios de aceptación:
 Tareas:
 
 - [x] Migraciones del esquema `private` ([arquitectura §5](arquitectura.md#5-modelo-de-datos-remoto-postgres)) y `supabase/config.toml` para `supabase start` en local.
-- [ ] Supabase: crear el proyecto (uno solo, producción; las pruebas van contra `supabase start` en local) y aplicar las migraciones (manual, [puesta-en-marcha.md](puesta-en-marcha.md) §2).
+- [ ] Supabase: crear el proyecto (uno solo, producción; las pruebas van en local) y aplicar las migraciones con `npm run db:push` (manual, [puesta-en-marcha.md](puesta-en-marcha.md) §2).
 - [x] Test de seguridad: con los roles de la clave pública (`anon`, `authenticated`), un `select` sobre cualquier tabla de `private` falla. Contra el proyecto real, con `curl` (puesta-en-marcha §1.4).
 - [x] Worker con Hono: `auth.ts` (JWKS de Supabase), `db.ts` (postgres.js + Hyperdrive), rutas `accounts/me`, `profiles`, `rounds`, `profiles/:id/state`.
 - [x] `POST /api/rounds` con todas las validaciones de arquitectura §6, idempotente, recalculando con `shared/engine`. `POST /api/purchases` validando el saldo con `purchaseProblem`.
 - [x] Cron diario de keepalive.
 - [x] Rate limiting (rondas y compras; el de `classrooms/join` va con las aulas en la etapa 8).
 - [x] Cliente: cola de sincronización (arquitectura §7) de rondas y compras, reintentos con backoff, indicador discreto de "sincronizado".
-- [x] Proxy de `/api` en Vite para desarrollo; `api/wrangler.jsonc` con la configuración local y la de producción; `npm run setup:db -w api` conecta el Worker con la base.
-- [ ] Deploy: un solo Worker con la app como assets y la API en `/api` (mismo dominio). Manual, puesta-en-marcha §3.
+- [x] Proxy de `/api` en Vite para desarrollo; `api/wrangler.jsonc` con la configuración local y la de producción; `npm run setup:db -w api` conecta el Worker con la base (Hyperdrive sin caché); `npm run db:push` aplica migraciones; `npm run dev:local` levanta la API sobre PGlite sin Docker.
+- [x] Deploy automático al mergear a `main` (GitHub Actions, environment `production` con solo el token de Cloudflare).
+- [ ] Deploy: un solo Worker con la app como assets y la API en `/api` (mismo dominio). Primera vez manual (puesta-en-marcha §3); después, automático (§4).
 
 Criterios de aceptación:
 

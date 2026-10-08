@@ -17,7 +17,9 @@
     "format": "prettier --write .",
     "test": "npm test --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
-    "check:secrets": "node scripts/check-secrets.mjs app/dist"
+    "check:secrets": "node scripts/check-secrets.mjs app/dist",
+    "db:push": "npm run db:push -w api",
+    "dev:local": "npm run dev:local -w api"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

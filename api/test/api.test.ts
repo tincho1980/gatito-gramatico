@@ -8,6 +8,7 @@ import {
   type RoundsResponse,
 } from '@gatita/shared';
 import { perfectPlayer, simulate, WORDS } from '../../shared/src/engine/testing.ts';
+import { applyMigrations, readMigrations } from '../scripts/migrations.ts';
 import { startHarness, SUPABASE_URL, type Harness } from './harness.ts';
 
 const FAMILY = '11111111-1111-4111-8111-111111111111';
@@ -302,6 +303,12 @@ describe('seguridad de la base (arquitectura §9)', () => {
       )
     ).rows;
     expect(rows.filter((r) => !r.relrowsecurity)).toEqual([]);
+  });
+
+  it('las migraciones quedan registradas y no se aplican dos veces', async () => {
+    expect(await applyMigrations(h.sql)).toEqual([]);
+    const rows = await h.sql`select version, name from supabase_migrations.schema_migrations`;
+    expect(rows.map((r) => r.name)).toEqual(readMigrations().map((m) => m.name));
   });
 
   it('el rol del Worker lee y escribe', async () => {

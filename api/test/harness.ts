@@ -1,7 +1,6 @@
 // Arnés de integración: Postgres embebido (PGlite) con la migración real, servido por socket
 // para que el Worker use el mismo cliente (postgres.js) que en producción, y tokens firmados
 // con una clave del test en lugar de la de Supabase.
-import { readdirSync, readFileSync } from 'node:fs';
 import { PGlite } from '@electric-sql/pglite';
 import { PGLiteSocketServer } from '@electric-sql/pglite-socket';
 import { createLocalJWKSet, exportJWK, generateKeyPair, SignJWT } from 'jose';
@@ -10,9 +9,9 @@ import { createApp, type Deps } from '../src/app.ts';
 import { supabaseVerifier } from '../src/auth.ts';
 import type { Env, RateLimiter } from '../src/env.ts';
 import { BANK } from '../src/words.ts';
+import { applyMigrations } from '../scripts/migrations.ts';
 
 export const SUPABASE_URL = 'https://test.supabase.co';
-const MIGRATIONS = new URL('../../supabase/migrations/', import.meta.url);
 
 export interface Harness {
   db: PGlite;
@@ -31,9 +30,6 @@ export async function startHarness(): Promise<Harness> {
   const db = await PGlite.create();
   // Los roles que Supabase ya trae.
   await db.exec('create role anon nologin; create role authenticated nologin;');
-  for (const f of readdirSync(MIGRATIONS).sort()) {
-    await db.exec(readFileSync(new URL(f, MIGRATIONS), 'utf8'));
-  }
   const server = new PGLiteSocketServer({ db, port: 0, host: '127.0.0.1' });
   await server.start();
   const address = (
@@ -47,6 +43,8 @@ export async function startHarness(): Promise<Harness> {
     max: 1,
     onnotice: () => {},
   });
+  // Las migraciones reales, con el mismo runner que `npm run db:push`.
+  await applyMigrations(sql);
 
   const { publicKey, privateKey } = await generateKeyPair('ES256');
   const jwks = createLocalJWKSet({ keys: [{ ...(await exportJWK(publicKey)), alg: 'ES256' }] });

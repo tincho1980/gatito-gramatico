@@ -40,3 +40,4 @@ playwright-report/
 .dev.vars*
 supabase/.branches
 supabase/.temp
+.local-db/

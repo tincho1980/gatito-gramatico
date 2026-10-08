@@ -5,7 +5,8 @@
 // 1. Lee la conexión de administrador de `.env.local` (no se versiona).
 // 2. Genera una contraseña aleatoria para `gatita_worker` y se la pone en Supabase.
 // 3. Prueba que el rol entra y lee `private`.
-// 4. Crea o actualiza Hyperdrive con esa contraseña y anota su id en `wrangler.jsonc`.
+// 4. Crea o actualiza Hyperdrive (sin caché) con esa contraseña y anota su id en
+//    `wrangler.jsonc`.
 //
 // La contraseña no se imprime ni se guarda: solo la conocen la base y Hyperdrive. Para
 // cambiarla, se vuelve a correr el script.
@@ -98,13 +99,24 @@ const wrangler = (args: string[]) => {
   return r.stdout;
 };
 
+// Sin caché de lecturas: Hyperdrive guarda por defecto 60 s lo leído, y un dispositivo que
+// pide el estado justo después de subir rondas lo vería viejo. El pooling sigue.
+const NO_CACHE = ['--caching-disabled'];
+
 const config = readFileSync(WRANGLER_CONFIG, 'utf8');
 let hyperdriveId = currentHyperdriveId(config);
 if (hyperdriveId) {
-  wrangler(['hyperdrive', 'update', hyperdriveId, '--connection-string', workerUrl]);
+  wrangler(['hyperdrive', 'update', hyperdriveId, '--connection-string', workerUrl, ...NO_CACHE]);
   console.log(`✓ Hyperdrive ${hyperdriveId} actualizado`);
 } else {
-  const out = wrangler(['hyperdrive', 'create', 'gatita', '--connection-string', workerUrl]);
+  const out = wrangler([
+    'hyperdrive',
+    'create',
+    'gatita',
+    '--connection-string',
+    workerUrl,
+    ...NO_CACHE,
+  ]);
   hyperdriveId = parseHyperdriveId(out);
   if (!hyperdriveId) fail('No pude leer el id de Hyperdrive en la salida de wrangler.');
   console.log(`✓ Hyperdrive gatita creado: ${hyperdriveId}`);

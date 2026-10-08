@@ -282,10 +282,10 @@ La misma función `applyRound(state, round, words, config)` corre en el cliente 
 
 | Entorno | App | API | Base |
 | --- | --- | --- | --- |
-| Local | `npm run dev -w app` (Vite) | `npm run dev -w api` (`wrangler dev`) | `supabase start` (Docker) |
-| Producción | Worker `--env production` (`npm run deploy -w api`), con la app | idem | El único proyecto de Supabase en la nube |
+| Local | `npm run dev -w app` (Vite) | `npm run dev:local` (las rutas del Worker sobre Node) | PGlite en `.local-db/`, mismas migraciones; sin Docker |
+| Producción | Worker `--env production`, con la app; lo publica GitHub Actions al mergear a `main` | idem | El único proyecto de Supabase en la nube; migraciones con `npm run db:push` antes de mergear |
 
-No hay un proyecto de Supabase de desarrollo: las pruebas se hacen contra `supabase start` en local, y los cambios de esquema se prueban ahí antes de `db push`.
+No hay un proyecto de Supabase de desarrollo: las pruebas se hacen en local sobre PGlite (o con `supabase start` si hace falta probar Auth). El CI no tiene la conexión a la base: solo el token de Cloudflare para publicar.
 
 Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las migraciones reales y llama a la API con tokens firmados en el test. No hace falta Docker. Pasos para probar en local, crear el proyecto y publicar: [puesta-en-marcha.md](puesta-en-marcha.md).
 
