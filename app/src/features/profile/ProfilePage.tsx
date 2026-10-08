@@ -13,7 +13,11 @@ export function ProfilePage() {
         ← Volver
       </Link>
       <div className="text-center">
-        <Gatita avatar={profile.avatar} className="mx-auto h-28 w-28" />
+        <Gatita
+          avatar={profile.avatar}
+          accessory={profile.look?.accesorio}
+          className="mx-auto h-28 w-28"
+        />
         <h1 className="mt-2 font-heading text-3xl font-bold text-gray-800">{profile.alias}</h1>
       </div>
       <label className="flex min-h-14 items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm">

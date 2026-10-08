@@ -1,9 +1,9 @@
 import 'fake-indexeddb/auto';
 import { afterEach, describe, expect, it } from 'vitest';
-import { indexWords, type Round, type WordEntry } from '@gatita/shared';
+import { indexWords, initialState, wallet, type Round, type WordEntry } from '@gatita/shared';
 import world02 from '../../public/words/world-02.json' with { type: 'json' };
 import { GatitaDB } from './db.ts';
-import { profilesRepo, roundsRepo, saveRound, stateRepo } from './repos.ts';
+import { profilesRepo, purchasesRepo, roundsRepo, saveRound, stateRepo } from './repos.ts';
 
 const words = indexWords(world02.words as WordEntry[]);
 const [w1, w2] = world02.words as WordEntry[];
@@ -98,5 +98,29 @@ describe('repositorios locales', () => {
     const p = await profilesRepo.create({ alias: 'Michi', avatar: 'gris' }, { db });
     await profilesRepo.setSound(p.id, false, db);
     expect((await db.profiles.get(p.id))?.sound).toBe(false);
+  });
+
+  it('§8.3 compra con el saldo y guarda el accesorio puesto', async () => {
+    const db = fresh();
+    dbs.push(db);
+    const p = await profilesRepo.create({ alias: 'Michi', avatar: 'gris' }, { db });
+    expect(await purchasesRepo.buy(p.id, 'mono-rosa', { db })).toBe('balance');
+
+    await db.profileState.put({
+      profileId: p.id,
+      state: { ...initialState(), croquetas: 25 },
+      updatedAt: '2026-03-02T14:00:00.000Z',
+    });
+    expect(await purchasesRepo.buy(p.id, 'mono-rosa', { db })).toBeNull();
+    expect(await purchasesRepo.buy(p.id, 'mono-rosa', { db })).toBe('owned');
+    expect(await purchasesRepo.buy(p.id, 'flor', { db })).toBe('balance');
+    const purchases = await purchasesRepo.byProfile(p.id, db);
+    expect(wallet(await stateRepo.get(p.id, db), purchases)).toMatchObject({
+      balance: 5,
+      owned: ['mono-rosa'],
+    });
+
+    await profilesRepo.setLook(p.id, { accesorio: 'mono-rosa' }, db);
+    expect((await db.profiles.get(p.id))?.look).toEqual({ accesorio: 'mono-rosa' });
   });
 });

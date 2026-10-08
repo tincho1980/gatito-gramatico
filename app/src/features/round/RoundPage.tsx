@@ -18,6 +18,8 @@ import {
 import { saveRound } from '../../db/repos.ts';
 import { reactTo } from '../../lib/feedback.ts';
 import { useWords, type LoadedWords } from '../../words/words.ts';
+import { roundNotices } from '../notify/notices.ts';
+import { useNotices } from '../notify/store.ts';
 import { useActiveProfile, useProfileState } from '../profile/hooks.ts';
 import { Feedback } from '../turn/Feedback.tsx';
 import { Turn } from '../turn/Turn.tsx';
@@ -52,6 +54,7 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
   const { session, start, answer, next, clear } = useRoundStore();
   const [outcome, setOutcome] = useState<Outcome | null>(null);
   const saving = useRef(false);
+  const pushNotices = useNotices((s) => s.push);
   const kind = stop === 5 ? 'boss' : 'practice';
 
   const playable = useCallback(
@@ -87,8 +90,10 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
     });
     void saveRound(profile.id, round, words.index).then(({ before, after }) => {
       const progress = after.worlds[world];
+      const summary = summarizeRound(before, after, round, words.index);
+      pushNotices(...roundNotices(summary, before, after));
       setOutcome({
-        summary: summarizeRound(before, after, round, words.index),
+        summary,
         after,
         stopCompleted:
           !before.worlds[world]?.stopsDone.includes(stop) && !!progress?.stopsDone.includes(stop),
@@ -103,7 +108,7 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
       });
       clear();
     });
-  }, [session, profile, words, clear, world, stop, kind]);
+  }, [session, profile, words, clear, world, stop, kind, pushNotices]);
 
   // Si se sale a mitad de ronda, la ronda se descarta.
   useEffect(() => () => useRoundStore.getState().clear(), []);
@@ -122,6 +127,7 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
           summary={outcome.summary}
           stars={outcome.after.worlds[world]?.stars ?? 0}
           avatar={profile.avatar}
+          accessory={profile.look?.accesorio}
           sound={profile.sound}
           onMap={() => navigate('/mapa')}
           onPractice={() => navigate(actionPath(stopAction(outcome.after, world, 4, words.index)))}
@@ -132,8 +138,10 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
     return (
       <Results
         summary={outcome.summary}
+        xpTotal={outcome.after.xp}
         stopCompleted={outcome.stopCompleted}
         avatar={profile.avatar}
+        accessory={profile.look?.accesorio}
         sound={profile.sound}
         onNext={() => navigate(actionPath(outcome.next))}
         onWorld={() => navigate(`/mundo/${world}`)}
@@ -184,6 +192,7 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
           word={session.current.word}
           turn={session.lastTurn}
           avatar={profile.avatar}
+          accessory={profile.look?.accesorio}
           sound={profile.sound}
           onNext={() => {
             reactTo('click', profile.sound);

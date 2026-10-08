@@ -21,6 +21,8 @@ export async function createProfile(page: Page, query = '') {
 export async function loadPreset(page: Page, name: string) {
   await page.getByText('Debug: cargar estado').click();
   await page.getByRole('button', { name }).click();
+  // El estado se guarda en IndexedDB de forma asíncrona: hay que esperar antes de navegar.
+  await expect(page.getByText(`Cargado: ${name}`)).toBeVisible();
 }
 
 /** Estados de los mundos en el mapa, desde los aria-label. */

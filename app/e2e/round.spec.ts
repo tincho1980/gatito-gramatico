@@ -22,7 +22,11 @@ test('crear perfil, hacer la lección y jugar una ronda completa', async ({ page
   await playUntil(page, 'Seguir jugando', { world: 1, correct: false });
 
   await expect(page.getByText('Completas')).toBeVisible();
-  await expect(page.getByText('Nueva insignia: Primera ronda')).toBeVisible();
+  await expect(page.getByRole('listitem').getByText('Nueva insignia: Primera ronda')).toBeVisible();
+  // El aviso aparece arriba, sobre la pantalla (plan, etapa 5).
+  await expect(
+    page.getByRole('status', { name: 'Avisos' }).getByText('Nueva insignia: Primera ronda'),
+  ).toBeVisible();
 
   // El progreso sigue después de recargar.
   await page.goto('/mundo/1');

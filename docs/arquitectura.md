@@ -38,7 +38,7 @@ flowchart TD
 | Node | 22 LTS | `.nvmrc` |
 | App | React 19 + Vite 7 | SPA |
 | Estilos | Tailwind CSS v4 con `@tailwindcss/vite` | Reemplaza el CDN actual |
-| Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/ronda`, `/coleccion`, `/perfil`, `/aula/:id` |
+| Ruteo | React Router 7 (modo librería) | Rutas: `/`, `/mapa`, `/mundo/:id`, `/mundo/:id/leccion`, `/ronda`, `/tienda`, `/coleccion`, `/progreso`, `/perfil`, `/aula/:id` |
 | Estado de UI | Zustand | Estado de la ronda en curso |
 | Datos locales | Dexie + `dexie-react-hooks` | IndexedDB |
 | PWA | `vite-plugin-pwa` (Workbox) | Precache del shell y de `/words/*.json` |
@@ -67,7 +67,10 @@ gatito-gramatico/
 │     │  ├─ turn/            # pasos tonica / tipo / tilde + feedback
 │     │  ├─ round/           # ronda en curso y resultados
 │     │  ├─ map/             # mapa de mundos y paradas
-│     │  ├─ rewards/         # colección, insignias, racha
+│     │  ├─ shop/            # tienda de accesorios y fondos
+│     │  ├─ collection/      # gatos amigos e insignias
+│     │  ├─ progress/        # progreso por regla
+│     │  ├─ notify/          # avisos al ganar algo
 │     │  ├─ profile/         # perfiles locales, login adulto
 │     │  └─ classroom/       # tablero docente
 │     ├─ components/         # UI genérica (Button, Gatita, AdSlot…)
@@ -102,15 +105,17 @@ Regla de dependencias: `app` y `api` importan de `shared`; `shared` no importa d
 
 ## 4. Modelo de datos local (IndexedDB)
 
-Base Dexie `gatita`, versión 1:
+Base Dexie `gatita`, versión 2 (la 2 agrega `purchases`):
 
 | Tabla | Clave | Campos |
 | --- | --- | --- |
-| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt`, `sound` (sonido y vibración) |
+| `profiles` | `id` (uuid) | `alias`, `avatar`, `kind: 'guest' \| 'linked'`, `remoteId?`, `createdAt`, `sound` (sonido y vibración), `look?: { accesorio?, fondo? }` (lo que tiene puesto) |
 | `rounds` | `id` (uuid) | `profileId`, `world`, `stop`, `kind: 'practice' \| 'boss' \| 'lesson'`, `startedAt`, `finishedAt`, `tzOffsetMin`, `wordsVersion`, `turns: TurnResult[]`, `synced: boolean` |
 | `profileState` | `profileId` | `state: ProfileState` (de `shared/engine`: cajas por palabra, EMA por regla y mundo, progreso de mundos, XP, croquetas, racha, insignias, colección), `updatedAt` |
+| `purchases` | `id` (uuid) | `profileId`, `itemId`, `at`, `synced: boolean` (desde la versión 2) |
 | `meta` | `key` | `activeProfileId`, `wordsVersion` |
 
+- `purchases` es el otro registro fuente: las compras de la tienda. No entran en `replay`; el saldo y los ítems salen de `wallet(state, purchases)` (especificación §8.3).
 - `rounds` es el registro fuente. `profileState` es derivado y se guarda entero, con el mismo shape que `profile_state.state` en el servidor (§5): se puede reconstruir aplicando `shared/engine` a las rondas en orden de `finishedAt` (función `replay(rounds) → state`). Esto se usa para tests, migraciones y para aplicar la respuesta del servidor.
 
 ## 5. Modelo de datos remoto (Postgres)
@@ -171,6 +176,15 @@ create table private.turns (
   primary key (round_id, idx)
 );
 
+create table private.purchases (         -- compras de la tienda (especificación §8.3)
+  id uuid primary key,                   -- generado en el cliente: idempotencia
+  profile_id uuid not null references private.profiles(id),
+  item_id text not null,
+  at timestamptz not null,
+  received_at timestamptz not null default now(),
+  unique (profile_id, item_id)
+);
+
 create table private.profile_state (      -- derivado, recalculable
   profile_id uuid primary key references private.profiles(id),
   state jsonb not null,                  -- mismo shape que el estado local
@@ -207,7 +221,8 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 | `GET /api/profiles` | adulto | Perfiles del adulto (familia) o de sus aulas (docente). |
 | `POST /api/profiles` | adulto | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, rounds? }`. Si trae `rounds`, se importan. |
 | `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds }`. |
-| `GET /api/profiles/:id/state` | dueño del perfil | Estado completo, para un dispositivo nuevo. |
+| `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds }`. |
+| `GET /api/profiles/:id/state` | dueño del perfil | Estado completo y compras, para un dispositivo nuevo. |
 | `POST /api/classrooms` | docente | Crea un aula y devuelve el código. |
 | `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin }` → crea o recupera el perfil y devuelve un token de perfil. |
 | `GET /api/classrooms/:id/dashboard` | docente del aula | Por perfil y por regla: EMA, intentos, mundo actual, última actividad. |
@@ -230,7 +245,7 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 ## 7. Sincronización
 
 1. Al terminar una ronda, el cliente la guarda en `rounds` con `synced: false` y actualiza el estado local con `shared/engine`.
-2. Si el perfil está vinculado y hay red, se envían todas las rondas pendientes en orden.
+2. Si el perfil está vinculado y hay red, se envían todas las rondas pendientes en orden. Después, las compras pendientes (`purchases` con `synced: false`); el servidor las valida con el estado ya actualizado.
 3. El servidor responde con `state` y `acceptedIds`. El cliente marca esas rondas como `synced`, reemplaza el estado local por `state` y vuelve a aplicar encima las rondas que sigan pendientes (si se jugó algo mientras viajaba la request).
 4. Reintentos con backoff ante error de red; un 4xx de validación marca la ronda como rechazada y se reporta en consola (no se reintenta).
 5. Al abrir la app en un dispositivo nuevo con un perfil vinculado: `GET /state` y se usa como estado inicial.

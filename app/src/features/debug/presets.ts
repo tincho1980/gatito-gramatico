@@ -90,6 +90,27 @@ export const PRESETS: Preset[] = [
     },
   },
   {
+    id: 'premios',
+    name: 'Con premios (100 croquetas, 3 gatos amigos, insignias)',
+    build: (words) => {
+      const s = initialState();
+      for (const id of [1, 2, 3, 4]) s.worlds[id] = done(id === 2 ? 3 : 1);
+      s.worlds[5] = open([1]);
+      s.lastWorld = 5;
+      s.xp = 1250;
+      s.croquetas = 100;
+      s.owned = ['gato-tejado', 'gato-dormilon', 'gato-trepador'];
+      const at = '2026-03-02T14:00:00.000Z';
+      s.badges = { 'primera-ronda': at, 'mundo-2': at, 'racha-3': at };
+      for (const rule of gateRules(words.byWorld.get(2) ?? [])) {
+        s.rules[ruleKey(2, rule)] = mastered();
+      }
+      const [first] = gateRules(words.byWorld.get(3) ?? []);
+      if (first) s.rules[ruleKey(3, first)] = { ema: 0.6, attempts: 12, recent: [1, 0, 1] };
+      return s;
+    },
+  },
+  {
     id: 'todo',
     name: 'Todo completo',
     build: () => {

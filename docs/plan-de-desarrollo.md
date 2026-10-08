@@ -161,13 +161,13 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] XP y nivel visibles en el inicio; XP ganado animado en resultados.
-- [ ] Racha con la siesta de gato semanal.
-- [ ] Croquetas y tienda de la colección (`collection.json`), con vista previa de la gatita con el accesorio.
-- [ ] Gatos amigos ganados por mundo.
-- [ ] Insignias (`badges.json`) con pantalla de colección; las secretas se muestran como "?" hasta ganarlas.
-- [ ] Notificación dentro de la app al ganar algo (no push).
-- [ ] Reemplazar la pantalla vieja de logros y el gráfico de Recharts por una vista de progreso por regla (barras simples de EMA, sin librería pesada).
+- [x] XP y nivel visibles en el inicio; XP ganado animado en resultados.
+- [x] Racha con la siesta de gato semanal.
+- [x] Croquetas y tienda de la colección (`collection.json`), con vista previa de la gatita con el accesorio.
+- [x] Gatos amigos ganados por mundo.
+- [x] Insignias (`badges.json`) con pantalla de colección; las secretas se muestran como "?" hasta ganarlas.
+- [x] Notificación dentro de la app al ganar algo (no push).
+- [x] Reemplazar la pantalla vieja de logros y el gráfico de Recharts por una vista de progreso por regla (barras simples de EMA, sin librería pesada).
 
 Criterios de aceptación:
 
@@ -207,10 +207,10 @@ Tareas:
 - [ ] Supabase: proyecto de desarrollo; migraciones del esquema `private` ([arquitectura §5](arquitectura.md#5-modelo-de-datos-remoto-postgres)); `supabase start` para local.
 - [ ] Test de seguridad: con la clave pública, un `select` sobre cualquier tabla de `private` falla.
 - [ ] Worker con Hono: `auth.ts` (JWKS de Supabase), `db.ts` (postgres.js + Hyperdrive), rutas `accounts/me`, `profiles`, `rounds`, `profiles/:id/state`.
-- [ ] `POST /api/rounds` con todas las validaciones de arquitectura §6, idempotente, recalculando con `shared/engine`.
+- [ ] `POST /api/rounds` con todas las validaciones de arquitectura §6, idempotente, recalculando con `shared/engine`. `POST /api/purchases` validando el saldo con `purchaseProblem`.
 - [ ] Cron diario de keepalive.
 - [ ] Rate limiting.
-- [ ] Cliente: cola de sincronización (arquitectura §7), reintentos con backoff, indicador discreto de "sincronizado".
+- [ ] Cliente: cola de sincronización (arquitectura §7) de rondas y compras, reintentos con backoff, indicador discreto de "sincronizado".
 - [ ] Proxy de `/api` en Vite para desarrollo; `wrangler.toml` con entornos preview y producción.
 - [ ] Deploy: Pages + Worker en el mismo dominio.
 

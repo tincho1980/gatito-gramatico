@@ -126,7 +126,12 @@ export function LessonPage() {
   if (phase.kind === 'done') {
     return (
       <main className="mx-auto flex min-h-dvh max-w-md flex-col items-center justify-center gap-4 px-4 py-6 text-center">
-        <Gatita avatar={profile.avatar} mood="success" className="h-32 w-32" />
+        <Gatita
+          avatar={profile.avatar}
+          accessory={profile.look?.accesorio}
+          mood="success"
+          className="h-32 w-32"
+        />
         <h1 className="font-heading text-3xl font-bold text-pink-600">¡Lección lista!</h1>
         <p className="text-gray-600">Ahora a practicar con palabras de este mundo.</p>
         <Button size="lg" className="min-h-14 w-full" onClick={() => navigate(roundPath(world, 2))}>
@@ -163,6 +168,7 @@ export function LessonPage() {
           word={word}
           turn={phase.turn}
           avatar={profile.avatar}
+          accessory={profile.look?.accesorio}
           sound={profile.sound}
           onNext={() => {
             reactTo('click', profile.sound);

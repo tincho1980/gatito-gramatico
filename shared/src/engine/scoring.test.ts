@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { roundXp, turnXp } from './scoring.ts';
+import { levelFor, roundXp, turnXp } from './scoring.ts';
 import { turn } from './testing.ts';
 
 const full = turn({ full: true });
@@ -31,5 +31,20 @@ describe('§3 puntos', () => {
   it('§3 jefe vencido: +50', () => {
     expect(roundXp([], { bossWon: true })).toBe(50);
     expect(roundXp([])).toBe(0);
+  });
+});
+
+describe('§3 nivel', () => {
+  it('del nivel n al n + 1 hacen falta 100 · n XP', () => {
+    expect(levelFor(0)).toEqual({ level: 1, into: 0, needed: 100 });
+    expect(levelFor(99)).toEqual({ level: 1, into: 99, needed: 100 });
+    expect(levelFor(100)).toEqual({ level: 2, into: 0, needed: 200 });
+    expect(levelFor(299)).toEqual({ level: 2, into: 199, needed: 200 });
+    expect(levelFor(300)).toEqual({ level: 3, into: 0, needed: 300 });
+    expect(levelFor(4500).level).toBe(10);
+  });
+
+  it('el XP negativo no existe: cuenta como 0', () => {
+    expect(levelFor(-5).level).toBe(1);
   });
 });

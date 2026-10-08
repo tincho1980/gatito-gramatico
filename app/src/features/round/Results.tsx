@@ -3,12 +3,16 @@ import { useEffect, useMemo } from 'react';
 import { BADGES, RULE_NAMES, type Avatar, type RoundSummary } from '@gatita/shared';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
+import { XpGain } from '../../components/XpGain.tsx';
 import { GATITA, pick } from '../../content/gatita.ts';
 import { reactTo } from '../../lib/feedback.ts';
 
 interface ResultsProps {
   summary: RoundSummary;
+  /** XP total del perfil después de la ronda. */
+  xpTotal: number;
   avatar: Avatar;
+  accessory?: string;
   sound: boolean;
   /** La ronda completó la parada (§7.2). */
   stopCompleted: boolean;
@@ -16,7 +20,16 @@ interface ResultsProps {
   onWorld: () => void;
 }
 
-export function Results({ summary, avatar, sound, stopCompleted, onNext, onWorld }: ResultsProps) {
+export function Results({
+  summary,
+  xpTotal,
+  avatar,
+  accessory,
+  sound,
+  stopCompleted,
+  onNext,
+  onWorld,
+}: ResultsProps) {
   const ratio = summary.total ? summary.fulls / summary.total : 0;
   const message = useMemo(
     () =>
@@ -36,12 +49,12 @@ export function Results({ summary, avatar, sound, stopCompleted, onNext, onWorld
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 py-6">
       <div className="flex min-h-0 flex-1 flex-col items-center gap-4 text-center">
-        <Gatita avatar={avatar} mood="success" className="h-24 w-24" />
+        <Gatita avatar={avatar} accessory={accessory} mood="success" className="h-24 w-24" />
         <h1 className="font-heading text-3xl font-bold text-pink-600">{message}</h1>
 
         <dl className="grid w-full grid-cols-2 gap-3">
           <Stat label="Completas" value={`${summary.fulls} / ${summary.total}`} />
-          <Stat label="XP ganado" value={`+${summary.xp}`} />
+          <XpGain gained={summary.xp} total={xpTotal} />
         </dl>
 
         <ul className="w-full space-y-2 text-left">
