@@ -231,7 +231,7 @@ Criterios de aceptación:
 
 Tareas:
 
-- [x] Login adulto con Supabase Auth (Google y magic link). Elección de rol: familia o docente. (Configurar Google y las URLs en el panel de Supabase: [puesta-en-marcha.md](puesta-en-marcha.md) §5.)
+- [x] Login adulto con Supabase Auth (Google y magic link). Elección de rol: familia o docente; una misma cuenta puede ser las dos cosas y cambia de panel con un selector. (Configurar Google y las URLs en el panel de Supabase: [puesta-en-marcha.md](puesta-en-marcha.md) §5.)
 - [x] Familia: crear perfiles de chicos y vincular un perfil invitado existente (sube su historial). También traer a este dispositivo un perfil de la cuenta.
 - [x] Docente: crear aula, ver y copiar el código de 6 letras.
 - [x] Chico: "Entrar a mi aula" con código + alias + PIN de 4 dígitos; recibe token de perfil. Recuperar el perfil en otro dispositivo con el mismo alias + PIN.

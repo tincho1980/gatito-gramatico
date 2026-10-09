@@ -21,10 +21,14 @@ export async function getAccount(sql: Tx, id: string): Promise<{ role: Role } | 
 }
 
 /** Crea la cuenta si no existe. El rol no cambia una vez elegido. */
+/**
+ * Crea la cuenta o cambia su panel preferido. Una cuenta puede ser familia y docente a la vez:
+ * `role` es solo el panel que se abre por defecto (el último que usó).
+ */
 export async function ensureAccount(sql: Tx, id: string, role: Role): Promise<Role> {
   const [row] = await sql<{ role: Role }[]>`
     insert into private.accounts (id, role) values (${id}, ${role})
-    on conflict (id) do update set id = excluded.id
+    on conflict (id) do update set role = excluded.role
     returning role`;
   return row!.role;
 }

@@ -274,13 +274,13 @@ export function createApp(deps: Deps) {
     return c.json({ id, role });
   });
 
-  // Familia: sus perfiles. Docente: los chicos de sus aulas.
+  // Los perfiles de la familia (o, con ?scope=classrooms, los chicos de sus aulas).
   app.get('/profiles', async (c) => {
     const id = accountId(c);
     if (!id) return fail(c, 403, 'solo para adultos');
-    const account = await getAccount(c.get('sql'), id);
+    // Los de la familia; con `?scope=classrooms`, los chicos de sus aulas.
     const rows =
-      account?.role === 'teacher'
+      c.req.query('scope') === 'classrooms'
         ? await profilesOfClassrooms(c.get('sql'), id)
         : await profilesOf(c.get('sql'), id);
     return c.json({
@@ -304,8 +304,7 @@ export function createApp(deps: Deps) {
     const req = parsed.data;
     const problem = aliasProblem(req.alias);
     if (problem) return fail(c, 400, problem);
-    const account = await getAccount(sql, owner);
-    if (account?.role !== 'family') return fail(c, 403, 'solo una cuenta de familia crea perfiles');
+    if (!(await getAccount(sql, owner))) return fail(c, 403, 'primero creá tu cuenta');
 
     let profile = await getProfile(sql, req.id);
     if (profile && profile.ownerId !== owner) return fail(c, 409, 'el id ya existe');
@@ -420,16 +419,16 @@ export function createApp(deps: Deps) {
 
   // —— Docente ——
 
+  /** Cualquier adulto con cuenta puede tener aulas (también si es familia). */
   async function requireTeacher(c: C): Promise<string | null> {
     const id = accountId(c);
     if (!id) return null;
-    const account = await getAccount(c.get('sql'), id);
-    return account?.role === 'teacher' ? id : null;
+    return (await getAccount(c.get('sql'), id)) ? id : null;
   }
 
   app.get('/classrooms', async (c) => {
     const teacher = await requireTeacher(c);
-    if (!teacher) return fail(c, 403, 'solo para docentes');
+    if (!teacher) return fail(c, 403, 'primero creá tu cuenta');
     const rows = await classroomsOf(c.get('sql'), teacher);
     return c.json({
       classrooms: rows.map((r): ClassroomSummary => ({
@@ -444,7 +443,7 @@ export function createApp(deps: Deps) {
 
   app.post('/classrooms', async (c) => {
     const teacher = await requireTeacher(c);
-    if (!teacher) return fail(c, 403, 'solo para docentes');
+    if (!teacher) return fail(c, 403, 'primero creá tu cuenta');
     const parsed = ClassroomRequestSchema.safeParse(await body(c));
     if (!parsed.success) return fail(c, 400, 'Poné un nombre de hasta 60 letras.');
     for (let attempt = 0; attempt < 5; attempt++) {

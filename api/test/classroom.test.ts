@@ -58,8 +58,9 @@ describe('aulas', () => {
     expect(((await res.json()) as { classroom: ClassroomSummary }).classroom.code).toBe('GHJKLM');
   });
 
-  it('una familia no crea aulas ni ve tableros', async () => {
-    expect((await h.call(FAMILY, 'POST', '/classrooms', { name: 'x' })).status).toBe(403);
+  it('una cuenta de familia también puede tener aulas, pero no ve las de otro', async () => {
+    h.queueCodes('PQRSTU');
+    expect((await h.call(FAMILY, 'POST', '/classrooms', { name: 'Taller' })).status).toBe(200);
     // El aula no es suya: no se distingue de una que no existe.
     expect((await h.call(FAMILY, 'GET', `/classrooms/${classroom.id}/dashboard`)).status).toBe(404);
   });
@@ -115,10 +116,13 @@ describe('tres chicos entran desde tres celulares y sus rondas aparecen en el ta
     );
   });
 
-  it('el docente ve a los chicos de sus aulas en /profiles', async () => {
-    const res = await h.call(TEACHER, 'GET', '/profiles');
+  it('el docente ve a los chicos de sus aulas en /profiles?scope=classrooms', async () => {
+    const res = await h.call(TEACHER, 'GET', '/profiles?scope=classrooms');
     const { profiles } = (await res.json()) as { profiles: { alias: string }[] };
     expect(profiles.map((p) => p.alias).sort()).toEqual(['Juli', 'Mica', 'Tomi']);
+    // Sin el scope, los de su familia (ninguno).
+    const own = await h.call(TEACHER, 'GET', '/profiles');
+    expect(((await own.json()) as { profiles: unknown[] }).profiles).toEqual([]);
   });
 
   it('el token de un chico solo sirve para su perfil', async () => {
