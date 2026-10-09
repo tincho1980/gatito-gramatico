@@ -257,7 +257,7 @@ function NewProfile({
         onChange={(e) => setAlias(e.target.value)}
         placeholder="Apodo"
         aria-label="Apodo"
-        className="min-h-12 rounded-2xl border-2 border-pink-200 px-4 text-lg focus:border-pink-400 focus:outline-none"
+        className="min-h-12 rounded-2xl border-2 border-pink-200 px-4 text-lg focus:border-pink-400"
       />
       <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Gatito">
         {AVATARS.map((a) => (

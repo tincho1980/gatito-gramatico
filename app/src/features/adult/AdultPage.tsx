@@ -1,6 +1,7 @@
 // Área de adultos (/adultos): ingreso con Google o enlace por email, elección de rol (una sola
 // vez) y el panel de familia o de docente. Los chicos no necesitan entrar acá.
 import { useEffect, useState, type FormEvent } from 'react';
+import { Link } from 'react-router';
 import { Button } from '../../components/Button.tsx';
 import { PageHeader } from '../../components/PageHeader.tsx';
 import {
@@ -53,9 +54,9 @@ export function AdultPage() {
 
   const choose = async (r: Role) => {
     if (!session) return;
+    setRole(r); // el cambio de panel se ve enseguida; el servidor guarda la preferencia
     const a = await adultApi(session.token).setRole(r);
     setAccountId(a.id);
-    setRole(a.role);
   };
 
   let content;
@@ -73,10 +74,18 @@ export function AdultPage() {
     );
   } else if (role === null) {
     content = <RoleChoice onChoose={(r) => void choose(r)} />;
-  } else if (role === 'family' && accountId) {
-    content = <FamilyPanel token={session.token} accountId={accountId} />;
-  } else if (role === 'teacher') {
-    content = <TeacherPanel token={session.token} />;
+  } else if (role && accountId) {
+    // Una cuenta puede ser familia y docente: el selector cambia de panel.
+    content = (
+      <>
+        <RoleTabs role={role} onChange={(r) => void choose(r)} />
+        {role === 'family' ? (
+          <FamilyPanel token={session.token} accountId={accountId} />
+        ) : (
+          <TeacherPanel token={session.token} />
+        )}
+      </>
+    );
   }
 
   return (
@@ -144,7 +153,7 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
-              className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400 focus:outline-none"
+              className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400"
             />
           </label>
           <Button type="submit" size="lg" className="min-h-14">
@@ -157,6 +166,17 @@ function Login() {
           {error}
         </p>
       )}
+      <p className="text-sm text-gray-600">
+        Al entrar aceptás los{' '}
+        <Link to="/terminos" className="underline">
+          términos de uso
+        </Link>{' '}
+        y la{' '}
+        <Link to="/privacidad" className="underline">
+          política de privacidad
+        </Link>
+        .
+      </p>
     </div>
   );
 }
@@ -164,7 +184,9 @@ function Login() {
 function RoleChoice({ onChoose }: { onChoose: (r: Role) => void }) {
   return (
     <div className="grid gap-3">
-      <p className="text-gray-700">¿Cómo vas a usar la gatita? Se elige una sola vez.</p>
+      <p className="text-gray-700">
+        ¿Cómo vas a usar la gatita? Si sos las dos cosas, después cambiás arriba.
+      </p>
       <button
         type="button"
         onClick={() => onChoose('family')}
@@ -185,6 +207,29 @@ function RoleChoice({ onChoose }: { onChoose: (r: Role) => void }) {
           Armo un aula, mis alumnos entran con un código y veo cómo van.
         </span>
       </button>
+    </div>
+  );
+}
+
+function RoleTabs({ role, onChange }: { role: Role; onChange: (r: Role) => void }) {
+  const tabs: { value: Role; label: string }[] = [
+    { value: 'family', label: '🏠 Familia' },
+    { value: 'teacher', label: '🏫 Docente' },
+  ];
+  return (
+    <div className="grid grid-cols-2 gap-2 rounded-2xl bg-pink-100 p-1" role="tablist">
+      {tabs.map((t) => (
+        <button
+          key={t.value}
+          type="button"
+          role="tab"
+          aria-selected={role === t.value}
+          onClick={() => onChange(t.value)}
+          className={`min-h-11 rounded-xl font-heading font-bold ${role === t.value ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-700'}`}
+        >
+          {t.label}
+        </button>
+      ))}
     </div>
   );
 }

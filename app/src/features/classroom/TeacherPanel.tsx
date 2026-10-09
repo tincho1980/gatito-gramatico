@@ -93,7 +93,7 @@ export function TeacherPanel({ token }: { token: string }) {
             onChange={(e) => setName(e.target.value)}
             maxLength={60}
             placeholder="Por ejemplo, 4.º B – Turno mañana"
-            className="min-h-12 rounded-2xl border-2 border-pink-200 px-4 text-lg focus:border-pink-400 focus:outline-none"
+            className="min-h-12 rounded-2xl border-2 border-pink-200 px-4 text-lg focus:border-pink-400"
           />
         </label>
         <Button type="submit">Crear aula</Button>
@@ -104,6 +104,13 @@ export function TeacherPanel({ token }: { token: string }) {
         código, inventa un apodo (nunca su nombre real) y un PIN de 4 números. Con el mismo apodo y
         PIN recupera su progreso en otro dispositivo.
       </p>
+
+      <Link
+        to="/revision"
+        className="flex min-h-12 items-center justify-between rounded-2xl bg-white px-4 font-bold text-gray-700 shadow-sm"
+      >
+        Revisar las palabras del juego <span aria-hidden>🔍</span>
+      </Link>
 
       {error && (
         <p role="alert" className="rounded-2xl bg-red-50 px-4 py-3 font-semibold text-red-700">

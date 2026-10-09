@@ -2,6 +2,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { Link, useNavigate } from 'react-router';
 import { Gatita } from '../../components/Gatita.tsx';
+import { LegalLinks } from '../../components/LegalLinks.tsx';
 import { profilesRepo } from '../../db/repos.ts';
 import { useActiveProfile } from './hooks.ts';
 
@@ -42,6 +43,17 @@ export function ProfilePage() {
           role="switch"
           checked={profile.sound}
           onChange={(e) => void profilesRepo.setSound(profile.id, e.target.checked)}
+          className="h-6 w-11 cursor-pointer appearance-none rounded-full bg-gray-300 transition before:block before:h-5 before:w-5 before:translate-x-0.5 before:rounded-full before:bg-white before:transition checked:bg-pink-500 checked:before:translate-x-5.5"
+        />
+      </label>
+
+      <label className="flex min-h-14 items-center justify-between rounded-2xl bg-white px-4 py-3 shadow-sm">
+        <span className="font-bold text-gray-700">Letra más grande</span>
+        <input
+          type="checkbox"
+          role="switch"
+          checked={!!profile.bigText}
+          onChange={(e) => void profilesRepo.setBigText(profile.id, e.target.checked)}
           className="h-6 w-11 cursor-pointer appearance-none rounded-full bg-gray-300 transition before:block before:h-5 before:w-5 before:translate-x-0.5 before:rounded-full before:bg-white before:transition checked:bg-pink-500 checked:before:translate-x-5.5"
         />
       </label>
@@ -92,6 +104,7 @@ export function ProfilePage() {
       >
         Para familias y docentes
       </Link>
+      <LegalLinks />
     </main>
   );
 }

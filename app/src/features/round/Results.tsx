@@ -1,6 +1,7 @@
 // §4.4 Pantalla de resultados.
 import { useEffect, useMemo } from 'react';
 import { BADGES, RULE_NAMES, type Avatar, type RoundSummary } from '@gatita/shared';
+import { AdSlot } from '../../components/AdSlot.tsx';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
 import { XpGain } from '../../components/XpGain.tsx';
@@ -93,6 +94,7 @@ export function Results({
         </ul>
       </div>
 
+      <AdSlot slot="results" />
       <div className="grid shrink-0 gap-3 pb-[env(safe-area-inset-bottom)]">
         <Button onClick={onNext} size="lg" className="min-h-14 w-full">
           Seguir jugando

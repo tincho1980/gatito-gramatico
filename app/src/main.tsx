@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router';
 import { listenForInstall } from './features/pwa/install.ts';
+import { listenForErrors } from './lib/errors.ts';
 import { router } from './router.tsx';
 import './index.css';
 
@@ -15,6 +16,7 @@ try {
 }
 
 listenForInstall();
+if (import.meta.env.PROD) listenForErrors();
 
 // La vuelta del login de adultos (Supabase) tiene que llegar a /adultos, que es donde se lee.
 // Si Supabase la manda a otra página (por ejemplo, su "Site URL"), se la lleva ahí.

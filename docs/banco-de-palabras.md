@@ -2,7 +2,7 @@
 
 794 entradas en 10 mundos, generadas desde listas curadas y validadas por código. Ninguna palabra llega al juego sin que el motor de acentuación confirme su clasificación.
 
-**Estado:** la lista actual se da por buena para desarrollo. Antes del MVP se amplía y la revisan docentes (sobre todo tiers 3 de los mundos 8, 9 y 10).
+**Estado:** la lista actual se da por buena para desarrollo. Antes del MVP se amplía y la revisan docentes (sobre todo tiers 3 de los mundos 8, 9 y 10). La revisión se hace en la app, en `/revision` (panel docente), y las marcas se juntan con `npm run reviews:export` (arquitectura §12).
 
 ## Qué hay
 

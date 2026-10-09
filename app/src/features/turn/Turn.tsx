@@ -6,7 +6,7 @@ import {
   type WordEntry,
   type WordType,
 } from '@gatita/shared';
-import { useMemo, type ReactNode } from 'react';
+import { useEffect, useMemo, useRef, type ReactNode } from 'react';
 import { GATITA, pick } from '../../content/gatita.ts';
 
 const TYPE_LABELS: Record<WordType, string> = {
@@ -46,6 +46,8 @@ export function Turn({
 }: TurnProps) {
   const syllables = word.syllables.map(withoutTildes);
   const hintText = useMemo(() => pick(GATITA.hint), []);
+  const promptRef = useRef<HTMLHeadingElement>(null);
+  useEffect(() => promptRef.current?.focus({ preventScroll: true }), []);
   const prompt =
     step === 'tilde' && word.sentence ? '¿La palabra resaltada lleva tilde?' : PROMPTS[step];
 
@@ -73,14 +75,22 @@ export function Turn({
         {markStress && tonicaOk === false && (
           <p className="text-sm font-semibold text-gray-600">La sílaba fuerte es la marcada.</p>
         )}
-        <h2 className="text-lg font-bold text-gray-600">{prompt}</h2>
+        {/* Cada paso es un componente nuevo: el foco va a la consigna, para que el lector de
+            pantalla la lea y el teclado no quede en un botón que ya no existe. */}
+        <h2 ref={promptRef} tabIndex={-1} className="text-lg font-bold text-gray-600 outline-none">
+          {prompt}
+        </h2>
       </div>
 
       <div className="shrink-0 px-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
         {step === 'tonica' && (
           <Options cols={Math.min(syllables.length, 4)}>
             {syllables.map((s, i) => (
-              <Choice key={i} onClick={() => onAnswer(i)} label={`Sílaba ${s}`}>
+              <Choice
+                key={i}
+                onClick={() => onAnswer(i)}
+                label={`Sílaba ${i + 1} de ${syllables.length}: ${s}`}
+              >
                 {s}
               </Choice>
             ))}

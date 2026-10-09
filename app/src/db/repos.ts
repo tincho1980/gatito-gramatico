@@ -50,6 +50,10 @@ export const profilesRepo = {
     await db.profiles.update(id, { sound });
   },
 
+  async setBigText(id: string, bigText: boolean, db: GatitaDB = defaultDb): Promise<void> {
+    await db.profiles.update(id, { bigText });
+  },
+
   async setLook(id: string, look: Look, db: GatitaDB = defaultDb): Promise<void> {
     await db.profiles.update(id, { look });
   },

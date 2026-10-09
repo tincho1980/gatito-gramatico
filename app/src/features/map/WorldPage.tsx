@@ -169,7 +169,7 @@ function StopCard({
       </span>
       <span className="flex flex-col">
         <span className="font-heading text-lg font-bold">{title}</span>
-        <span className={`text-sm ${state === 'next' ? 'text-white/90' : 'text-gray-500'}`}>
+        <span className={`text-sm ${state === 'next' ? 'text-white' : 'text-gray-500'}`}>
           {detail}
         </span>
       </span>

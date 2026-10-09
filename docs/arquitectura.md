@@ -219,15 +219,15 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 
 | Método y ruta | Quién | Qué hace |
 | --- | --- | --- |
-| `POST /api/accounts/me` | adulto | Crea o devuelve la cuenta (`role`). |
-| `GET /api/profiles` | adulto | Perfiles del adulto (familia) o de sus aulas (docente). |
-| `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). Un apodo no se repite dentro de la misma cuenta (409). |
-| `DELETE /api/profiles/:id` | familia dueña | Borra el perfil con todo su progreso (rondas, turnos, compras y estado, en cascada). Desde el panel de familia, con confirmación. |
+| `POST /api/accounts/me` | adulto | `{ role }` → crea la cuenta o cambia su panel preferido. Una cuenta puede ser familia y docente a la vez: `role` es solo el panel que se abre por defecto (el último que usó); la app tiene un selector Familia / Docente. |
+| `GET /api/profiles` | adulto | Perfiles de su familia; con `?scope=classrooms`, los chicos de sus aulas. |
+| `POST /api/profiles` | adulto con cuenta | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). Un apodo no se repite dentro de la misma cuenta (409). |
+| `DELETE /api/profiles/:id` | adulto dueño | Borra el perfil con todo su progreso (rondas, turnos, compras y estado, en cascada). Desde el panel de familia, con confirmación. |
 | `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds, rejected: [{ id, reason }] }`: cada ronda se acepta o rechaza por separado. |
 | `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds, rejected }`. |
 | `GET /api/profiles/:id/state` | dueño del perfil (adulto o el propio chico) | `{ state, rounds, purchases, profile }`, para un dispositivo nuevo: el estado y los registros fuente. Con `?only=state`, solo el estado (para traer cambios del servidor). |
-| `GET /api/classrooms` | docente | Sus aulas: nombre, código, cantidad de alumnos y mundos abiertos. |
-| `POST /api/classrooms` | docente | `{ name }` → crea un aula con un código de 6 letras al azar (sin I ni O; si ya existe, prueba otro). |
+| `GET /api/classrooms` | adulto con cuenta | Sus aulas: nombre, código, cantidad de alumnos y mundos abiertos. |
+| `POST /api/classrooms` | adulto con cuenta | `{ name }` → crea un aula con un código de 6 letras al azar (sin I ni O; si ya existe, prueba otro). |
 | `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin, avatar?, profileId?, createdAt? }` → si el apodo ya existe en el aula (sin distinguir mayúsculas), comprueba el PIN y devuelve su token (`existing: true`, para traerlo a otro dispositivo); si no, crea el perfil (con el id del perfil invitado del dispositivo, si viene) y devuelve su token. |
 | `GET /api/classrooms/:id/dashboard` | docente del aula | Por alumno: apodo, mundo actual, rondas, última actividad, EMA e intentos por regla y estrellas por mundo. Lee solo esas partes del estado guardado. |
 | `POST /api/classrooms/:id/unlocks` | docente del aula | `{ world }` → abre ese mundo para el aula. Abrir un mundo solo marca `unlocked` (`applyTeacherUnlocks`): se aplica sobre el estado guardado de cada alumno, sin recalcular sus rondas, y también en cada estado que devuelve la API. |
@@ -300,8 +300,27 @@ Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las m
 
 En local, Vite hace proxy de `/api` a `wrangler dev`.
 
-## 11. Publicidad (al final, detrás de una bandera)
+## 11. Monitoreo de errores
+
+- **Worker:** `app.onError` escribe un JSON (`type: 'worker-error'`, método, ruta, mensaje, primeras líneas del stack) en los logs de Cloudflare (`observability` activado en `wrangler.jsonc`).
+- **App:** en el build `production`, los errores que nadie atrapó y los de render (pantalla de error de React Router) se mandan a `POST /api/errors` (público, 30 por minuto por IP, `ERRORS_LIMITER`). El Worker los escribe en los mismos logs (`type: 'client-error'`) y no guarda nada en la base. El reporte lleva el mensaje y el stack recortados, sin URLs con parámetros, emails ni tokens; la ruta va sin ids; y la versión (commit en el CI). Máximo 5 reportes por carga de página.
+- Sin servicios externos de rastreo: es un sitio para chicos. Los logs se ven en el panel de Cloudflare (*Workers & Pages → gatita-gramatica → Logs*).
+
+## 12. Revisión del banco por docentes
+
+- `/revision` (desde el panel docente): cada palabra con sílabas, tónica, tipo, tilde, regla, tier, trampa y frase. Cada adulto marca las que hay que revisar, con una nota (`private.word_reviews`: una marca por adulto y palabra).
+- `GET/POST /api/reviews`, `DELETE /api/reviews/:wordId` (adulto con cuenta; solo ve sus marcas).
+- `npm run reviews:export` (con la conexión de `.env.local`) baja `revisiones.local.csv`: palabra, clasificación, cuántos la marcaron y sus notas. Las correcciones se hacen en `words/src/*.txt`.
+
+## 13. Accesibilidad
+
+- Contraste AA: sobre el fondo rosado, `pink-500/600/700` y `gray-400/500` de Tailwind se oscurecen un tono en `@theme` (`app/src/index.css`).
+- Foco visible en toda la app (`:focus-visible`). En el turno, cada paso lleva el foco a la consigna (lector de pantalla y teclado); en la corrección, al botón "Seguir". Las sílabas se anuncian con su posición.
+- "Letra más grande" por perfil: agranda la letra base del documento (todo está en `rem`).
+- Los e2e corren axe (WCAG 2.1 A y AA) en todas las pantallas.
+
+## 14. Publicidad (al final, detrás de una bandera)
 
 - Componente `<AdSlot>` con alto reservado; solo en inicio y resultados, nunca durante una ronda.
 - Siempre con `data-tag-for-age-treatment="1"` (sitio dirigido a menores: sin anuncios personalizados).
-- Bandera `VITE_ADS_ENABLED`; desactivado para perfiles de aula.
+- Bandera `VITE_ADS_ENABLED` (más `VITE_ADSENSE_CLIENT` y los slots); apagada por defecto y desactivada para perfiles de aula. Componente `app/src/components/AdSlot.tsx`. Antes de activarla: revisar la configuración de AdSense para sitios dirigidos a menores y actualizar la política de privacidad.

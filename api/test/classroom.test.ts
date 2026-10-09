@@ -58,8 +58,9 @@ describe('aulas', () => {
     expect(((await res.json()) as { classroom: ClassroomSummary }).classroom.code).toBe('GHJKLM');
   });
 
-  it('una familia no crea aulas ni ve tableros', async () => {
-    expect((await h.call(FAMILY, 'POST', '/classrooms', { name: 'x' })).status).toBe(403);
+  it('una cuenta de familia también puede tener aulas, pero no ve las de otro', async () => {
+    h.queueCodes('PQRSTU');
+    expect((await h.call(FAMILY, 'POST', '/classrooms', { name: 'Taller' })).status).toBe(200);
     // El aula no es suya: no se distingue de una que no existe.
     expect((await h.call(FAMILY, 'GET', `/classrooms/${classroom.id}/dashboard`)).status).toBe(404);
   });
@@ -115,10 +116,13 @@ describe('tres chicos entran desde tres celulares y sus rondas aparecen en el ta
     );
   });
 
-  it('el docente ve a los chicos de sus aulas en /profiles', async () => {
-    const res = await h.call(TEACHER, 'GET', '/profiles');
+  it('el docente ve a los chicos de sus aulas en /profiles?scope=classrooms', async () => {
+    const res = await h.call(TEACHER, 'GET', '/profiles?scope=classrooms');
     const { profiles } = (await res.json()) as { profiles: { alias: string }[] };
     expect(profiles.map((p) => p.alias).sort()).toEqual(['Juli', 'Mica', 'Tomi']);
+    // Sin el scope, los de su familia (ninguno).
+    const own = await h.call(TEACHER, 'GET', '/profiles');
+    expect(((await own.json()) as { profiles: unknown[] }).profiles).toEqual([]);
   });
 
   it('el token de un chico solo sirve para su perfil', async () => {
@@ -248,5 +252,36 @@ describe('ingreso con PIN (arquitectura §9.7)', () => {
     h.setNow('2026-08-01T00:00:00.000Z'); // más de 90 días después
     expect((await h.callWith(token, 'GET', `/profiles/${profile.id}/state`)).status).toBe(401);
     h.setNow('2026-04-01T12:00:00.000Z');
+  });
+});
+
+describe('revisión del banco de palabras (etapa 9)', () => {
+  it('el docente marca palabras para revisar con una nota, la cambia y la quita', async () => {
+    const word = [...(await import('../src/words.ts')).BANK.index.byId.keys()][0]!;
+    const mark = await h.call(TEACHER, 'POST', '/reviews', {
+      wordId: word,
+      note: '¿grave o aguda?',
+    });
+    expect(
+      ((await mark.json()) as { reviews: { wordId: string; note: string }[] }).reviews,
+    ).toEqual([expect.objectContaining({ wordId: word, note: '¿grave o aguda?' })]);
+    await h.call(TEACHER, 'POST', '/reviews', { wordId: word, note: 'separación en sílabas' });
+    const list = (await (await h.call(TEACHER, 'GET', '/reviews')).json()) as {
+      reviews: { note: string }[];
+    };
+    expect(list.reviews.map((r) => r.note)).toEqual(['separación en sílabas']);
+    // Las marcas son de cada docente.
+    const other = (await (await h.call(OTHER_TEACHER, 'GET', '/reviews')).json()) as {
+      reviews: unknown[];
+    };
+    expect(other.reviews).toEqual([]);
+    const del = await h.call(TEACHER, 'DELETE', `/reviews/${encodeURIComponent(word)}`);
+    expect(((await del.json()) as { reviews: unknown[] }).reviews).toEqual([]);
+  });
+
+  it('no se marca una palabra que no está en el banco, ni sin cuenta', async () => {
+    expect((await h.call(TEACHER, 'POST', '/reviews', { wordId: 'inventada' })).status).toBe(400);
+    const res = await h.call('88888888-8888-4888-8888-888888888888', 'GET', '/reviews');
+    expect(res.status).toBe(403);
   });
 });

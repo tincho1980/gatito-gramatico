@@ -3,6 +3,7 @@ export function Croquetas({ value, className = '' }: { value: number; className?
   return (
     <span
       className={`inline-flex items-center gap-1 font-heading font-bold ${className}`}
+      role="img"
       aria-label={`${value} ${value === 1 ? 'croqueta' : 'croquetas'}`}
     >
       <span aria-hidden>🐟</span>

@@ -74,9 +74,21 @@ describe('autenticación', () => {
     expect(await bad('no-es-un-jwt')).toBe(401);
   });
 
-  it('el rol de la cuenta no cambia una vez elegido', async () => {
+  it('el rol es solo el panel preferido: se puede cambiar', async () => {
     const res = await h.call(FAMILY, 'POST', '/accounts/me', { role: 'teacher' });
-    expect(await res.json()).toMatchObject({ role: 'family' });
+    expect(await res.json()).toMatchObject({ role: 'teacher' });
+    await h.call(FAMILY, 'POST', '/accounts/me', { role: 'family' });
+    const me = await h.call(FAMILY, 'GET', '/accounts/me');
+    expect(await me.json()).toMatchObject({ role: 'family' });
+  });
+
+  it('sin cuenta no se crean perfiles', async () => {
+    const res = await h.call('99999999-9999-4999-8999-999999999999', 'POST', '/profiles', {
+      id: uuidFor('sin-cuenta'),
+      alias: 'Nadie',
+      avatar: 'gris',
+    });
+    expect(res.status).toBe(403);
   });
 });
 
@@ -92,7 +104,7 @@ describe('perfiles', () => {
     expect(theirs.profiles).toEqual([]);
   });
 
-  it('el alias no puede ser un email y un docente no crea perfiles de familia', async () => {
+  it('el alias no puede ser un email; una cuenta docente también puede tener perfiles de familia', async () => {
     const email = await h.call(FAMILY, 'POST', '/profiles', {
       id: uuidFor('mail'),
       alias: 'mica@mail.com',
@@ -104,7 +116,7 @@ describe('perfiles', () => {
       alias: 'Tomi',
       avatar: 'gris',
     });
-    expect(teacher.status).toBe(403);
+    expect(teacher.status).toBe(200);
   });
 
   it('no se guarda email ni nombre real: el perfil solo tiene alias y avatar', async () => {
@@ -355,5 +367,35 @@ describe('seguridad de la base (arquitectura §9)', () => {
     );
     await h.db.exec('reset role');
     expect(rows[0]!.n).toBeGreaterThan(0);
+  });
+});
+
+describe('reportes de error de la app (etapa 9)', () => {
+  it('se registran en los logs sin datos del chico, y uno roto no falla', async () => {
+    const logs: string[] = [];
+    const original = console.error;
+    console.error = (msg: string) => logs.push(msg);
+    try {
+      const ok = await h.call(null, 'POST', '/errors', {
+        message: 'boom',
+        path: '/mundo/3',
+        version: 'abc',
+        kind: 'error',
+      });
+      expect(ok.status).toBe(204);
+      const broken = await h.call(null, 'POST', '/errors', { message: 'x', alias: 'Michi' });
+      expect(broken.status).toBe(204);
+    } finally {
+      console.error = original;
+    }
+    expect(logs).toEqual([
+      JSON.stringify({
+        type: 'client-error',
+        message: 'boom',
+        path: '/mundo/3',
+        version: 'abc',
+        kind: 'error',
+      }),
+    ]);
   });
 });

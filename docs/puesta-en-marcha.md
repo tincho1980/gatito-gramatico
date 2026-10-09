@@ -145,3 +145,18 @@ Una sola vez, en este orden:
 5. Publicar: `npm run build` y `npm run deploy -w api`.
 
 Para probar: abrí la app, **Perfil → Para familias y docentes**, entrá con tu email (te llega el enlace) o con Google y elegí "Soy docente". Creá un aula y entrá desde el celular con **Entrar a mi aula** y el código.
+
+## 6. Cierre del MVP (etapa 9)
+
+1. **Migración nueva** (marcas de revisión del banco): `npm run db:push`. Después, publicar.
+2. **Revisión del banco con docentes:** cada docente entra a **Familias y docentes → Docente → Revisar las palabras del juego**, recorre los mundos (empezando por los tiers 3 de los mundos 8, 9 y 10) y marca lo que haya que corregir, con una nota. Para juntar las marcas:
+
+   ```bash
+   npm run reviews:export
+   ```
+
+   Deja `revisiones.local.csv` en la raíz (no se versiona; se abre con Excel). Las correcciones se hacen en `words/src/*.txt` y después `npm run build -w words`.
+
+3. **Errores:** en el panel de Cloudflare, *Workers & Pages → gatita-gramatica → Logs* (o *Observability*). Los de la app tienen `"type":"client-error"`; los del Worker, `"type":"worker-error"`. Se puede armar una alerta por email desde ese mismo panel.
+4. **Privacidad y términos:** completar `app/src/content/legal.ts` (responsable, email de contacto, fecha) y hacer revisar `/privacidad` y `/terminos` por un abogado antes del piloto.
+5. **Supabase Pro** antes del piloto con escuelas reales (backups diarios y sin pausa por inactividad).

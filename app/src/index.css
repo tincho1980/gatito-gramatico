@@ -3,6 +3,16 @@
 @import '@fontsource-variable/quicksand';
 
 @theme {
+  /*
+   * Contraste AA (plan, etapa 9): sobre el fondo rosado, el rosa y el gris de Tailwind quedan
+   * apenas por debajo de 4,5:1. Se oscurece un tono cada uno, acá y en ningún otro lado.
+   */
+  --color-pink-500: oklch(59.2% 0.249 0.584);
+  --color-pink-600: oklch(52.5% 0.223 3.958);
+  --color-pink-700: oklch(45.9% 0.187 3.815);
+  --color-gray-400: oklch(55.1% 0.027 264.364);
+  --color-gray-500: oklch(44.6% 0.03 256.802);
+
   --font-sans: 'Quicksand Variable', sans-serif;
   --font-heading: 'Fredoka Variable', sans-serif;
 
@@ -50,6 +60,11 @@
 }
 
 @layer base {
+  /* Foco visible al navegar con teclado (plan, etapa 9), en toda la app. */
+  :focus-visible {
+    outline: 3px solid var(--color-pink-600);
+    outline-offset: 2px;
+  }
   html {
     -webkit-tap-highlight-color: transparent;
     -webkit-text-size-adjust: 100%;
