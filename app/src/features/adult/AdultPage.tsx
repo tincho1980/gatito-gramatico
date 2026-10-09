@@ -14,12 +14,14 @@ import {
 } from '../../auth/adult.ts';
 import { adultApi, ApiError } from '../../sync/api.ts';
 import { TeacherPanel } from '../classroom/TeacherPanel.tsx';
+import { useActiveProfile } from '../profile/hooks.ts';
 import { FamilyPanel } from './FamilyPanel.tsx';
 
 type Role = 'family' | 'teacher';
 
 export function AdultPage() {
   const { status, session } = useAdultAuth();
+  const hasProfile = !!useActiveProfile();
   const [role, setRole] = useState<Role | null | undefined>(undefined);
   const [accountId, setAccountId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -79,7 +81,7 @@ export function AdultPage() {
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-2xl flex-col gap-5 px-4 pt-6 pb-safe">
-      <PageHeader title="Familias y docentes" back="/perfil">
+      <PageHeader title="Familias y docentes" back={hasProfile ? '/perfil' : '/'}>
         {session && (
           <button
             type="button"

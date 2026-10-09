@@ -29,6 +29,7 @@ import {
   addUnlock,
   classroomByCode,
   classroomsOf,
+  deleteProfile,
   ensureAccount,
   getAccount,
   getClassroom,
@@ -36,6 +37,7 @@ import {
   insertClassroom,
   insertClassroomProfile,
   insertProfile,
+  ownerHasAlias,
   profileInClassroom,
   profilesOf,
   profilesOfClassrooms,
@@ -279,6 +281,9 @@ export function createApp(deps: Deps) {
 
     let profile = await getProfile(sql, req.id);
     if (profile && profile.ownerId !== owner) return fail(c, 409, 'el id ya existe');
+    if (await ownerHasAlias(sql, owner, normalizeAlias(req.alias), req.id)) {
+      return fail(c, 409, 'Ya tenés un perfil con ese apodo.');
+    }
     if (!profile) {
       const created = Math.min(
         req.createdAt ? Date.parse(req.createdAt) : Infinity,
@@ -298,6 +303,16 @@ export function createApp(deps: Deps) {
       now: now(),
     });
     return c.json({ profile: { id: profile.id, alias: profile.alias }, ...result });
+  });
+
+  // Borrar un perfil de la familia, con todo su progreso (desde el panel de familia).
+  app.delete('/profiles/:id', async (c) => {
+    const owner = accountId(c);
+    if (!owner) return fail(c, 403, 'solo para adultos');
+    const profile = await getProfile(c.get('sql'), c.req.param('id'));
+    if (!profile || profile.ownerId !== owner) return fail(c, 404, 'perfil inexistente');
+    await deleteProfile(c.get('sql'), profile.id);
+    return c.json({ deleted: profile.id });
   });
 
   app.post('/rounds', async (c) => {

@@ -45,6 +45,24 @@ export async function profilesOf(sql: Tx, accountId: string): Promise<ProfileRow
     order by created_at`;
 }
 
+/** Otro perfil del mismo adulto con ese apodo (sin distinguir mayúsculas). */
+export async function ownerHasAlias(
+  sql: Tx,
+  ownerId: string,
+  alias: string,
+  exceptId: string,
+): Promise<boolean> {
+  const [row] = await sql`
+    select 1 from private.profiles
+    where owner_id = ${ownerId} and lower(alias) = lower(${alias}) and id <> ${exceptId}`;
+  return !!row;
+}
+
+/** Borra el perfil y todo lo suyo (rondas, turnos, compras, estado: `on delete cascade`). */
+export async function deleteProfile(sql: Tx, id: string): Promise<void> {
+  await sql`delete from private.profiles where id = ${id}`;
+}
+
 export async function insertProfile(
   sql: Tx,
   p: { id: string; ownerId: string; alias: string; avatar: string; createdAt: string },

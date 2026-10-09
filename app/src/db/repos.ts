@@ -19,10 +19,14 @@ import { db as defaultDb, type GatitaDB, type Look, type Profile, type ProfileLi
 export const profilesRepo = {
   async create(
     { alias, avatar }: { alias: string; avatar: Avatar },
-    { db = defaultDb, now = new Date().toISOString() } = {},
+    {
+      db = defaultDb,
+      now = new Date().toISOString(),
+      id = crypto.randomUUID(),
+    }: { db?: GatitaDB; now?: string; id?: string } = {},
   ): Promise<Profile> {
     const profile: Profile = {
-      id: crypto.randomUUID(),
+      id,
       alias: normalizeAlias(alias),
       avatar,
       kind: 'guest',
@@ -56,6 +60,29 @@ export const profilesRepo = {
 
   async setActive(id: string, db: GatitaDB = defaultDb): Promise<void> {
     await db.meta.put({ key: 'activeProfileId', value: id });
+  },
+
+  /**
+   * Saca el perfil de este dispositivo con todo lo suyo. Si era el activo, queda activo otro
+   * (o ninguno: la app vuelve a la bienvenida).
+   */
+  async remove(id: string, db: GatitaDB = defaultDb): Promise<void> {
+    await db.transaction(
+      'rw',
+      [db.profiles, db.rounds, db.purchases, db.profileState, db.meta],
+      async () => {
+        await db.rounds.where('profileId').equals(id).delete();
+        await db.purchases.where('profileId').equals(id).delete();
+        await db.profileState.delete(id);
+        await db.profiles.delete(id);
+        const active = await db.meta.get('activeProfileId');
+        if (active?.value === id) {
+          const next = await db.profiles.orderBy('createdAt').first();
+          if (next) await db.meta.put({ key: 'activeProfileId', value: next.id });
+          else await db.meta.delete('activeProfileId');
+        }
+      },
+    );
   },
 
   /** Vincula un perfil del dispositivo: desde ahora sus rondas y compras se sincronizan. */
