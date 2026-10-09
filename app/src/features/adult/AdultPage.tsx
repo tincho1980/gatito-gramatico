@@ -225,7 +225,7 @@ function RoleTabs({ role, onChange }: { role: Role; onChange: (r: Role) => void 
           role="tab"
           aria-selected={role === t.value}
           onClick={() => onChange(t.value)}
-          className={`min-h-11 rounded-xl font-heading font-bold ${role === t.value ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-500'}`}
+          className={`min-h-11 rounded-xl font-heading font-bold ${role === t.value ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-700'}`}
         >
           {t.label}
         </button>
