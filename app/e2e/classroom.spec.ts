@@ -154,3 +154,21 @@ test('la familia borra un perfil de su cuenta con todo su progreso', async ({ br
   await page.goto('/');
   await expect(page.getByPlaceholder('Por ejemplo, Michi')).toBeVisible();
 });
+
+test('una misma cuenta es familia y docente: el selector cambia de panel', async ({ browser }) => {
+  const page = await phone(browser);
+  await adultLogin(page, `ambas-${Date.now()}@casa.test`, 'Soy familia');
+  await expect(page.getByRole('heading', { name: 'Crear un perfil' })).toBeVisible();
+  await page.getByRole('tab', { name: '🏫 Docente' }).click();
+  await page.getByRole('textbox', { name: 'Crear un aula' }).fill('Taller de lectura');
+  await page.getByRole('button', { name: 'Crear aula' }).click();
+  await expect(page.getByRole('heading', { name: 'Taller de lectura' })).toBeVisible();
+  // La preferencia queda guardada: al volver, abre el panel docente.
+  await page.reload();
+  await expect(page.getByRole('tab', { name: '🏫 Docente' })).toHaveAttribute(
+    'aria-selected',
+    'true',
+  );
+  await page.getByRole('tab', { name: '🏠 Familia' }).click();
+  await expect(page.getByRole('heading', { name: 'Crear un perfil' })).toBeVisible();
+});

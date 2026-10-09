@@ -53,9 +53,9 @@ export function AdultPage() {
 
   const choose = async (r: Role) => {
     if (!session) return;
+    setRole(r); // el cambio de panel se ve enseguida; el servidor guarda la preferencia
     const a = await adultApi(session.token).setRole(r);
     setAccountId(a.id);
-    setRole(a.role);
   };
 
   let content;
@@ -73,10 +73,18 @@ export function AdultPage() {
     );
   } else if (role === null) {
     content = <RoleChoice onChoose={(r) => void choose(r)} />;
-  } else if (role === 'family' && accountId) {
-    content = <FamilyPanel token={session.token} accountId={accountId} />;
-  } else if (role === 'teacher') {
-    content = <TeacherPanel token={session.token} />;
+  } else if (role && accountId) {
+    // Una cuenta puede ser familia y docente: el selector cambia de panel.
+    content = (
+      <>
+        <RoleTabs role={role} onChange={(r) => void choose(r)} />
+        {role === 'family' ? (
+          <FamilyPanel token={session.token} accountId={accountId} />
+        ) : (
+          <TeacherPanel token={session.token} />
+        )}
+      </>
+    );
   }
 
   return (
@@ -164,7 +172,9 @@ function Login() {
 function RoleChoice({ onChoose }: { onChoose: (r: Role) => void }) {
   return (
     <div className="grid gap-3">
-      <p className="text-gray-700">¿Cómo vas a usar la gatita? Se elige una sola vez.</p>
+      <p className="text-gray-700">
+        ¿Cómo vas a usar la gatita? Si sos las dos cosas, después cambiás arriba.
+      </p>
       <button
         type="button"
         onClick={() => onChoose('family')}
@@ -185,6 +195,29 @@ function RoleChoice({ onChoose }: { onChoose: (r: Role) => void }) {
           Armo un aula, mis alumnos entran con un código y veo cómo van.
         </span>
       </button>
+    </div>
+  );
+}
+
+function RoleTabs({ role, onChange }: { role: Role; onChange: (r: Role) => void }) {
+  const tabs: { value: Role; label: string }[] = [
+    { value: 'family', label: '🏠 Familia' },
+    { value: 'teacher', label: '🏫 Docente' },
+  ];
+  return (
+    <div className="grid grid-cols-2 gap-2 rounded-2xl bg-pink-100 p-1" role="tablist">
+      {tabs.map((t) => (
+        <button
+          key={t.value}
+          type="button"
+          role="tab"
+          aria-selected={role === t.value}
+          onClick={() => onChange(t.value)}
+          className={`min-h-11 rounded-xl font-heading font-bold ${role === t.value ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-500'}`}
+        >
+          {t.label}
+        </button>
+      ))}
     </div>
   );
 }

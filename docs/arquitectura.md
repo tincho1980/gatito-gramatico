@@ -219,15 +219,15 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 
 | Método y ruta | Quién | Qué hace |
 | --- | --- | --- |
-| `POST /api/accounts/me` | adulto | Crea o devuelve la cuenta (`role`). |
-| `GET /api/profiles` | adulto | Perfiles del adulto (familia) o de sus aulas (docente). |
-| `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). Un apodo no se repite dentro de la misma cuenta (409). |
-| `DELETE /api/profiles/:id` | familia dueña | Borra el perfil con todo su progreso (rondas, turnos, compras y estado, en cascada). Desde el panel de familia, con confirmación. |
+| `POST /api/accounts/me` | adulto | `{ role }` → crea la cuenta o cambia su panel preferido. Una cuenta puede ser familia y docente a la vez: `role` es solo el panel que se abre por defecto (el último que usó); la app tiene un selector Familia / Docente. |
+| `GET /api/profiles` | adulto | Perfiles de su familia; con `?scope=classrooms`, los chicos de sus aulas. |
+| `POST /api/profiles` | adulto con cuenta | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). Un apodo no se repite dentro de la misma cuenta (409). |
+| `DELETE /api/profiles/:id` | adulto dueño | Borra el perfil con todo su progreso (rondas, turnos, compras y estado, en cascada). Desde el panel de familia, con confirmación. |
 | `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds, rejected: [{ id, reason }] }`: cada ronda se acepta o rechaza por separado. |
 | `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds, rejected }`. |
 | `GET /api/profiles/:id/state` | dueño del perfil (adulto o el propio chico) | `{ state, rounds, purchases, profile }`, para un dispositivo nuevo: el estado y los registros fuente. Con `?only=state`, solo el estado (para traer cambios del servidor). |
-| `GET /api/classrooms` | docente | Sus aulas: nombre, código, cantidad de alumnos y mundos abiertos. |
-| `POST /api/classrooms` | docente | `{ name }` → crea un aula con un código de 6 letras al azar (sin I ni O; si ya existe, prueba otro). |
+| `GET /api/classrooms` | adulto con cuenta | Sus aulas: nombre, código, cantidad de alumnos y mundos abiertos. |
+| `POST /api/classrooms` | adulto con cuenta | `{ name }` → crea un aula con un código de 6 letras al azar (sin I ni O; si ya existe, prueba otro). |
 | `POST /api/classrooms/join` | público, con rate limit | `{ code, alias, pin, avatar?, profileId?, createdAt? }` → si el apodo ya existe en el aula (sin distinguir mayúsculas), comprueba el PIN y devuelve su token (`existing: true`, para traerlo a otro dispositivo); si no, crea el perfil (con el id del perfil invitado del dispositivo, si viene) y devuelve su token. |
 | `GET /api/classrooms/:id/dashboard` | docente del aula | Por alumno: apodo, mundo actual, rondas, última actividad, EMA e intentos por regla y estrellas por mundo. Lee solo esas partes del estado guardado. |
 | `POST /api/classrooms/:id/unlocks` | docente del aula | `{ world }` → abre ese mundo para el aula. Abrir un mundo solo marca `unlocked` (`applyTeacherUnlocks`): se aplica sobre el estado guardado de cada alumno, sin recalcular sus rondas, y también en cada estado que devuelve la API. |
