@@ -253,13 +253,15 @@ Criterios de aceptación:
 
 Tareas:
 
-- [ ] Banco ampliado y revisado por docentes (prioridad: tiers 3 de mundos 8, 9 y 10). Herramienta simple de revisión: una página interna que muestra cada palabra con su clasificación y permite marcar "revisar".
-- [ ] Accesibilidad: contraste AA, foco visible, lectores de pantalla en el turno, opción de texto grande.
-- [ ] Ilustraciones definitivas de la gatita y los mundos.
-- [ ] Textos finales de la gatita y las lecciones, revisados por docentes.
-- [ ] Política de privacidad y términos, pensados para menores (Ley 25.326).
-- [ ] Publicidad detrás de bandera (arquitectura §11), apagada por defecto.
-- [ ] Monitoreo de errores en el cliente y el Worker.
+- [x] Herramienta de revisión: `/revision` (desde el panel docente) muestra cada palabra con su clasificación y permite marcarla con una nota; `npm run reviews:export` las baja a un CSV.
+- [ ] Banco ampliado y revisado por docentes (prioridad: tiers 3 de mundos 8, 9 y 10), con esa herramienta. Necesita a los docentes del piloto.
+- [x] Accesibilidad: contraste AA, foco visible, lectores de pantalla en el turno, opción de texto grande. Verificado con axe (WCAG 2.1 AA) en todas las pantallas, en los e2e.
+- [ ] Ilustraciones definitivas de la gatita y los mundos. Necesita ilustrador.
+- [ ] Textos finales de la gatita y las lecciones, revisados por docentes. Necesita a los docentes del piloto.
+- [x] Borradores de política de privacidad y términos, pensados para menores (Ley 25.326): `/privacidad` y `/terminos`.
+- [ ] Revisión legal de esos textos y datos del responsable (`app/src/content/legal.ts`).
+- [x] Publicidad detrás de bandera (arquitectura §11), apagada por defecto.
+- [x] Monitoreo de errores en el cliente y el Worker: a los logs de Cloudflare, sin servicios externos ni datos del chico.
 - [ ] Pasar Supabase a Pro antes del piloto si hay escuelas reales.
 
 Criterios de aceptación:

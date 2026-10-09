@@ -1,6 +1,7 @@
 // Área de adultos (/adultos): ingreso con Google o enlace por email, elección de rol (una sola
 // vez) y el panel de familia o de docente. Los chicos no necesitan entrar acá.
 import { useEffect, useState, type FormEvent } from 'react';
+import { Link } from 'react-router';
 import { Button } from '../../components/Button.tsx';
 import { PageHeader } from '../../components/PageHeader.tsx';
 import {
@@ -144,7 +145,7 @@ function Login() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
-              className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400 focus:outline-none"
+              className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400"
             />
           </label>
           <Button type="submit" size="lg" className="min-h-14">
@@ -157,6 +158,17 @@ function Login() {
           {error}
         </p>
       )}
+      <p className="text-sm text-gray-600">
+        Al entrar aceptás los{' '}
+        <Link to="/terminos" className="underline">
+          términos de uso
+        </Link>{' '}
+        y la{' '}
+        <Link to="/privacidad" className="underline">
+          política de privacidad
+        </Link>
+        .
+      </p>
     </div>
   );
 }

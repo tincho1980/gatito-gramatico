@@ -42,3 +42,4 @@ playwright-report/
 supabase/.branches
 supabase/.temp
 .local-db/
+*.local.csv

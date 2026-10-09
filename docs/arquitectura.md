@@ -300,8 +300,27 @@ Tests del Worker: `npm test -w api` levanta Postgres embebido (PGlite) con las m
 
 En local, Vite hace proxy de `/api` a `wrangler dev`.
 
-## 11. Publicidad (al final, detrás de una bandera)
+## 11. Monitoreo de errores
+
+- **Worker:** `app.onError` escribe un JSON (`type: 'worker-error'`, método, ruta, mensaje, primeras líneas del stack) en los logs de Cloudflare (`observability` activado en `wrangler.jsonc`).
+- **App:** en el build `production`, los errores que nadie atrapó y los de render (pantalla de error de React Router) se mandan a `POST /api/errors` (público, 30 por minuto por IP, `ERRORS_LIMITER`). El Worker los escribe en los mismos logs (`type: 'client-error'`) y no guarda nada en la base. El reporte lleva el mensaje y el stack recortados, sin URLs con parámetros, emails ni tokens; la ruta va sin ids; y la versión (commit en el CI). Máximo 5 reportes por carga de página.
+- Sin servicios externos de rastreo: es un sitio para chicos. Los logs se ven en el panel de Cloudflare (*Workers & Pages → gatita-gramatica → Logs*).
+
+## 12. Revisión del banco por docentes
+
+- `/revision` (desde el panel docente): cada palabra con sílabas, tónica, tipo, tilde, regla, tier, trampa y frase. Cada adulto marca las que hay que revisar, con una nota (`private.word_reviews`: una marca por adulto y palabra).
+- `GET/POST /api/reviews`, `DELETE /api/reviews/:wordId` (adulto con cuenta; solo ve sus marcas).
+- `npm run reviews:export` (con la conexión de `.env.local`) baja `revisiones.local.csv`: palabra, clasificación, cuántos la marcaron y sus notas. Las correcciones se hacen en `words/src/*.txt`.
+
+## 13. Accesibilidad
+
+- Contraste AA: sobre el fondo rosado, `pink-500/600/700` y `gray-400/500` de Tailwind se oscurecen un tono en `@theme` (`app/src/index.css`).
+- Foco visible en toda la app (`:focus-visible`). En el turno, cada paso lleva el foco a la consigna (lector de pantalla y teclado); en la corrección, al botón "Seguir". Las sílabas se anuncian con su posición.
+- "Letra más grande" por perfil: agranda la letra base del documento (todo está en `rem`).
+- Los e2e corren axe (WCAG 2.1 A y AA) en todas las pantallas.
+
+## 14. Publicidad (al final, detrás de una bandera)
 
 - Componente `<AdSlot>` con alto reservado; solo en inicio y resultados, nunca durante una ronda.
 - Siempre con `data-tag-for-age-treatment="1"` (sitio dirigido a menores: sin anuncios personalizados).
-- Bandera `VITE_ADS_ENABLED`; desactivado para perfiles de aula.
+- Bandera `VITE_ADS_ENABLED` (más `VITE_ADSENSE_CLIENT` y los slots); apagada por defecto y desactivada para perfiles de aula. Componente `app/src/components/AdSlot.tsx`. Antes de activarla: revisar la configuración de AdSense para sitios dirigidos a menores y actualizar la política de privacidad.

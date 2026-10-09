@@ -21,7 +21,7 @@ import { useNotices } from '../notify/store.ts';
 import { useActiveProfile } from '../profile/hooks.ts';
 
 const inputClass =
-  'min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400 focus:outline-none';
+  'min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400';
 
 export function JoinPage() {
   const active = useActiveProfile();

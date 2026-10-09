@@ -35,6 +35,8 @@
     },
     // Ingresos al aula por IP (además del conteo en la base).
     { "name": "JOIN_LIMITER", "namespace_id": "1002", "simple": { "limit": 10, "period": 60 } },
+    // Reportes de error de la app por IP.
+    { "name": "ERRORS_LIMITER", "namespace_id": "1005", "simple": { "limit": 30, "period": 60 } },
   ],
   "triggers": {
     // Una vez por día: evita que Supabase pause el proyecto del plan gratis.
@@ -58,6 +60,11 @@
           "name": "JOIN_LIMITER",
           "namespace_id": "1004",
           "simple": { "limit": 10, "period": 60 },
+        },
+        {
+          "name": "ERRORS_LIMITER",
+          "namespace_id": "1006",
+          "simple": { "limit": 30, "period": 60 },
         },
       ],
       "triggers": { "crons": ["0 12 * * *"] },

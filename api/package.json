@@ -11,7 +11,8 @@
     "setup:db": "node scripts/setup-db.ts",
     "db:push": "node scripts/db-push.ts",
     "dev:local": "node scripts/dev-local.ts",
-    "setup:secret": "node scripts/setup-secret.ts"
+    "setup:secret": "node scripts/setup-secret.ts",
+    "reviews:export": "node scripts/reviews-export.ts"
   },
   "dependencies": {
     "@gatita/shared": "*",

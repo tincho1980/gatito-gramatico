@@ -357,3 +357,33 @@ describe('seguridad de la base (arquitectura §9)', () => {
     expect(rows[0]!.n).toBeGreaterThan(0);
   });
 });
+
+describe('reportes de error de la app (etapa 9)', () => {
+  it('se registran en los logs sin datos del chico, y uno roto no falla', async () => {
+    const logs: string[] = [];
+    const original = console.error;
+    console.error = (msg: string) => logs.push(msg);
+    try {
+      const ok = await h.call(null, 'POST', '/errors', {
+        message: 'boom',
+        path: '/mundo/3',
+        version: 'abc',
+        kind: 'error',
+      });
+      expect(ok.status).toBe(204);
+      const broken = await h.call(null, 'POST', '/errors', { message: 'x', alias: 'Michi' });
+      expect(broken.status).toBe(204);
+    } finally {
+      console.error = original;
+    }
+    expect(logs).toEqual([
+      JSON.stringify({
+        type: 'client-error',
+        message: 'boom',
+        path: '/mundo/3',
+        version: 'abc',
+        kind: 'error',
+      }),
+    ]);
+  });
+});

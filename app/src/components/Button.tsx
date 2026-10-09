@@ -21,7 +21,7 @@ export const Button: React.FC<ButtonProps> = ({
     secondary:
       'bg-indigo-400 hover:bg-indigo-500 text-white shadow-indigo-200 border-b-4 border-indigo-700 active:border-b-0 active:translate-y-1',
     outline:
-      'bg-white hover:bg-pink-50 text-pink-500 border-2 border-pink-200 hover:border-pink-300',
+      'bg-white hover:bg-pink-50 text-pink-700 border-2 border-pink-200 hover:border-pink-300',
     danger:
       'bg-red-400 hover:bg-red-500 text-white shadow-red-200 border-b-4 border-red-700 active:border-b-0 active:translate-y-1',
   };

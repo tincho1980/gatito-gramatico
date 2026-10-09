@@ -95,7 +95,7 @@ export function ShopPage() {
               setKind(t.kind);
               setSelected(null);
             }}
-            className={`min-h-11 rounded-xl font-heading font-bold ${kind === t.kind ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-500'}`}
+            className={`min-h-11 rounded-xl font-heading font-bold ${kind === t.kind ? 'bg-white text-pink-600 shadow-sm' : 'text-pink-700'}`}
           >
             {t.label}
           </button>

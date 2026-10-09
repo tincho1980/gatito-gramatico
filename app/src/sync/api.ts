@@ -80,6 +80,12 @@ export function createApi(getToken: GetToken, fetchImpl: Fetch = defaultFetch): 
   };
 }
 
+export interface Review {
+  wordId: string;
+  note: string;
+  createdAt: string;
+}
+
 export type RemoteProfile = ProfileStateResponse & {
   profile: { id: string; alias: string; avatar: string };
 };
@@ -129,6 +135,11 @@ export const adultApi = (token: string) => ({
       body: { world },
     }),
   fetchProfile: (profileId: string) => fetchProfile(token, profileId),
+  reviews: () => request<{ reviews: Review[] }>('GET', '/reviews', { token }),
+  markReview: (wordId: string, note: string) =>
+    request<{ reviews: Review[] }>('POST', '/reviews', { token, body: { wordId, note } }),
+  unmarkReview: (wordId: string) =>
+    request<{ reviews: Review[] }>('DELETE', `/reviews/${encodeURIComponent(wordId)}`, { token }),
   /** Borra el perfil de la cuenta con todo su progreso. */
   deleteProfile: (profileId: string) =>
     request<{ deleted: string }>('DELETE', `/profiles/${profileId}`, { token }),

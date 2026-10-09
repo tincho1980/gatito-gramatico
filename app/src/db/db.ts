@@ -13,6 +13,8 @@ export interface Profile {
   createdAt: string;
   /** Sonidos y vibración. */
   sound: boolean;
+  /** Letra más grande en toda la app (accesibilidad, plan etapa 9). */
+  bigText?: boolean;
   /** Accesorio y fondo puestos (ids de la colección). */
   look?: Look;
 }

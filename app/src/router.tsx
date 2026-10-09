@@ -11,14 +11,18 @@ import { WorldPage } from './features/map/WorldPage.tsx';
 import { NewProfilePage } from './features/profile/NewProfilePage.tsx';
 import { ProfilePage } from './features/profile/ProfilePage.tsx';
 import { InstallHelp } from './features/pwa/InstallHelp.tsx';
+import { ReviewPage } from './features/review/ReviewPage.tsx';
+import { PrivacyPage, TermsPage } from './features/legal/LegalPages.tsx';
 import { ProgressPage } from './features/progress/ProgressPage.tsx';
 import { RoundPage } from './features/round/RoundPage.tsx';
 import { ShopPage } from './features/shop/ShopPage.tsx';
+import { ErrorPage } from './features/errors/ErrorPage.tsx';
 import { Layout } from './Layout.tsx';
 
 export const router = createBrowserRouter([
   {
     element: <Layout />,
+    errorElement: <ErrorPage />,
     children: [
       { path: '/', element: <Home /> },
       { path: '/mapa', element: <MapPage /> },
@@ -34,6 +38,9 @@ export const router = createBrowserRouter([
       { path: '/entrar-al-aula', element: <JoinPage /> },
       { path: '/adultos', element: <AdultPage /> },
       { path: '/aula/:id', element: <DashboardPage /> },
+      { path: '/revision', element: <ReviewPage /> },
+      { path: '/privacidad', element: <PrivacyPage /> },
+      { path: '/terminos', element: <TermsPage /> },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },

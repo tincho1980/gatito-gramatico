@@ -8,6 +8,7 @@ import { Hono, type Context as HonoContext } from 'hono';
 import type { Sql } from 'postgres';
 import {
   AccountRequestSchema,
+  ClientErrorSchema,
   aliasProblem,
   applyTeacherUnlocks,
   ClassroomRequestSchema,
@@ -17,6 +18,7 @@ import {
   normalizeAlias,
   normalizeClassroomCode,
   ProfileRequestSchema,
+  ReviewRequestSchema,
   PurchasesRequestSchema,
   RoundsRequestSchema,
   UnlockRequestSchema,
@@ -30,6 +32,7 @@ import {
   classroomByCode,
   classroomsOf,
   deleteProfile,
+  deleteReview,
   ensureAccount,
   getAccount,
   getClassroom,
@@ -43,11 +46,13 @@ import {
   profilesOfClassrooms,
   purchasesOf,
   recordJoinAttempt,
+  reviewsOf,
   roundsOf,
   saveState,
   statesOfClassroom,
   studentsOf,
   unlocksOf,
+  upsertReview,
   type ProfileRow,
 } from './db.ts';
 import type { Env, RateLimiter } from './env.ts';
@@ -67,6 +72,8 @@ export interface Deps {
   limiter?: (env: Env) => RateLimiter | undefined;
   /** Ingresos al aula por IP (además del conteo en la base). */
   joinLimiter?: (env: Env) => RateLimiter | undefined;
+  /** Reportes de error de la app por IP. */
+  errorsLimiter?: (env: Env) => RateLimiter | undefined;
   /** Generador de códigos de aula (para tests). */
   randomCode?: () => string;
 }
@@ -102,8 +109,17 @@ export function createApp(deps: Deps) {
   const now = deps.now ?? (() => new Date());
   const app = new Hono<{ Bindings: Env; Variables: Vars }>().basePath('/api');
 
+  // Errores del Worker: a los logs de Cloudflare (Workers Logs), con la ruta y el método.
   app.onError((err, c) => {
-    console.error(err);
+    console.error(
+      JSON.stringify({
+        type: 'worker-error',
+        method: c.req.method,
+        path: new URL(c.req.url).pathname,
+        message: err.message,
+        stack: err.stack?.split('\n').slice(0, 8).join('\n'),
+      }),
+    );
     return c.json({ error: 'error interno' }, 500);
   });
   app.notFound((c) => c.json({ error: 'no existe' }, 404));
@@ -122,6 +138,18 @@ export function createApp(deps: Deps) {
       }
     }
   }
+
+  // Errores de la app (plan, etapa 9): público, sin base, con límite por IP. Van a los logs
+  // de Cloudflare; no se guarda nada más.
+  app.post('/errors', async (c) => {
+    const limiter = deps.errorsLimiter?.(c.env);
+    const ip = c.req.header('CF-Connecting-IP') ?? 'local';
+    if (limiter && !(await limiter.limit({ key: ip })).success) return c.body(null, 204);
+    const parsed = ClientErrorSchema.safeParse(await body(c));
+    if (!parsed.success) return c.body(null, 204); // un reporte roto no merece otro error
+    console.error(JSON.stringify({ type: 'client-error', ...parsed.data }));
+    return c.body(null, 204);
+  });
 
   // Ingreso de un chico al aula: público, con límite por IP (arquitectura §6 y §9.7).
   app.post('/classrooms/join', (c) =>
@@ -357,6 +385,37 @@ export function createApp(deps: Deps) {
       purchases: await purchasesOf(sql, profile.id),
       profile: { id: profile.id, alias: profile.alias, avatar: profile.avatar },
     });
+  });
+
+  // —— Revisión del banco de palabras (etapa 9) ——
+
+  app.get('/reviews', async (c) => {
+    const id = await requireTeacher(c);
+    if (!id) return fail(c, 403, 'primero creá tu cuenta');
+    return c.json({ reviews: await reviewsOf(c.get('sql'), id) });
+  });
+
+  app.post('/reviews', async (c) => {
+    const id = await requireTeacher(c);
+    if (!id) return fail(c, 403, 'primero creá tu cuenta');
+    const parsed = ReviewRequestSchema.safeParse(await body(c));
+    if (!parsed.success || !deps.bank.index.byId.has(parsed.data.wordId)) {
+      return fail(c, 400, 'palabra inexistente');
+    }
+    await upsertReview(c.get('sql'), {
+      accountId: id,
+      wordId: parsed.data.wordId,
+      wordsVersion: deps.bank.version,
+      note: (parsed.data.note ?? '').trim(),
+    });
+    return c.json({ reviews: await reviewsOf(c.get('sql'), id) });
+  });
+
+  app.delete('/reviews/:wordId', async (c) => {
+    const id = await requireTeacher(c);
+    if (!id) return fail(c, 403, 'primero creá tu cuenta');
+    await deleteReview(c.get('sql'), id, c.req.param('wordId'));
+    return c.json({ reviews: await reviewsOf(c.get('sql'), id) });
   });
 
   // —— Docente ——

@@ -19,6 +19,8 @@ export interface Env {
   ROUNDS_LIMITER?: RateLimiter;
   /** 10 ingresos al aula por minuto por IP. */
   JOIN_LIMITER?: RateLimiter;
+  /** 30 reportes de error por minuto por IP. */
+  ERRORS_LIMITER?: RateLimiter;
   /** La app estática (app/dist). */
   ASSETS: { fetch: (request: Request) => Promise<Response> };
 }

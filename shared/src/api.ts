@@ -148,6 +148,22 @@ export interface DashboardResponse {
   students: DashboardStudent[];
 }
 
+/** Error de la app que se reporta al Worker (plan, etapa 9). Sin datos del chico. */
+export const ClientErrorSchema = z.strictObject({
+  message: z.string().check(z.maxLength(300)),
+  stack: z.optional(z.string().check(z.maxLength(2000))),
+  /** Solo la ruta, sin parámetros (`/mundo/3`). */
+  path: z.string().check(z.maxLength(100)),
+  /** Versión de la app (build) y del banco. */
+  version: z.string().check(z.maxLength(40)),
+  kind: z.enum(['error', 'rejection', 'render']),
+});
+
+export const ReviewRequestSchema = z.strictObject({
+  wordId: z.string().check(z.minLength(1), z.maxLength(80)),
+  note: z.optional(z.string().check(z.maxLength(500))),
+});
+
 /** Una ronda o compra que el Worker no aceptó, con el motivo. No se reintenta. */
 export interface Rejected {
   id: string;

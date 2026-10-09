@@ -10,6 +10,7 @@ import {
   playAction,
   WORLDS,
 } from '@gatita/shared';
+import { AdSlot } from '../../components/AdSlot.tsx';
 import { Croquetas } from '../../components/Croquetas.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
 import { backgroundClass, FRIENDS } from '../../content/collection.ts';
@@ -61,18 +62,20 @@ export function Home() {
         <div className="rounded-2xl bg-white p-2 shadow-sm">
           <dt className="text-xs font-semibold text-gray-500">Nivel</dt>
           <dd className="font-heading text-2xl font-bold text-gray-800">{level.level}</dd>
-          <dd
-            className="mx-1 mt-1 h-1.5 overflow-hidden rounded-full bg-pink-100"
-            role="progressbar"
-            aria-label={`${level.into} de ${level.needed} XP para el nivel ${level.level + 1}`}
-            aria-valuemin={0}
-            aria-valuemax={level.needed}
-            aria-valuenow={level.into}
-          >
+          <dd className="mx-1 mt-1">
             <div
-              className="h-full rounded-full bg-pink-500"
-              style={{ width: `${(level.into / level.needed) * 100}%` }}
-            />
+              className="h-1.5 overflow-hidden rounded-full bg-pink-100"
+              role="progressbar"
+              aria-label={`${level.into} de ${level.needed} XP para el nivel ${level.level + 1}`}
+              aria-valuemin={0}
+              aria-valuemax={level.needed}
+              aria-valuenow={level.into}
+            >
+              <div
+                className="h-full rounded-full bg-pink-500"
+                style={{ width: `${(level.into / level.needed) * 100}%` }}
+              />
+            </div>
           </dd>
         </div>
         <div className="rounded-2xl bg-white p-2 shadow-sm">
@@ -146,6 +149,7 @@ export function Home() {
       </section>
 
       {state && <InstallCard roundsPlayed={state.roundsPlayed} />}
+      <AdSlot slot="home" />
 
       {isDebug() && <DebugPanel profileId={profile.id} />}
 

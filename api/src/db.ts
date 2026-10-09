@@ -361,3 +361,33 @@ export async function lastRoundKey(
     order by finished_at desc, id desc limit 1`;
   return row ? { finishedAt: row.finishedAt.toISOString(), id: row.id } : null;
 }
+
+// —— Revisión del banco (etapa 9) ——
+
+export interface WordReview {
+  wordId: string;
+  note: string;
+  createdAt: string;
+}
+
+export async function reviewsOf(sql: Tx, accountId: string): Promise<WordReview[]> {
+  const rows = await sql<{ wordId: string; note: string; createdAt: Date }[]>`
+    select word_id as "wordId", note, created_at as "createdAt"
+    from private.word_reviews where account_id = ${accountId} order by created_at`;
+  return rows.map((r) => ({ ...r, createdAt: r.createdAt.toISOString() }));
+}
+
+export async function upsertReview(
+  sql: Tx,
+  r: { accountId: string; wordId: string; wordsVersion: string; note: string },
+): Promise<void> {
+  await sql`
+    insert into private.word_reviews (account_id, word_id, words_version, note)
+    values (${r.accountId}, ${r.wordId}, ${r.wordsVersion}, ${r.note})
+    on conflict (account_id, word_id)
+      do update set note = excluded.note, words_version = excluded.words_version`;
+}
+
+export async function deleteReview(sql: Tx, accountId: string, wordId: string): Promise<void> {
+  await sql`delete from private.word_reviews where account_id = ${accountId} and word_id = ${wordId}`;
+}

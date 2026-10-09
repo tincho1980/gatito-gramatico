@@ -29,6 +29,7 @@ const app = createApp({
   },
   limiter: (env) => env.ROUNDS_LIMITER,
   joinLimiter: (env) => env.JOIN_LIMITER,
+  errorsLimiter: (env) => env.ERRORS_LIMITER,
   appSecret: (env) => {
     if (!env.APP_SECRET)
       throw new Error('Falta el secreto APP_SECRET (npm run setup:secret -w api)');

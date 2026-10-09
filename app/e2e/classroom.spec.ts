@@ -154,3 +154,22 @@ test('la familia borra un perfil de su cuenta con todo su progreso', async ({ br
   await page.goto('/');
   await expect(page.getByPlaceholder('Por ejemplo, Michi')).toBeVisible();
 });
+
+test('un docente marca palabras para revisar con una nota', async ({ browser }) => {
+  const page = await phone(browser);
+  await adultLogin(page, `revisora-${Date.now()}@escuela.test`, 'Soy docente');
+  await page.getByRole('link', { name: /Revisar las palabras del juego/ }).click();
+  await page.getByRole('button', { name: 'Tier 3' }).click();
+  const card = page.getByRole('listitem').first();
+  const word = await card.locator('.font-heading.text-2xl').textContent();
+  await card.getByRole('button', { name: 'Marcar para revisar' }).click();
+  await card
+    .getByRole('textbox', { name: '¿Qué hay que revisar?' })
+    .fill('La frase no se entiende');
+  await card.getByRole('button', { name: 'Guardar marca' }).click();
+  await expect(page.getByText('Llevás 1 marca')).toBeVisible();
+  await page.getByRole('checkbox', { name: 'Solo marcadas' }).check();
+  await expect(page.getByRole('listitem')).toHaveCount(1);
+  await expect(page.getByRole('listitem')).toContainText(word!);
+  await expect(page.getByRole('listitem')).toContainText('La frase no se entiende');
+});

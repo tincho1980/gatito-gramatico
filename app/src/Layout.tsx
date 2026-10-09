@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router';
 import { Toaster } from './features/notify/Toaster.tsx';
+import { TextSize } from './features/profile/TextSize.tsx';
 import { UpdatePrompt } from './features/pwa/UpdatePrompt.tsx';
 import { SyncManager } from './sync/SyncManager.tsx';
 
@@ -11,6 +12,7 @@ export function Layout() {
       <Toaster />
       <UpdatePrompt />
       <SyncManager />
+      <TextSize />
     </>
   );
 }

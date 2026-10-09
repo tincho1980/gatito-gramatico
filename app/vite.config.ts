@@ -8,6 +8,12 @@ const API_URL = process.env.GATITA_API_URL ?? 'http://127.0.0.1:8787';
 export default defineConfig({
   // Las variables VITE_* (URL y clave publicable de Supabase) salen del .env.local de la raíz.
   envDir: '..',
+  // Versión de la app en los reportes de error: el commit en el CI, la fecha en otro lado.
+  define: {
+    __APP_VERSION__: JSON.stringify(
+      process.env.GITHUB_SHA?.slice(0, 7) ?? new Date().toISOString().slice(0, 16),
+    ),
+  },
   server: {
     port: 3000,
     host: '0.0.0.0',

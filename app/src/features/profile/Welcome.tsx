@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 import { aliasProblem, ALIAS_MAX, AVATARS, type Avatar } from '@gatita/shared';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
+import { LegalLinks } from '../../components/LegalLinks.tsx';
 import { profilesRepo } from '../../db/repos.ts';
 
 /** `onCreated`: a dónde ir después (al agregar un perfil desde /nuevo-perfil). */
@@ -43,7 +44,7 @@ export function Welcome({ onCreated }: { onCreated?: () => void } = {}) {
           maxLength={ALIAS_MAX + 5}
           autoComplete="off"
           placeholder="Por ejemplo, Michi"
-          className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400 focus:outline-none"
+          className="min-h-12 rounded-2xl border-2 border-pink-200 bg-white px-4 text-lg focus:border-pink-400"
           aria-invalid={touched && !!problem}
           aria-describedby="alias-help"
         />
@@ -96,6 +97,7 @@ export function Welcome({ onCreated }: { onCreated?: () => void } = {}) {
         >
           Soy adulto: familias y docentes
         </Link>
+        <LegalLinks />
       </div>
     </form>
   );
