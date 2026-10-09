@@ -221,7 +221,8 @@ Base: `/api`. Todas las rutas, salvo `classrooms/join`, requieren `Authorization
 | --- | --- | --- |
 | `POST /api/accounts/me` | adulto | Crea o devuelve la cuenta (`role`). |
 | `GET /api/profiles` | adulto | Perfiles del adulto (familia) o de sus aulas (docente). |
-| `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). |
+| `POST /api/profiles` | familia | Crea un perfil o vincula uno invitado: `{ id, alias, avatar, createdAt?, rounds? }`. Si trae `rounds`, se importan como en `POST /rounds`. `createdAt` es el alta del perfil invitado (nunca en el futuro). Un apodo no se repite dentro de la misma cuenta (409). |
+| `DELETE /api/profiles/:id` | familia dueña | Borra el perfil con todo su progreso (rondas, turnos, compras y estado, en cascada). Desde el panel de familia, con confirmación. |
 | `POST /api/rounds` | dueño del perfil | Sube una o más rondas: `{ profileId, rounds: Round[] }`. Idempotente por `round.id`. Recalcula y devuelve `{ state, acceptedIds, rejected: [{ id, reason }] }`: cada ronda se acepta o rechaza por separado. |
 | `POST /api/purchases` | dueño del perfil | Sube compras: `{ profileId, purchases: Purchase[] }`. Idempotente por `id`. Acepta solo las que pasan `purchaseProblem` con el estado recalculado; devuelve `{ acceptedIds, rejected }`. |
 | `GET /api/profiles/:id/state` | dueño del perfil (adulto o el propio chico) | `{ state, rounds, purchases, profile }`, para un dispositivo nuevo: el estado y los registros fuente. Con `?only=state`, solo el estado (para traer cambios del servidor). |

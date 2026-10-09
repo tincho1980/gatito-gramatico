@@ -28,7 +28,7 @@ export class ApiError extends Error {
 const defaultFetch: Fetch = (...args) => fetch(...args);
 
 export async function request<T>(
-  method: 'GET' | 'POST',
+  method: 'GET' | 'POST' | 'DELETE',
   path: string,
   {
     token,
@@ -129,4 +129,7 @@ export const adultApi = (token: string) => ({
       body: { world },
     }),
   fetchProfile: (profileId: string) => fetchProfile(token, profileId),
+  /** Borra el perfil de la cuenta con todo su progreso. */
+  deleteProfile: (profileId: string) =>
+    request<{ deleted: string }>('DELETE', `/profiles/${profileId}`, { token }),
 });

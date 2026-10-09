@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState, type FormEvent } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router';
-import { aliasProblem, AVATARS, isAvatar, type Avatar } from '@gatita/shared';
+import { aliasProblem, AVATARS, isAvatar, normalizeAlias, type Avatar } from '@gatita/shared';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
 import { db } from '../../db/db.ts';
@@ -93,7 +93,24 @@ export function FamilyPanel({ token, accountId }: { token: string; accountId: st
       navigate('/');
     });
 
+  /**
+   * Borra el perfil con todo su progreso: de la cuenta (si es de la familia) y del dispositivo.
+   * Un perfil invitado o de aula solo se saca de este dispositivo.
+   */
+  const removeProfile = (id: string, alias: string, inAccount: boolean) => {
+    const message = inAccount
+      ? `¿Borrar a ${alias} con todo su progreso? Se borra de tu cuenta y de este dispositivo. No se puede deshacer.`
+      : `¿Sacar a ${alias} de este dispositivo con todo su progreso? No se puede deshacer.`;
+    if (!window.confirm(message)) return;
+    void run(id, async () => {
+      if (inAccount) await api.deleteProfile(id);
+      await profilesRepo.remove(id);
+      push({ icon: '🗑', text: `Se borró ${alias}` });
+    });
+  };
+
   const onDevice = new Set((local ?? []).map((p) => p.id));
+  const taken = [...(local ?? []), ...(remote ?? [])].map((p) => p.alias.toLowerCase());
   const elsewhere = (remote ?? []).filter((r) => !onDevice.has(r.id));
 
   return (
@@ -123,6 +140,15 @@ export function FamilyPanel({ token, accountId }: { token: string; accountId: st
                 {busy === p.id ? 'Guardando…' : 'Guardar en mi cuenta'}
               </Button>
             )}
+            <button
+              type="button"
+              disabled={busy !== null}
+              onClick={() => removeProfile(p.id, p.alias, p.link?.via === 'family')}
+              aria-label={`Borrar a ${p.alias}`}
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg text-gray-400 hover:bg-gray-100"
+            >
+              🗑
+            </button>
           </div>
         ))}
       </section>
@@ -151,6 +177,15 @@ export function FamilyPanel({ token, accountId }: { token: string; accountId: st
               >
                 {busy === r.id ? 'Trayendo…' : 'Jugar acá'}
               </Button>
+              <button
+                type="button"
+                disabled={busy !== null}
+                onClick={() => removeProfile(r.id, r.alias, true)}
+                aria-label={`Borrar a ${r.alias}`}
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-lg text-gray-400 hover:bg-gray-100"
+              >
+                🗑
+              </button>
             </div>
           ))}
         </section>
@@ -158,10 +193,14 @@ export function FamilyPanel({ token, accountId }: { token: string; accountId: st
 
       <NewProfile
         disabled={busy !== null}
+        taken={taken}
         onCreate={(alias, avatar) =>
           run('nuevo', async () => {
-            const p = await profilesRepo.create({ alias, avatar });
-            await api.createProfile({ id: p.id, alias: p.alias, avatar, createdAt: p.createdAt });
+            // Primero en la cuenta: si el servidor lo rechaza, no queda un perfil suelto acá.
+            const id = crypto.randomUUID();
+            const createdAt = new Date().toISOString();
+            await api.createProfile({ id, alias, avatar, createdAt });
+            const p = await profilesRepo.create({ alias, avatar }, { id, now: createdAt });
             await profilesRepo.link(p.id, { via: 'family', accountId });
             push({ icon: '🐱', text: `Listo: ${p.alias} ya puede jugar` });
             navigate('/');
@@ -181,9 +220,12 @@ export function FamilyPanel({ token, accountId }: { token: string; accountId: st
 function NewProfile({
   onCreate,
   disabled,
+  taken,
 }: {
   onCreate: (alias: string, avatar: Avatar) => void;
   disabled: boolean;
+  /** Apodos que ya existen (en el dispositivo o en la cuenta), en minúsculas. */
+  taken: readonly string[];
 }) {
   const [alias, setAlias] = useState('');
   const [avatar, setAvatar] = useState<Avatar>('naranja');
@@ -191,7 +233,11 @@ function NewProfile({
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    const p = aliasProblem(alias);
+    const p =
+      aliasProblem(alias) ??
+      (taken.includes(normalizeAlias(alias).toLowerCase())
+        ? 'Ya tenés un perfil con ese apodo.'
+        : null);
     setProblem(p);
     if (!p) onCreate(alias, avatar);
   };

@@ -123,4 +123,25 @@ describe('repositorios locales', () => {
     await profilesRepo.setLook(p.id, { accesorio: 'mono-rosa' }, db);
     expect((await db.profiles.get(p.id))?.look).toEqual({ accesorio: 'mono-rosa' });
   });
+
+  it('saca un perfil del dispositivo con todo lo suyo y deja activo otro', async () => {
+    const db = fresh();
+    dbs.push(db);
+    const a = await profilesRepo.create(
+      { alias: 'Uno', avatar: 'gris' },
+      { db, now: '2026-03-01T00:00:00Z' },
+    );
+    const b = await profilesRepo.create(
+      { alias: 'Dos', avatar: 'gris' },
+      { db, now: '2026-03-02T00:00:00Z' },
+    );
+    await saveRound(b.id, round('r1', '2026-03-02T14:00:00.000Z', true), words, { db });
+    await profilesRepo.remove(b.id, db);
+    expect(await db.profiles.get(b.id)).toBeUndefined();
+    expect(await db.rounds.where('profileId').equals(b.id).count()).toBe(0);
+    expect(await db.profileState.get(b.id)).toBeUndefined();
+    expect((await profilesRepo.active(db))?.id).toBe(a.id);
+    await profilesRepo.remove(a.id, db);
+    expect(await profilesRepo.active(db)).toBeUndefined();
+  });
 });

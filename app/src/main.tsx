@@ -16,6 +16,14 @@ try {
 
 listenForInstall();
 
+// La vuelta del login de adultos (Supabase) tiene que llegar a /adultos, que es donde se lee.
+// Si Supabase la manda a otra página (por ejemplo, su "Site URL"), se la lleva ahí.
+const { pathname, search, hash } = window.location;
+const authReturn = /[?&]code=/.test(search) || /access_token=|error_description=/.test(hash);
+if (authReturn && pathname !== '/adultos') {
+  window.history.replaceState(null, '', `/adultos${search}${hash}`);
+}
+
 const rootElement = document.getElementById('root');
 if (!rootElement) throw new Error('Could not find root element to mount to');
 

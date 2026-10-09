@@ -33,7 +33,14 @@ let client: Promise<SupabaseClient> | null = null;
 function supabase(): Promise<SupabaseClient> {
   client ??= import('@supabase/supabase-js').then(({ createClient }) => {
     const c = createClient(URL!, KEY!, {
-      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
+      // PKCE: la vuelta del login trae un código de un solo uso (`?code=`), no la sesión en la
+      // URL; si alguien comparte esa dirección, no comparte su sesión.
+      auth: {
+        flowType: 'pkce',
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true,
+      },
     });
     c.auth.onAuthStateChange((_event, s) => {
       useAdultAuth.setState(

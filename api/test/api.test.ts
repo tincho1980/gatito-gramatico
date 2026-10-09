@@ -241,6 +241,43 @@ describe('rondas (arquitectura §6 y §7)', () => {
   });
 });
 
+describe('perfiles de la familia', () => {
+  it('no se repite un apodo en la misma cuenta (sin distinguir mayúsculas)', async () => {
+    const res = await h.call(FAMILY, 'POST', '/profiles', {
+      id: uuidFor('michi-repetido'),
+      alias: 'MICHI',
+      avatar: 'gris',
+    });
+    expect(res.status).toBe(409);
+    expect(await res.json()).toEqual({ error: 'Ya tenés un perfil con ese apodo.' });
+    // Otra familia sí puede usar el mismo apodo.
+    const other = await h.call(OTHER, 'POST', '/profiles', {
+      id: uuidFor('michi-de-otra'),
+      alias: 'Michi',
+      avatar: 'gris',
+    });
+    expect(other.status).toBe(200);
+  });
+
+  it('la familia borra un perfil con todo su progreso; otro adulto no puede', async () => {
+    const id = uuidFor('para-borrar');
+    await h.call(FAMILY, 'POST', '/profiles', {
+      id,
+      alias: 'Borrable',
+      avatar: 'gris',
+      createdAt: '2026-03-01T00:00:00.000Z',
+      rounds: ROUNDS.slice(0, 3).map((r) => ({ ...r, id: uuidFor(`borrar-${r.id}`) })),
+    });
+    expect((await h.call(OTHER, 'DELETE', `/profiles/${id}`)).status).toBe(404);
+    expect((await h.call(FAMILY, 'DELETE', `/profiles/${id}`)).status).toBe(200);
+    const left = await h.sql`
+      select (select count(*)::int from private.profiles where id = ${id}) as p,
+             (select count(*)::int from private.rounds where profile_id = ${id}) as r,
+             (select count(*)::int from private.profile_state where profile_id = ${id}) as s`;
+    expect(left[0]).toEqual({ p: 0, r: 0, s: 0 });
+  });
+});
+
 describe('vincular un perfil invitado con su historial', () => {
   it('sube las rondas junto con el perfil', async () => {
     const pid = uuidFor('invitado');

@@ -120,8 +120,15 @@ test('una familia guarda el perfil en su cuenta y lo trae a otro dispositivo', a
   await home.getByRole('button', { name: 'Guardar en mi cuenta' }).click();
   await expect(home.getByText('☁️ En tu cuenta')).toBeVisible();
 
+  // No deja repetir un apodo de la cuenta.
+  await home.getByRole('textbox', { name: 'Apodo' }).fill('michi');
+  await home.getByRole('button', { name: 'Crear' }).click();
+  await expect(home.getByText('Ya tenés un perfil con ese apodo.')).toBeVisible();
+
+  // En otro dispositivo, el adulto entra desde la bienvenida sin crear un perfil.
   const tablet = await phone(browser);
-  await tablet.goto('/adultos');
+  await tablet.goto('/');
+  await tablet.getByRole('link', { name: 'Soy adulto: familias y docentes' }).click();
   await tablet.getByRole('textbox', { name: 'O con tu email' }).fill(email);
   await tablet.getByRole('button', { name: 'Entrar (prueba local)' }).click();
   await tablet.getByRole('button', { name: 'Jugar acá' }).click();
@@ -129,4 +136,21 @@ test('una familia guarda el perfil en su cuenta y lo trae a otro dispositivo', a
   await expect(tablet.getByText('Todo guardado en la nube')).toBeVisible();
   await tablet.goto('/mundo/1');
   await expect(tablet.getByLabel('Lección, completa')).toBeVisible();
+});
+
+test('la familia borra un perfil de su cuenta con todo su progreso', async ({ browser }) => {
+  const page = await phone(browser);
+  await createProfile(page);
+  await adultLogin(page, `borrar-${Date.now()}@casa.test`, 'Soy familia');
+  await page.getByRole('button', { name: 'Guardar en mi cuenta' }).click();
+  await expect(page.getByText('☁️ En tu cuenta')).toBeVisible();
+  page.once('dialog', (d) => void d.accept());
+  await page.getByRole('button', { name: 'Borrar a Michi' }).click();
+  await expect(
+    page.getByRole('status', { name: 'Avisos' }).getByText('Se borró Michi'),
+  ).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Borrar a Michi' })).toHaveCount(0);
+  // Sin perfiles, la app vuelve a la bienvenida.
+  await page.goto('/');
+  await expect(page.getByPlaceholder('Por ejemplo, Michi')).toBeVisible();
 });

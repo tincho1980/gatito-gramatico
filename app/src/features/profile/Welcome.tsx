@@ -90,6 +90,12 @@ export function Welcome({ onCreated }: { onCreated?: () => void } = {}) {
         >
           Tengo un código de aula
         </Link>
+        <Link
+          to="/adultos"
+          className="flex min-h-12 items-center justify-center text-sm font-bold text-gray-500 underline"
+        >
+          Soy adulto: familias y docentes
+        </Link>
       </div>
     </form>
   );
