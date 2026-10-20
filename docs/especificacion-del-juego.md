@@ -108,6 +108,17 @@ La lección no da XP (sus turnos no afectan nada, ver 4.2).
 
 Pantalla de resultados con: aciertos completos sobre total, XP ganado, qué regla mejoró y cuál conviene repasar (la de mayor y menor variación de EMA en la ronda), cajas que subieron, premios nuevos.
 
+En una ronda de práctica, además, avisa qué sigue y el botón principal lo dice:
+
+| Caso | Aviso | Botón |
+| --- | --- | --- |
+| El jefe quedó habilitado (6.2) | "¡Ya podés desafiar al jefe!" | Desafiar al jefe |
+| Paradas completas pero el jefe no está habilitado | "Todavía no llegás al jefe" y las reglas que faltan | Seguir practicando |
+| La ronda no completó la parada | Cuántas completas pide la parada (7.2) | Probar de nuevo |
+| Otro caso | — | Seguir jugando |
+
+Si lo que sigue es la misma parada, la ronda nueva arranca ahí mismo.
+
 Una ronda se guarda como un registro con sus turnos; todo lo derivado (cajas, EMA, XP, premios) se recalcula desde los turnos.
 
 ## 5. Cajas de repaso (Leitner)
@@ -203,6 +214,21 @@ El jefe de un mundo se habilita cuando:
 - Si pierde: mensaje de ánimo, vuelve a la parada 4 y puede reintentar cuando quiera (sigue habilitado).
 - "Sigue habilitado": una vez que el jefe se habilitó (6.2), queda habilitado hasta vencerlo, aunque la EMA baje por el intento fallido (`bossReady` en el progreso del mundo).
 - Al ganar: animación, +50 XP, estrellas (7.4), gato amigo del mundo a la colección y desbloqueo de los mundos que dependan de él.
+
+**Los jefes.** Cada mundo tiene su jefe: un personaje travieso (no da miedo) que se mete con el tema del mundo. Se presenta al empezar la ronda con su frase, aparece en la parada 5 del mundo y en el resultado: se ríe si el chico pierde y, si le gana, se hace su amigo (cara amigable, cachetes rosados y corazones; nunca se lo muestra lastimado ni noqueado). En la parada 5 de un mundo completo aparece con su cara de amigo. Los nombres y las frases están en `shared/src/data/worlds.ts`; los dibujos, en `app/src/components/Boss.tsx`.
+
+| Mundo | Jefe | Por qué |
+| --- | --- | --- |
+| 1 | El Ratón Monótono | Dice todas las sílabas igual: no hay sílaba fuerte |
+| 2 | La Paloma Picuda | Desde el tejado, picotea las tildes de las agudas (la fuerza en la punta) |
+| 3 | El Sapo Siestero | Duerme la siesta en las llanuras, tranquilo como las graves |
+| 4 | La Ardilla Acróbata | Sube las tildes de las esdrújulas a la rama más alta |
+| 5 | El Pulpo Revoltijo | Con ocho brazos mezcla agudas, graves y esdrújulas en los ovillos |
+| 6 | El Cangrejo Abrazón | Abraza a las vocales como un diptongo |
+| 7 | El Castor Cortapuentes | Corta el puente entre las vocales, como un hiato |
+| 8 | El Loro Copión | Copia todo igualito: tu / tú, el / él |
+| 9 | El Búho Preguntón | Pregunta todo: qué, cómo, cuándo |
+| 10 | El Dragón Borratildes | El último: borra las tildes más difíciles con su goma |
 
 ### 7.4 Estrellas por mundo
 

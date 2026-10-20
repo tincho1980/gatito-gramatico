@@ -4,17 +4,21 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Navigate, useLocation, useNavigate, useSearchParams } from 'react-router';
 import {
+  bossOf,
   canPlayStop,
   CONFIG,
   currentStop,
   isBossEnabled,
+  nextNote,
   stopAction,
   summarizeRound,
+  type NextNote,
   type PlayAction,
   type ProfileState,
   type RoundSummary,
   type Stop,
 } from '@gatita/shared';
+import { Boss } from '../../components/Boss.tsx';
 import { saveRound } from '../../db/repos.ts';
 import { reactTo } from '../../lib/feedback.ts';
 import { useWords, type LoadedWords } from '../../words/words.ts';
@@ -36,6 +40,7 @@ interface Outcome {
   stopCompleted: boolean;
   bossWon: boolean;
   next: PlayAction;
+  note: NextNote | null;
 }
 
 export function RoundPage() {
@@ -94,6 +99,10 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
       const summary = summarizeRound(before, after, round, words.index);
       pushNotices(...roundNotices(summary, before, after));
       requestSync();
+      const next: PlayAction =
+        progress?.bossBest !== null && progress?.bossBest !== undefined
+          ? { kind: 'map' }
+          : stopAction(after, world, currentStop(progress, world), words.index);
       setOutcome({
         summary,
         after,
@@ -103,10 +112,8 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
           kind === 'boss' &&
           (progress?.bossBest ?? null) !== null &&
           round.turns.filter((t) => t.full).length >= CONFIG.bossWin,
-        next:
-          progress?.bossBest !== null && progress?.bossBest !== undefined
-            ? { kind: 'map' }
-            : stopAction(after, world, currentStop(progress, world), words.index),
+        next,
+        note: kind === 'practice' ? nextNote(after, world, stop, next, words.index) : null,
       });
       clear();
     });
@@ -125,6 +132,7 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
     if (kind === 'boss') {
       return (
         <BossResult
+          world={world}
           won={outcome.bossWon}
           summary={outcome.summary}
           stars={outcome.after.worlds[world]?.stars ?? 0}
@@ -142,10 +150,21 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
         summary={outcome.summary}
         xpTotal={outcome.after.xp}
         stopCompleted={outcome.stopCompleted}
+        note={outcome.note}
+        bossName={bossOf(world).name}
         avatar={profile.avatar}
         accessory={profile.look?.accesorio}
         sound={profile.sound}
-        onNext={() => navigate(actionPath(outcome.next))}
+        onNext={() => {
+          const { next } = outcome;
+          // La misma parada: la URL no cambia, así que la ronda nueva arranca acá mismo.
+          if (next.kind === 'practice' && next.world === world && next.stop === stop) {
+            setOutcome(null);
+            window.scrollTo(0, 0);
+          } else {
+            navigate(actionPath(next));
+          }
+        }}
         onWorld={() => navigate(`/mundo/${world}`)}
       />
     );
@@ -184,9 +203,14 @@ function Round({ world, stop }: { world: number; stop: Stop }) {
         </span>
       </header>
       {kind === 'boss' && done === 0 && session.phase === 'step' && session.stepIndex === 0 && (
-        <p className="mx-4 rounded-2xl bg-violet-100 px-3 py-2 text-center text-sm font-bold text-violet-800">
-          ¡Ronda del jefe! Necesitás {CONFIG.bossWin} de 10.
-        </p>
+        <div className="mx-4 flex items-center gap-3 rounded-2xl bg-violet-100 px-3 py-2 text-violet-900">
+          <Boss world={world} className="h-16 w-16 shrink-0" label="" />
+          <div className="text-sm">
+            <p className="font-bold">¡{bossOf(world).name} te desafía!</p>
+            <p>“{bossOf(world).taunt}”</p>
+            <p className="font-bold">Necesitás {CONFIG.bossWin} de 10.</p>
+          </div>
+        </div>
       )}
 
       {session.phase === 'feedback' && session.lastTurn ? (

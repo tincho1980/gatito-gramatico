@@ -19,9 +19,11 @@ test('crear perfil, hacer la lección y jugar una ronda completa', async ({ page
     height: window.innerHeight,
   }));
   expect(scroll).toBeLessThanOrEqual(height);
-  await playUntil(page, 'Seguir jugando', { world: 1, correct: false });
+  // Sin acertar no completa la parada: lo avisa y el botón la vuelve a jugar (§4.4).
+  await playUntil(page, 'Probar de nuevo', { world: 1, correct: false });
 
-  await expect(page.getByText('Completas')).toBeVisible();
+  await expect(page.getByText('Completas', { exact: true })).toBeVisible();
+  await expect(page.getByText(/Para completar esta parada necesitás 7 de 10/)).toBeVisible();
   await expect(page.getByRole('listitem').getByText('Nueva insignia: Primera ronda')).toBeVisible();
   // El aviso aparece arriba, sobre la pantalla (plan, etapa 5).
   await expect(

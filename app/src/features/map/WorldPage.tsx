@@ -1,8 +1,10 @@
 // Pantalla de un mundo (§7.2): sus paradas en orden, cuáles están hechas, cuál sigue y
 // cuánto falta para el jefe (§6.2).
+import type { ReactNode } from 'react';
 import { Link, Navigate, useParams } from 'react-router';
 import {
   bossGateStatus,
+  bossOf,
   CONFIG,
   canPlayStop,
   currentStop,
@@ -10,10 +12,12 @@ import {
   RULE_NAMES,
   stopAction,
   stopsOf,
+  toBoss,
   WORLDS,
   type RuleGate,
   type Stop,
 } from '@gatita/shared';
+import { Boss } from '../../components/Boss.tsx';
 import { Stars } from '../../components/Stars.tsx';
 import { worldLook } from '../../content/worlds.ts';
 import { useWords } from '../../words/words.ts';
@@ -25,7 +29,7 @@ const STOP_NAMES: Record<Stop, { name: string; detail: string }> = {
   2: { name: 'Práctica', detail: `Palabras fáciles · ${CONFIG.stopPass[2]} de 10 para pasar` },
   3: { name: 'Práctica +', detail: `Palabras medianas · ${CONFIG.stopPass[3]} de 10 para pasar` },
   4: { name: 'Desafío', detail: `Palabras difíciles · ${CONFIG.stopPass[4]} de 10 para pasar` },
-  5: { name: 'Jefe', detail: `${CONFIG.bossWin} de 10 para ganar` },
+  5: { name: 'Jefe', detail: `Jefe · ${CONFIG.bossWin} de 10 para ganar` },
 };
 
 export function WorldPage() {
@@ -45,6 +49,7 @@ export function WorldPage() {
   const worldWords = words.index.byWorld.get(id) ?? [];
   const bossEnabled = isBossEnabled(state, id, worldWords);
   const gate = bossGateStatus(state, id, worldWords);
+  const boss = bossOf(id).name;
 
   return (
     <main className="mx-auto flex min-h-dvh max-w-md flex-col gap-4 px-4 pt-6 pb-safe">
@@ -82,8 +87,19 @@ export function WorldPage() {
           return (
             <li key={stop}>
               <StopCard
-                title={STOP_NAMES[stop].name}
+                title={stop === 5 ? boss : STOP_NAMES[stop].name}
+                labelTitle={stop === 5 ? `Jefe: ${boss}` : undefined}
                 detail={STOP_NAMES[stop].detail}
+                art={
+                  stop === 5 && (
+                    <Boss
+                      world={id}
+                      mood={progress.bossBest !== null ? 'friend' : 'idle'}
+                      className="h-14 w-14"
+                      label=""
+                    />
+                  )
+                }
                 state={done ? 'done' : !playable ? 'locked' : isNext ? 'next' : 'open'}
                 to={playable && !blockedBoss ? actionPath(action) : undefined}
               />
@@ -94,9 +110,12 @@ export function WorldPage() {
 
       {canPlayStop(progress, id, 5) && !bossEnabled && progress.bossBest === null && (
         <section className="rounded-2xl bg-white p-4 shadow-sm" aria-labelledby="gate-title">
-          <h2 id="gate-title" className="font-heading text-lg font-bold text-gray-800">
-            Para desafiar al jefe
-          </h2>
+          <div className="flex items-center gap-3">
+            <Boss world={id} className="h-14 w-14 shrink-0" label="" />
+            <h2 id="gate-title" className="font-heading text-lg font-bold text-gray-800">
+              Para desafiar {toBoss(boss)}
+            </h2>
+          </div>
           <p className="mb-3 text-sm text-gray-600">
             Seguí practicando hasta que estas reglas te salgan casi siempre bien.
           </p>
@@ -150,11 +169,17 @@ function StopCard({
   detail,
   state,
   to,
+  art,
+  labelTitle = title,
 }: {
   title: string;
   detail: string;
   state: StopState;
   to?: string;
+  /** Dibujo a la derecha (el jefe en su parada). */
+  art?: ReactNode;
+  /** Título para lectores de pantalla, si no es el visible. */
+  labelTitle?: string;
 }) {
   const badge = { done: '✓', next: '▶', open: '↻', locked: '🔒' }[state];
   const content = (
@@ -167,15 +192,16 @@ function StopCard({
       >
         {badge}
       </span>
-      <span className="flex flex-col">
+      <span className="flex flex-1 flex-col">
         <span className="font-heading text-lg font-bold">{title}</span>
         <span className={`text-sm ${state === 'next' ? 'text-white' : 'text-gray-500'}`}>
           {detail}
         </span>
       </span>
+      {art}
     </div>
   );
-  const label = `${title}, ${{ done: 'completa', next: 'la que sigue', open: 'disponible', locked: 'bloqueada' }[state]}`;
+  const label = `${labelTitle}, ${{ done: 'completa', next: 'la que sigue', open: 'disponible', locked: 'bloqueada' }[state]}`;
   return to ? (
     <Link to={to} aria-label={label} className="block">
       {content}

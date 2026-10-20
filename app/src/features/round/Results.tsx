@@ -1,6 +1,14 @@
 // §4.4 Pantalla de resultados.
 import { useEffect, useMemo } from 'react';
-import { BADGES, RULE_NAMES, type Avatar, type RoundSummary } from '@gatita/shared';
+import {
+  BADGES,
+  CONFIG,
+  RULE_NAMES,
+  toBoss,
+  type Avatar,
+  type NextNote,
+  type RoundSummary,
+} from '@gatita/shared';
 import { AdSlot } from '../../components/AdSlot.tsx';
 import { Button } from '../../components/Button.tsx';
 import { Gatita } from '../../components/Gatita.tsx';
@@ -17,6 +25,10 @@ interface ResultsProps {
   sound: boolean;
   /** La ronda completó la parada (§7.2). */
   stopCompleted: boolean;
+  /** Qué sigue y por qué (§4.4): jefe habilitado, jefe que falta o parada sin completar. */
+  note: NextNote | null;
+  /** Nombre del jefe del mundo, para los avisos. */
+  bossName: string;
   onNext: () => void;
   onWorld: () => void;
 }
@@ -28,6 +40,8 @@ export function Results({
   accessory,
   sound,
   stopCompleted,
+  note,
+  bossName,
   onNext,
   onWorld,
 }: ResultsProps) {
@@ -64,6 +78,31 @@ export function Results({
               <strong>¡Completaste esta parada!</strong>
             </Line>
           )}
+          {note?.kind === 'bossReady' && (
+            <Line icon="🐉">
+              <strong>¡Ya podés desafiar {toBoss(bossName)}!</strong> Necesitás {CONFIG.bossWin} de
+              10.
+            </Line>
+          )}
+          {note?.kind === 'bossLocked' && (
+            <Line icon="🐾">
+              <strong>Todavía no llegás {toBoss(bossName)}.</strong> Seguí practicando
+              {note.rules.length > 0 && (
+                <>
+                  {' '}
+                  hasta que te {note.rules.length > 1 ? 'salgan' : 'salga'} casi siempre bien:{' '}
+                  {listOf(note.rules.map((r) => RULE_NAMES[r]))}
+                </>
+              )}
+              .
+            </Line>
+          )}
+          {note?.kind === 'stopPending' && (
+            <Line icon="🎯">
+              Para completar esta parada necesitás <strong>{note.need} de 10</strong> completas.
+              ¡Probá de nuevo!
+            </Line>
+          )}
           {summary.improved && (
             <Line icon="⬆️">
               Mejoraste en <strong>{RULE_NAMES[summary.improved.rule]}</strong>
@@ -97,7 +136,13 @@ export function Results({
       <AdSlot slot="results" />
       <div className="grid shrink-0 gap-3 pb-[env(safe-area-inset-bottom)]">
         <Button onClick={onNext} size="lg" className="min-h-14 w-full">
-          Seguir jugando
+          {note?.kind === 'bossReady'
+            ? 'Desafiar al jefe'
+            : note?.kind === 'bossLocked'
+              ? 'Seguir practicando'
+              : note?.kind === 'stopPending'
+                ? 'Probar de nuevo'
+                : 'Seguir jugando'}
         </Button>
         <Button onClick={onWorld} variant="outline" size="lg" className="min-h-14 w-full">
           Volver al mundo
@@ -105,6 +150,11 @@ export function Results({
       </div>
     </main>
   );
+}
+
+/** "a", "a y b", "a, b y c". */
+function listOf(items: string[]): string {
+  return items.length < 2 ? (items[0] ?? '') : `${items.slice(0, -1).join(', ')} y ${items.at(-1)}`;
 }
 
 function Stat({ label, value }: { label: string; value: string }) {

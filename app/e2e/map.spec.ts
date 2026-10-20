@@ -45,7 +45,7 @@ test('el mapa muestra cada estado posible con los presets de debug', async ({ pa
 test('ganar el jefe del mundo 1 abre 2, 3 y 4 a la vez; el 5 sigue cerrado', async ({ page }) => {
   await loadPreset(page, 'Jefe del mundo 1 habilitado');
   await page.getByRole('link', { name: '¡Desafiar al jefe!' }).click();
-  await playUntil(page, '¡Le ganaste al jefe!', { world: 1, correct: true });
+  await playUntil(page, '¡Le ganaste al Ratón Monótono!', { world: 1, correct: true });
   await expect(
     page.getByText(
       /Se abrieron El Tejado Puntiagudo, Las Llanuras de la Siesta, El Árbol Trepador/,
@@ -72,5 +72,5 @@ test('perder contra el jefe no hace perder nada', async ({ page }) => {
   expect(states[3]).toBe('Mundo 4, El Árbol Trepador, en curso');
   await page.goto('/mundo/4');
   await expect(page.getByLabel('Desafío, completa')).toBeVisible();
-  await expect(page.getByLabel('Jefe, la que sigue')).toBeVisible();
+  await expect(page.getByLabel('Jefe: La Ardilla Acróbata, la que sigue')).toBeVisible();
 });

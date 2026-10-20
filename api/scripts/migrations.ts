@@ -47,7 +47,7 @@ export async function applyMigrations(
       await tx.unsafe(m.sql);
       await tx`
         insert into supabase_migrations.schema_migrations (version, name, statements)
-        values (${m.version}, ${m.name}, ${[m.sql]})`;
+        values (${m.version}, ${m.name}, array[${m.sql}]::text[])`;
     });
     applied.push(m.version);
   }

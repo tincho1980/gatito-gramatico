@@ -3,7 +3,7 @@ import type { Rule, WordEntry } from '../schemas.ts';
 import { CONFIG, type Config } from './config.ts';
 import { gateRules, isBossEnabled, ruleKey, windowAccuracy } from './mastery.ts';
 import type { ProfileState, Stop, WordIndex } from './types.ts';
-import { currentStop, requiredStopsBeforeBoss } from './worlds.ts';
+import { canPlayStop, currentStop, requiredStopsBeforeBoss } from './worlds.ts';
 
 export type WorldStatus = 'locked' | 'available' | 'inProgress' | 'complete';
 
@@ -84,4 +84,34 @@ export function bossGateStatus(
       ready: ema >= minEma && accuracy >= minAccuracy,
     };
   });
+}
+
+/** §4.4 Qué viene después de una ronda de práctica, para avisarlo en los resultados. */
+export type NextNote =
+  /** El jefe quedó habilitado: el botón lleva a él. */
+  | { kind: 'bossReady' }
+  /** Paradas completas pero el jefe todavía no (§6.2): se repite la última práctica. */
+  | { kind: 'bossLocked'; rules: Rule[] }
+  /** La ronda no completó la parada: se vuelve a jugar con la marca que falta. */
+  | { kind: 'stopPending'; need: number };
+
+export function nextNote(
+  after: ProfileState,
+  world: number,
+  stop: Stop,
+  next: PlayAction,
+  words: WordIndex,
+  config: Config = CONFIG,
+): NextNote | null {
+  const progress = after.worlds[world];
+  if (next.kind === 'boss') return { kind: 'bossReady' };
+  if (next.kind !== 'practice' || next.world !== world || progress?.bossBest != null) return null;
+  if (canPlayStop(progress, world, 5, config)) {
+    const gate = bossGateStatus(after, world, words.byWorld.get(world) ?? [], config);
+    return { kind: 'bossLocked', rules: gate.filter((r) => !r.ready).map((r) => r.rule) };
+  }
+  if (next.stop === stop && !progress?.stopsDone.includes(stop)) {
+    return { kind: 'stopPending', need: config.stopPass[stop] ?? 0 };
+  }
+  return null;
 }

@@ -49,7 +49,15 @@ await socket.start();
 const { port } = (
   socket as unknown as { server: { address(): { port: number } } }
 ).server.address();
-const sql = postgres({ host: '127.0.0.1', port, user: 'postgres', database: 'postgres', max: 1 });
+// Igual que en el Worker: sin buscar los tipos de la base.
+const sql = postgres({
+  host: '127.0.0.1',
+  port,
+  user: 'postgres',
+  database: 'postgres',
+  max: 1,
+  fetch_types: false,
+});
 
 const applied = await applyMigrations(sql);
 if (applied.length) console.log(`✓ Migraciones aplicadas: ${applied.join(', ')}`);
