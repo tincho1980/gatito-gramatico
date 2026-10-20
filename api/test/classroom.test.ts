@@ -209,7 +209,10 @@ describe('ingreso con PIN (arquitectura §9.7)', () => {
     const rows = await h.sql`
       select alias, pin_hash from private.profiles where alias in ('Mica', 'Lola')`;
     const hashes = rows.map((r) => r.pin_hash as string);
-    expect(hashes.every((x) => /^[0-9a-f]{64}$/.test(x) && !x.includes('1000'))).toBe(true);
+    // No se compara contra el texto "1000": un hash hexadecimal al azar puede contenerlo (el
+    // aula cambia en cada corrida). Lo que importa es que no sea el PIN ni su hash sin secreto.
+    const plain = createHash('sha256').update('1000').digest('hex');
+    expect(hashes.every((x) => /^[0-9a-f]{64}$/.test(x) && x !== '1000' && x !== plain)).toBe(true);
     expect(new Set(hashes).size).toBe(2);
   });
 
