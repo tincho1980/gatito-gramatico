@@ -100,7 +100,13 @@ describe('tres chicos entran desde tres celulares y sus rondas aparecen en el ta
   it('el tablero muestra a los tres con sus reglas, mundo y última actividad', async () => {
     const res = await h.call(TEACHER, 'GET', `/classrooms/${classroom.id}/dashboard`);
     const body = (await res.json()) as DashboardResponse;
-    expect(body.classroom).toMatchObject({ code: 'ABCDEF', students: 3 });
+    // Los mundos abiertos llegan como lista aunque no haya ninguno (antes llegaban como texto
+    // en producción y el tablero se rompía).
+    expect(body.classroom).toMatchObject({ code: 'ABCDEF', students: 3, unlocks: [] });
+    const list = (await (await h.call(TEACHER, 'GET', '/classrooms')).json()) as {
+      classrooms: ClassroomSummary[];
+    };
+    expect(list.classrooms.every((c) => Array.isArray(c.unlocks))).toBe(true);
     expect(body.students.map((s) => s.alias)).toEqual(['Juli', 'Mica', 'Tomi']);
     for (const s of body.students) {
       expect(s.roundsPlayed).toBeGreaterThan(0);
@@ -157,6 +163,10 @@ describe('tres chicos entran desde tres celulares y sus rondas aparecen en el ta
   it('abrir un mundo para el aula lo abre en el estado de cada chico', async () => {
     const res = await h.call(TEACHER, 'POST', `/classrooms/${classroom.id}/unlocks`, { world: 8 });
     expect(await res.json()).toEqual({ unlocks: [8] });
+    const dash = (await (
+      await h.call(TEACHER, 'GET', `/classrooms/${classroom.id}/dashboard`)
+    ).json()) as DashboardResponse;
+    expect(dash.classroom.unlocks).toEqual([8]);
     for (const alias of kids) {
       const s = await h.callWith(tokens[alias]!, 'GET', `/profiles/${ids[alias]}/state?only=state`);
       expect(((await s.json()) as { state: ProfileState }).state.worlds[8]?.unlocked).toBe(true);

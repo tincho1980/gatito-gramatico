@@ -52,6 +52,9 @@ export async function startHarness(): Promise<Harness> {
     database: 'postgres',
     max: 1,
     onnotice: () => {},
+    // Igual que en el Worker (index.ts): sin buscar los tipos de la base. Así los tests ven lo
+    // mismo que producción (por ejemplo, un arreglo de Postgres llega como texto).
+    fetch_types: false,
   });
   // Las migraciones reales, con el mismo runner que `npm run db:push`.
   await applyMigrations(sql);

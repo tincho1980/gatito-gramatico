@@ -236,8 +236,8 @@ export async function classroomsOf(
   return sql`
     select c.id, c.teacher_id as "teacherId", c.name, c.code,
            (select count(*)::int from private.profiles p where p.classroom_id = c.id) as students,
-           coalesce((select array_agg(u.world order by u.world) from private.teacher_unlocks u
-                     where u.classroom_id = c.id), '{}') as unlocks
+           coalesce((select json_agg(u.world order by u.world) from private.teacher_unlocks u
+                     where u.classroom_id = c.id), '[]'::json) as unlocks
     from private.classrooms c
     where c.teacher_id = ${teacherId}
     order by c.created_at`;
