@@ -21,8 +21,8 @@ test('con el service worker instalado, se juega una ronda completa sin red', asy
   await page.getByRole('button', { name: 'Practicar' }).click();
   await playUntil(page, '¡Lección lista!', { world: 1, correct: false });
   await page.getByRole('button', { name: 'Ir a la práctica' }).click();
-  await playUntil(page, 'Seguir jugando', { world: 1, correct: false });
-  await expect(page.getByText('Completas')).toBeVisible();
+  await playUntil(page, 'Probar de nuevo', { world: 1, correct: false });
+  await expect(page.getByText('Completas', { exact: true })).toBeVisible();
 
   // Se guardó: sigue ahí al recargar, todavía sin red.
   await page.goto('/mundo/1');

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { gateRules, ruleKey } from './mastery.ts';
-import { bossGateStatus, playAction, stopAction, worldStatus } from './play.ts';
+import { bossGateStatus, nextNote, playAction, stopAction, worldStatus } from './play.ts';
 import { initialState } from './state.ts';
 import { WORDS } from './testing.ts';
 import type { ProfileState, RuleMastery } from './types.ts';
@@ -80,5 +80,29 @@ describe('§6.2 lo que falta para el jefe', () => {
     expect(status.every((r) => !r.ready && r.ema === 0.5 && r.attempts === 0)).toBe(true);
     const ready = bossGateStatus(withWorld2([1, 2, 3, 4], true), 2, words2);
     expect(ready.every((r) => r.ready && r.accuracy === 1)).toBe(true);
+  });
+});
+
+describe('§4.4 aviso de lo que sigue al terminar una práctica', () => {
+  // Lo que sigue es lo mismo que el botón Jugar del mundo 2 (el último jugado).
+  const after = (s: ProfileState, stop: 2 | 3 | 4) =>
+    nextNote(s, 2, stop, playAction(s, WORDS), WORDS);
+
+  it('paradas completas sin jefe habilitado: avisa qué reglas faltan', () => {
+    const note = after(withWorld2([1, 2, 3, 4]), 4);
+    expect(note?.kind).toBe('bossLocked');
+    expect(note?.kind === 'bossLocked' && note.rules.sort()).toEqual(gateRules(words2).sort());
+  });
+
+  it('con el jefe habilitado: lo anuncia', () => {
+    expect(after(withWorld2([1, 2, 3, 4], true), 4)).toEqual({ kind: 'bossReady' });
+  });
+
+  it('la ronda no completó la parada: dice cuántas completas hacen falta', () => {
+    expect(after(withWorld2([1]), 2)).toEqual({ kind: 'stopPending', need: 7 });
+  });
+
+  it('completó la parada y sigue la próxima: sin aviso', () => {
+    expect(after(withWorld2([1, 2]), 2)).toBeNull();
   });
 });

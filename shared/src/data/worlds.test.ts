@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { WORLDS, WORLD_IDS } from './worlds.ts';
+import { toBoss, WORLDS, WORLD_IDS } from './worlds.ts';
 
 describe('§7.1 grafo de desbloqueo', () => {
   it('tiene los 10 mundos, del 1 al 10', () => {
@@ -35,5 +35,21 @@ describe('§7.1 grafo de desbloqueo', () => {
   it('el 5 pide 2, 3 y 4; el 10 pide 7 y 9', () => {
     expect(WORLDS.find((w) => w.id === 5)?.requires).toEqual([2, 3, 4]);
     expect(WORLDS.find((w) => w.id === 10)?.requires).toEqual([7, 9]);
+  });
+});
+
+describe('§7.3 jefes', () => {
+  it('cada mundo tiene un jefe distinto, con artículo y frase', () => {
+    const names = WORLDS.map((w) => w.boss.name);
+    expect(new Set(names).size).toBe(10);
+    for (const w of WORLDS) {
+      expect(w.boss.name).toMatch(/^(El|La) /);
+      expect(w.boss.taunt.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('"a" + nombre: al Ratón, a la Paloma', () => {
+    expect(toBoss('El Ratón Monótono')).toBe('al Ratón Monótono');
+    expect(toBoss('La Paloma Picuda')).toBe('a la Paloma Picuda');
   });
 });
